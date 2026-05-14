@@ -128,7 +128,7 @@ Ark-waifu 是一个轻量网页看板娘框架实验项目。第一阶段 MVP �
 
 ## 一句话 CDN 引入
 
-发布为 npm 包后，目标用法如下：
+如果你是新手小白，你可以直接在你的HTML文件的body部分的最后直接加入下面这句话：
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/ark-waifu/dist/ark-waifu.iife.js" data-manifest="/models/sample/manifest.json"></script>
