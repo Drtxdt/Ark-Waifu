@@ -1,12 +1,31 @@
 {
   "name": "ark-waifu",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "type": "module",
   "license": "MIT",
+  "main": "./dist/ark-waifu.iife.js",
+  "module": "./dist/ark-waifu.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/ark-waifu.es.js",
+      "browser": "./dist/ark-waifu.iife.js",
+      "default": "./dist/ark-waifu.es.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "pnpm typecheck && pnpm build:demo && pnpm build:lib && pnpm build:types",
+    "build:demo": "vite build",
+    "build:lib": "vite build --config vite.lib.config.ts && vite build --config vite.iife.config.ts",
+    "build:types": "tsc -p tsconfig.lib.json",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },

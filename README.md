@@ -4,17 +4,23 @@ English | [中文](#中文说明)
 
 Ark-waifu is a lightweight TypeScript widget experiment for rendering small character models on web pages. The first MVP targets Ark-Models style Spine 3.8 assets and places a chibi model in the bottom-right corner of the page.
 
-This project does not bundle Arknights official assets. Model files are loaded only from paths supplied by a user-owned manifest.
+The npm/CDN build includes one temporary sample model for out-of-the-box testing. Production use should still load user-owned model files through a manifest.
 
 ## CDN One-Liner
 
-Planned CDN usage after publishing:
+After publishing to npm, the browser IIFE bundle can be used with one script tag:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/ark-waifu/dist/ark-waifu.iife.js" data-manifest="/models/sample/manifest.json"></script>
+<script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.0/dist/ark-waifu.iife.js"></script>
 ```
 
-The current repo is still an MVP app/demo. To make this CDN line work, publish a browser bundle that exposes a global initializer and load model resources from your own manifest path.
+That line auto-loads the packaged sample manifest. To use your own model:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.0/dist/ark-waifu.iife.js" data-manifest="/models/my-operator/manifest.json"></script>
+```
+
+The script also exposes `window.ArkWaifu` with `ArkWaifuWidget`, `mountArkWaifu`, and `loadManifest`.
 
 ## Why Spine First
 
@@ -32,6 +38,8 @@ pnpm install
 pnpm dev
 pnpm typecheck
 pnpm build
+pnpm build:demo
+pnpm build:lib
 pnpm preview
 ```
 
@@ -72,14 +80,14 @@ Models are described by JSON manifests:
 3. Update the manifest paths to point at the `.skel` or `.json`, `.atlas`, and texture `.png` files.
 4. Map widget actions to animation names that exist in that model.
 
-The demo manifest points at `/src/models/sample/` for local testing. The Vite dev middleware serves that folder directly so `.skel`, `.atlas`, and file names containing `#` are not rewritten to `index.html`. For production builds, prefer `public/models/...` or a remote asset host because `src` files are normally part of the application source pipeline.
+The demo manifest points at `/models/sample/`, which is copied from `public/models/sample/` into `dist/models/sample/` during build. The old `/src/models/...` dev path is still supported by local middleware for quick experiments, but production manifests should use static assets or a remote CDN.
 
 ## Current Limits
 
 - MVP supports only `type: "ark-spine"`.
 - No Live2D support yet.
 - No PHP backend or remote model index is included.
-- No official game assets are included.
+- One temporary sample model is included for out-of-the-box testing.
 - Only one widget/model is managed at a time.
 - Texture paths inside `.atlas` still need to be compatible with the served files and browser CORS rules.
 - File names containing `#` must be URL-encoded by the loader as `%23`; the adapter handles this for manifest paths and atlas page names.
@@ -94,26 +102,33 @@ The demo manifest points at `/src/models/sample/` for local testing. The Vite de
 
 Recommended path:
 
-1. Add a library entry such as `src/index.ts` that exports `ArkWaifuWidget` and a small `mountArkWaifu(options)` helper.
-2. Add a Vite library build that emits ESM and IIFE bundles, for example `dist/ark-waifu.es.js` and `dist/ark-waifu.iife.js`.
-3. Add package metadata:
-   - `main`: `dist/ark-waifu.iife.js`
-   - `module`: `dist/ark-waifu.es.js`
-   - `types`: `dist/index.d.ts`
-   - `files`: `["dist", "README.md", "LICENSE"]`
-4. Run `pnpm build`, then publish to npm with `npm publish --access public`.
-5. Use jsDelivr or unpkg:
+1. Run `pnpm build`.
+2. Check the package contents:
+
+```bash
+npm pack --dry-run
+```
+
+3. Publish to npm:
+
+```bash
+npm login
+npm publish --access public
+```
+
+4. Use jsDelivr or unpkg:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.0/dist/ark-waifu.iife.js" data-manifest="/models/sample/manifest.json"></script>
 ```
 
-Model files should be hosted by the site owner, not bundled into the npm package.
+The package currently includes a sample model under `dist/models/sample/` for first-run testing. Real model files should normally be hosted by the site owner and referenced by `data-manifest`.
 
 ## Next Steps
 
 - Add a small manifest registry loader for multiple user-provided manifests.
-- Add the library/IIFE build needed for real one-line CDN usage.
+- Add a small model picker/registry API for multiple user-provided manifests.
+- Add optional `data-action-panel` controls for CDN demos.
 - Improve atlas texture resolution for Ark-Models folder layouts.
 - Add optional drag, click hit testing, and action scheduling.
 - Add Live2D as a separate adapter after the Spine MVP is stable.
@@ -124,17 +139,23 @@ Model files should be hosted by the site owner, not bundled into the npm package
 
 Ark-waifu 是一个轻量网页看板娘框架实验项目。第一阶段 MVP 只面向 Ark-Models 风格的 Spine 3.8 小人，在网页右下角显示模型并支持基础动作切换。
 
-本项目不内置任何明日方舟官方素材。模型文件必须由使用者通过 manifest 指定本地或远程资源路径。
+当前 npm/CDN 构建会临时包含一个测试模型，方便开箱即用。正式使用时仍建议通过 manifest 加载使用者自己托管的模型资源。
 
 ## 一句话 CDN 引入
 
-如果你是新手小白，你可以直接在你的HTML文件的body部分的最后直接加入下面这句话：
+如果你是新手小白，可以直接在 HTML 文件的 `body` 末尾加入下面这一句话：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/ark-waifu/dist/ark-waifu.iife.js" data-manifest="/models/sample/manifest.json"></script>
+<script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.0/dist/ark-waifu.iife.js"></script>
 ```
 
-当前仓库还是 MVP demo。要让这行 CDN 引入真正可用，需要增加浏览器 IIFE 包，并让它读取 `data-manifest` 后自动创建 widget。
+这会自动加载包内置 sample 模型。使用你自己的模型时写：
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.0/dist/ark-waifu.iife.js" data-manifest="/models/my-operator/manifest.json"></script>
+```
+
+脚本会挂载全局对象 `window.ArkWaifu`，提供 `ArkWaifuWidget`、`mountArkWaifu` 和 `loadManifest`。
 
 ## 为什么先做 Spine
 
@@ -152,6 +173,8 @@ pnpm install
 pnpm dev
 pnpm typecheck
 pnpm build
+pnpm build:demo
+pnpm build:lib
 pnpm preview
 ```
 
@@ -192,14 +215,14 @@ pnpm preview
 3. 修改 manifest 中的资源路径。
 4. 将 `actions` 映射到这个模型真实存在的动画名。
 
-demo manifest 当前指向 `/src/models/sample/`，方便本地测试。生产环境建议改为 `/models/...`、远程 CDN 或其他静态资源服务，不建议依赖 `src` 目录。
+demo manifest 当前指向 `/models/sample/`，对应 `public/models/sample/`，构建后会复制到 `dist/models/sample/`。`/src/models/...` 仍可用于本地临时测试，但生产环境应使用静态目录、远程 CDN 或其他资源服务。
 
 ## 当前限制
 
 - MVP 只支持 `type: "ark-spine"`。
 - 暂不支持 Live2D。
 - 不包含 PHP 后端或远程模型索引。
-- 不包含任何官方游戏素材。
+- 当前临时包含一个测试模型，用于开箱即用。
 - 当前只管理一个 widget/model。
 - `.atlas` 里的纹理页名称必须能和 manifest 中的纹理路径匹配。
 - 文件名包含 `#` 时需要按 URL 语义编码为 `%23`；当前 adapter 会处理 manifest 路径和 atlas 页名。
@@ -214,35 +237,37 @@ demo manifest 当前指向 `/src/models/sample/`，方便本地测试。生产�
 
 推荐发布路径：
 
-1. 新增 `src/index.ts`，导出 `ArkWaifuWidget`，并提供一个 `mountArkWaifu(options)` 便捷函数。
-2. 配置 Vite library build，输出：
-   - `dist/ark-waifu.es.js`
-   - `dist/ark-waifu.iife.js`
-3. 在 `package.json` 增加：
-   - `main`: `dist/ark-waifu.iife.js`
-   - `module`: `dist/ark-waifu.es.js`
-   - `types`: `dist/index.d.ts`
-   - `files`: `["dist", "README.md", "LICENSE"]`
-4. 执行 `pnpm build`。
-5. 发布到 npm：
+1. 执行构建：
+
+```bash
+pnpm build
+```
+
+2. 检查 npm 包内容：
+
+```bash
+npm pack --dry-run
+```
+
+3. 发布到 npm：
 
 ```bash
 npm login
 npm publish --access public
 ```
 
-6. 发布后即可通过 jsDelivr 或 unpkg 引入：
+4. 发布后即可通过 jsDelivr 或 unpkg 引入：
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.0/dist/ark-waifu.iife.js" data-manifest="/models/sample/manifest.json"></script>
 ```
 
-模型文件不要随 npm 包发布，应由站点使用者自行托管。
+当前包内置 sample 模型用于首次测试。真实模型文件建议由站点使用者自行托管，并通过 `data-manifest` 指定。
 
 ## 下一步
 
-- 增加多个 manifest 的注册表加载器。
-- 增加真正面向 CDN 的 library/IIFE 构建。
+- 增加多个 manifest 的注册表加载器或模型选择器。
+- 为 CDN demo 增加可选动作按钮面板。
 - 优化 Ark-Models 目录结构下的 atlas 纹理解析。
 - 增加拖拽、点击命中和动作调度。
 - Spine MVP 稳定后，再增加 Live2D adapter。

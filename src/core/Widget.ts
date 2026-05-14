@@ -24,15 +24,41 @@ export class ArkWaifuWidget {
 
     this.root = document.createElement("section");
     this.root.className = ["ark-waifu-widget", this.options.className].filter(Boolean).join(" ");
-    this.root.style.width = `${this.options.width}px`;
-    this.root.style.height = `${this.options.height}px`;
-    this.root.style.zIndex = String(this.options.zIndex);
+    Object.assign(this.root.style, {
+      position: "fixed",
+      right: "24px",
+      bottom: "16px",
+      overflow: "hidden",
+      pointerEvents: "none",
+      width: `${this.options.width}px`,
+      height: `${this.options.height}px`,
+      zIndex: String(this.options.zIndex)
+    });
 
     this.viewport = document.createElement("div");
     this.viewport.className = "ark-waifu-viewport";
+    Object.assign(this.viewport.style, {
+      position: "absolute",
+      inset: "0"
+    });
 
     this.status = document.createElement("div");
     this.status.className = "ark-waifu-status";
+    Object.assign(this.status.style, {
+      position: "absolute",
+      right: "0",
+      bottom: "0",
+      left: "0",
+      margin: "12px",
+      border: "1px solid #d5b46a",
+      borderRadius: "8px",
+      padding: "10px 12px",
+      color: "#593f00",
+      background: "#fff7dd",
+      fontSize: "13px",
+      lineHeight: "1.45",
+      pointerEvents: "auto"
+    });
     this.status.hidden = true;
 
     this.root.append(this.viewport, this.status);

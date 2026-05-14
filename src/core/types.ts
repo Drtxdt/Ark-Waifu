@@ -31,6 +31,16 @@ export type WidgetOptions = {
   className?: string;
 };
 
+export type MountArkWaifuOptions = WidgetOptions & {
+  manifest?: ModelManifest;
+  manifestUrl?: string;
+};
+
+export type MountedArkWaifu = {
+  widget: import("./Widget").ArkWaifuWidget;
+  ready: Promise<void>;
+};
+
 export type AdapterContext = {
   container: HTMLElement;
   width: number;
