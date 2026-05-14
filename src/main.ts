@@ -1,5 +1,5 @@
 import "./style.css";
-import { ChibiDockWidget } from "./core/Widget";
+import { ArkWaifuWidget } from "./core/Widget";
 import sampleManifest from "./registry/sample-manifest.json";
 import type { ModelManifest } from "./core/types";
 
@@ -31,7 +31,7 @@ root.innerHTML = `
 `;
 
 async function bootstrap(): Promise<void> {
-  const widget = new ChibiDockWidget();
+  const widget = new ArkWaifuWidget();
   await widget.load(manifest);
 
   root.querySelectorAll<HTMLButtonElement>("[data-action]").forEach((button) => {

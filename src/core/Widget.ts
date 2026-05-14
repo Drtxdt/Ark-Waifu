@@ -5,7 +5,7 @@ import type { CharacterAdapter, ModelManifest, WidgetOptions } from "./types";
 const DEFAULT_WIDTH = 320;
 const DEFAULT_HEIGHT = 420;
 
-export class ChibiDockWidget {
+export class ArkWaifuWidget {
   private readonly root: HTMLElement;
   private readonly viewport: HTMLElement;
   private readonly status: HTMLElement;

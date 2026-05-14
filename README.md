@@ -94,7 +94,7 @@ The demo manifest points at `/src/models/sample/` for local testing. The Vite de
 
 Recommended path:
 
-1. Add a library entry such as `src/index.ts` that exports `ChibiDockWidget` and a small `mountArkWaifu(options)` helper.
+1. Add a library entry such as `src/index.ts` that exports `ArkWaifuWidget` and a small `mountArkWaifu(options)` helper.
 2. Add a Vite library build that emits ESM and IIFE bundles, for example `dist/ark-waifu.es.js` and `dist/ark-waifu.iife.js`.
 3. Add package metadata:
    - `main`: `dist/ark-waifu.iife.js`
@@ -214,7 +214,7 @@ demo manifest 当前指向 `/src/models/sample/`，方便本地测试。生产�
 
 推荐发布路径：
 
-1. 新增 `src/index.ts`，导出 `ChibiDockWidget`，并提供一个 `mountArkWaifu(options)` 便捷函数。
+1. 新增 `src/index.ts`，导出 `ArkWaifuWidget`，并提供一个 `mountArkWaifu(options)` 便捷函数。
 2. 配置 Vite library build，输出：
    - `dist/ark-waifu.es.js`
    - `dist/ark-waifu.iife.js`
