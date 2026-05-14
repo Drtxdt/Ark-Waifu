@@ -22,6 +22,23 @@ That line auto-loads the packaged sample manifest. To use your own model:
 
 The script also exposes `window.ArkWaifu` with `ArkWaifuWidget`, `mountArkWaifu`, and `loadManifest`.
 
+Optional CDN attributes:
+
+```html
+<script
+  src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.0/dist/ark-waifu.iife.js"
+  data-action-panel="true"
+  data-click-action="touch"
+  data-draggable="true"
+  data-action-schedule='[{"action":"special","intervalMs":30000}]'
+></script>
+```
+
+- `data-action-panel="true"` renders a small action button panel from manifest actions.
+- `data-click-action="touch"` plays an action when the user clicks the visible model bounds. Use `"false"` to disable.
+- `data-draggable="true"` lets the user drag the widget.
+- `data-action-schedule` accepts JSON action timers, for example recurring `special` every 30 seconds.
+
 ## Why Spine First
 
 Traditional `live2d-widget` style projects focus on Live2D and often pair the widget with heavier resource APIs. Ark-Models exports are mainly Spine resources, and many operator chibi assets are Spine 3.8 era files. The first milestone therefore avoids Live2D and PHP backends and proves a minimal browser-side Spine pipeline first.
@@ -73,6 +90,8 @@ Models are described by JSON manifests:
 
 `files.skel` is preferred for Ark-Models style binary skeletons. `files.json` can be used for JSON skeletons when the runtime can parse the export. `actions` maps widget-level action names to real Spine animation names.
 
+For Ark-Models folders, texture pages are resolved in this order: exact manifest texture path, matching texture filename, atlas-relative fallback, then skeleton-relative fallback.
+
 ## Ark-Models Integration
 
 1. Export or locate the operator Spine files from your local Ark-Models copy.
@@ -89,7 +108,7 @@ The demo manifest points at `/models/sample/`, which is copied from `public/mode
 - No PHP backend or remote model index is included.
 - One temporary sample model is included for out-of-the-box testing.
 - Only one widget/model is managed at a time.
-- Texture paths inside `.atlas` still need to be compatible with the served files and browser CORS rules.
+- Texture paths inside `.atlas` are resolved from manifest texture paths, atlas-relative paths, or skeleton-relative paths, but files still need to be served with valid browser CORS rules.
 - File names containing `#` must be URL-encoded by the loader as `%23`; the adapter handles this for manifest paths and atlas page names.
 
 ## Known Issues
@@ -126,11 +145,8 @@ The package currently includes a sample model under `dist/models/sample/` for fi
 
 ## Next Steps
 
-- Add a small manifest registry loader for multiple user-provided manifests.
 - Add a small model picker/registry API for multiple user-provided manifests.
-- Add optional `data-action-panel` controls for CDN demos.
-- Improve atlas texture resolution for Ark-Models folder layouts.
-- Add optional drag, click hit testing, and action scheduling.
+- Improve hit testing from rectangular bounds to actual Spine slot/attachment picking.
 - Add Live2D as a separate adapter after the Spine MVP is stable.
 
 ---
@@ -156,6 +172,23 @@ Ark-waifu 是一个轻量网页看板娘框架实验项目。第一阶段 MVP �
 ```
 
 脚本会挂载全局对象 `window.ArkWaifu`，提供 `ArkWaifuWidget`、`mountArkWaifu` 和 `loadManifest`。
+
+可选 CDN 属性：
+
+```html
+<script
+  src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.0/dist/ark-waifu.iife.js"
+  data-action-panel="true"
+  data-click-action="touch"
+  data-draggable="true"
+  data-action-schedule='[{"action":"special","intervalMs":30000}]'
+></script>
+```
+
+- `data-action-panel="true"` 会根据 manifest actions 生成动作按钮面板。
+- `data-click-action="touch"` 点击模型可见区域时播放指定动作；设为 `"false"` 可关闭。
+- `data-draggable="true"` 允许拖拽看板娘。
+- `data-action-schedule` 接收 JSON 动作定时配置，例如每 30 秒播放一次 `special`。
 
 ## 为什么先做 Spine
 
@@ -208,6 +241,8 @@ pnpm preview
 
 `files.skel` 优先用于 Ark-Models 常见的二进制骨骼文件。`files.json` 可用于 JSON 骨骼文件。`actions` 用来把 widget 层动作名映射到真实 Spine 动画名。
 
+针对 Ark-Models 目录，纹理页按以下顺序解析：manifest 中的完整纹理路径、同名文件匹配、相对 atlas 路径、相对 skeleton 路径。
+
 ## 接入 Ark-Models
 
 1. 从你本地的 Ark-Models 资源中找到或导出某个角色的 Spine 文件。
@@ -224,7 +259,7 @@ demo manifest 当前指向 `/models/sample/`，对应 `public/models/sample/`，
 - 不包含 PHP 后端或远程模型索引。
 - 当前临时包含一个测试模型，用于开箱即用。
 - 当前只管理一个 widget/model。
-- `.atlas` 里的纹理页名称必须能和 manifest 中的纹理路径匹配。
+- `.atlas` 里的纹理页会按 manifest、atlas 相对路径、skeleton 相对路径解析，但资源服务仍需满足浏览器 CORS 要求。
 - 文件名包含 `#` 时需要按 URL 语义编码为 `%23`；当前 adapter 会处理 manifest 路径和 atlas 页名。
 
 ## 已知问题
@@ -267,7 +302,7 @@ npm publish --access public
 ## 下一步
 
 - 增加多个 manifest 的注册表加载器或模型选择器。
-- 为 CDN demo 增加可选动作按钮面板。
+- 将点击命中从矩形边界升级为 Spine slot/attachment 级命中。
 - 优化 Ark-Models 目录结构下的 atlas 纹理解析。
 - 增加拖拽、点击命中和动作调度。
 - Spine MVP 稳定后，再增加 Live2D adapter。

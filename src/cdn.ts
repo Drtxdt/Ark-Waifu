@@ -33,7 +33,12 @@ if (currentScript?.dataset.auto !== "false") {
       manifestUrl,
       width: readNumberDataset(currentScript, "width"),
       height: readNumberDataset(currentScript, "height"),
-      zIndex: readNumberDataset(currentScript, "zIndex")
+      zIndex: readNumberDataset(currentScript, "zIndex"),
+      draggable: readBooleanDataset(currentScript, "draggable", true),
+      hitTest: readBooleanDataset(currentScript, "hitTest", true),
+      clickAction: readStringOrFalseDataset(currentScript, "clickAction", "touch"),
+      actionSchedule: readJsonDataset(currentScript, "actionSchedule"),
+      actionPanel: readBooleanDataset(currentScript, "actionPanel", false)
     };
 
     const { ready } = mountArkWaifu(options);
@@ -65,4 +70,48 @@ function readNumberDataset(script: HTMLScriptElement | null, key: string): numbe
 
   const parsed = Number(value);
   return Number.isFinite(parsed) ? parsed : undefined;
+}
+
+function readBooleanDataset(
+  script: HTMLScriptElement | null,
+  key: string,
+  defaultValue: boolean
+): boolean {
+  const value = script?.dataset[key];
+  if (value === undefined) {
+    return defaultValue;
+  }
+
+  return value !== "false" && value !== "0";
+}
+
+function readStringOrFalseDataset(
+  script: HTMLScriptElement | null,
+  key: string,
+  defaultValue: string | false
+): string | false {
+  const value = script?.dataset[key];
+  if (value === undefined) {
+    return defaultValue;
+  }
+
+  return value === "false" ? false : value;
+}
+
+function readJsonDataset<T>(script: HTMLScriptElement | null, key: string): T | undefined {
+  const value = script?.dataset[key];
+  if (!value) {
+    return undefined;
+  }
+
+  try {
+    return JSON.parse(value) as T;
+  } catch (error) {
+    console.warn(`[Ark-waifu] Ignoring invalid data-${toKebabCase(key)} JSON.`, error);
+    return undefined;
+  }
+}
+
+function toKebabCase(value: string): string {
+  return value.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
 }

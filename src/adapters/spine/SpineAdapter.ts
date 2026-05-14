@@ -88,6 +88,15 @@ export class SpineAdapter implements CharacterAdapter {
     this.applyTransform();
   }
 
+  hitTest(x: number, y: number): boolean {
+    if (!this.spine) {
+      return false;
+    }
+
+    const bounds = this.spine.getBounds(false);
+    return bounds.contains(x, y);
+  }
+
   destroy(): void {
     this.spine = null;
 
@@ -112,7 +121,7 @@ export class SpineAdapter implements CharacterAdapter {
       crossOrigin: "anonymous",
       metadata: {
         spineAtlasFile: encodeAssetUrl(manifest.files.atlas),
-        imageLoader: createManifestImageLoader(manifest.files.textures)
+        imageLoader: createManifestImageLoader(manifest.files.textures, manifest.files.atlas)
       }
     };
 
@@ -175,7 +184,7 @@ export class SpineAdapter implements CharacterAdapter {
   }
 }
 
-function createManifestImageLoader(textureUrls: string[]) {
+function createManifestImageLoader(textureUrls: string[], atlasUrl: string) {
   return (
     loader: PIXI.Loader,
     namePrefix: string,
@@ -183,7 +192,7 @@ function createManifestImageLoader(textureUrls: string[]) {
     imageOptions: PIXI.IAddOptions
   ) => {
     return (line: string, callback: (baseTexture: PIXI.BaseTexture | null) => void): void => {
-      const textureUrl = resolveTextureUrl(textureUrls, line, baseUrl);
+      const textureUrl = resolveTextureUrl(textureUrls, line, baseUrl, atlasUrl);
       const resourceName = `${namePrefix}${line}`;
       const cachedResource = loader.resources[resourceName];
 
@@ -207,23 +216,64 @@ function createManifestImageLoader(textureUrls: string[]) {
   };
 }
 
-function resolveTextureUrl(textureUrls: string[], atlasPageName: string, baseUrl: string): string {
-  const matchedTexture = textureUrls.find(
-    (textureUrl) => getDecodedFileName(textureUrl) === atlasPageName
-  );
+function resolveTextureUrl(
+  textureUrls: string[],
+  atlasPageName: string,
+  skeletonBaseUrl: string,
+  atlasUrl: string
+): string {
+  const normalizedAtlasPageName = normalizeAssetPath(atlasPageName);
+  const matchedTexture = textureUrls.find((textureUrl) => {
+    const normalizedTextureUrl = normalizeAssetPath(textureUrl);
+    return (
+      normalizedTextureUrl === normalizedAtlasPageName ||
+      getDecodedFileName(normalizedTextureUrl) === getDecodedFileName(normalizedAtlasPageName)
+    );
+  });
 
   if (matchedTexture) {
     return encodeAssetUrl(matchedTexture);
   }
 
-  const normalizedBaseUrl = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
-  return encodeAssetUrl(`${normalizedBaseUrl}${atlasPageName}`);
+  const atlasBaseUrl = getBaseUrl(atlasUrl);
+  if (atlasBaseUrl) {
+    return resolveAgainstBase(normalizedAtlasPageName, atlasBaseUrl);
+  }
+
+  const normalizedBaseUrl = skeletonBaseUrl.endsWith("/") ? skeletonBaseUrl : `${skeletonBaseUrl}/`;
+  return resolveAgainstBase(normalizedAtlasPageName, normalizedBaseUrl);
 }
 
 function getDecodedFileName(url: string): string {
-  const path = url.split(/[?#]/)[0] ?? url;
+  const path = normalizeAssetPath(url).split(/[?#]/)[0] ?? url;
   const fileName = path.substring(path.lastIndexOf("/") + 1);
   return decodeURIComponent(fileName);
+}
+
+function getBaseUrl(url: string): string | null {
+  try {
+    return new URL(".", encodeAssetUrl(url)).href;
+  } catch {
+    const normalizedUrl = normalizeAssetPath(url);
+    const slashIndex = normalizedUrl.lastIndexOf("/");
+    return slashIndex >= 0 ? normalizedUrl.slice(0, slashIndex + 1) : null;
+  }
+}
+
+function normalizeAssetPath(url: string): string {
+  return url.replace(/\\/g, "/");
+}
+
+function resolveAgainstBase(assetUrl: string, baseUrl: string): string {
+  const encodedAssetUrl = encodeAssetUrl(assetUrl);
+  const encodedBaseUrl = encodeAssetUrl(baseUrl);
+
+  try {
+    return new URL(encodedAssetUrl, encodedBaseUrl).href;
+  } catch {
+    const normalizedBaseUrl = encodedBaseUrl.endsWith("/") ? encodedBaseUrl : `${encodedBaseUrl}/`;
+    return `${normalizedBaseUrl}${encodedAssetUrl}`;
+  }
 }
 
 function encodeAssetUrl(url: string): string {

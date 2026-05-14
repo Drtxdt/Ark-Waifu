@@ -16,7 +16,8 @@ function localModelDevServer(): Plugin {
     name: "ark-waifu-local-model-dev-server",
     apply: "serve",
     configureServer(server) {
-      const modelsRoot = path.resolve(process.cwd(), "src", "models");
+      const srcModelsRoot = path.resolve(process.cwd(), "src", "models");
+      const publicModelsRoot = path.resolve(process.cwd(), "public", "models");
 
       server.middlewares.use((request, response, next) => {
         if (!request.url) {
@@ -28,15 +29,16 @@ function localModelDevServer(): Plugin {
           new URL(request.url, "http://localhost").pathname
         );
 
-        if (!requestPath.startsWith("/src/models/")) {
+        const modelRoute = getModelRoute(requestPath);
+        if (!modelRoute) {
           next();
           return;
         }
 
-        const relativePath = requestPath.slice("/src/models/".length);
-        const filePath = path.resolve(modelsRoot, relativePath);
+        const modelsRoot = modelRoute.kind === "src" ? srcModelsRoot : publicModelsRoot;
+        const filePath = path.resolve(modelsRoot, modelRoute.relativePath);
 
-        if (!filePath.startsWith(`${modelsRoot}${path.sep}`)) {
+        if (!isInsideDirectory(filePath, modelsRoot)) {
           response.statusCode = 403;
           response.end("Forbidden model path.");
           return;
@@ -61,6 +63,29 @@ function localModelDevServer(): Plugin {
       });
     }
   };
+}
+
+function getModelRoute(requestPath: string): { kind: "src" | "public"; relativePath: string } | null {
+  if (requestPath.startsWith("/src/models/")) {
+    return {
+      kind: "src",
+      relativePath: requestPath.slice("/src/models/".length)
+    };
+  }
+
+  if (requestPath.startsWith("/models/")) {
+    return {
+      kind: "public",
+      relativePath: requestPath.slice("/models/".length)
+    };
+  }
+
+  return null;
+}
+
+function isInsideDirectory(filePath: string, directory: string): boolean {
+  const relativePath = path.relative(directory, filePath);
+  return Boolean(relativePath) && !relativePath.startsWith("..") && !path.isAbsolute(relativePath);
 }
 
 function getContentType(filePath: string): string {
