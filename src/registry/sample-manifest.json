@@ -1,0 +1,25 @@
+{
+  "id": "sample-ark-operator",
+  "name": "Sample Ark Operator",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/src/models/sample/build_char_291_aglina_summer#5.skel",
+    "atlas": "/src/models/sample/build_char_291_aglina_summer#5.atlas",
+    "textures": ["/src/models/sample/build_char_291_aglina_summer#5.png"]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1.0
+  }
+}
