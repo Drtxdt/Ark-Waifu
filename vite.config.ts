@@ -18,6 +18,7 @@ function localModelDevServer(): Plugin {
     configureServer(server) {
       const srcModelsRoot = path.resolve(process.cwd(), "src", "models");
       const publicModelsRoot = path.resolve(process.cwd(), "public", "models");
+      const arkModelsRoot = path.resolve(process.cwd(), "Ark-Models");
 
       server.middlewares.use((request, response, next) => {
         if (!request.url) {
@@ -35,7 +36,12 @@ function localModelDevServer(): Plugin {
           return;
         }
 
-        const modelsRoot = modelRoute.kind === "src" ? srcModelsRoot : publicModelsRoot;
+        const modelsRoot =
+          modelRoute.kind === "src"
+            ? srcModelsRoot
+            : modelRoute.kind === "ark"
+              ? arkModelsRoot
+              : publicModelsRoot;
         const filePath = path.resolve(modelsRoot, modelRoute.relativePath);
 
         if (!isInsideDirectory(filePath, modelsRoot)) {
@@ -65,11 +71,20 @@ function localModelDevServer(): Plugin {
   };
 }
 
-function getModelRoute(requestPath: string): { kind: "src" | "public"; relativePath: string } | null {
+function getModelRoute(
+  requestPath: string
+): { kind: "src" | "public" | "ark"; relativePath: string } | null {
   if (requestPath.startsWith("/src/models/")) {
     return {
       kind: "src",
       relativePath: requestPath.slice("/src/models/".length)
+    };
+  }
+
+  if (requestPath.startsWith("/Ark-Models/")) {
+    return {
+      kind: "ark",
+      relativePath: requestPath.slice("/Ark-Models/".length)
     };
   }
 
@@ -98,6 +113,8 @@ function getContentType(filePath: string): string {
       return "image/png";
     case ".skel":
       return "application/octet-stream";
+    case ".json":
+      return "application/json; charset=utf-8";
     default:
       return "application/octet-stream";
   }

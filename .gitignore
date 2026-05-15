@@ -34,3 +34,12 @@ Thumbs.db
 .edge-profile/
 edge-screenshot.png
 
+*.zip
+
+# Local Ark-Models checkout and generated scan output
+Ark-Models/
+registry/
+
+# Keep demo registry under public/ when intentionally generated
+!public/registry/
+!public/registry/*.json

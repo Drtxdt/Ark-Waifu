@@ -7,9 +7,11 @@ export type {
   ModelFiles,
   ModelManifest,
   ModelPosition,
+  ModelRegistry,
   ModelType,
   MountedArkWaifu,
   MountArkWaifuOptions,
+  ScannedModelManifest,
   WidgetOptions
 } from "./core/types";
 

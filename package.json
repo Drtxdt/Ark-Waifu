@@ -20,12 +20,17 @@
       "default": "./dist/ark-waifu.es.js"
     }
   },
+  "bin": {
+    "ark-waifu": "./dist/cli/ark-waifu.js"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "pnpm typecheck && pnpm build:demo && pnpm build:lib && pnpm build:types",
+    "build": "pnpm typecheck && pnpm build:demo && pnpm build:lib && pnpm build:cli && pnpm build:types",
     "build:demo": "vite build",
     "build:lib": "vite build --config vite.lib.config.ts && vite build --config vite.iife.config.ts",
+    "build:cli": "tsc -p tsconfig.cli.json",
     "build:types": "tsc -p tsconfig.lib.json",
+    "ark-waifu": "pnpm build:cli && node ./dist/cli/ark-waifu.js",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
@@ -34,6 +39,7 @@
     "pixi.js": "^6.5.10"
   },
   "devDependencies": {
+    "@types/node": "^20.17.10",
     "typescript": "^5.4.5",
     "vite": "^5.4.11"
   },

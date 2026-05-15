@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-15T08:39:27.081Z",
+  "baseUrl": "/models",
+  "operators": [
+    {
+      "id": "sample-build-char-291-aglina-summer-5",
+      "name": "char 291 aglina summer#5",
+      "type": "ark-spine",
+      "version": "spine-3.8",
+      "files": {
+        "skel": "/models/sample/build_char_291_aglina_summer%235.skel",
+        "atlas": "/models/sample/build_char_291_aglina_summer%235.atlas",
+        "textures": [
+          "/models/sample/build_char_291_aglina_summer%235.png"
+        ]
+      },
+      "actions": {
+        "idle": "Default",
+        "touch": "Interact",
+        "walk": "Move",
+        "relax": "Relax",
+        "sit": "Sit",
+        "sleep": "Sleep",
+        "special": "Special"
+      },
+      "scale": 0.5,
+      "position": {
+        "x": 0.5,
+        "y": 1
+      },
+      "category": "sample",
+      "relativeDir": "sample",
+      "sourceFiles": {
+        "skeleton": "sample/build_char_291_aglina_summer#5.skel",
+        "atlas": "sample/build_char_291_aglina_summer#5.atlas",
+        "textures": [
+          "sample/build_char_291_aglina_summer#5.png"
+        ]
+      },
+      "searchText": "char 291 aglina summer#5 build_char_291_aglina_summer#5 sample default interact move relax sit sleep special"
+    }
+  ]
+}

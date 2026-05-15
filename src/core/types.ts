@@ -23,6 +23,26 @@ export type ModelManifest = {
   position?: ModelPosition;
 };
 
+export type ScannedModelManifest = ModelManifest & {
+  category?: string;
+  relativeDir: string;
+  sourceFiles: {
+    skeleton: string;
+    atlas: string;
+    textures: string[];
+  };
+  displayName?: string;
+  searchText?: string;
+  warnings?: string[];
+};
+
+export type ModelRegistry = {
+  version: 1;
+  generatedAt: string;
+  baseUrl: string;
+  operators: ScannedModelManifest[];
+};
+
 export type ActionScheduleItem = {
   action: string;
   delayMs?: number;

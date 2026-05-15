@@ -1,14 +1,18 @@
 import * as PIXI from "pixi.js";
-import { Spine } from "@pixi-spine/all-3.8";
+import {
+  AtlasAttachmentLoader,
+  SkeletonBinary,
+  SkeletonJson,
+  Spine,
+  TextureAtlas
+} from "@pixi-spine/all-3.8";
 import type { AdapterContext, CharacterAdapter, ModelManifest } from "../../core/types";
-
-type SpineLoaderResource = PIXI.LoaderResource & {
-  spineData?: ConstructorParameters<typeof Spine>[0];
-};
 
 export class SpineAdapter implements CharacterAdapter {
   private app: PIXI.Application | null = null;
   private spine: Spine | null = null;
+  private atlas: TextureAtlas | null = null;
+  private readonly baseTextures: PIXI.BaseTexture[] = [];
   private manifest: ModelManifest | null = null;
   private readonly context: AdapterContext;
 
@@ -37,13 +41,18 @@ export class SpineAdapter implements CharacterAdapter {
       throw new Error(`Manifest "${manifest.id}" has no skeleton file.`);
     }
 
-    const spineData = await this.loadSpineData(manifest, skeletonUrl);
-    this.spine = new Spine(spineData);
-    this.spine.autoUpdate = true;
-    this.app.stage.addChild(this.spine);
-    this.play("idle");
-    this.spine.update(0);
-    this.applyTransform();
+    try {
+      const spineData = await this.loadSpineData(manifest, skeletonUrl);
+      this.spine = new Spine(spineData);
+      this.spine.autoUpdate = true;
+      this.app.stage.addChild(this.spine);
+      this.play("idle");
+      this.spine.update(0);
+      this.applyTransform();
+    } catch (error) {
+      this.destroy();
+      throw error;
+    }
   }
 
   play(action: string): void {
@@ -108,51 +117,89 @@ export class SpineAdapter implements CharacterAdapter {
       });
       this.app = null;
     }
+
+    this.atlas?.dispose();
+    this.atlas = null;
+
+    while (this.baseTextures.length > 0) {
+      this.baseTextures.pop()?.destroy();
+    }
   }
 
   private async loadSpineData(
     manifest: ModelManifest,
     skeletonUrl: string
   ): Promise<ConstructorParameters<typeof Spine>[0]> {
-    const loader = new PIXI.Loader();
     const encodedSkeletonUrl = encodeAssetUrl(skeletonUrl);
     const isBinary = encodedSkeletonUrl.toLowerCase().endsWith(".skel");
-    const addOptions: PIXI.IAddOptions = {
-      crossOrigin: "anonymous",
-      metadata: {
-        spineAtlasFile: encodeAssetUrl(manifest.files.atlas),
-        imageLoader: createManifestImageLoader(manifest.files.textures, manifest.files.atlas)
+    const atlasText = await fetchText(manifest.files.atlas, "atlas", manifest.id);
+    const atlas = await this.createTextureAtlas(manifest, skeletonUrl, atlasText);
+    const attachmentLoader = new AtlasAttachmentLoader(atlas);
+
+    try {
+      if (isBinary) {
+        const buffer = await fetchArrayBuffer(encodedSkeletonUrl, "skeleton", manifest.id);
+        return new SkeletonBinary(attachmentLoader).readSkeletonData(new Uint8Array(buffer));
       }
-    };
 
-    if (isBinary) {
-      addOptions.xhrType = PIXI.LoaderResource.XHR_RESPONSE_TYPE.BUFFER;
+      const skeletonText = await fetchText(encodedSkeletonUrl, "skeleton", manifest.id);
+      const skeletonJson = JSON.parse(skeletonText) as unknown;
+      return new SkeletonJson(attachmentLoader).readSkeletonData(skeletonJson);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new Error(
+        `Failed to parse Spine data for "${manifest.id}". Current runtime expects Spine 3.8 assets. ${message}`
+      );
     }
+  }
 
-    loader.add(manifest.id, encodedSkeletonUrl, addOptions);
+  private async createTextureAtlas(
+    manifest: ModelManifest,
+    skeletonUrl: string,
+    atlasText: string
+  ): Promise<TextureAtlas> {
+    const atlas = await new Promise<TextureAtlas>((resolve, reject) => {
+      let settled = false;
+      const fail = (error: unknown): void => {
+        if (!settled) {
+          settled = true;
+          reject(error);
+        }
+      };
 
-    const resources = await new Promise<Record<string, PIXI.LoaderResource>>((resolve, reject) => {
-      loader.onError.once((_error, _loader, resource) => {
-        reject(
-          new Error(
-            `Failed to load Spine resource "${resource?.url ?? skeletonUrl}". Check manifest paths and CORS settings.`
-          )
+      const textureLoader = (line: string, callback: (baseTexture: PIXI.BaseTexture) => void): void => {
+        const textureUrl = resolveTextureUrl(
+          manifest.files.textures,
+          line,
+          getBaseUrl(skeletonUrl) ?? globalThis.location.href,
+          manifest.files.atlas
         );
-      });
 
-      loader.load((_loader, resourcesByName) => {
-        resolve(resourcesByName);
+        loadBaseTexture(textureUrl)
+          .then((baseTexture) => {
+            this.baseTextures.push(baseTexture);
+            callback(baseTexture);
+          })
+          .catch((error: unknown) => {
+            const message = error instanceof Error ? error.message : String(error);
+            fail(
+              new Error(
+                `Failed to load atlas texture page "${line}" from "${textureUrl}" for "${manifest.id}": ${message}`
+              )
+            );
+          });
+      };
+
+      new TextureAtlas(atlasText, textureLoader, (loadedAtlas) => {
+        if (!settled) {
+          settled = true;
+          resolve(loadedAtlas);
+        }
       });
     });
 
-    const resource = resources[manifest.id] as SpineLoaderResource | undefined;
-    if (!resource?.spineData) {
-      throw new Error(
-        `Spine data was not parsed for "${manifest.id}". Current MVP expects Spine 3.8 assets loadable by @pixi-spine/all-3.8.`
-      );
-    }
-
-    return resource.spineData;
+    this.atlas = atlas;
+    return atlas;
   }
 
   private applyTransform(): void {
@@ -184,38 +231,6 @@ export class SpineAdapter implements CharacterAdapter {
   }
 }
 
-function createManifestImageLoader(textureUrls: string[], atlasUrl: string) {
-  return (
-    loader: PIXI.Loader,
-    namePrefix: string,
-    baseUrl: string,
-    imageOptions: PIXI.IAddOptions
-  ) => {
-    return (line: string, callback: (baseTexture: PIXI.BaseTexture | null) => void): void => {
-      const textureUrl = resolveTextureUrl(textureUrls, line, baseUrl, atlasUrl);
-      const resourceName = `${namePrefix}${line}`;
-      const cachedResource = loader.resources[resourceName];
-
-      if (cachedResource?.texture?.baseTexture) {
-        callback(cachedResource.texture.baseTexture);
-        return;
-      }
-
-      loader.add(resourceName, textureUrl, imageOptions, (resource) => {
-        if (resource.error || !resource.texture?.baseTexture) {
-          console.warn(
-            `[Ark-waifu] Failed to load texture page "${line}" from "${textureUrl}".`
-          );
-          callback(null);
-          return;
-        }
-
-        callback(resource.texture.baseTexture);
-      });
-    };
-  };
-}
-
 function resolveTextureUrl(
   textureUrls: string[],
   atlasPageName: string,
@@ -245,7 +260,7 @@ function resolveTextureUrl(
 }
 
 function getDecodedFileName(url: string): string {
-  const path = normalizeAssetPath(url).split(/[?#]/)[0] ?? url;
+  const path = stripQueryAndHash(normalizeAssetPath(url));
   const fileName = path.substring(path.lastIndexOf("/") + 1);
   return decodeURIComponent(fileName);
 }
@@ -264,6 +279,11 @@ function normalizeAssetPath(url: string): string {
   return url.replace(/\\/g, "/");
 }
 
+function stripQueryAndHash(url: string): string {
+  const queryIndex = url.indexOf("?");
+  return queryIndex >= 0 ? url.slice(0, queryIndex) : url;
+}
+
 function resolveAgainstBase(assetUrl: string, baseUrl: string): string {
   const encodedAssetUrl = encodeAssetUrl(assetUrl);
   const encodedBaseUrl = encodeAssetUrl(baseUrl);
@@ -278,4 +298,70 @@ function resolveAgainstBase(assetUrl: string, baseUrl: string): string {
 
 function encodeAssetUrl(url: string): string {
   return url.replace(/#/g, "%23").replace(/ /g, "%20");
+}
+
+async function fetchText(url: string, label: string, manifestId: string): Promise<string> {
+  const encodedUrl = encodeAssetUrl(url);
+  const response = await fetch(encodedUrl);
+
+  if (!response.ok) {
+    throw new Error(
+      `Failed to load ${label} "${encodedUrl}" for "${manifestId}": ${response.status} ${response.statusText}.`
+    );
+  }
+
+  const text = await response.text();
+
+  if (looksLikeHtml(text)) {
+    throw new Error(
+      `Loaded ${label} "${encodedUrl}" for "${manifestId}" as HTML. Check static routing, baseUrl, and MIME handling.`
+    );
+  }
+
+  return text;
+}
+
+async function fetchArrayBuffer(
+  url: string,
+  label: string,
+  manifestId: string
+): Promise<ArrayBuffer> {
+  const encodedUrl = encodeAssetUrl(url);
+  const response = await fetch(encodedUrl);
+
+  if (!response.ok) {
+    throw new Error(
+      `Failed to load ${label} "${encodedUrl}" for "${manifestId}": ${response.status} ${response.statusText}.`
+    );
+  }
+
+  const contentType = response.headers.get("content-type") ?? "";
+
+  if (contentType.includes("text/html")) {
+    throw new Error(
+      `Loaded ${label} "${encodedUrl}" for "${manifestId}" as HTML. Check static routing, baseUrl, and MIME handling.`
+    );
+  }
+
+  return response.arrayBuffer();
+}
+
+function loadBaseTexture(url: string): Promise<PIXI.BaseTexture> {
+  const encodedUrl = encodeAssetUrl(url);
+
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.crossOrigin = "anonymous";
+    image.onload = () => {
+      resolve(PIXI.BaseTexture.from(image));
+    };
+    image.onerror = () => {
+      reject(new Error(`Image load failed: ${encodedUrl}`));
+    };
+    image.src = encodedUrl;
+  });
+}
+
+function looksLikeHtml(text: string): boolean {
+  return /^\s*<!doctype html|^\s*<html[\s>]/i.test(text);
 }
