@@ -68,10 +68,10 @@ mounted.ready.catch((error) => {
 
 ```html
 <script
-    src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.2/dist/ark-waifu.iife.js"
+    src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.4/dist/ark-waifu.iife.js"
     data-registry="/registry/operators.json"
     data-model="models-358-lisa-build-char-358-lisa"
-    data-cdn="jsdelivr"
+    data-cdn="osyb"
   ></script>
 ```
 

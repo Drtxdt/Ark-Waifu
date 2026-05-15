@@ -22,9 +22,10 @@ type RegistryControllerState = {
   registry: ModelRegistry;
   assetBaseUrl?: string;
   selected: ScannedModelManifest;
+  matches: ScannedModelManifest[];
   panel: HTMLElement;
   searchInput: HTMLInputElement;
-  select: HTMLSelectElement;
+  datalist: HTMLDataListElement;
   actions: HTMLElement;
   status: HTMLElement;
 };
@@ -138,25 +139,38 @@ async function autoMountRegistryController(
     registry,
     assetBaseUrl,
     selected: initialModel,
+    matches: registry.operators,
     panel,
     searchInput: panel.querySelector<HTMLInputElement>("[data-ark-waifu-search]")!,
-    select: panel.querySelector<HTMLSelectElement>("[data-ark-waifu-select]")!,
+    datalist: panel.querySelector<HTMLDataListElement>("[data-ark-waifu-list]")!,
     actions: panel.querySelector<HTMLElement>("[data-ark-waifu-actions]")!,
     status: panel.querySelector<HTMLElement>("[data-ark-waifu-status]")!
   };
 
   state.searchInput.addEventListener("input", () => {
-    renderModelOptions(state, state.searchInput.value);
+    renderModelSuggestions(state, state.searchInput.value);
   });
-  state.select.addEventListener("change", () => {
-    const model = findModel(registry, state.select.value);
+  state.searchInput.addEventListener("change", () => {
+    const model = findSearchModel(state, state.searchInput.value);
+
+    if (model) {
+      void loadControllerModel(state, model);
+    }
+  });
+  state.searchInput.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") {
+      return;
+    }
+
+    event.preventDefault();
+    const model = findSearchModel(state, state.searchInput.value) ?? state.matches[0];
 
     if (model) {
       void loadControllerModel(state, model);
     }
   });
 
-  renderModelOptions(state, "");
+  renderModelSuggestions(state, "");
   await loadControllerModel(state, initialModel);
 }
 
@@ -165,7 +179,7 @@ async function loadControllerModel(
   model: ScannedModelManifest
 ): Promise<void> {
   state.selected = model;
-  state.select.value = model.id;
+  state.searchInput.value = model.name;
   state.status.textContent = `Loading ${model.name}...`;
   state.actions.innerHTML = "";
 
@@ -181,31 +195,27 @@ async function loadControllerModel(
   }
 }
 
-function renderModelOptions(state: RegistryControllerState, term: string): void {
+function renderModelSuggestions(state: RegistryControllerState, term: string): void {
   const query = term.trim().toLowerCase();
-  const matchedModels = query
+  state.matches = query
     ? state.registry.operators.filter((model) =>
         (model.searchText ?? createSearchText(model)).includes(query)
       )
     : state.registry.operators;
 
-  state.select.innerHTML = "";
+  state.datalist.innerHTML = "";
 
-  matchedModels.slice(0, 300).forEach((model) => {
+  state.matches.slice(0, 80).forEach((model) => {
     const option = document.createElement("option");
-    option.value = model.id;
-    option.textContent = model.name;
-    option.selected = model.id === state.selected.id;
-    state.select.appendChild(option);
+    option.value = model.name;
+    option.label = model.id;
+    state.datalist.appendChild(option);
   });
 
-  if (!matchedModels.some((model) => model.id === state.selected.id)) {
-    const option = document.createElement("option");
-    option.value = state.selected.id;
-    option.textContent = state.selected.name;
-    option.selected = true;
-    state.select.insertBefore(option, state.select.firstChild);
-  }
+  state.status.textContent =
+    state.matches.length > 0
+      ? `${state.matches.length} model(s). Select a suggestion or press Enter.`
+      : "No matching model.";
 }
 
 function renderActionButtons(state: RegistryControllerState, manifest: ModelManifest): void {
@@ -245,30 +255,27 @@ function createRegistryPanel(): HTMLElement {
   });
 
   panel.innerHTML = `
-    <input data-ark-waifu-search type="search" placeholder="Search model..." />
-    <select data-ark-waifu-select></select>
+    <input data-ark-waifu-search type="search" list="ark-waifu-model-list" placeholder="Search model..." />
+    <datalist id="ark-waifu-model-list" data-ark-waifu-list></datalist>
     <div data-ark-waifu-actions></div>
     <div data-ark-waifu-status></div>
   `;
 
   const input = panel.querySelector<HTMLInputElement>("[data-ark-waifu-search]");
-  const select = panel.querySelector<HTMLSelectElement>("[data-ark-waifu-select]");
   const actions = panel.querySelector<HTMLElement>("[data-ark-waifu-actions]");
   const status = panel.querySelector<HTMLElement>("[data-ark-waifu-status]");
 
-  [input, select].forEach((element) => {
-    if (element) {
-      Object.assign(element.style, {
-        width: "100%",
-        border: "1px solid #cad3df",
-        borderRadius: "8px",
-        padding: "8px 10px",
-        color: "#20242a",
-        background: "#ffffff",
-        font: "12px system-ui, sans-serif"
-      });
-    }
-  });
+  if (input) {
+    Object.assign(input.style, {
+      width: "100%",
+      border: "1px solid #cad3df",
+      borderRadius: "8px",
+      padding: "8px 10px",
+      color: "#20242a",
+      background: "#ffffff",
+      font: "12px system-ui, sans-serif"
+    });
+  }
 
   if (actions) {
     Object.assign(actions.style, {
@@ -324,6 +331,24 @@ function findModel(
   modelId: string | undefined
 ): ScannedModelManifest | undefined {
   return modelId ? registry.operators.find((model) => model.id === modelId) : undefined;
+}
+
+function findSearchModel(
+  state: RegistryControllerState,
+  value: string
+): ScannedModelManifest | undefined {
+  const query = value.trim().toLowerCase();
+
+  if (!query) {
+    return undefined;
+  }
+
+  return (
+    state.registry.operators.find(
+      (model) => model.name.toLowerCase() === query || model.id.toLowerCase() === query
+    ) ??
+    state.matches.find((model) => (model.searchText ?? createSearchText(model)).includes(query))
+  );
 }
 
 function createSearchText(model: ScannedModelManifest): string {
