@@ -38,7 +38,7 @@ edge-screenshot.png
 
 # Local Ark-Models checkout and generated scan output
 Ark-Models/
-registry/
+/registry/
 
 # Keep demo registry under public/ when intentionally generated
 !public/registry/
