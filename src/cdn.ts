@@ -179,7 +179,7 @@ async function loadControllerModel(
   model: ScannedModelManifest
 ): Promise<void> {
   state.selected = model;
-  state.searchInput.value = model.name;
+  state.searchInput.value = createModelInputValue(model);
   state.status.textContent = `Loading ${model.name}...`;
   state.actions.innerHTML = "";
 
@@ -207,7 +207,7 @@ function renderModelSuggestions(state: RegistryControllerState, term: string): v
 
   state.matches.slice(0, 80).forEach((model) => {
     const option = document.createElement("option");
-    option.value = model.name;
+    option.value = createModelInputValue(model);
     option.label = model.id;
     state.datalist.appendChild(option);
   });
@@ -345,10 +345,25 @@ function findSearchModel(
 
   return (
     state.registry.operators.find(
-      (model) => model.name.toLowerCase() === query || model.id.toLowerCase() === query
+      (model) =>
+        model.id.toLowerCase() === query ||
+        createModelInputValue(model).toLowerCase() === query
     ) ??
+    findUniqueNameMatch(state, query) ??
     state.matches.find((model) => (model.searchText ?? createSearchText(model)).includes(query))
   );
+}
+
+function findUniqueNameMatch(
+  state: RegistryControllerState,
+  query: string
+): ScannedModelManifest | undefined {
+  const matches = state.registry.operators.filter((model) => model.name.toLowerCase() === query);
+  return matches.length === 1 ? matches[0] : undefined;
+}
+
+function createModelInputValue(model: ScannedModelManifest): string {
+  return `${model.name} | ${model.relativeDir} | ${model.id}`;
 }
 
 function createSearchText(model: ScannedModelManifest): string {

@@ -68,7 +68,7 @@ mounted.ready.catch((error) => {
 
 ```html
 <script
-    src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.5/dist/ark-waifu.iife.js"
+    src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.6/dist/ark-waifu.iife.js"
     data-registry="/registry/operators.json"
     data-model="models-358-lisa-build-char-358-lisa"
     data-cdn="osyb"
@@ -161,6 +161,34 @@ pnpm typecheck
 pnpm build
 pnpm preview
 ```
+
+### 本地测试 CDN/IIFE 版本
+
+`pnpm dev` 测的是源码入口，不等同于 npm CDN 的 `dist/ark-waifu.iife.js`。本地测试 CDN 版本按下面做：
+
+```bash
+pnpm build
+pnpm preview
+```
+
+然后在测试页里引用本地构建产物，例如：
+
+```html
+<script
+  src="http://127.0.0.1:4173/ark-waifu.iife.js"
+  data-registry="http://127.0.0.1:4173/registry/operators.json"
+  data-model="models-358-lisa-build-char-358-lisa"
+  data-cdn="osyb"
+></script>
+```
+
+如果要测试 npm 包内容，先执行：
+
+```bash
+npm pack --dry-run
+```
+
+确认 tarball 里包含 `dist/ark-waifu.iife.js` 和 `dist/registry/operators.json` 后再发布。
 
 ## Compatibility Notes
 

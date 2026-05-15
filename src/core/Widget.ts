@@ -92,23 +92,26 @@ export class ArkWaifuWidget {
 
   async load(rawManifest: ModelManifest): Promise<void> {
     const manifest = validateManifest(rawManifest);
-    this.manifest = manifest;
+    const previousManifest = this.manifest;
+    const previousAdapter = this.adapter;
     this.clearSchedule();
     this.setStatus(`Loading ${manifest.name}...`, false);
 
-    this.adapter?.destroy();
-    this.viewport.replaceChildren();
+    const nextAdapter = this.createAdapter(manifest);
 
     try {
-      this.adapter = this.createAdapter(manifest);
-      await this.adapter.load(manifest);
+      await nextAdapter.load(manifest);
+      previousAdapter?.destroy();
+      this.adapter = nextAdapter;
+      this.manifest = manifest;
       this.setStatus("", true);
       if (this.options.actionSchedule) {
         this.schedule(this.options.actionSchedule);
       }
     } catch (error) {
-      this.adapter?.destroy();
-      this.adapter = null;
+      nextAdapter.destroy();
+      this.adapter = previousAdapter;
+      this.manifest = previousManifest;
       const message = error instanceof Error ? error.message : String(error);
       this.setStatus(`Failed to load ${manifest.name}: ${message}`, false);
       console.error("[Ark-waifu] Failed to load model", error);
