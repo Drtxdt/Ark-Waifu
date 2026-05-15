@@ -1,12 +1,23 @@
 import "./style.css";
 import { ArkWaifuWidget } from "./core/Widget";
+import { rewriteScannedManifestAssetBase } from "./index";
+import {
+  ARK_MODELS_CDN_SOURCES,
+  getDefaultArkModelsCdnSource
+} from "./registry/cdn-sources";
 import sampleManifest from "./registry/sample-manifest.json";
-import type { ModelManifest, ModelRegistry, ScannedModelManifest } from "./core/types";
+import type {
+  AssetCdnSource,
+  ModelManifest,
+  ModelRegistry,
+  ScannedModelManifest
+} from "./core/types";
 
 type DemoState = {
   registry: ModelRegistry;
   filtered: ScannedModelManifest[];
   selected?: ScannedModelManifest;
+  selectedCdn: AssetCdnSource;
   widget?: ArkWaifuWidget;
 };
 
@@ -38,7 +49,8 @@ const state: DemoState = {
     operators: [fallbackOperator]
   },
   filtered: [fallbackOperator],
-  selected: fallbackOperator
+  selected: fallbackOperator,
+  selectedCdn: getDefaultArkModelsCdnSource()
 };
 
 root.innerHTML = `
@@ -56,6 +68,11 @@ root.innerHTML = `
       <label class="demo-search">
         <span>Search</span>
         <input type="search" data-search placeholder="operator, model id, action..." />
+      </label>
+
+      <label class="demo-search">
+        <span>Asset CDN</span>
+        <select data-cdn></select>
       </label>
 
       <div class="demo-list" data-list role="listbox" aria-label="Scanned operators"></div>
@@ -80,6 +97,7 @@ root.innerHTML = `
 
 const listElement = query<HTMLDivElement>("[data-list]");
 const searchInput = query<HTMLInputElement>("[data-search]");
+const cdnSelect = query<HTMLSelectElement>("[data-cdn]");
 const nameElement = query<HTMLElement>("[data-name]");
 const metaElement = query<HTMLElement>("[data-meta]");
 const actionsElement = query<HTMLDivElement>("[data-actions]");
@@ -91,9 +109,25 @@ async function bootstrap(): Promise<void> {
   state.registry = await loadRegistry();
   state.filtered = state.registry.operators;
   state.selected = state.registry.operators[0] ?? fallbackOperator;
+  state.selectedCdn = pickInitialCdnSource(state.registry);
 
   searchInput.addEventListener("input", () => {
     applySearch(searchInput.value);
+  });
+
+  cdnSelect.addEventListener("change", () => {
+    const cdn = ARK_MODELS_CDN_SOURCES.find((source) => source.id === cdnSelect.value);
+
+    if (!cdn) {
+      return;
+    }
+
+    state.selectedCdn = cdn;
+    window.localStorage.setItem("ark-waifu-cdn-source", cdn.id);
+
+    if (state.selected) {
+      void selectOperator(state.selected);
+    }
   });
 
   copyButton.addEventListener("click", async () => {
@@ -101,13 +135,16 @@ async function bootstrap(): Promise<void> {
       return;
     }
 
-    await navigator.clipboard.writeText(createCdnConfig(state.selected));
+    await navigator.clipboard.writeText(
+      createCdnConfig(state.selected, getPreviewManifest(state.selected))
+    );
     copyButton.textContent = "Copied";
     window.setTimeout(() => {
       copyButton.textContent = "Copy CDN config";
     }, 1200);
   });
 
+  renderCdnOptions();
   renderList();
   await selectOperator(state.selected);
 }
@@ -168,6 +205,18 @@ function renderList(): void {
   });
 }
 
+function renderCdnOptions(): void {
+  cdnSelect.innerHTML = "";
+
+  ARK_MODELS_CDN_SOURCES.forEach((source) => {
+    const option = document.createElement("option");
+    option.value = source.id;
+    option.textContent = source.recommended ? `${source.label} (recommended)` : source.label;
+    option.selected = source.id === state.selectedCdn.id;
+    cdnSelect.appendChild(option);
+  });
+}
+
 async function selectOperator(operator: ScannedModelManifest): Promise<void> {
   state.selected = operator;
   renderList();
@@ -181,7 +230,7 @@ async function selectOperator(operator: ScannedModelManifest): Promise<void> {
   });
 
   try {
-    await state.widget.load(operator);
+    await state.widget.load(getPreviewManifest(operator));
     hideError();
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
@@ -190,15 +239,17 @@ async function selectOperator(operator: ScannedModelManifest): Promise<void> {
 }
 
 function renderDetails(operator: ScannedModelManifest): void {
+  const previewManifest = getPreviewManifest(operator);
   nameElement.textContent = operator.name;
   metaElement.textContent = [
     operator.category,
     operator.relativeDir,
+    canUseArkModelsCdn(operator) ? state.selectedCdn.label : "manifest asset URLs",
     Object.keys(operator.actions).length > 0 ? `${Object.keys(operator.actions).length} actions` : undefined
   ]
     .filter(Boolean)
     .join(" / ");
-  codeElement.textContent = createCdnConfig(operator);
+  codeElement.textContent = createCdnConfig(operator, previewManifest);
   actionsElement.innerHTML = "";
 
   Object.keys(operator.actions).forEach((action) => {
@@ -216,22 +267,54 @@ function renderDetails(operator: ScannedModelManifest): void {
   }
 }
 
-function createCdnConfig(operator: ScannedModelManifest): string {
-  const manifest: ModelManifest = {
-    id: operator.id,
-    name: operator.name,
-    type: operator.type,
-    version: operator.version,
-    files: operator.files,
-    actions: operator.actions,
-    scale: operator.scale,
-    position: operator.position
-  };
+function createCdnConfig(
+  operator: ScannedModelManifest,
+  manifest: ModelManifest
+): string {
+  if (canUseArkModelsCdn(operator)) {
+    return [
+      `<script`,
+      `  src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.2/dist/ark-waifu.iife.js"`,
+      `  data-registry="/registry/operators.json"`,
+      `  data-model="${escapeAttribute(operator.id)}"`,
+      `  data-cdn="${escapeAttribute(state.selectedCdn.id)}"`,
+      `  data-action-panel="true"`,
+      `></script>`
+    ].join("\n");
+  }
 
   return [
-    `<script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.1/dist/ark-waifu.iife.js" data-auto="false"></script>`,
+    `<script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.2/dist/ark-waifu.iife.js" data-auto="false"></script>`,
     `<script>window.ArkWaifu.mountArkWaifu({manifest:${JSON.stringify(manifest)},draggable:true,clickAction:"touch",actionPanel:true});</script>`
   ].join("\n");
+}
+
+function getPreviewManifest(operator: ScannedModelManifest): ModelManifest {
+  if (!canUseArkModelsCdn(operator)) {
+    return operator;
+  }
+
+  return rewriteScannedManifestAssetBase(operator, state.selectedCdn.baseUrl);
+}
+
+function canUseArkModelsCdn(operator: ScannedModelManifest): boolean {
+  const sourcePath = operator.sourceFiles.skeleton.replace(/\\/g, "/");
+  return sourcePath.startsWith("models/") || sourcePath.startsWith("models_enemies/");
+}
+
+function pickInitialCdnSource(registry: ModelRegistry): AssetCdnSource {
+  const savedSourceId = window.localStorage.getItem("ark-waifu-cdn-source");
+  const savedSource = ARK_MODELS_CDN_SOURCES.find((source) => source.id === savedSourceId);
+
+  if (savedSource) {
+    return savedSource;
+  }
+
+  if (registry.operators.some(canUseArkModelsCdn)) {
+    return getDefaultArkModelsCdnSource();
+  }
+
+  return ARK_MODELS_CDN_SOURCES.find((source) => source.id === "local") ?? getDefaultArkModelsCdnSource();
 }
 
 function createSearchText(operator: ScannedModelManifest): string {
@@ -269,6 +352,10 @@ function escapeHtml(value: string): string {
     };
     return entities[char] ?? char;
   });
+}
+
+function escapeAttribute(value: string): string {
+  return value.replace(/[&"]/g, (char) => (char === "&" ? "&amp;" : "&quot;"));
 }
 
 function query<T extends Element>(selector: string): T {

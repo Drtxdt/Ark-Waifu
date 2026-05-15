@@ -20,7 +20,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -106,7 +107,8 @@ code {
   font-weight: 700;
 }
 
-.demo-search input {
+.demo-search input,
+.demo-search select {
   width: 100%;
   border: 1px solid #cad3df;
   border-radius: 8px;

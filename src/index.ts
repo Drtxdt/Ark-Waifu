@@ -1,8 +1,15 @@
 export { ArkWaifuWidget } from "./core/Widget";
 export { validateManifest, ManifestError } from "./core/loader";
+export {
+  ARK_MODELS_CDN_SOURCES,
+  DEFAULT_ARK_MODELS_CDN_ID,
+  getArkModelsCdnSource,
+  getDefaultArkModelsCdnSource
+} from "./registry/cdn-sources";
 export type {
   ActionPanelOptions,
   ActionScheduleItem,
+  AssetCdnSource,
   CharacterAdapter,
   ModelFiles,
   ModelManifest,
@@ -20,8 +27,10 @@ import type {
   ActionPanelOptions,
   ModelFiles,
   ModelManifest,
+  ModelRegistry,
   MountedArkWaifu,
-  MountArkWaifuOptions
+  MountArkWaifuOptions,
+  ScannedModelManifest
 } from "./core/types";
 
 export async function loadManifest(manifestUrl: string): Promise<ModelManifest> {
@@ -77,16 +86,92 @@ async function resolveMountManifest(options: MountArkWaifuOptions): Promise<Mode
     return options.manifest;
   }
 
+  if (options.registryUrl) {
+    return loadRegistryManifest(options.registryUrl, options.modelId, options.assetBaseUrl);
+  }
+
   if (!options.manifestUrl) {
-    throw new Error("mountArkWaifu requires options.manifest or options.manifestUrl.");
+    throw new Error(
+      "mountArkWaifu requires options.manifest, options.manifestUrl, or options.registryUrl."
+    );
   }
 
   return loadManifest(options.manifestUrl);
 }
 
+export async function loadRegistryManifest(
+  registryUrl: string,
+  modelId?: string,
+  assetBaseUrl?: string
+): Promise<ModelManifest> {
+  const response = await fetch(registryUrl);
+
+  if (!response.ok) {
+    throw new Error(`Failed to load registry "${registryUrl}": ${response.status} ${response.statusText}`);
+  }
+
+  const registry = (await response.json()) as ModelRegistry;
+  const model = modelId
+    ? registry.operators.find((operator) => operator.id === modelId)
+    : registry.operators[0];
+
+  if (!model) {
+    throw new Error(
+      modelId
+        ? `Model "${modelId}" was not found in registry "${registryUrl}".`
+        : `Registry "${registryUrl}" does not contain any model.`
+    );
+  }
+
+  return assetBaseUrl ? rewriteScannedManifestAssetBase(model, assetBaseUrl) : model;
+}
+
+export function rewriteScannedManifestAssetBase(
+  manifest: ScannedModelManifest,
+  assetBaseUrl: string
+): ModelManifest {
+  const skeletonPath = manifest.sourceFiles.skeleton;
+  const files: ModelFiles = {
+    skel: manifest.files.skel ? joinAssetBase(assetBaseUrl, skeletonPath) : undefined,
+    json: manifest.files.json ? joinAssetBase(assetBaseUrl, skeletonPath) : undefined,
+    atlas: joinAssetBase(assetBaseUrl, manifest.sourceFiles.atlas),
+    textures: manifest.sourceFiles.textures.map((texture) => joinAssetBase(assetBaseUrl, texture))
+  };
+
+  return {
+    id: manifest.id,
+    name: manifest.name,
+    type: manifest.type,
+    version: manifest.version,
+    files,
+    actions: manifest.actions,
+    scale: manifest.scale,
+    position: manifest.position
+  };
+}
+
 function resolveAssetUrl(assetUrl: string, baseUrl: string): string {
   const encodedAssetUrl = assetUrl.replace(/#/g, "%23").replace(/ /g, "%20");
   return new URL(encodedAssetUrl, baseUrl).href;
+}
+
+function joinAssetBase(assetBaseUrl: string, relativePath: string): string {
+  const baseUrl = assetBaseUrl.endsWith("/") ? assetBaseUrl : `${assetBaseUrl}/`;
+  const encodedPath = relativePath
+    .replace(/\\/g, "/")
+    .split("/")
+    .map((segment) => encodeURIComponent(safeDecodeURIComponent(segment)))
+    .join("/");
+
+  return new URL(encodedPath, baseUrl).href;
+}
+
+function safeDecodeURIComponent(value: string): string {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
 }
 
 function createActionPanel(

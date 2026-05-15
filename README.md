@@ -71,8 +71,31 @@ demo 页面提供：
 - 模型预览
 - 动作按钮
 - 复制 CDN 配置
+- CDN 源切换
 
 当前仓库临时打包了一个 sample 模型，方便验证加载链路。正式接入时仍建议通过 manifest/registry 指向你自己托管的 Ark-Models 资源，不要把官方素材塞进库包。
+
+## Ark-Models CDN Sources
+
+Ark-Waifu 不内置完整 Ark-Models 资源。当前项目先提供一组免费公共源，demo 会用 `sourceFiles` 把扫描出的模型路径重写到选中的 CDN。
+
+内置源：
+
+- `jsdelivr`: `https://cdn.jsdelivr.net/gh/isHarryh/Ark-Models@main`
+- `jsdelivr-fastly`: `https://fastly.jsdelivr.net/gh/isHarryh/Ark-Models@main`
+- `jsdelivr-gcore`: `https://gcore.jsdelivr.net/gh/isHarryh/Ark-Models@main`
+- `ghproxy-harryh`: `https://ghproxy.harryh.cn/https://raw.githubusercontent.com/isHarryh/Ark-Models/main`
+- `ghproxy-com`: `https://ghproxy.com/https://raw.githubusercontent.com/isHarryh/Ark-Models/main`
+- `ghproxy-net`: `https://ghproxy.net/https://raw.githubusercontent.com/isHarryh/Ark-Models/main`
+- `gh-llkk`: `https://gh.llkk.cc/https://raw.githubusercontent.com/isHarryh/Ark-Models/main`
+- `raw-github`: `https://raw.githubusercontent.com/isHarryh/Ark-Models/main`
+- `local`: `/Ark-Models`
+
+这些公共代理不保证长期稳定。`jsdelivr` 是默认值；如果你后续有自己的静态托管，把扫描命令改成你的域名即可：
+
+```bash
+pnpm ark-waifu scan ./Ark-Models --out registry/operators.json --base-url https://cdn.example.com/Ark-Models
+```
 
 ## Manifest Format
 
@@ -113,7 +136,33 @@ demo 页面提供：
 最短一行引入：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.1/dist/ark-waifu.iife.js" data-manifest="/models/sample/manifest.json" data-action-panel="true"></script>
+<script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.2/dist/ark-waifu.iife.js" data-manifest="/models/sample/manifest.json" data-action-panel="true"></script>
+```
+
+使用 registry + CDN 选择模型：
+
+```html
+<script
+  src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.2/dist/ark-waifu.iife.js"
+  data-registry="/registry/operators.json"
+  data-model="models-358-lisa-build-char-358-lisa"
+  data-cdn="jsdelivr"
+  data-action-panel="true"
+></script>
+```
+
+如果你直接双击 HTML 用 `file://` 打开页面，浏览器不能 fetch 本机 `/registry/operators.json`。CDN 脚本会在这种情况下把 `/registry/operators.json` 自动解析为脚本包里的 `dist/registry/operators.json`，用于快速测试。正式页面仍建议通过 `http://` 或 `https://` 托管 registry。
+
+registry 模式默认会显示一个控制面板：
+
+- 搜索模型
+- 切换模型
+- 显示当前模型所有动作按钮
+
+如需关闭控制面板，添加：
+
+```html
+data-model-selector="false"
 ```
 
 如果你使用 registry demo 的 “Copy CDN config”，它会复制一段包含当前模型 manifest 的 CDN 配置，适合静态页面快速测试。
@@ -122,6 +171,11 @@ demo 页面提供：
 
 - `data-auto`: 是否自动挂载，默认 `true`
 - `data-manifest`: manifest 地址
+- `data-registry`: registry 地址
+- `data-model`: registry 中的模型 id；不传则使用第一个模型
+- `data-cdn`: 内置 CDN 源 id，例如 `jsdelivr`、`ghproxy-harryh`
+- `data-asset-base-url`: 自定义模型资源基础 URL，优先级高于 `data-cdn`
+- `data-model-selector`: registry 模式下是否显示搜索/模型选择/动作面板，默认 `true`
 - `data-width`: 挂件宽度
 - `data-height`: 挂件高度
 - `data-z-index`: 层级
@@ -152,8 +206,10 @@ mounted.ready.catch((error) => {
 ## API
 
 - `loadManifest(manifestUrl)`: 加载 manifest，并基于 manifest URL 解析资源路径
+- `loadRegistryManifest(registryUrl, modelId?, assetBaseUrl?)`: 从 registry 中选择模型，并可重写到指定 CDN
 - `mountArkWaifu(options)`: 创建并挂载 widget，返回 `{ widget, ready, actionPanel? }`
 - `resolveManifestAssetUrls(manifest, manifestUrl)`: 解析相对资源路径，处理 `#` 与空格
+- `rewriteScannedManifestAssetBase(manifest, assetBaseUrl)`: 将扫描出的 `sourceFiles` 重写到新的 CDN 基础 URL
 - `ArkWaifuWidget`: 手动实例化，支持 `load`、`play`、`schedule`、`clearSchedule`、`destroy`
 
 ## Current Limits
@@ -182,7 +238,7 @@ npm publish --access public
 ```
 
 发布后可以通过 jsDelivr 或 unpkg 引入：
-
+0.1.2
 ```html
 <script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.1/dist/ark-waifu.iife.js"></script>
 ```

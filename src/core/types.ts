@@ -43,6 +43,14 @@ export type ModelRegistry = {
   operators: ScannedModelManifest[];
 };
 
+export type AssetCdnSource = {
+  id: string;
+  label: string;
+  baseUrl: string;
+  description?: string;
+  recommended?: boolean;
+};
+
 export type ActionScheduleItem = {
   action: string;
   delayMs?: number;
@@ -69,6 +77,9 @@ export type WidgetOptions = {
 export type MountArkWaifuOptions = WidgetOptions & {
   manifest?: ModelManifest;
   manifestUrl?: string;
+  registryUrl?: string;
+  modelId?: string;
+  assetBaseUrl?: string;
   actionPanel?: boolean | ActionPanelOptions;
 };
 
