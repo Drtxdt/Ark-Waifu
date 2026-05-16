@@ -228,6 +228,14 @@ pnpm typecheck
 pnpm build
 ```
 
+## Thanks
+
+感谢以下仓库或者开发人员
+
+灵感来源：[stevenjoezhang/live2d-widget: 把萌萌哒的看板娘抱回家 (ノ≧∇≦)ノ | Live2D widget for web platform](https://github.com/stevenjoezhang/live2d-widget)
+
+模型来源：[isHarryh/Ark-Models: Arknights Spine Models (Excerpt) | 明日方舟Spine动画小人模型(节选)](https://github.com/isHarryh/Ark-Models)
+
 ## License
 
 MIT
