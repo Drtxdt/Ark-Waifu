@@ -1,11 +1,186 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ark-waifu Local CDN Preview</title>
+    <style>
+      body {
+        margin: 0;
+        color: #20242a;
+        background: #f6f7fb;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .blog-shell {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 32px;
+        width: min(1120px, calc(100vw - 40px));
+        margin: 0 auto;
+        padding: 40px 0 120px;
+      }
+
+      .site-header,
+      .post,
+      .sidebar-card,
+      .comment-card {
+        border: 1px solid #dfe5ee;
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 10px 28px rgba(39, 52, 68, 0.06);
+      }
+
+      .site-header {
+        grid-column: 1 / -1;
+        padding: 28px 32px;
+      }
+
+      .site-header h1,
+      .post h2,
+      .sidebar-card h3 {
+        margin: 0;
+        letter-spacing: 0;
+      }
+
+      .site-header p,
+      .post p,
+      .sidebar-card p,
+      .comment-card p {
+        color: #596575;
+        line-height: 1.75;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .nav-links a {
+        color: #2f6fa3;
+        text-decoration: none;
+      }
+
+      .post-list {
+        display: grid;
+        gap: 20px;
+      }
+
+      .post {
+        padding: 28px;
+      }
+
+      .post-meta {
+        margin: 0 0 12px;
+        color: #7a8695;
+        font-size: 13px;
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .tag-row span {
+        border: 1px solid #d7e0eb;
+        border-radius: 999px;
+        padding: 4px 10px;
+        color: #486174;
+        background: #f8fbff;
+        font-size: 12px;
+      }
+
+      .sidebar {
+        display: grid;
+        align-content: start;
+        gap: 18px;
+      }
+
+      .sidebar-card {
+        padding: 20px;
+      }
+
+      .comment-card {
+        margin-top: 20px;
+        padding: 18px 20px;
+      }
+
+      .ark-waifu-sit-target {
+        position: relative;
+      }
+
+      @media (max-width: 820px) {
+        .blog-shell {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
+    <main class="blog-shell">
+      <header class="site-header">
+        <p class="post-meta">Personal Blog / Ark-waifu CDN Preview</p>
+        <h1>一个普通博客页面</h1>
+        <p>
+          这里放了文章卡片、侧边栏、标签、评论框等常见博客元素，用来测试看板娘在真实网页布局里的覆盖、拖拽和坐下行为。
+        </p>
+        <nav class="nav-links" aria-label="站点导航">
+          <a href="#">首页</a>
+          <a href="#">归档</a>
+          <a href="#">项目</a>
+          <a href="#">关于</a>
+          <a href="#">订阅</a>
+        </nav>
+      </header>
+
+      <section class="post-list" aria-label="文章列表">
+        <article class="post ark-waifu-sit-target">
+          <p class="post-meta">2026-05-17 / 前端工程</p>
+          <h2>把一个轻量 Spine 看板娘塞进静态博客</h2>
+          <p>
+            静态博客通常只有 HTML、CSS 和少量脚本。Ark-waifu 的 CDN 版本应该可以像评论系统或统计脚本一样接入，
+            同时允许用户把模型资源放在自己的静态托管上。
+          </p>
+          <div class="tag-row">
+            <span>TypeScript</span>
+            <span>Vite</span>
+            <span>Spine</span>
+          </div>
+        </article>
+
+        <article class="post ark-waifu-sit-target">
+          <p class="post-meta">2026-05-16 / 交互设计</p>
+          <h2>让看板娘理解页面里的盒子</h2>
+          <p>
+            与其自动扫描整个页面，不如先让站点作者显式声明哪些区域可以互动。这样可以避开按钮、输入框和广告位，
+            行为也更容易调试。
+          </p>
+          <div class="comment-card ark-waifu-sit-target">
+            <p>评论区：这里也可以作为一个坐下测试目标。</p>
+          </div>
+        </article>
+      </section>
+
+      <aside class="sidebar" aria-label="侧边栏">
+        <section class="sidebar-card ark-waifu-sit-target">
+          <h3>关于作者</h3>
+          <p>写一点网页、小工具和偶尔的游戏资源研究。</p>
+        </section>
+        <section class="sidebar-card">
+          <h3>最近文章</h3>
+          <p>Ark-waifu MVP、CDN 发布、Ark-Models 扫描器。</p>
+        </section>
+        <section class="sidebar-card ark-waifu-sit-target">
+          <h3>友情链接</h3>
+          <p>这里模拟博客常见的链接卡片，也能测试右侧较窄盒子的坐下检测。</p>
+        </section>
+      </aside>
+    </main>
     <script
       src="/ark-waifu.iife.js"
       data-registry="/registry/operators.json"
@@ -13,6 +188,9 @@
       data-cdn="osyb"
       data-model-selector="true"
       data-action-panel="true"
+      data-default-action="auto"
+      data-sit-targets=".ark-waifu-sit-target"
+      data-dialogue-url="/registry/dialogue.sample.json"
     ></script>
   </body>
 </html>

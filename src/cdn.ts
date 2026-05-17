@@ -95,6 +95,13 @@ if (currentScript?.dataset.auto !== "false") {
       hitTest: readBooleanDataset(currentScript, "hitTest", true),
       clickAction: readStringOrFalseDataset(currentScript, "clickAction", "touch"),
       actionSchedule: readJsonDataset(currentScript, "actionSchedule"),
+      defaultAction: currentScript?.dataset.defaultAction ?? "auto",
+      sitTargets: readSelectorListDataset(currentScript, "sitTargets"),
+      sitOptions: readJsonDataset(currentScript, "sitOptions"),
+      dialogueUrl: currentScript?.dataset.dialogueUrl
+        ? resolveDatasetUrl(currentScript.dataset.dialogueUrl, currentScript.dataset.dialogueUrl, currentScript)
+        : undefined,
+      bubbleDurationMs: readNumberDataset(currentScript, "bubbleDurationMs"),
       actionPanel: readBooleanDataset(currentScript, "actionPanel", Boolean(registryUrl))
     };
 
@@ -131,7 +138,14 @@ async function autoMountRegistryController(
     draggable: readBooleanDataset(script, "draggable", true),
     hitTest: readBooleanDataset(script, "hitTest", true),
     clickAction: readStringOrFalseDataset(script, "clickAction", "touch"),
-    actionSchedule: readJsonDataset(script, "actionSchedule")
+    actionSchedule: readJsonDataset(script, "actionSchedule"),
+    defaultAction: script?.dataset.defaultAction ?? "auto",
+    sitTargets: readSelectorListDataset(script, "sitTargets"),
+    sitOptions: readJsonDataset(script, "sitOptions"),
+    dialogueUrl: script?.dataset.dialogueUrl
+      ? resolveDatasetUrl(script.dataset.dialogueUrl, script.dataset.dialogueUrl, script)
+      : undefined,
+    bubbleDurationMs: readNumberDataset(script, "bubbleDurationMs")
   });
   const panel = createRegistryPanel();
   const state: RegistryControllerState = {
@@ -462,6 +476,22 @@ function readStringOrFalseDataset(
   }
 
   return value === "false" ? false : value;
+}
+
+function readSelectorListDataset(
+  script: HTMLScriptElement | null,
+  key: string
+): string[] | undefined {
+  const value = script?.dataset[key];
+
+  if (!value) {
+    return undefined;
+  }
+
+  return value
+    .split(",")
+    .map((selector) => selector.trim())
+    .filter(Boolean);
 }
 
 function readJsonDataset<T>(script: HTMLScriptElement | null, key: string): T | undefined {

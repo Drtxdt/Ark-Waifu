@@ -1,6 +1,14 @@
 import { SpineAdapter } from "../adapters/spine/SpineAdapter";
+import { InteractionController } from "./interaction";
 import { validateManifest } from "./loader";
-import type { ActionScheduleItem, CharacterAdapter, ModelManifest, WidgetOptions } from "./types";
+import type {
+  ActionScheduleItem,
+  CharacterAdapter,
+  InteractionOptions,
+  ModelManifest,
+  PlayOptions,
+  WidgetOptions
+} from "./types";
 
 const DEFAULT_WIDTH = 320;
 const DEFAULT_HEIGHT = 420;
@@ -9,12 +17,28 @@ export class ArkWaifuWidget {
   private readonly root: HTMLElement;
   private readonly viewport: HTMLElement;
   private readonly status: HTMLElement;
+  private readonly bubble: HTMLElement;
   private readonly options: Required<
-    Omit<WidgetOptions, "container" | "className" | "actionSchedule">
+    Omit<
+      WidgetOptions,
+      | "container"
+      | "className"
+      | "actionSchedule"
+      | "interaction"
+      | "sitTargets"
+      | "sitOptions"
+      | "dialogue"
+      | "dialogueUrl"
+    >
   > &
-    Pick<WidgetOptions, "container" | "className" | "actionSchedule">;
+    Pick<
+      WidgetOptions,
+      "container" | "className" | "actionSchedule" | "interaction" | "sitTargets" | "sitOptions" | "dialogue" | "dialogueUrl"
+    >;
   private adapter: CharacterAdapter | null = null;
   private manifest: ModelManifest | null = null;
+  private interaction: InteractionController | null = null;
+  private bubbleTimer: number | null = null;
   private dragState: { pointerId: number; offsetX: number; offsetY: number; moved: boolean } | null =
     null;
   private scheduleTimers: number[] = [];
@@ -28,6 +52,13 @@ export class ArkWaifuWidget {
       clickAction: options.clickAction ?? "touch",
       hitTest: options.hitTest ?? true,
       actionSchedule: options.actionSchedule,
+      interaction: options.interaction,
+      defaultAction: options.defaultAction ?? "auto",
+      sitTargets: options.sitTargets,
+      sitOptions: options.sitOptions,
+      dialogue: options.dialogue,
+      dialogueUrl: options.dialogueUrl,
+      bubbleDurationMs: options.bubbleDurationMs ?? 3600,
       container: options.container,
       className: options.className
     };
@@ -38,7 +69,7 @@ export class ArkWaifuWidget {
       position: "fixed",
       right: "24px",
       bottom: "16px",
-      overflow: "hidden",
+      overflow: "visible",
       pointerEvents: this.options.draggable || this.options.clickAction ? "auto" : "none",
       width: `${this.options.width}px`,
       height: `${this.options.height}px`,
@@ -52,7 +83,8 @@ export class ArkWaifuWidget {
     Object.assign(this.viewport.style, {
       position: "absolute",
       inset: "0",
-      cursor: this.options.draggable ? "grab" : "default"
+      cursor: this.options.draggable ? "grab" : "default",
+      overflow: "visible"
     });
 
     this.status = document.createElement("div");
@@ -74,7 +106,29 @@ export class ArkWaifuWidget {
     });
     this.status.hidden = true;
 
-    this.root.append(this.viewport, this.status);
+    this.bubble = document.createElement("div");
+    this.bubble.className = "ark-waifu-bubble";
+    Object.assign(this.bubble.style, {
+      position: "absolute",
+      right: "12px",
+      bottom: "56%",
+      maxWidth: "260px",
+      border: "1px solid #e0c36d",
+      borderRadius: "8px",
+      padding: "9px 12px",
+      color: "#594100",
+      background: "#fff4bd",
+      boxShadow: "0 8px 22px rgba(104, 79, 0, 0.16)",
+      fontSize: "13px",
+      lineHeight: "1.45",
+      opacity: "0",
+      transform: "translateY(4px)",
+      transition: "opacity 160ms ease, transform 160ms ease",
+      pointerEvents: "none"
+    });
+    this.bubble.hidden = true;
+
+    this.root.append(this.viewport, this.bubble, this.status);
     (this.options.container ?? document.body).appendChild(this.root);
 
     window.addEventListener("resize", this.handleResize);
@@ -94,37 +148,74 @@ export class ArkWaifuWidget {
     const manifest = validateManifest(rawManifest);
     const previousManifest = this.manifest;
     const previousAdapter = this.adapter;
+    const previousInteraction = this.interaction;
     this.clearSchedule();
+    this.interaction?.stop();
     this.setStatus(`Loading ${manifest.name}...`, false);
 
     const nextAdapter = this.createAdapter(manifest);
+    const nextInteraction = new InteractionController(
+      {
+        root: this.root,
+        getManifest: () => this.manifest,
+        hasAction: (action) => nextAdapter.hasAction?.(action) ?? Boolean(manifest.actions[action]),
+        play: (action, options) => nextAdapter.play(action, options),
+        showBubble: (message, durationMs) => {
+          this.showBubble(message, durationMs);
+        }
+      },
+      this.createInteractionOptions()
+    );
 
     try {
       await nextAdapter.load(manifest);
+      await nextInteraction.loadDialogue();
       previousAdapter?.destroy();
+      previousInteraction?.destroy();
       this.adapter = nextAdapter;
       this.manifest = manifest;
+      this.interaction = nextInteraction;
       this.setStatus("", true);
+      this.interaction.start();
       if (this.options.actionSchedule) {
         this.schedule(this.options.actionSchedule);
       }
     } catch (error) {
       nextAdapter.destroy();
+      nextInteraction.destroy();
       this.adapter = previousAdapter;
       this.manifest = previousManifest;
+      this.interaction = previousInteraction;
+      this.interaction?.start();
       const message = error instanceof Error ? error.message : String(error);
       this.setStatus(`Failed to load ${manifest.name}: ${message}`, false);
+      this.interaction?.speak("error");
       console.error("[Ark-waifu] Failed to load model", error);
     }
   }
 
-  play(action: string): void {
+  play(action: string, options?: PlayOptions): boolean {
     if (!this.adapter) {
       console.warn(`[Ark-waifu] Cannot play "${action}" before a model is loaded.`);
-      return;
+      return false;
     }
 
-    this.adapter.play(action);
+    const playOptions =
+      options ??
+      (this.interaction && !isLoopingBaseAction(action)
+        ? {
+            loop: false,
+            onComplete: () => {
+              this.interaction?.playBaseAction();
+            }
+          }
+        : undefined);
+    const played = this.adapter.play(action, playOptions);
+    if (played) {
+      this.interaction?.handleManualAction(action);
+    }
+
+    return played;
   }
 
   getManifest(): ModelManifest | null {
@@ -171,6 +262,9 @@ export class ArkWaifuWidget {
     this.root.removeEventListener("pointerup", this.handlePointerUp);
     this.root.removeEventListener("pointercancel", this.handlePointerCancel);
     this.clearSchedule();
+    this.interaction?.destroy();
+    this.interaction = null;
+    this.clearBubble();
     this.adapter?.destroy();
     this.adapter = null;
     this.manifest = null;
@@ -187,6 +281,18 @@ export class ArkWaifuWidget {
     }
 
     throw new Error(`Unsupported model type "${manifest.type}".`);
+  }
+
+  private createInteractionOptions(): InteractionOptions {
+    return {
+      ...this.options.interaction,
+      defaultAction: this.options.interaction?.defaultAction ?? this.options.defaultAction,
+      sitTargets: this.options.interaction?.sitTargets ?? this.options.sitTargets,
+      sitOptions: this.options.interaction?.sitOptions ?? this.options.sitOptions,
+      dialogue: this.options.interaction?.dialogue ?? this.options.dialogue,
+      dialogueUrl: this.options.interaction?.dialogueUrl ?? this.options.dialogueUrl,
+      bubbleDurationMs: this.options.interaction?.bubbleDurationMs ?? this.options.bubbleDurationMs
+    };
   }
 
   private readonly handleResize = (): void => {
@@ -241,6 +347,8 @@ export class ArkWaifuWidget {
 
     if (!wasDragged) {
       this.handleClickAction(event);
+    } else {
+      this.interaction?.markMoved();
     }
   };
 
@@ -266,15 +374,49 @@ export class ArkWaifuWidget {
       return;
     }
 
-    this.play(this.options.clickAction);
+    this.interaction?.handleClick(this.options.clickAction);
   }
 
   private setStatus(message: string, hidden: boolean): void {
     this.status.textContent = message;
     this.status.hidden = hidden;
   }
+
+  private showBubble(message: string, durationMs = this.options.bubbleDurationMs): void {
+    this.clearBubble();
+    this.bubble.textContent = message;
+    this.bubble.hidden = false;
+    window.requestAnimationFrame(() => {
+      this.bubble.style.opacity = "1";
+      this.bubble.style.transform = "translateY(0)";
+    });
+
+    this.bubbleTimer = window.setTimeout(() => {
+      this.bubble.style.opacity = "0";
+      this.bubble.style.transform = "translateY(4px)";
+      this.bubbleTimer = window.setTimeout(() => {
+        this.bubble.hidden = true;
+        this.bubbleTimer = null;
+      }, 180);
+    }, durationMs);
+  }
+
+  private clearBubble(): void {
+    if (this.bubbleTimer !== null) {
+      window.clearTimeout(this.bubbleTimer);
+      this.bubbleTimer = null;
+    }
+
+    this.bubble.hidden = true;
+    this.bubble.style.opacity = "0";
+    this.bubble.style.transform = "translateY(4px)";
+  }
 }
 
 function clamp(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), Math.max(min, max));
+}
+
+function isLoopingBaseAction(action: string): boolean {
+  return action === "idle" || action === "relax" || action === "walk" || action === "sit";
 }

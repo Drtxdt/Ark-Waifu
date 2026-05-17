@@ -57,6 +57,35 @@ export type ActionScheduleItem = {
   intervalMs?: number;
 };
 
+export type PlayOptions = {
+  loop?: boolean;
+  onComplete?: () => void;
+};
+
+export type DialogueEvent = "load" | "relax" | "sit" | "stand" | "click" | "error";
+
+export type DialogueManifest = {
+  version: 1;
+  lines: Partial<Record<DialogueEvent, string[]>>;
+};
+
+export type SitOptions = {
+  hoverMs?: number;
+  durationMs?: number;
+  cooldownMs?: number;
+  minOverlapRatio?: number;
+  scanIntervalMs?: number;
+};
+
+export type InteractionOptions = {
+  defaultAction?: string | "auto";
+  sitTargets?: string | string[];
+  sitOptions?: SitOptions;
+  dialogue?: DialogueManifest;
+  dialogueUrl?: string;
+  bubbleDurationMs?: number;
+};
+
 export type ActionPanelOptions = {
   container?: HTMLElement;
   className?: string;
@@ -72,6 +101,13 @@ export type WidgetOptions = {
   clickAction?: string | false;
   hitTest?: boolean;
   actionSchedule?: ActionScheduleItem[];
+  interaction?: InteractionOptions;
+  defaultAction?: string | "auto";
+  sitTargets?: string | string[];
+  sitOptions?: SitOptions;
+  dialogue?: DialogueManifest;
+  dialogueUrl?: string;
+  bubbleDurationMs?: number;
 };
 
 export type MountArkWaifuOptions = WidgetOptions & {
@@ -97,8 +133,9 @@ export type AdapterContext = {
 
 export interface CharacterAdapter {
   load(manifest: ModelManifest): Promise<void>;
-  play(action: string): void;
+  play(action: string, options?: PlayOptions): boolean;
   resize(width: number, height: number): void;
   hitTest?(x: number, y: number): boolean;
+  hasAction?(action: string): boolean;
   destroy(): void;
 }

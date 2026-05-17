@@ -11,7 +11,8 @@ Ark-Waifu 提供两种使用方式：
 
 - 支持 Ark-Models 常见的 Spine manifest 资源描述
 - 支持 skel/json 骨骼文件 + atlas + textures 组合
-- 内置拖拽、点击动作、动作定时调度
+- 内置拖拽、点击动作、动作定时调度、基础交互状态机
+- 支持 relax 默认待机、可选 CSS 盒子坐下检测、独立气泡台词 JSON
 - 提供可选动作面板
 - 提供全局 API 与模块化 API
 - 内置 sample 模型，开箱可验证链路
@@ -56,7 +57,10 @@ const mounted = mountArkWaifu({
   draggable: true,
   clickAction: "touch",
   actionPanel: true,
-  actionSchedule: [{ action: "special", intervalMs: 30000 }]
+  actionSchedule: [{ action: "special", intervalMs: 30000 }],
+  defaultAction: "auto",
+  sitTargets: ".ark-waifu-sit-target",
+  dialogueUrl: "/registry/dialogue.sample.json"
 });
 
 mounted.ready.catch((error) => {
@@ -89,6 +93,31 @@ mounted.ready.catch((error) => {
 - data-click-action: 点击触发动作名，默认 touch；传 false 可关闭
 - data-action-panel: 是否渲染动作面板，默认 false
 - data-action-schedule: JSON 字符串，格式为 ActionScheduleItem[]
+- data-default-action: 默认循环动作，默认 auto；auto 会优先 relax，其次 idle
+- data-sit-targets: 允许坐下的 CSS selector，多个 selector 用英文逗号分隔
+- data-sit-options: JSON 字符串，可配置 hoverMs、durationMs、cooldownMs、minOverlapRatio
+- data-dialogue-url: 气泡台词 JSON 地址
+- data-bubble-duration-ms: 气泡显示时长（数字，毫秒）
+
+### Dialogue JSON
+
+气泡台词独立加载，不写入模型 manifest。示例：
+
+```json
+{
+  "version": 1,
+  "lines": {
+    "load": ["博士，我准备好了。"],
+    "relax": ["先在这里休息一下。"],
+    "sit": ["这个位置看起来不错。"],
+    "stand": ["休息结束，继续工作吧。"],
+    "click": ["嗯？博士有什么安排吗？"],
+    "error": ["资源好像没有加载成功。"]
+  }
+}
+```
+
+缺少某个事件的台词时会静默跳过，不影响模型加载。
 
 ## Manifest Spec
 
@@ -164,14 +193,21 @@ pnpm preview
 
 ### 本地测试 CDN/IIFE 版本
 
-`pnpm dev` 测的是源码入口，不等同于 npm CDN 的 `dist/ark-waifu.iife.js`。本地测试 CDN 版本按下面做：
+当前 `index.html` 是本地 CDN 预览页。要用 `pnpm dev` 测试 IIFE，需要先构建一次：
+
+```bash
+pnpm build
+pnpm dev
+```
+
+此时首页会从 `dist/ark-waifu.iife.js` 读取真实 IIFE 产物。也可以用 `pnpm preview` 测试完整 `dist` 静态站：
 
 ```bash
 pnpm build
 pnpm preview
 ```
 
-然后在测试页里引用本地构建产物，例如：
+外部测试页可引用本地构建产物，例如：
 
 ```html
 <script
@@ -179,6 +215,8 @@ pnpm preview
   data-registry="http://127.0.0.1:4173/registry/operators.json"
   data-model="models-358-lisa-build-char-358-lisa"
   data-cdn="osyb"
+  data-default-action="auto"
+  data-dialogue-url="http://127.0.0.1:4173/registry/dialogue.sample.json"
 ></script>
 ```
 
@@ -196,6 +234,8 @@ npm pack --dry-run
 - 暂不支持 Live2D
 - 依赖 PixiJS 6 + @pixi-spine/all-3.8 3.x
 - 动画名由模型决定，manifest 映射不存在时会告警而非崩溃
+- CSS 盒子坐下检测只扫描显式配置的 selector，不会自动识别整页布局
+- 坐下姿态会重新计算模型 transform，但个别资源的动画边界如果本身不完整，仍可能需要单独调整 manifest scale/position
 
 ## Project Structure
 

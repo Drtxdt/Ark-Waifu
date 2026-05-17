@@ -11,6 +11,9 @@ export type {
   ActionScheduleItem,
   AssetCdnSource,
   CharacterAdapter,
+  DialogueEvent,
+  DialogueManifest,
+  InteractionOptions,
   ModelFiles,
   ModelManifest,
   ModelPosition,
@@ -18,7 +21,9 @@ export type {
   ModelType,
   MountedArkWaifu,
   MountArkWaifuOptions,
+  PlayOptions,
   ScannedModelManifest,
+  SitOptions,
   WidgetOptions
 } from "./core/types";
 

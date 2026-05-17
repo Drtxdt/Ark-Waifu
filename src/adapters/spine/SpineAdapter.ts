@@ -2,11 +2,12 @@ import * as PIXI from "pixi.js";
 import {
   AtlasAttachmentLoader,
   SkeletonBinary,
+  type TrackEntry,
   SkeletonJson,
   Spine,
   TextureAtlas
 } from "@pixi-spine/all-3.8";
-import type { AdapterContext, CharacterAdapter, ModelManifest } from "../../core/types";
+import type { AdapterContext, CharacterAdapter, ModelManifest, PlayOptions } from "../../core/types";
 
 export class SpineAdapter implements CharacterAdapter {
   private app: PIXI.Application | null = null;
@@ -14,6 +15,7 @@ export class SpineAdapter implements CharacterAdapter {
   private atlas: TextureAtlas | null = null;
   private readonly baseTextures: PIXI.BaseTexture[] = [];
   private manifest: ModelManifest | null = null;
+  private currentAction: string | null = null;
   private readonly context: AdapterContext;
 
   constructor(context: AdapterContext) {
@@ -46,7 +48,7 @@ export class SpineAdapter implements CharacterAdapter {
       this.spine = new Spine(spineData);
       this.spine.autoUpdate = true;
       this.app.stage.addChild(this.spine);
-      this.play("idle");
+      this.play("idle", { loop: true });
       this.spine.update(0);
       this.applyTransform();
     } catch (error) {
@@ -55,10 +57,10 @@ export class SpineAdapter implements CharacterAdapter {
     }
   }
 
-  play(action: string): void {
+  play(action: string, options: PlayOptions = {}): boolean {
     if (!this.spine || !this.manifest) {
       console.warn(`[Ark-waifu] Cannot play "${action}" before Spine data is ready.`);
-      return;
+      return false;
     }
 
     const animationName = this.manifest.actions[action];
@@ -66,26 +68,31 @@ export class SpineAdapter implements CharacterAdapter {
       console.warn(
         `[Ark-waifu] Action "${action}" is not defined in manifest "${this.manifest.id}".`
       );
-      return;
+      return false;
     }
 
     if (!this.hasAnimation(animationName)) {
       console.warn(
         `[Ark-waifu] Animation "${animationName}" for action "${action}" was not found in model "${this.manifest.id}".`
       );
-      return;
+      return false;
     }
 
-    const loop = action === "idle" || action === "walk";
+    const loop = options.loop ?? (action === "idle" || action === "walk" || action === "relax");
     const entry = this.spine.state.setAnimation(0, animationName, loop);
+    this.currentAction = action;
 
-    if (!loop && action !== "idle" && this.manifest.actions.idle) {
-      entry.listener = {
-        complete: () => {
-          this.play("idle");
-        }
-      };
+    if (options.onComplete) {
+      entry.listener = createCompleteListener(options.onComplete);
     }
+
+    this.spine.update(0);
+    this.applyTransform();
+    window.requestAnimationFrame(() => {
+      this.applyTransform();
+    });
+
+    return true;
   }
 
   resize(width: number, height: number): void {
@@ -108,6 +115,7 @@ export class SpineAdapter implements CharacterAdapter {
 
   destroy(): void {
     this.spine = null;
+    this.currentAction = null;
 
     if (this.app) {
       this.app.destroy(true, {
@@ -211,13 +219,14 @@ export class SpineAdapter implements CharacterAdapter {
     const configuredScale = this.manifest.scale ?? 1;
     const position = this.manifest.position ?? { x: 0.5, y: 1 };
     const bounds = this.spine.getLocalBounds();
+    const bottomSafety = this.currentAction === "sit" ? Math.max(20, height * 0.08) : 0;
     const fitScale =
       bounds.width > 0 && bounds.height > 0
-        ? Math.min(width / bounds.width, height / bounds.height, 1)
+        ? Math.min(width / bounds.width, (height - bottomSafety) / bounds.height, 1)
         : 1;
     const scale = configuredScale * fitScale;
     const targetX = width * position.x;
-    const targetY = height * position.y;
+    const targetY = height * position.y - bottomSafety;
 
     this.spine.scale.set(scale);
     this.spine.position.set(
@@ -229,6 +238,26 @@ export class SpineAdapter implements CharacterAdapter {
   private hasAnimation(animationName: string): boolean {
     return this.spine?.state.hasAnimation(animationName) ?? false;
   }
+
+  hasAction(action: string): boolean {
+    const animationName = this.manifest?.actions[action];
+    return Boolean(animationName && this.hasAnimation(animationName));
+  }
+}
+
+function createCompleteListener(onComplete: () => void): TrackEntry["listener"] {
+  let called = false;
+
+  return {
+    complete: () => {
+      if (called) {
+        return;
+      }
+
+      called = true;
+      onComplete();
+    }
+  };
 }
 
 function resolveTextureUrl(
