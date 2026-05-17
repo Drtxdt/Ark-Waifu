@@ -19,6 +19,7 @@ function localModelDevServer(): Plugin {
       const srcModelsRoot = path.resolve(process.cwd(), "src", "models");
       const publicModelsRoot = path.resolve(process.cwd(), "public", "models");
       const arkModelsRoot = path.resolve(process.cwd(), "Ark-Models");
+      const distRoot = path.resolve(process.cwd(), "dist");
 
       server.middlewares.use((request, response, next) => {
         if (!request.url) {
@@ -29,6 +30,37 @@ function localModelDevServer(): Plugin {
         const requestPath = decodeURIComponent(
           new URL(request.url, "http://localhost").pathname
         );
+
+        const cdnRoute = getLocalCdnRoute(requestPath);
+        if (cdnRoute) {
+          const filePath = path.resolve(distRoot, cdnRoute.relativePath);
+
+          if (!isInsideDirectory(filePath, distRoot)) {
+            response.statusCode = 403;
+            response.end("Forbidden CDN preview path.");
+            return;
+          }
+
+          if (!existsSync(filePath) || !statSync(filePath).isFile()) {
+            response.statusCode = 404;
+            response.end(
+              `Local CDN preview file "${cdnRoute.relativePath}" was not found. Run "pnpm build" before "pnpm dev".`
+            );
+            return;
+          }
+
+          response.setHeader("Cache-Control", "no-cache");
+          response.setHeader("Content-Type", getContentType(filePath));
+
+          if (request.method === "HEAD") {
+            response.statusCode = 200;
+            response.end();
+            return;
+          }
+
+          createReadStream(filePath).pipe(response);
+          return;
+        }
 
         const modelRoute = getModelRoute(requestPath);
         if (!modelRoute) {
@@ -69,6 +101,14 @@ function localModelDevServer(): Plugin {
       });
     }
   };
+}
+
+function getLocalCdnRoute(requestPath: string): { relativePath: string } | null {
+  if (requestPath === "/ark-waifu.iife.js") {
+    return { relativePath: "ark-waifu.iife.js" };
+  }
+
+  return null;
 }
 
 function getModelRoute(
