@@ -21,7 +21,7 @@
     }
   },
   "bin": {
-    "ark-waifu": "./dist/cli/ark-waifu.js"
+    "ark-waifu": "dist/cli/ark-waifu.js"
   },
   "scripts": {
     "dev": "vite",
@@ -43,5 +43,9 @@
     "typescript": "^5.4.5",
     "vite": "^5.4.11"
   },
-  "packageManager": "pnpm@9.15.0"
+  "packageManager": "pnpm@9.15.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drtxdt/Ark-Waifu.git"
+  }
 }
