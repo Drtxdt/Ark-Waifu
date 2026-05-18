@@ -4,13 +4,15 @@
     "load": [
       "博士，我准备好了。",
       "今天也请多关照。",
-      "页面加载完成，我会在这里待命。"
+      "页面加载完成，我会在这里待命。",
+      "如果看到有趣的地方，可以叫我一起看看。"
     ],
     "relax": [
       "先在这里休息一下。",
       "博士也别一直盯着屏幕。",
       "风很安静，适合摸鱼。",
-      "如果有任务，随时叫我。"
+      "如果有任务，随时叫我。",
+      "这个页面的布局看起来挺舒服。"
     ],
     "sit": [
       "这个位置看起来不错。",
@@ -27,7 +29,8 @@
       "嗯？博士有什么安排吗？",
       "我在听。",
       "需要我帮忙吗？",
-      "别戳太多次啦。"
+      "别戳太多次啦。",
+      "收到，我会注意这里。"
     ],
     "error": [
       "资源好像没有加载成功。",
@@ -51,15 +54,35 @@
     {
       "selector": "button",
       "event": "mouseenter",
-      "text": ["这个按钮看起来有点重要。", "点击前可以先想一下要做什么。"],
+      "text": ["这个按钮看起来有点重要。", "点击前可以先想一下要做什么。", "按钮附近通常会有关键操作。"],
       "action": "touch",
       "cooldownMs": 3500
+    },
+    {
+      "selector": ".hero-title",
+      "event": "mouseenter",
+      "text": ["标题是页面的门面。", "这个主题看起来很适合做测试。"],
+      "action": "relax",
+      "cooldownMs": 4000
+    },
+    {
+      "selector": ".hero-lead",
+      "event": "mouseenter",
+      "text": ["简介写得清楚，读者会更快明白重点。", "这里适合放项目目标和当前状态。"],
+      "cooldownMs": 4000
     },
     {
       "selector": "input, textarea",
       "event": "focus",
       "text": ["开始输入了吗？我会安静一点。", "写内容的时候记得保存。"],
       "action": "relax",
+      "cooldownMs": 5000
+    },
+    {
+      "selector": "input, textarea",
+      "event": "blur",
+      "text": ["输入结束了吗？", "刚才写的内容可以检查一下。"],
+      "action": "touch",
       "cooldownMs": 5000
     },
     {
@@ -73,6 +96,13 @@
       "event": "mouseenter",
       "text": ["这是文章标签。", "用标签可以很快找到相关内容。"],
       "cooldownMs": 2500
+    },
+    {
+      "selector": ".toc-link",
+      "event": "mouseenter",
+      "text": ["目录可以帮你快速跳转。", "这节内容可能值得先看。"],
+      "action": "touch",
+      "cooldownMs": 3000
     },
     {
       "selector": ".archive-item",
@@ -89,6 +119,13 @@
       "cooldownMs": 3000
     },
     {
+      "selector": ".comment-input",
+      "event": "focus",
+      "text": ["准备写评论了吗？", "评论之前可以先整理一下思路。"],
+      "action": "relax",
+      "cooldownMs": 5000
+    },
+    {
       "selector": ".search-box",
       "event": "focus",
       "text": ["想找什么内容？", "输入关键词试试看。"],
@@ -100,6 +137,62 @@
       "event": "mouseenter",
       "text": ["这里是友情链接。", "朋友的站点也值得看看。"],
       "action": "relax",
+      "cooldownMs": 4000
+    },
+    {
+      "selector": ".profile-card",
+      "event": "mouseleave",
+      "text": ["要离开作者介绍了吗？", "作者信息就先看到这里吧。"],
+      "action": "touch",
+      "cooldownMs": 5000
+    },
+    {
+      "selector": ".code-block",
+      "event": "mouseenter",
+      "text": ["代码块要仔细看缩进。", "复制前可以确认版本号和路径。"],
+      "action": "relax",
+      "cooldownMs": 4000
+    },
+    {
+      "selector": ".copy-code",
+      "event": "click",
+      "text": ["代码已经准备好复制了。", "复制后记得按自己的路径改配置。"],
+      "action": "touch",
+      "cooldownMs": 4000
+    },
+    {
+      "selector": ".image-placeholder",
+      "event": "mouseenter",
+      "text": ["这里可以放文章配图。", "图片最好不要太大，页面会更快。"],
+      "action": "relax",
+      "cooldownMs": 4000
+    },
+    {
+      "selector": ".music-card",
+      "event": "mouseenter",
+      "text": ["听点音乐也不错。", "不过不要把音量开太大哦。"],
+      "action": "relax",
+      "cooldownMs": 4000
+    },
+    {
+      "selector": ".theme-toggle",
+      "event": "click",
+      "text": ["切换主题的话，记得照顾夜间阅读。", "深色模式也要保证对比度。"],
+      "action": "special",
+      "cooldownMs": 6000
+    },
+    {
+      "selector": ".danger-button",
+      "event": "mouseenter",
+      "text": ["这个按钮看起来有风险。", "危险操作前最好再确认一次。"],
+      "action": "touch",
+      "cooldownMs": 4000
+    },
+    {
+      "selector": ".back-to-top",
+      "event": "click",
+      "text": ["回到顶部。", "重新从标题开始也不错。"],
+      "action": "touch",
       "cooldownMs": 4000
     },
     {

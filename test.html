@@ -4,8 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ark-waifu CDN Test</title>
+    <style>
+      body {
+        margin: 0;
+        color: #20242a;
+        background: #f5f7fb;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .page {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 28px;
+        width: min(1120px, calc(100vw - 40px));
+        margin: 0 auto;
+        padding: 36px 0 120px;
+      }
+
+      .hero,
+      .post,
+      .panel,
+      .comment-card,
+      .demo-card {
+        border: 1px solid #dce4ef;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 10px 26px rgba(40, 54, 72, 0.06);
+      }
+
+      .hero {
+        grid-column: 1 / -1;
+        padding: 28px 32px;
+      }
+
+      .hero-title {
+        margin: 0;
+        font-size: 32px;
+        letter-spacing: 0;
+      }
+
+      .hero-lead,
+      p {
+        color: #5b6675;
+        line-height: 1.75;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      a {
+        color: #276a9d;
+        text-decoration: none;
+      }
+
+      .content,
+      .sidebar {
+        display: grid;
+        align-content: start;
+        gap: 18px;
+      }
+
+      .post,
+      .panel,
+      .demo-card {
+        padding: 22px;
+      }
+
+      .post h2,
+      .panel h3,
+      .demo-card h3 {
+        margin: 0 0 10px;
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tag-row span {
+        border: 1px solid #d7e0eb;
+        border-radius: 999px;
+        padding: 4px 10px;
+        color: #486174;
+        background: #f8fbff;
+        font-size: 12px;
+      }
+
+      .test-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      input,
+      textarea,
+      button {
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid #cbd6e2;
+        border-radius: 8px;
+        padding: 10px 12px;
+        color: #20242a;
+        background: #fff;
+        font: inherit;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      .danger-button {
+        border-color: #e6a3a3;
+        color: #7b1f1f;
+        background: #fff7f7;
+      }
+
+      .code-block {
+        overflow: auto;
+        border-radius: 8px;
+        padding: 14px;
+        color: #25313d;
+        background: #eef3f8;
+        font-size: 13px;
+      }
+
+      .image-placeholder {
+        display: grid;
+        min-height: 150px;
+        place-items: center;
+        border: 1px dashed #aebbd0;
+        border-radius: 8px;
+        color: #607083;
+        background: #f9fbff;
+      }
+
+      .archive-list {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .archive-item {
+        border-bottom: 1px solid #e6edf5;
+        padding-bottom: 10px;
+      }
+
+      .ark-waifu-sit-target {
+        position: relative;
+      }
+
+      @media (max-width: 820px) {
+        .page,
+        .test-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
 </head>
 <body>
+  <main class="page">
+    <header class="hero ark-waifu-sit-target">
+      <h1 class="hero-title">Ark-waifu CDN 行为测试页</h1>
+      <p class="hero-lead">
+        这个页面用于测试统一版 waifu-tips JSON：链接悬停、按钮悬停、输入聚焦、评论点击、代码块提示、坐下目标和特殊动作。
+      </p>
+      <nav class="nav" aria-label="测试导航">
+        <a href="#">首页</a>
+        <a class="toc-link" href="#article">文章</a>
+        <a class="toc-link" href="#comments">评论</a>
+        <a class="toc-link" href="#tests">测试区</a>
+      </nav>
+    </header>
+
+    <section class="content">
+      <article id="article" class="post ark-waifu-sit-target">
+        <h2>把看板娘交互接入博客页面</h2>
+        <p>
+          鼠标经过这篇文章会触发文章规则。把模型拖到卡片上边缘并停留，可以触发 settle 规则和 sit 动作。
+        </p>
+        <div class="tag-row">
+          <span>Spine</span>
+          <span>CDN</span>
+          <span>Tips JSON</span>
+          <span>静态博客</span>
+        </div>
+      </article>
+
+      <section class="post">
+        <h2>代码片段</h2>
+        <pre class="code-block"><code>&lt;script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.7/dist/ark-waifu.iife.js"&gt;&lt;/script&gt;</code></pre>
+        <button class="copy-code" type="button">复制代码配置</button>
+      </section>
+
+      <section id="tests" class="post ark-waifu-sit-target">
+        <h2>交互测试区</h2>
+        <div class="test-grid">
+          <section class="demo-card">
+            <h3>搜索 Focus</h3>
+            <input class="search-box" type="search" placeholder="搜索文章或标签" />
+          </section>
+          <section class="demo-card">
+            <h3>普通输入 Focus / Blur</h3>
+            <textarea class="comment-input" rows="4" placeholder="写一段评论"></textarea>
+          </section>
+          <section class="demo-card sleep-zone">
+            <h3>Sleep Click</h3>
+            <button type="button">点击触发 sleep</button>
+          </section>
+          <section class="demo-card special-zone">
+            <h3>Special Click</h3>
+            <button type="button">点击触发 special</button>
+          </section>
+          <section class="demo-card">
+            <h3>Theme Toggle</h3>
+            <button class="theme-toggle" type="button">切换主题测试</button>
+          </section>
+          <section class="demo-card">
+            <h3>Danger Hover</h3>
+            <button class="danger-button" type="button">危险操作按钮</button>
+          </section>
+        </div>
+      </section>
+
+      <section class="post">
+        <h2>图片和音乐卡片</h2>
+        <div class="test-grid">
+          <div class="image-placeholder">文章配图占位</div>
+          <div class="demo-card music-card">
+            <h3>音乐卡片</h3>
+            <p>鼠标移到这里会触发音乐提示。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="comments" class="comment-card ark-waifu-sit-target">
+        <h2>评论区</h2>
+        <p>点击这里可以测试评论规则，也可以作为坐下目标。</p>
+      </section>
+    </section>
+
+    <aside class="sidebar">
+      <section class="panel profile-card ark-waifu-sit-target">
+        <h3>作者介绍</h3>
+        <p>鼠标离开这里会触发 mouseleave 规则。</p>
+      </section>
+      <section class="panel">
+        <h3>归档</h3>
+        <ul class="archive-list">
+          <li class="archive-item">2026-05 Ark-waifu 交互系统</li>
+          <li class="archive-item">2026-04 Spine 模型加载</li>
+          <li class="archive-item">2026-03 静态资源托管</li>
+        </ul>
+      </section>
+      <section class="panel ark-waifu-sit-target">
+        <h3>友情链接</h3>
+        <p>
+          <a class="friend-link" href="#">友站 A</a>
+          ·
+          <a class="friend-link" href="#">友站 B</a>
+        </p>
+      </section>
+      <section class="panel">
+        <button class="back-to-top" type="button">回到顶部</button>
+      </section>
+    </aside>
+  </main>
+
   <script
     src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.7/dist/ark-waifu.iife.js"
     data-registry="/registry/operators.json"
