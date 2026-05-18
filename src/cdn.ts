@@ -350,6 +350,12 @@ function createRegistryToggle(): HTMLElement {
     right: "24px",
     bottom: "452px",
     zIndex: "10001",
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "auto",
+    minWidth: "0",
+    boxSizing: "border-box",
     border: "1px solid rgba(120, 134, 155, 0.42)",
     borderRadius: "8px",
     padding: "8px 10px",
@@ -430,6 +436,13 @@ function createRegistryPanel(): HTMLElement {
 
 function actionButtonStyle(): Partial<CSSStyleDeclaration> {
   return {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flex: "0 0 auto",
+    width: "auto",
+    minWidth: "0",
+    boxSizing: "border-box",
     border: "1px solid #cad3df",
     borderRadius: "8px",
     padding: "8px 10px",
