@@ -101,6 +101,9 @@ if (currentScript?.dataset.auto !== "false") {
       dialogueUrl: currentScript?.dataset.dialogueUrl
         ? resolveDatasetUrl(currentScript.dataset.dialogueUrl, currentScript.dataset.dialogueUrl, currentScript)
         : undefined,
+      tipsUrl: currentScript?.dataset.tipsUrl
+        ? resolveDatasetUrl(currentScript.dataset.tipsUrl, currentScript.dataset.tipsUrl, currentScript)
+        : undefined,
       bubbleDurationMs: readNumberDataset(currentScript, "bubbleDurationMs"),
       actionPanel: readBooleanDataset(currentScript, "actionPanel", Boolean(registryUrl))
     };
@@ -144,6 +147,9 @@ async function autoMountRegistryController(
     sitOptions: readJsonDataset(script, "sitOptions"),
     dialogueUrl: script?.dataset.dialogueUrl
       ? resolveDatasetUrl(script.dataset.dialogueUrl, script.dataset.dialogueUrl, script)
+      : undefined,
+    tipsUrl: script?.dataset.tipsUrl
+      ? resolveDatasetUrl(script.dataset.tipsUrl, script.dataset.tipsUrl, script)
       : undefined,
     bubbleDurationMs: readNumberDataset(script, "bubbleDurationMs")
   });

@@ -4,7 +4,9 @@ import type {
   InteractionOptions,
   ModelManifest,
   PlayOptions,
-  SitOptions
+  SitOptions,
+  TipsManifest,
+  TipsRule
 } from "./types";
 
 const DEFAULT_SIT_OPTIONS: Required<SitOptions> = {
@@ -17,6 +19,8 @@ const DEFAULT_SIT_OPTIONS: Required<SitOptions> = {
 
 const RELAX_BRANCH_DELAY_MS = 20000;
 const SPECIAL_DELAY_MS = 5000;
+const DEFAULT_TIPS_COOLDOWN_MS = 3000;
+const DEFAULT_SETTLE_DELAY_MS = 3000;
 
 type InteractionControllerContext = {
   root: HTMLElement;
@@ -40,6 +44,9 @@ export class InteractionController {
   private relaxBranchTimer: number | null = null;
   private specialDelayTimer: number | null = null;
   private candidate: SitCandidate | null = null;
+  private readonly tipCleanups: Array<() => void> = [];
+  private readonly tipCooldowns = new WeakMap<TipsRule, number>();
+  private settleCandidates = new WeakMap<TipsRule, { element: Element; startedAt: number }>();
   private currentBaseAction = "idle";
   private sitting = false;
 
@@ -50,21 +57,7 @@ export class InteractionController {
   }
 
   async loadDialogue(): Promise<void> {
-    if (this.options.dialogue || !this.options.dialogueUrl) {
-      return;
-    }
-
-    try {
-      const response = await fetch(this.options.dialogueUrl, { cache: "no-cache" });
-
-      if (!response.ok) {
-        throw new Error(`${response.status} ${response.statusText}`);
-      }
-
-      this.options.dialogue = (await response.json()) as DialogueManifest;
-    } catch (error) {
-      console.warn("[Ark-waifu] Failed to load dialogue manifest.", error);
-    }
+    await Promise.all([this.loadDialogueLines(), this.loadTips()]);
   }
 
   start(): void {
@@ -72,6 +65,8 @@ export class InteractionController {
     this.currentBaseAction = this.pickBaseAction();
     this.playBaseAction();
     this.speak("load");
+    this.bindTips();
+    this.triggerTips("load");
     this.startSitScanner();
   }
 
@@ -82,6 +77,7 @@ export class InteractionController {
     }
 
     this.clearActionTimers();
+    this.clearTips();
 
     this.candidate = null;
     this.sitting = false;
@@ -188,7 +184,7 @@ export class InteractionController {
   }
 
   private startSitScanner(): void {
-    if (!this.options.sitTargets || !this.context.hasAction("sit")) {
+    if (!this.options.sitTargets && !this.hasSettleTips()) {
       return;
     }
 
@@ -203,6 +199,7 @@ export class InteractionController {
     }
 
     const target = this.findSitTarget();
+    this.scanSettleTips(target);
 
     if (!target) {
       this.candidate = null;
@@ -368,6 +365,187 @@ export class InteractionController {
       window.clearTimeout(this.specialDelayTimer);
       this.specialDelayTimer = null;
     }
+  }
+
+  private async loadDialogueLines(): Promise<void> {
+    if (this.options.dialogue || !this.options.dialogueUrl) {
+      return;
+    }
+
+    try {
+      const response = await fetch(this.options.dialogueUrl, { cache: "no-cache" });
+
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+
+      this.options.dialogue = (await response.json()) as DialogueManifest;
+    } catch (error) {
+      console.warn("[Ark-waifu] Failed to load dialogue manifest.", error);
+    }
+  }
+
+  private async loadTips(): Promise<void> {
+    if (this.options.tips || !this.options.tipsUrl) {
+      return;
+    }
+
+    try {
+      const response = await fetch(this.options.tipsUrl, { cache: "no-cache" });
+
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+
+      const manifest = (await response.json()) as TipsManifest;
+      this.options.tips = manifest;
+
+      if (!this.options.dialogue && manifest.lines) {
+        this.options.dialogue = {
+          version: manifest.version,
+          lines: manifest.lines
+        };
+      }
+    } catch (error) {
+      console.warn("[Ark-waifu] Failed to load tips manifest.", error);
+    }
+  }
+
+  private bindTips(): void {
+    const rules = this.options.tips?.rules ?? [];
+
+    rules.forEach((rule) => {
+      if (rule.event === "load" || rule.event === "settle" || !rule.selector) {
+        return;
+      }
+
+      const listener = (event: Event): void => {
+        this.triggerTip(rule, event.currentTarget instanceof Element ? event.currentTarget : undefined);
+      };
+
+      document.querySelectorAll(rule.selector).forEach((element) => {
+        element.addEventListener(rule.event, listener);
+        this.tipCleanups.push(() => {
+          element.removeEventListener(rule.event, listener);
+        });
+      });
+    });
+  }
+
+  private clearTips(): void {
+    while (this.tipCleanups.length > 0) {
+      this.tipCleanups.pop()?.();
+    }
+
+    this.settleCandidates = new WeakMap();
+  }
+
+  private triggerTips(event: TipsRule["event"]): void {
+    const rules = this.options.tips?.rules ?? [];
+
+    rules
+      .filter((rule) => rule.event === event)
+      .forEach((rule) => {
+        this.triggerTip(rule);
+      });
+  }
+
+  private scanSettleTips(activeTarget: Element | null): void {
+    const rules = this.options.tips?.rules ?? [];
+
+    rules
+      .filter((rule) => rule.event === "settle" && rule.selector)
+      .forEach((rule) => {
+        const target = activeTarget?.matches(rule.selector ?? "") ? activeTarget : this.findRuleTarget(rule);
+
+        if (!target) {
+          this.settleCandidates.delete(rule);
+          return;
+        }
+
+        const candidate = this.settleCandidates.get(rule);
+
+        if (candidate?.element !== target) {
+          this.settleCandidates.set(rule, { element: target, startedAt: Date.now() });
+          return;
+        }
+
+        if (Date.now() - candidate.startedAt >= (rule.delayMs ?? DEFAULT_SETTLE_DELAY_MS)) {
+          this.triggerTip(rule, target);
+          this.settleCandidates.set(rule, { element: target, startedAt: Date.now() });
+        }
+      });
+  }
+
+  private findRuleTarget(rule: TipsRule): Element | null {
+    if (!rule.selector) {
+      return null;
+    }
+
+    const rootRect = this.context.root.getBoundingClientRect();
+    const footX = rootRect.left + rootRect.width / 2;
+    const footY = rootRect.bottom;
+
+    return (
+      Array.from(document.querySelectorAll(rule.selector)).find((element) => {
+        const rect = element.getBoundingClientRect();
+        return (
+          isVisibleElement(element, rect) &&
+          footX >= rect.left &&
+          footX <= rect.right &&
+          Math.abs(footY - rect.top) <= Math.max(16, rootRect.height * 0.08)
+        );
+      }) ?? null
+    );
+  }
+
+  private triggerTip(rule: TipsRule, _target?: Element): void {
+    const now = Date.now();
+    const lastTriggeredAt = this.tipCooldowns.get(rule) ?? 0;
+
+    if (now - lastTriggeredAt < (rule.cooldownMs ?? DEFAULT_TIPS_COOLDOWN_MS)) {
+      return;
+    }
+
+    this.tipCooldowns.set(rule, now);
+    const text = rule.text[Math.floor(Math.random() * rule.text.length)];
+
+    if (text) {
+      this.context.showBubble(text, this.options.bubbleDurationMs);
+    }
+
+    if (rule.action) {
+      this.playTipAction(rule.action);
+    }
+  }
+
+  private playTipAction(action: string): void {
+    if (action === "sit") {
+      this.enterSit();
+      return;
+    }
+
+    if (action === "sleep") {
+      this.enterSleep();
+      return;
+    }
+
+    if (action === "relax" || action === "idle") {
+      this.currentBaseAction = action;
+      this.sitting = false;
+      this.clearActionTimers();
+      this.context.play(action, { loop: true });
+      if (action === "relax") {
+        this.armRelaxBranch();
+      }
+      return;
+    }
+
+    this.playTemporary(action);
+  }
+
+  private hasSettleTips(): boolean {
+    return Boolean(this.options.tips?.rules.some((rule) => rule.event === "settle" && rule.selector));
   }
 }
 

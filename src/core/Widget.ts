@@ -29,11 +29,22 @@ export class ArkWaifuWidget {
       | "sitOptions"
       | "dialogue"
       | "dialogueUrl"
+      | "tips"
+      | "tipsUrl"
     >
   > &
     Pick<
       WidgetOptions,
-      "container" | "className" | "actionSchedule" | "interaction" | "sitTargets" | "sitOptions" | "dialogue" | "dialogueUrl"
+      | "container"
+      | "className"
+      | "actionSchedule"
+      | "interaction"
+      | "sitTargets"
+      | "sitOptions"
+      | "dialogue"
+      | "dialogueUrl"
+      | "tips"
+      | "tipsUrl"
     >;
   private adapter: CharacterAdapter | null = null;
   private manifest: ModelManifest | null = null;
@@ -58,6 +69,8 @@ export class ArkWaifuWidget {
       sitOptions: options.sitOptions,
       dialogue: options.dialogue,
       dialogueUrl: options.dialogueUrl,
+      tips: options.tips,
+      tipsUrl: options.tipsUrl,
       bubbleDurationMs: options.bubbleDurationMs ?? 3600,
       container: options.container,
       className: options.className
@@ -291,6 +304,8 @@ export class ArkWaifuWidget {
       sitOptions: this.options.interaction?.sitOptions ?? this.options.sitOptions,
       dialogue: this.options.interaction?.dialogue ?? this.options.dialogue,
       dialogueUrl: this.options.interaction?.dialogueUrl ?? this.options.dialogueUrl,
+      tips: this.options.interaction?.tips ?? this.options.tips,
+      tipsUrl: this.options.interaction?.tipsUrl ?? this.options.tipsUrl,
       bubbleDurationMs: this.options.interaction?.bubbleDurationMs ?? this.options.bubbleDurationMs
     };
   }

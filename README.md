@@ -60,7 +60,7 @@ const mounted = mountArkWaifu({
   actionSchedule: [{ action: "special", intervalMs: 30000 }],
   defaultAction: "auto",
   sitTargets: ".ark-waifu-sit-target",
-  dialogueUrl: "/registry/dialogue.sample.json"
+  tipsUrl: "/registry/waifu-tips.sample.json"
 });
 
 mounted.ready.catch((error) => {
@@ -97,11 +97,12 @@ mounted.ready.catch((error) => {
 - data-sit-targets: 允许坐下的 CSS selector，多个 selector 用英文逗号分隔
 - data-sit-options: JSON 字符串，可配置 hoverMs、durationMs、cooldownMs、minOverlapRatio
 - data-dialogue-url: 气泡台词 JSON 地址
+- data-tips-url: Spine 版 waifu-tips JSON 地址，用于根据网页 DOM 事件显示气泡并触发动作
 - data-bubble-duration-ms: 气泡显示时长（数字，毫秒）
 
-### Dialogue JSON
+### Tips JSON
 
-气泡台词独立加载，不写入模型 manifest。示例：
+Tips JSON 可以同时包含模型状态台词和网页 DOM 事件规则，不写入模型 manifest。示例：
 
 ```json
 {
@@ -113,11 +114,33 @@ mounted.ready.catch((error) => {
     "stand": ["休息结束，继续工作吧。"],
     "click": ["嗯？博士有什么安排吗？"],
     "error": ["资源好像没有加载成功。"]
-  }
+  },
+  "rules": [
+    {
+      "event": "load",
+      "text": ["欢迎来到这个博客页面。"]
+    },
+    {
+      "selector": "a",
+      "event": "mouseenter",
+      "text": ["要打开这个链接吗？"],
+      "action": "touch"
+    },
+    {
+      "selector": ".ark-waifu-sit-target",
+      "event": "settle",
+      "text": ["这里可以坐一会儿。"],
+      "action": "sit",
+      "delayMs": 3000,
+      "cooldownMs": 6000
+    }
+  ]
 }
 ```
 
-缺少某个事件的台词时会静默跳过，不影响模型加载。
+如果只需要状态台词，也可以继续使用 `data-dialogue-url` 指向只包含 `lines` 的 JSON。缺少某个事件的台词时会静默跳过，不影响模型加载。
+
+`event` 当前支持 `load`、`click`、`mouseenter`、`mouseleave`、`focus`、`blur`、`settle`。动作不存在时只显示文本并跳过动作。
 
 ## Manifest Spec
 
@@ -216,7 +239,7 @@ pnpm preview
   data-model="models-358-lisa-build-char-358-lisa"
   data-cdn="osyb"
   data-default-action="auto"
-  data-dialogue-url="http://127.0.0.1:4173/registry/dialogue.sample.json"
+  data-tips-url="http://127.0.0.1:4173/registry/waifu-tips.sample.json"
 ></script>
 ```
 

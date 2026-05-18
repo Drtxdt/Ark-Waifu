@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "lines": {
+    "load": [
+      "博士，我准备好了。",
+      "今天也请多关照。",
+      "页面加载完成，我会在这里待命。"
+    ],
+    "relax": [
+      "先在这里休息一下。",
+      "博士也别一直盯着屏幕。",
+      "风很安静，适合摸鱼。",
+      "如果有任务，随时叫我。"
+    ],
+    "sit": [
+      "这个位置看起来不错。",
+      "我先坐一会儿。",
+      "这里刚好可以休息。",
+      "坐下之后视野也不错。"
+    ],
+    "stand": [
+      "休息结束，继续工作吧。",
+      "我站起来了。",
+      "差不多该继续巡逻了。"
+    ],
+    "click": [
+      "嗯？博士有什么安排吗？",
+      "我在听。",
+      "需要我帮忙吗？",
+      "别戳太多次啦。"
+    ],
+    "error": [
+      "资源好像没有加载成功。",
+      "模型文件可能没有找到。",
+      "加载失败了，检查一下资源路径吧。"
+    ]
+  },
+  "rules": [
+    {
+      "event": "load",
+      "text": ["欢迎来到这个博客页面。", "博士，今天想看哪篇文章？"],
+      "cooldownMs": 8000
+    },
+    {
+      "selector": "a",
+      "event": "mouseenter",
+      "text": ["要打开这个链接吗？", "这个导航看起来可以点进去看看。"],
+      "action": "touch",
+      "cooldownMs": 3500
+    },
+    {
+      "selector": "button",
+      "event": "mouseenter",
+      "text": ["这个按钮看起来有点重要。", "点击前可以先想一下要做什么。"],
+      "action": "touch",
+      "cooldownMs": 3500
+    },
+    {
+      "selector": "input, textarea",
+      "event": "focus",
+      "text": ["开始输入了吗？我会安静一点。", "写内容的时候记得保存。"],
+      "action": "relax",
+      "cooldownMs": 5000
+    },
+    {
+      "selector": ".post",
+      "event": "mouseenter",
+      "text": ["这篇文章看起来挺有意思。", "博士，要读一下这篇吗？"],
+      "cooldownMs": 4000
+    },
+    {
+      "selector": ".tag-row span",
+      "event": "mouseenter",
+      "text": ["这是文章标签。", "用标签可以很快找到相关内容。"],
+      "cooldownMs": 2500
+    },
+    {
+      "selector": ".archive-item",
+      "event": "mouseenter",
+      "text": ["归档里藏着以前的记录。", "要不要翻翻旧文章？"],
+      "action": "relax",
+      "cooldownMs": 4000
+    },
+    {
+      "selector": ".comment-card",
+      "event": "click",
+      "text": ["评论区也要保持礼貌哦。", "这里可以留下你的想法。"],
+      "action": "touch",
+      "cooldownMs": 3000
+    },
+    {
+      "selector": ".search-box",
+      "event": "focus",
+      "text": ["想找什么内容？", "输入关键词试试看。"],
+      "action": "touch",
+      "cooldownMs": 4000
+    },
+    {
+      "selector": ".friend-link",
+      "event": "mouseenter",
+      "text": ["这里是友情链接。", "朋友的站点也值得看看。"],
+      "action": "relax",
+      "cooldownMs": 4000
+    },
+    {
+      "selector": ".sleep-zone",
+      "event": "click",
+      "text": ["这个区域适合打个盹。", "稍微睡一下也没关系。"],
+      "action": "sleep",
+      "cooldownMs": 5000
+    },
+    {
+      "selector": ".special-zone",
+      "event": "click",
+      "text": ["收到特别指令。", "那就认真一点吧。"],
+      "action": "special",
+      "cooldownMs": 6000
+    },
+    {
+      "selector": ".ark-waifu-sit-target",
+      "event": "settle",
+      "text": ["这里可以坐一会儿。", "这个位置刚好能休息。"],
+      "action": "sit",
+      "delayMs": 3000,
+      "cooldownMs": 6000
+    }
+  ]
+}

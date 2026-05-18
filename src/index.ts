@@ -24,6 +24,9 @@ export type {
   PlayOptions,
   ScannedModelManifest,
   SitOptions,
+  TipsEvent,
+  TipsManifest,
+  TipsRule,
   WidgetOptions
 } from "./core/types";
 

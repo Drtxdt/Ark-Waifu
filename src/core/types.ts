@@ -69,6 +69,30 @@ export type DialogueManifest = {
   lines: Partial<Record<DialogueEvent, string[]>>;
 };
 
+export type TipsEvent =
+  | "click"
+  | "mouseenter"
+  | "mouseleave"
+  | "focus"
+  | "blur"
+  | "settle"
+  | "load";
+
+export type TipsRule = {
+  selector?: string;
+  event: TipsEvent;
+  text: string[];
+  action?: string;
+  delayMs?: number;
+  cooldownMs?: number;
+};
+
+export type TipsManifest = {
+  version: 1;
+  lines?: Partial<Record<DialogueEvent, string[]>>;
+  rules: TipsRule[];
+};
+
 export type SitOptions = {
   hoverMs?: number;
   durationMs?: number;
@@ -83,6 +107,8 @@ export type InteractionOptions = {
   sitOptions?: SitOptions;
   dialogue?: DialogueManifest;
   dialogueUrl?: string;
+  tips?: TipsManifest;
+  tipsUrl?: string;
   bubbleDurationMs?: number;
 };
 
@@ -107,6 +133,8 @@ export type WidgetOptions = {
   sitOptions?: SitOptions;
   dialogue?: DialogueManifest;
   dialogueUrl?: string;
+  tips?: TipsManifest;
+  tipsUrl?: string;
   bubbleDurationMs?: number;
 };
 
