@@ -274,7 +274,7 @@ function createCdnConfig(
   if (canUseArkModelsCdn(operator)) {
     return [
       `<script`,
-      `  src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.7/dist/ark-waifu.iife.js"`,
+      `  src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.8/dist/ark-waifu.iife.js"`,
       `  data-registry="/registry/operators.json"`,
       `  data-model="${escapeAttribute(operator.id)}"`,
       `  data-cdn="${escapeAttribute(state.selectedCdn.id)}"`,
@@ -284,7 +284,7 @@ function createCdnConfig(
   }
 
   return [
-    `<script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.7/dist/ark-waifu.iife.js" data-auto="false"></script>`,
+    `<script src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.8/dist/ark-waifu.iife.js" data-auto="false"></script>`,
     `<script>window.ArkWaifu.mountArkWaifu({manifest:${JSON.stringify(manifest)},draggable:true,clickAction:"touch",actionPanel:true});</script>`
   ].join("\n");
 }
