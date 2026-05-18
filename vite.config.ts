@@ -104,8 +104,8 @@ function localModelDevServer(): Plugin {
 }
 
 function getLocalCdnRoute(requestPath: string): { relativePath: string } | null {
-  if (requestPath === "/ark-waifu.iife.js") {
-    return { relativePath: "ark-waifu.iife.js" };
+  if (requestPath === "/ark-waifu.iife.js" || requestPath === "/ark-waifu.loader.js") {
+    return { relativePath: requestPath.slice(1) };
   }
 
   return null;

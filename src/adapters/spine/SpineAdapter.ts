@@ -32,8 +32,12 @@ export class SpineAdapter implements CharacterAdapter {
       backgroundAlpha: 0,
       antialias: true,
       autoDensity: true,
-      resolution: window.devicePixelRatio || 1
+      resolution: Math.min(window.devicePixelRatio || 1, this.context.maxDpr ?? 1.5)
     });
+
+    if (this.context.fpsLimit && this.context.fpsLimit > 0) {
+      this.app.ticker.maxFPS = this.context.fpsLimit;
+    }
 
     this.app.view.className = "ark-waifu-canvas";
     this.context.container.appendChild(this.app.view);
@@ -132,6 +136,14 @@ export class SpineAdapter implements CharacterAdapter {
     while (this.baseTextures.length > 0) {
       this.baseTextures.pop()?.destroy();
     }
+  }
+
+  pause(): void {
+    this.app?.ticker.stop();
+  }
+
+  resume(): void {
+    this.app?.ticker.start();
   }
 
   private async loadSpineData(

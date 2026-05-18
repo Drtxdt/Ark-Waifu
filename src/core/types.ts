@@ -110,6 +110,10 @@ export type InteractionOptions = {
   tips?: TipsManifest;
   tipsUrl?: string;
   bubbleDurationMs?: number;
+  maxDpr?: number;
+  fpsLimit?: number;
+  pauseWhenHidden?: boolean;
+  pauseWhenOffscreen?: boolean;
 };
 
 export type ActionPanelOptions = {
@@ -136,6 +140,10 @@ export type WidgetOptions = {
   tips?: TipsManifest;
   tipsUrl?: string;
   bubbleDurationMs?: number;
+  maxDpr?: number;
+  fpsLimit?: number;
+  pauseWhenHidden?: boolean;
+  pauseWhenOffscreen?: boolean;
 };
 
 export type MountArkWaifuOptions = WidgetOptions & {
@@ -157,6 +165,8 @@ export type AdapterContext = {
   container: HTMLElement;
   width: number;
   height: number;
+  maxDpr?: number;
+  fpsLimit?: number;
 };
 
 export interface CharacterAdapter {
@@ -165,5 +175,7 @@ export interface CharacterAdapter {
   resize(width: number, height: number): void;
   hitTest?(x: number, y: number): boolean;
   hasAction?(action: string): boolean;
+  pause?(): void;
+  resume?(): void;
   destroy(): void;
 }

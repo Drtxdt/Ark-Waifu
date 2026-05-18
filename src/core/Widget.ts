@@ -31,6 +31,8 @@ export class ArkWaifuWidget {
       | "dialogueUrl"
       | "tips"
       | "tipsUrl"
+      | "pauseWhenHidden"
+      | "pauseWhenOffscreen"
     >
   > &
     Pick<
@@ -45,11 +47,16 @@ export class ArkWaifuWidget {
       | "dialogueUrl"
       | "tips"
       | "tipsUrl"
+      | "pauseWhenHidden"
+      | "pauseWhenOffscreen"
     >;
   private adapter: CharacterAdapter | null = null;
   private manifest: ModelManifest | null = null;
   private interaction: InteractionController | null = null;
   private bubbleTimer: number | null = null;
+  private intersectionObserver: IntersectionObserver | null = null;
+  private hiddenPaused = false;
+  private offscreenPaused = false;
   private dragState: { pointerId: number; offsetX: number; offsetY: number; moved: boolean } | null =
     null;
   private scheduleTimers: number[] = [];
@@ -72,6 +79,10 @@ export class ArkWaifuWidget {
       tips: options.tips,
       tipsUrl: options.tipsUrl,
       bubbleDurationMs: options.bubbleDurationMs ?? 3600,
+      maxDpr: options.maxDpr ?? 1.5,
+      fpsLimit: options.fpsLimit ?? 30,
+      pauseWhenHidden: options.pauseWhenHidden ?? true,
+      pauseWhenOffscreen: options.pauseWhenOffscreen ?? true,
       container: options.container,
       className: options.className
     };
@@ -145,10 +156,12 @@ export class ArkWaifuWidget {
     (this.options.container ?? document.body).appendChild(this.root);
 
     window.addEventListener("resize", this.handleResize);
+    document.addEventListener("visibilitychange", this.handleVisibilityChange);
     this.root.addEventListener("pointerdown", this.handlePointerDown);
     this.root.addEventListener("pointermove", this.handlePointerMove);
     this.root.addEventListener("pointerup", this.handlePointerUp);
     this.root.addEventListener("pointercancel", this.handlePointerCancel);
+    this.setupIntersectionObserver();
   }
 
   async init(manifest?: ModelManifest): Promise<void> {
@@ -190,6 +203,7 @@ export class ArkWaifuWidget {
       this.interaction = nextInteraction;
       this.setStatus("", true);
       this.interaction.start();
+      this.updateAdapterPauseState();
       if (this.options.actionSchedule) {
         this.schedule(this.options.actionSchedule);
       }
@@ -270,11 +284,14 @@ export class ArkWaifuWidget {
 
   destroy(): void {
     window.removeEventListener("resize", this.handleResize);
+    document.removeEventListener("visibilitychange", this.handleVisibilityChange);
     this.root.removeEventListener("pointerdown", this.handlePointerDown);
     this.root.removeEventListener("pointermove", this.handlePointerMove);
     this.root.removeEventListener("pointerup", this.handlePointerUp);
     this.root.removeEventListener("pointercancel", this.handlePointerCancel);
     this.clearSchedule();
+    this.intersectionObserver?.disconnect();
+    this.intersectionObserver = null;
     this.interaction?.destroy();
     this.interaction = null;
     this.clearBubble();
@@ -289,7 +306,9 @@ export class ArkWaifuWidget {
       return new SpineAdapter({
         container: this.viewport,
         width: this.options.width,
-        height: this.options.height
+        height: this.options.height,
+        maxDpr: this.options.maxDpr,
+        fpsLimit: this.options.fpsLimit
       });
     }
 
@@ -315,6 +334,35 @@ export class ArkWaifuWidget {
     const height = this.root.clientHeight || this.options.height;
     this.adapter?.resize(width, height);
   };
+
+  private readonly handleVisibilityChange = (): void => {
+    this.hiddenPaused = Boolean(
+      this.options.pauseWhenHidden && document.visibilityState === "hidden"
+    );
+    this.updateAdapterPauseState();
+  };
+
+  private setupIntersectionObserver(): void {
+    if (!this.options.pauseWhenOffscreen || !("IntersectionObserver" in window)) {
+      return;
+    }
+
+    this.intersectionObserver = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      this.offscreenPaused = entry ? !entry.isIntersecting : false;
+      this.updateAdapterPauseState();
+    });
+    this.intersectionObserver.observe(this.root);
+  }
+
+  private updateAdapterPauseState(): void {
+    if (this.hiddenPaused || this.offscreenPaused) {
+      this.adapter?.pause?.();
+      return;
+    }
+
+    this.adapter?.resume?.();
+  }
 
   private readonly handlePointerDown = (event: PointerEvent): void => {
     if (!this.options.draggable || event.button !== 0) {

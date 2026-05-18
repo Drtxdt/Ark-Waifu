@@ -72,9 +72,9 @@ mounted.ready.catch((error) => {
 
 ```html
 <script
-    src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.8/dist/ark-waifu.iife.js"
+    src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.8/dist/ark-waifu.loader.js"
     data-registry="/registry/operators.json"
-    data-model="models-358-lisa-build-char-358-lisa"
+    data-model="models-4134-cetsyr-epoque-50-build-char-4134-cetsyr-epoque-50"
     data-cdn="osyb"
   ></script>
 ```
@@ -99,6 +99,11 @@ mounted.ready.catch((error) => {
 - data-dialogue-url: 气泡台词 JSON 地址
 - data-tips-url: Spine 版 waifu-tips JSON 地址，用于根据网页 DOM 事件显示气泡并触发动作
 - data-bubble-duration-ms: 气泡显示时长（数字，毫秒）
+- data-load-strategy: loader 加载策略，支持 idle、after-load、immediate，默认 idle
+- data-max-dpr: Pixi 最大 DPR，默认 1.5
+- data-fps-limit: Pixi ticker FPS 限制，默认 30
+- data-pause-when-hidden: 页面隐藏时暂停渲染，默认 true
+- data-pause-when-offscreen: widget 离屏时暂停渲染，默认 true
 
 ### Tips JSON
 
@@ -223,7 +228,7 @@ pnpm build
 pnpm dev
 ```
 
-此时首页会从 `dist/ark-waifu.iife.js` 读取真实 IIFE 产物。也可以用 `pnpm preview` 测试完整 `dist` 静态站：
+此时首页会从 `dist/ark-waifu.loader.js` 延后加载真实 IIFE 产物。也可以用 `pnpm preview` 测试完整 `dist` 静态站：
 
 ```bash
 pnpm build
@@ -234,9 +239,9 @@ pnpm preview
 
 ```html
 <script
-  src="http://127.0.0.1:4173/ark-waifu.iife.js"
+  src="http://127.0.0.1:4173/ark-waifu.loader.js"
   data-registry="http://127.0.0.1:4173/registry/operators.json"
-  data-model="models-358-lisa-build-char-358-lisa"
+  data-model="models-4134-cetsyr-epoque-50-build-char-4134-cetsyr-epoque-50"
   data-cdn="osyb"
   data-default-action="auto"
   data-tips-url="http://127.0.0.1:4173/registry/waifu-tips.sample.json"
@@ -249,7 +254,7 @@ pnpm preview
 npm pack --dry-run
 ```
 
-确认 tarball 里包含 `dist/ark-waifu.iife.js` 和 `dist/registry/operators.json` 后再发布。
+确认 tarball 里包含 `dist/ark-waifu.loader.js`、`dist/ark-waifu.iife.js` 和 `dist/registry/operators.json` 后再发布。
 
 ## Compatibility Notes
 

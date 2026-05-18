@@ -19,16 +19,21 @@ import type {
 
 type RegistryControllerState = {
   widget: ArkWaifuWidget;
-  registry: ModelRegistry;
+  registry?: ModelRegistry;
+  registryUrl: string;
   assetBaseUrl?: string;
   selected: ScannedModelManifest;
   matches: ScannedModelManifest[];
-  panel: HTMLElement;
-  searchInput: HTMLInputElement;
-  datalist: HTMLDataListElement;
-  actions: HTMLElement;
-  status: HTMLElement;
+  panel?: HTMLElement;
+  toggle: HTMLElement;
+  searchInput?: HTMLInputElement;
+  datalist?: HTMLDataListElement;
+  actions?: HTMLElement;
+  status?: HTMLElement;
+  panelLoaded: boolean;
 };
+
+const DEFAULT_MODEL_ID = "models-4134-cetsyr-epoque-50-build-char-4134-cetsyr-epoque-50";
 
 declare global {
   interface Window {
@@ -66,8 +71,8 @@ if (currentScript?.dataset.auto !== "false") {
   const autoMount = (): void => {
     const registryUrl = resolveRegistryUrl(currentScript);
 
-    if (registryUrl && readBooleanDataset(currentScript, "modelSelector", true)) {
-      autoMountRegistryController(currentScript, registryUrl).catch((error: unknown) => {
+    if (registryUrl) {
+      autoMountRegistryModel(currentScript, registryUrl).catch((error: unknown) => {
         console.error("[Ark-waifu] Auto mount failed", error);
       });
       return;
@@ -86,7 +91,7 @@ if (currentScript?.dataset.auto !== "false") {
     const options: MountArkWaifuOptions = {
       manifestUrl,
       registryUrl,
-      modelId: currentScript?.dataset.model,
+      modelId: currentScript?.dataset.model ?? DEFAULT_MODEL_ID,
       assetBaseUrl: currentScript?.dataset.assetBaseUrl ?? selectedCdn?.baseUrl,
       width: readNumberDataset(currentScript, "width"),
       height: readNumberDataset(currentScript, "height"),
@@ -105,7 +110,11 @@ if (currentScript?.dataset.auto !== "false") {
         ? resolveDatasetUrl(currentScript.dataset.tipsUrl, currentScript.dataset.tipsUrl, currentScript)
         : undefined,
       bubbleDurationMs: readNumberDataset(currentScript, "bubbleDurationMs"),
-      actionPanel: readBooleanDataset(currentScript, "actionPanel", Boolean(registryUrl))
+      maxDpr: readNumberDataset(currentScript, "maxDpr"),
+      fpsLimit: readNumberDataset(currentScript, "fpsLimit"),
+      pauseWhenHidden: readBooleanDataset(currentScript, "pauseWhenHidden", true),
+      pauseWhenOffscreen: readBooleanDataset(currentScript, "pauseWhenOffscreen", true),
+      actionPanel: readBooleanDataset(currentScript, "actionPanel", false)
     };
 
     const { ready } = mountArkWaifu(options);
@@ -121,14 +130,14 @@ if (currentScript?.dataset.auto !== "false") {
   }
 }
 
-async function autoMountRegistryController(
+async function autoMountRegistryModel(
   script: HTMLScriptElement | null,
   registryUrl: string
 ): Promise<void> {
   const registry = await loadRegistry(registryUrl);
   const assetBaseUrl = readAssetBaseUrl(script);
   const initialModel =
-    findModel(registry, script?.dataset.model) ?? registry.operators[0];
+    findModel(registry, script?.dataset.model ?? DEFAULT_MODEL_ID) ?? registry.operators[0];
 
   if (!initialModel) {
     throw new Error(`Registry "${registryUrl}" does not contain any model.`);
@@ -151,47 +160,33 @@ async function autoMountRegistryController(
     tipsUrl: script?.dataset.tipsUrl
       ? resolveDatasetUrl(script.dataset.tipsUrl, script.dataset.tipsUrl, script)
       : undefined,
-    bubbleDurationMs: readNumberDataset(script, "bubbleDurationMs")
+    bubbleDurationMs: readNumberDataset(script, "bubbleDurationMs"),
+    maxDpr: readNumberDataset(script, "maxDpr"),
+    fpsLimit: readNumberDataset(script, "fpsLimit"),
+    pauseWhenHidden: readBooleanDataset(script, "pauseWhenHidden", true),
+    pauseWhenOffscreen: readBooleanDataset(script, "pauseWhenOffscreen", true)
   });
-  const panel = createRegistryPanel();
+  const toggle = createRegistryToggle();
   const state: RegistryControllerState = {
     widget,
-    registry,
+    registry: readBooleanDataset(script, "modelSelectorOpen", false) ? registry : undefined,
+    registryUrl,
     assetBaseUrl,
     selected: initialModel,
     matches: registry.operators,
-    panel,
-    searchInput: panel.querySelector<HTMLInputElement>("[data-ark-waifu-search]")!,
-    datalist: panel.querySelector<HTMLDataListElement>("[data-ark-waifu-list]")!,
-    actions: panel.querySelector<HTMLElement>("[data-ark-waifu-actions]")!,
-    status: panel.querySelector<HTMLElement>("[data-ark-waifu-status]")!
+    toggle,
+    panelLoaded: false
   };
 
-  state.searchInput.addEventListener("input", () => {
-    renderModelSuggestions(state, state.searchInput.value);
-  });
-  state.searchInput.addEventListener("change", () => {
-    const model = findSearchModel(state, state.searchInput.value);
-
-    if (model) {
-      void loadControllerModel(state, model);
-    }
-  });
-  state.searchInput.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter") {
-      return;
-    }
-
-    event.preventDefault();
-    const model = findSearchModel(state, state.searchInput.value) ?? state.matches[0];
-
-    if (model) {
-      void loadControllerModel(state, model);
-    }
+  toggle.addEventListener("click", () => {
+    void openRegistryPanel(state);
   });
 
-  renderModelSuggestions(state, "");
   await loadControllerModel(state, initialModel);
+
+  if (readBooleanDataset(script, "modelSelectorOpen", false)) {
+    await openRegistryPanel(state);
+  }
 }
 
 async function loadControllerModel(
@@ -199,29 +194,46 @@ async function loadControllerModel(
   model: ScannedModelManifest
 ): Promise<void> {
   state.selected = model;
-  state.searchInput.value = createModelInputValue(model);
-  state.status.textContent = `Loading ${model.name}...`;
-  state.actions.innerHTML = "";
+  if (state.searchInput) {
+    state.searchInput.value = createModelInputValue(model);
+  }
+  if (state.status) {
+    state.status.textContent = `Loading ${model.name}...`;
+  }
+  if (state.actions) {
+    state.actions.innerHTML = "";
+  }
 
   try {
     const manifest = resolveControllerManifest(model, state.assetBaseUrl);
     await state.widget.load(manifest);
-    renderActionButtons(state, manifest);
-    state.status.textContent = model.name;
+    if (state.actions) {
+      renderActionButtons(state, manifest);
+    }
+    if (state.status) {
+      state.status.textContent = model.name;
+    }
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    state.status.textContent = `Failed to load ${model.name}: ${message}`;
+    if (state.status) {
+      state.status.textContent = `Failed to load ${model.name}: ${message}`;
+    }
     console.error("[Ark-waifu] Failed to load model", error);
   }
 }
 
 function renderModelSuggestions(state: RegistryControllerState, term: string): void {
   const query = term.trim().toLowerCase();
+  const registry = state.registry;
+  if (!registry || !state.datalist || !state.status) {
+    return;
+  }
+
   state.matches = query
-    ? state.registry.operators.filter((model) =>
+    ? registry.operators.filter((model) =>
         (model.searchText ?? createSearchText(model)).includes(query)
       )
-    : state.registry.operators;
+    : registry.operators;
 
   state.datalist.innerHTML = "";
 
@@ -229,7 +241,7 @@ function renderModelSuggestions(state: RegistryControllerState, term: string): v
     const option = document.createElement("option");
     option.value = createModelInputValue(model);
     option.label = model.id;
-    state.datalist.appendChild(option);
+    state.datalist?.appendChild(option);
   });
 
   state.status.textContent =
@@ -239,7 +251,12 @@ function renderModelSuggestions(state: RegistryControllerState, term: string): v
 }
 
 function renderActionButtons(state: RegistryControllerState, manifest: ModelManifest): void {
-  state.actions.innerHTML = "";
+  const actions = state.actions;
+  if (!actions) {
+    return;
+  }
+
+  actions.innerHTML = "";
 
   Object.keys(manifest.actions).forEach((action) => {
     const button = document.createElement("button");
@@ -249,8 +266,83 @@ function renderActionButtons(state: RegistryControllerState, manifest: ModelMani
     button.addEventListener("click", () => {
       state.widget.play(action);
     });
-    state.actions.appendChild(button);
+    actions.appendChild(button);
   });
+}
+
+async function openRegistryPanel(state: RegistryControllerState): Promise<void> {
+  if (!state.registry) {
+    state.toggle.textContent = "Loading...";
+    state.registry = await loadRegistry(state.registryUrl);
+    state.matches = state.registry.operators;
+  }
+
+  if (!state.panelLoaded) {
+    const panel = createRegistryPanel();
+    state.panel = panel;
+    state.searchInput = panel.querySelector<HTMLInputElement>("[data-ark-waifu-search]")!;
+    state.datalist = panel.querySelector<HTMLDataListElement>("[data-ark-waifu-list]")!;
+    state.actions = panel.querySelector<HTMLElement>("[data-ark-waifu-actions]")!;
+    state.status = panel.querySelector<HTMLElement>("[data-ark-waifu-status]")!;
+    state.panelLoaded = true;
+
+    state.searchInput.addEventListener("input", () => {
+      renderModelSuggestions(state, state.searchInput?.value ?? "");
+    });
+    state.searchInput.addEventListener("change", () => {
+      const model = findSearchModel(state, state.searchInput?.value ?? "");
+
+      if (model) {
+        void loadControllerModel(state, model);
+      }
+    });
+    state.searchInput.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter") {
+        return;
+      }
+
+      event.preventDefault();
+      const model = findSearchModel(state, state.searchInput?.value ?? "") ?? state.matches[0];
+
+      if (model) {
+        void loadControllerModel(state, model);
+      }
+    });
+  }
+
+  if (state.panel) {
+    state.panel.hidden = !state.panel.hidden;
+    state.toggle.textContent = state.panel.hidden ? "Models" : "Close";
+  }
+
+  if (!state.panel?.hidden) {
+    renderModelSuggestions(state, "");
+    await loadControllerModel(state, state.selected);
+  }
+}
+
+function createRegistryToggle(): HTMLElement {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "ark-waifu-registry-toggle";
+  button.textContent = "Models";
+  Object.assign(button.style, {
+    position: "fixed",
+    right: "24px",
+    bottom: "452px",
+    zIndex: "10001",
+    border: "1px solid rgba(120, 134, 155, 0.42)",
+    borderRadius: "8px",
+    padding: "8px 10px",
+    color: "#20242a",
+    background: "rgba(255, 255, 255, 0.94)",
+    boxShadow: "0 8px 22px rgba(19, 35, 52, 0.14)",
+    font: "12px system-ui, sans-serif",
+    cursor: "pointer",
+    pointerEvents: "auto"
+  });
+  document.body.appendChild(button);
+  return button;
 }
 
 function createRegistryPanel(): HTMLElement {
@@ -364,7 +456,7 @@ function findSearchModel(
   }
 
   return (
-    state.registry.operators.find(
+    state.registry?.operators.find(
       (model) =>
         model.id.toLowerCase() === query ||
         createModelInputValue(model).toLowerCase() === query
@@ -378,7 +470,7 @@ function findUniqueNameMatch(
   state: RegistryControllerState,
   query: string
 ): ScannedModelManifest | undefined {
-  const matches = state.registry.operators.filter((model) => model.name.toLowerCase() === query);
+  const matches = state.registry?.operators.filter((model) => model.name.toLowerCase() === query) ?? [];
   return matches.length === 1 ? matches[0] : undefined;
 }
 
