@@ -72,7 +72,7 @@ mounted.ready.catch((error) => {
 
 ```html
 <script
-    src="https://cdn.jsdelivr.net/npm/ark-waifu@1.0.0/dist/ark-waifu.loader.js"
+    src="https://cdn.jsdelivr.net/npm/ark-waifu@1.0.1/dist/ark-waifu.loader.js"
     data-registry-base="/registry/"
     data-model="models-4134-cetsyr-epoque-50-build-char-4134-cetsyr-epoque-50"
     data-cdn="osyb"
