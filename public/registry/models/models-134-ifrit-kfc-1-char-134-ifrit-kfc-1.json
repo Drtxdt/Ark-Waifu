@@ -1,0 +1,38 @@
+{
+  "id": "models-134-ifrit-kfc-1-char-134-ifrit-kfc-1",
+  "name": "伊芙利特",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/134_ifrit_kfc%231/char_134_ifrit_kfc%231.skel",
+    "atlas": "/Ark-Models/models/134_ifrit_kfc%231/char_134_ifrit_kfc%231.atlas",
+    "textures": [
+      "/Ark-Models/models/134_ifrit_kfc%231/char_134_ifrit_kfc%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/134_ifrit_kfc#1",
+  "sourceFiles": {
+    "skeleton": "models/134_ifrit_kfc#1/char_134_ifrit_kfc#1.skel",
+    "atlas": "models/134_ifrit_kfc#1/char_134_ifrit_kfc#1.atlas",
+    "textures": [
+      "models/134_ifrit_kfc#1/char_134_ifrit_kfc#1.png"
+    ]
+  },
+  "displayName": "伊芙利特",
+  "searchText": "伊芙利特 char_134_ifrit_kfc#1 models/134_ifrit_kfc#1 default interact move relax sit sleep special"
+}

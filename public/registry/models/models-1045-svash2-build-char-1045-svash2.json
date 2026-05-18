@@ -1,0 +1,37 @@
+{
+  "id": "models-1045-svash2-build-char-1045-svash2",
+  "name": "凛御银灰",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1045_svash2/build_char_1045_svash2.skel",
+    "atlas": "/Ark-Models/models/1045_svash2/build_char_1045_svash2.atlas",
+    "textures": [
+      "/Ark-Models/models/1045_svash2/build_char_1045_svash2.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1045_svash2",
+  "sourceFiles": {
+    "skeleton": "models/1045_svash2/build_char_1045_svash2.skel",
+    "atlas": "models/1045_svash2/build_char_1045_svash2.atlas",
+    "textures": [
+      "models/1045_svash2/build_char_1045_svash2.png"
+    ]
+  },
+  "displayName": "凛御银灰",
+  "searchText": "凛御银灰 build_char_1045_svash2 models/1045_svash2 default interact move relax sit sleep"
+}

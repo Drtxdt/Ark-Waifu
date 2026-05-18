@@ -1,0 +1,37 @@
+{
+  "id": "models-4178-alanna-build-char-4178-alanna",
+  "name": "阿兰娜",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4178_alanna/build_char_4178_alanna.skel",
+    "atlas": "/Ark-Models/models/4178_alanna/build_char_4178_alanna.atlas",
+    "textures": [
+      "/Ark-Models/models/4178_alanna/build_char_4178_alanna.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4178_alanna",
+  "sourceFiles": {
+    "skeleton": "models/4178_alanna/build_char_4178_alanna.skel",
+    "atlas": "models/4178_alanna/build_char_4178_alanna.atlas",
+    "textures": [
+      "models/4178_alanna/build_char_4178_alanna.png"
+    ]
+  },
+  "displayName": "阿兰娜",
+  "searchText": "阿兰娜 build_char_4178_alanna models/4178_alanna default interact move relax sit sleep"
+}

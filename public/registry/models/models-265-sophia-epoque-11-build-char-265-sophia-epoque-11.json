@@ -1,0 +1,38 @@
+{
+  "id": "models-265-sophia-epoque-11-build-char-265-sophia-epoque-11",
+  "name": "鞭刃",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/265_sophia_epoque%2311/build_char_265_sophia_epoque%2311.skel",
+    "atlas": "/Ark-Models/models/265_sophia_epoque%2311/build_char_265_sophia_epoque%2311.atlas",
+    "textures": [
+      "/Ark-Models/models/265_sophia_epoque%2311/build_char_265_sophia_epoque%2311.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/265_sophia_epoque#11",
+  "sourceFiles": {
+    "skeleton": "models/265_sophia_epoque#11/build_char_265_sophia_epoque#11.skel",
+    "atlas": "models/265_sophia_epoque#11/build_char_265_sophia_epoque#11.atlas",
+    "textures": [
+      "models/265_sophia_epoque#11/build_char_265_sophia_epoque#11.png"
+    ]
+  },
+  "displayName": "鞭刃",
+  "searchText": "鞭刃 build_char_265_sophia_epoque#11 models/265_sophia_epoque#11 default interact move relax sit sleep special"
+}

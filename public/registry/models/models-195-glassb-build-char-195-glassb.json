@@ -1,0 +1,37 @@
+{
+  "id": "models-195-glassb-build-char-195-glassb",
+  "name": "真理",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/195_glassb/build_char_195_glassb.skel",
+    "atlas": "/Ark-Models/models/195_glassb/build_char_195_glassb.atlas",
+    "textures": [
+      "/Ark-Models/models/195_glassb/build_char_195_glassb.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/195_glassb",
+  "sourceFiles": {
+    "skeleton": "models/195_glassb/build_char_195_glassb.skel",
+    "atlas": "models/195_glassb/build_char_195_glassb.atlas",
+    "textures": [
+      "models/195_glassb/build_char_195_glassb.png"
+    ]
+  },
+  "displayName": "真理",
+  "searchText": "真理 build_char_195_glassb models/195_glassb default interact move relax sit sleep"
+}

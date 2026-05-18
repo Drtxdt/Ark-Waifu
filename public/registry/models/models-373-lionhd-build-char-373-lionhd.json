@@ -1,0 +1,37 @@
+{
+  "id": "models-373-lionhd-build-char-373-lionhd",
+  "name": "莱恩哈特",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/373_lionhd/build_char_373_lionhd.skel",
+    "atlas": "/Ark-Models/models/373_lionhd/build_char_373_lionhd.atlas",
+    "textures": [
+      "/Ark-Models/models/373_lionhd/build_char_373_lionhd.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/373_lionhd",
+  "sourceFiles": {
+    "skeleton": "models/373_lionhd/build_char_373_lionhd.skel",
+    "atlas": "models/373_lionhd/build_char_373_lionhd.atlas",
+    "textures": [
+      "models/373_lionhd/build_char_373_lionhd.png"
+    ]
+  },
+  "displayName": "莱恩哈特",
+  "searchText": "莱恩哈特 build_char_373_lionhd models/373_lionhd default interact move relax sit sleep"
+}

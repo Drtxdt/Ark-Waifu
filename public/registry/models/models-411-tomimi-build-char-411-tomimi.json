@@ -1,0 +1,37 @@
+{
+  "id": "models-411-tomimi-build-char-411-tomimi",
+  "name": "特米米",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/411_tomimi/build_char_411_tomimi.skel",
+    "atlas": "/Ark-Models/models/411_tomimi/build_char_411_tomimi.atlas",
+    "textures": [
+      "/Ark-Models/models/411_tomimi/build_char_411_tomimi.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/411_tomimi",
+  "sourceFiles": {
+    "skeleton": "models/411_tomimi/build_char_411_tomimi.skel",
+    "atlas": "models/411_tomimi/build_char_411_tomimi.atlas",
+    "textures": [
+      "models/411_tomimi/build_char_411_tomimi.png"
+    ]
+  },
+  "displayName": "特米米",
+  "searchText": "特米米 build_char_411_tomimi models/411_tomimi default interact move relax sit sleep"
+}

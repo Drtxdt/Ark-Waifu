@@ -1,0 +1,37 @@
+{
+  "id": "models-254-vodfox-build-char-254-vodfox",
+  "name": "巫恋",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/254_vodfox/build_char_254_vodfox.skel",
+    "atlas": "/Ark-Models/models/254_vodfox/build_char_254_vodfox.atlas",
+    "textures": [
+      "/Ark-Models/models/254_vodfox/build_char_254_vodfox.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/254_vodfox",
+  "sourceFiles": {
+    "skeleton": "models/254_vodfox/build_char_254_vodfox.skel",
+    "atlas": "models/254_vodfox/build_char_254_vodfox.atlas",
+    "textures": [
+      "models/254_vodfox/build_char_254_vodfox.png"
+    ]
+  },
+  "displayName": "巫恋",
+  "searchText": "巫恋 build_char_254_vodfox models/254_vodfox default interact move relax sit sleep"
+}

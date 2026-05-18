@@ -1,0 +1,38 @@
+{
+  "id": "models-369-bena-epoque-38-build-char-369-bena-epoque-38",
+  "name": "贝娜",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/369_bena_epoque%2338/build_char_369_bena_epoque%2338.skel",
+    "atlas": "/Ark-Models/models/369_bena_epoque%2338/build_char_369_bena_epoque%2338.atlas",
+    "textures": [
+      "/Ark-Models/models/369_bena_epoque%2338/build_char_369_bena_epoque%2338.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/369_bena_epoque#38",
+  "sourceFiles": {
+    "skeleton": "models/369_bena_epoque#38/build_char_369_bena_epoque#38.skel",
+    "atlas": "models/369_bena_epoque#38/build_char_369_bena_epoque#38.atlas",
+    "textures": [
+      "models/369_bena_epoque#38/build_char_369_bena_epoque#38.png"
+    ]
+  },
+  "displayName": "贝娜",
+  "searchText": "贝娜 build_char_369_bena_epoque#38 models/369_bena_epoque#38 default interact move relax sit sleep special"
+}

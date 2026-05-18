@@ -1,0 +1,38 @@
+{
+  "id": "models-306-leizi-game-3-build-char-306-leizi-game-3",
+  "name": "惊蛰",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/306_leizi_game%233/build_char_306_leizi_game%233.skel",
+    "atlas": "/Ark-Models/models/306_leizi_game%233/build_char_306_leizi_game%233.atlas",
+    "textures": [
+      "/Ark-Models/models/306_leizi_game%233/build_char_306_leizi_game%233.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/306_leizi_game#3",
+  "sourceFiles": {
+    "skeleton": "models/306_leizi_game#3/build_char_306_leizi_game#3.skel",
+    "atlas": "models/306_leizi_game#3/build_char_306_leizi_game#3.atlas",
+    "textures": [
+      "models/306_leizi_game#3/build_char_306_leizi_game#3.png"
+    ]
+  },
+  "displayName": "惊蛰",
+  "searchText": "惊蛰 build_char_306_leizi_game#3 models/306_leizi_game#3 default interact move relax sit sleep special"
+}

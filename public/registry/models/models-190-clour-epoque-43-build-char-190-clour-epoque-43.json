@@ -1,0 +1,38 @@
+{
+  "id": "models-190-clour-epoque-43-build-char-190-clour-epoque-43",
+  "name": "红云",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/190_clour_epoque%2343/build_char_190_clour_epoque%2343.skel",
+    "atlas": "/Ark-Models/models/190_clour_epoque%2343/build_char_190_clour_epoque%2343.atlas",
+    "textures": [
+      "/Ark-Models/models/190_clour_epoque%2343/build_char_190_clour_epoque%2343.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/190_clour_epoque#43",
+  "sourceFiles": {
+    "skeleton": "models/190_clour_epoque#43/build_char_190_clour_epoque#43.skel",
+    "atlas": "models/190_clour_epoque#43/build_char_190_clour_epoque#43.atlas",
+    "textures": [
+      "models/190_clour_epoque#43/build_char_190_clour_epoque#43.png"
+    ]
+  },
+  "displayName": "红云",
+  "searchText": "红云 build_char_190_clour_epoque#43 models/190_clour_epoque#43 default interact move relax sit sleep special"
+}

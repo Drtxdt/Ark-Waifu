@@ -1,0 +1,38 @@
+{
+  "id": "models-172-svrash-summer-4-build-char-172-svrash-summer-4",
+  "name": "银灰",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/172_svrash_summer%234/build_char_172_svrash_summer%234.skel",
+    "atlas": "/Ark-Models/models/172_svrash_summer%234/build_char_172_svrash_summer%234.atlas",
+    "textures": [
+      "/Ark-Models/models/172_svrash_summer%234/build_char_172_svrash_summer%234.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/172_svrash_summer#4",
+  "sourceFiles": {
+    "skeleton": "models/172_svrash_summer#4/build_char_172_svrash_summer#4.skel",
+    "atlas": "models/172_svrash_summer#4/build_char_172_svrash_summer#4.atlas",
+    "textures": [
+      "models/172_svrash_summer#4/build_char_172_svrash_summer#4.png"
+    ]
+  },
+  "displayName": "银灰",
+  "searchText": "银灰 build_char_172_svrash_summer#4 models/172_svrash_summer#4 default interact move relax sit sleep special"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-118-yuki-boc-2-build-char-118-yuki-boc-2",
+  "name": "白雪",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/118_yuki_boc%232/build_char_118_yuki_boc%232.skel",
+    "atlas": "/Ark-Models/models/118_yuki_boc%232/build_char_118_yuki_boc%232.atlas",
+    "textures": [
+      "/Ark-Models/models/118_yuki_boc%232/build_char_118_yuki_boc%232.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/118_yuki_boc#2",
+  "sourceFiles": {
+    "skeleton": "models/118_yuki_boc#2/build_char_118_yuki_boc#2.skel",
+    "atlas": "models/118_yuki_boc#2/build_char_118_yuki_boc#2.atlas",
+    "textures": [
+      "models/118_yuki_boc#2/build_char_118_yuki_boc#2.png"
+    ]
+  },
+  "displayName": "白雪",
+  "searchText": "白雪 build_char_118_yuki_boc#2 models/118_yuki_boc#2 default interact move relax sit sleep special"
+}

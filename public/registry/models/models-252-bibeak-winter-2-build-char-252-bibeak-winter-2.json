@@ -1,0 +1,38 @@
+{
+  "id": "models-252-bibeak-winter-2-build-char-252-bibeak-winter-2",
+  "name": "柏喙",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/252_bibeak_winter%232/build_char_252_bibeak_winter%232.skel",
+    "atlas": "/Ark-Models/models/252_bibeak_winter%232/build_char_252_bibeak_winter%232.atlas",
+    "textures": [
+      "/Ark-Models/models/252_bibeak_winter%232/build_char_252_bibeak_winter%232.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/252_bibeak_winter#2",
+  "sourceFiles": {
+    "skeleton": "models/252_bibeak_winter#2/build_char_252_bibeak_winter#2.skel",
+    "atlas": "models/252_bibeak_winter#2/build_char_252_bibeak_winter#2.atlas",
+    "textures": [
+      "models/252_bibeak_winter#2/build_char_252_bibeak_winter#2.png"
+    ]
+  },
+  "displayName": "柏喙",
+  "searchText": "柏喙 build_char_252_bibeak_winter#2 models/252_bibeak_winter#2 default interact move relax sit sleep special"
+}

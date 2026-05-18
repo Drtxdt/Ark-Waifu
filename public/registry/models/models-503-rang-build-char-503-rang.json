@@ -1,0 +1,37 @@
+{
+  "id": "models-503-rang-build-char-503-rang",
+  "name": "巡林者",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/503_rang/build_char_503_rang.skel",
+    "atlas": "/Ark-Models/models/503_rang/build_char_503_rang.atlas",
+    "textures": [
+      "/Ark-Models/models/503_rang/build_char_503_rang.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/503_rang",
+  "sourceFiles": {
+    "skeleton": "models/503_rang/build_char_503_rang.skel",
+    "atlas": "models/503_rang/build_char_503_rang.atlas",
+    "textures": [
+      "models/503_rang/build_char_503_rang.png"
+    ]
+  },
+  "displayName": "巡林者",
+  "searchText": "巡林者 build_char_503_rang models/503_rang default interact move relax sit sleep"
+}

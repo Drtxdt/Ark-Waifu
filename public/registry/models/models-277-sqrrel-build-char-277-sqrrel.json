@@ -1,0 +1,37 @@
+{
+  "id": "models-277-sqrrel-build-char-277-sqrrel",
+  "name": "阿消",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/277_sqrrel/build_char_277_sqrrel.skel",
+    "atlas": "/Ark-Models/models/277_sqrrel/build_char_277_sqrrel.atlas",
+    "textures": [
+      "/Ark-Models/models/277_sqrrel/build_char_277_sqrrel.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/277_sqrrel",
+  "sourceFiles": {
+    "skeleton": "models/277_sqrrel/build_char_277_sqrrel.skel",
+    "atlas": "models/277_sqrrel/build_char_277_sqrrel.atlas",
+    "textures": [
+      "models/277_sqrrel/build_char_277_sqrrel.png"
+    ]
+  },
+  "displayName": "阿消",
+  "searchText": "阿消 build_char_277_sqrrel models/277_sqrrel default interact move relax sit sleep"
+}

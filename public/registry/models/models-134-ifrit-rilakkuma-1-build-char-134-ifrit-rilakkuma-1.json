@@ -1,0 +1,38 @@
+{
+  "id": "models-134-ifrit-rilakkuma-1-build-char-134-ifrit-rilakkuma-1",
+  "name": "伊芙利特",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/134_ifrit_rilakkuma%231/build_char_134_ifrit_rilakkuma%231.skel",
+    "atlas": "/Ark-Models/models/134_ifrit_rilakkuma%231/build_char_134_ifrit_rilakkuma%231.atlas",
+    "textures": [
+      "/Ark-Models/models/134_ifrit_rilakkuma%231/build_char_134_ifrit_rilakkuma%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/134_ifrit_rilakkuma#1",
+  "sourceFiles": {
+    "skeleton": "models/134_ifrit_rilakkuma#1/build_char_134_ifrit_rilakkuma#1.skel",
+    "atlas": "models/134_ifrit_rilakkuma#1/build_char_134_ifrit_rilakkuma#1.atlas",
+    "textures": [
+      "models/134_ifrit_rilakkuma#1/build_char_134_ifrit_rilakkuma#1.png"
+    ]
+  },
+  "displayName": "伊芙利特",
+  "searchText": "伊芙利特 build_char_134_ifrit_rilakkuma#1 models/134_ifrit_rilakkuma#1 default interact move relax sit sleep special"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-1027-greyy2-snow-5-build-char-1027-greyy2-snow-5",
+  "name": "承曦格雷伊",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1027_greyy2_snow%235/build_char_1027_greyy2_snow%235.skel",
+    "atlas": "/Ark-Models/models/1027_greyy2_snow%235/build_char_1027_greyy2_snow%235.atlas",
+    "textures": [
+      "/Ark-Models/models/1027_greyy2_snow%235/build_char_1027_greyy2_snow%235.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1027_greyy2_snow#5",
+  "sourceFiles": {
+    "skeleton": "models/1027_greyy2_snow#5/build_char_1027_greyy2_snow#5.skel",
+    "atlas": "models/1027_greyy2_snow#5/build_char_1027_greyy2_snow#5.atlas",
+    "textures": [
+      "models/1027_greyy2_snow#5/build_char_1027_greyy2_snow#5.png"
+    ]
+  },
+  "displayName": "承曦格雷伊",
+  "searchText": "承曦格雷伊 build_char_1027_greyy2_snow#5 models/1027_greyy2_snow#5 default interact move relax sit sleep special"
+}

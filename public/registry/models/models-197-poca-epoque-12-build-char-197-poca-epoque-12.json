@@ -1,0 +1,38 @@
+{
+  "id": "models-197-poca-epoque-12-build-char-197-poca-epoque-12",
+  "name": "早露",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/197_poca_epoque%2312/build_char_197_poca_epoque%2312.skel",
+    "atlas": "/Ark-Models/models/197_poca_epoque%2312/build_char_197_poca_epoque%2312.atlas",
+    "textures": [
+      "/Ark-Models/models/197_poca_epoque%2312/build_char_197_poca_epoque%2312.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/197_poca_epoque#12",
+  "sourceFiles": {
+    "skeleton": "models/197_poca_epoque#12/build_char_197_poca_epoque#12.skel",
+    "atlas": "models/197_poca_epoque#12/build_char_197_poca_epoque#12.atlas",
+    "textures": [
+      "models/197_poca_epoque#12/build_char_197_poca_epoque#12.png"
+    ]
+  },
+  "displayName": "早露",
+  "searchText": "早露 build_char_197_poca_epoque#12 models/197_poca_epoque#12 default interact move relax sit sleep special"
+}

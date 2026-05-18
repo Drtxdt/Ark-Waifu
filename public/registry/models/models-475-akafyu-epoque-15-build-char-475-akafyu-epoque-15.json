@@ -1,0 +1,38 @@
+{
+  "id": "models-475-akafyu-epoque-15-build-char-475-akafyu-epoque-15",
+  "name": "赤冬",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/475_akafyu_epoque%2315/build_char_475_akafyu_epoque%2315.skel",
+    "atlas": "/Ark-Models/models/475_akafyu_epoque%2315/build_char_475_akafyu_epoque%2315.atlas",
+    "textures": [
+      "/Ark-Models/models/475_akafyu_epoque%2315/build_char_475_akafyu_epoque%2315.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/475_akafyu_epoque#15",
+  "sourceFiles": {
+    "skeleton": "models/475_akafyu_epoque#15/build_char_475_akafyu_epoque#15.skel",
+    "atlas": "models/475_akafyu_epoque#15/build_char_475_akafyu_epoque#15.atlas",
+    "textures": [
+      "models/475_akafyu_epoque#15/build_char_475_akafyu_epoque#15.png"
+    ]
+  },
+  "displayName": "赤冬",
+  "searchText": "赤冬 build_char_475_akafyu_epoque#15 models/475_akafyu_epoque#15 default interact move relax sit sleep special"
+}

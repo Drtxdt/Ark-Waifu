@@ -1,0 +1,37 @@
+{
+  "id": "models-230-savage-build-char-230-savage",
+  "name": "暴行",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/230_savage/build_char_230_savage.skel",
+    "atlas": "/Ark-Models/models/230_savage/build_char_230_savage.atlas",
+    "textures": [
+      "/Ark-Models/models/230_savage/build_char_230_savage.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/230_savage",
+  "sourceFiles": {
+    "skeleton": "models/230_savage/build_char_230_savage.skel",
+    "atlas": "models/230_savage/build_char_230_savage.atlas",
+    "textures": [
+      "models/230_savage/build_char_230_savage.png"
+    ]
+  },
+  "displayName": "暴行",
+  "searchText": "暴行 build_char_230_savage models/230_savage default interact move relax sit sleep"
+}

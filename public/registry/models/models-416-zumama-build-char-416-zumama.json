@@ -1,0 +1,37 @@
+{
+  "id": "models-416-zumama-build-char-416-zumama",
+  "name": "森蚺",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/416_zumama/build_char_416_zumama.skel",
+    "atlas": "/Ark-Models/models/416_zumama/build_char_416_zumama.atlas",
+    "textures": [
+      "/Ark-Models/models/416_zumama/build_char_416_zumama.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/416_zumama",
+  "sourceFiles": {
+    "skeleton": "models/416_zumama/build_char_416_zumama.skel",
+    "atlas": "models/416_zumama/build_char_416_zumama.atlas",
+    "textures": [
+      "models/416_zumama/build_char_416_zumama.png"
+    ]
+  },
+  "displayName": "森蚺",
+  "searchText": "森蚺 build_char_416_zumama models/416_zumama default interact move relax sit sleep"
+}

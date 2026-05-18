@@ -1,0 +1,37 @@
+{
+  "id": "models-427-vigil-build-char-427-vigil",
+  "name": "伺夜",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/427_vigil/build_char_427_vigil.skel",
+    "atlas": "/Ark-Models/models/427_vigil/build_char_427_vigil.atlas",
+    "textures": [
+      "/Ark-Models/models/427_vigil/build_char_427_vigil.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/427_vigil",
+  "sourceFiles": {
+    "skeleton": "models/427_vigil/build_char_427_vigil.skel",
+    "atlas": "models/427_vigil/build_char_427_vigil.atlas",
+    "textures": [
+      "models/427_vigil/build_char_427_vigil.png"
+    ]
+  },
+  "displayName": "伺夜",
+  "searchText": "伺夜 build_char_427_vigil models/427_vigil default interact move relax sit sleep"
+}

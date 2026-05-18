@@ -1,0 +1,37 @@
+{
+  "id": "models-154-morgan-build-char-154-morgan",
+  "name": "摩根",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/154_morgan/build_char_154_morgan.skel",
+    "atlas": "/Ark-Models/models/154_morgan/build_char_154_morgan.atlas",
+    "textures": [
+      "/Ark-Models/models/154_morgan/build_char_154_morgan.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/154_morgan",
+  "sourceFiles": {
+    "skeleton": "models/154_morgan/build_char_154_morgan.skel",
+    "atlas": "models/154_morgan/build_char_154_morgan.atlas",
+    "textures": [
+      "models/154_morgan/build_char_154_morgan.png"
+    ]
+  },
+  "displayName": "摩根",
+  "searchText": "摩根 build_char_154_morgan models/154_morgan default interact move relax sit sleep"
+}

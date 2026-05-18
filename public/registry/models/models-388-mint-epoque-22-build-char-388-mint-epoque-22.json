@@ -1,0 +1,38 @@
+{
+  "id": "models-388-mint-epoque-22-build-char-388-mint-epoque-22",
+  "name": "薄绿",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/388_mint_epoque%2322/build_char_388_mint_epoque%2322.skel",
+    "atlas": "/Ark-Models/models/388_mint_epoque%2322/build_char_388_mint_epoque%2322.atlas",
+    "textures": [
+      "/Ark-Models/models/388_mint_epoque%2322/build_char_388_mint_epoque%2322.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/388_mint_epoque#22",
+  "sourceFiles": {
+    "skeleton": "models/388_mint_epoque#22/build_char_388_mint_epoque#22.skel",
+    "atlas": "models/388_mint_epoque#22/build_char_388_mint_epoque#22.atlas",
+    "textures": [
+      "models/388_mint_epoque#22/build_char_388_mint_epoque#22.png"
+    ]
+  },
+  "displayName": "薄绿",
+  "searchText": "薄绿 build_char_388_mint_epoque#22 models/388_mint_epoque#22 default interact move relax sit sleep special"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "models-451-robin-build-char-451-robin",
+  "name": "罗宾",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/451_robin/build_char_451_robin.skel",
+    "atlas": "/Ark-Models/models/451_robin/build_char_451_robin.atlas",
+    "textures": [
+      "/Ark-Models/models/451_robin/build_char_451_robin.png"
+    ]
+  },
+  "actions": {
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/451_robin",
+  "sourceFiles": {
+    "skeleton": "models/451_robin/build_char_451_robin.skel",
+    "atlas": "models/451_robin/build_char_451_robin.atlas",
+    "textures": [
+      "models/451_robin/build_char_451_robin.png"
+    ]
+  },
+  "displayName": "罗宾",
+  "searchText": "罗宾 build_char_451_robin models/451_robin interact move relax sit sleep"
+}

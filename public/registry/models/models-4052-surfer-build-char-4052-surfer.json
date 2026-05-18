@@ -1,0 +1,37 @@
+{
+  "id": "models-4052-surfer-build-char-4052-surfer",
+  "name": "寻澜",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4052_surfer/build_char_4052_surfer.skel",
+    "atlas": "/Ark-Models/models/4052_surfer/build_char_4052_surfer.atlas",
+    "textures": [
+      "/Ark-Models/models/4052_surfer/build_char_4052_surfer.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4052_surfer",
+  "sourceFiles": {
+    "skeleton": "models/4052_surfer/build_char_4052_surfer.skel",
+    "atlas": "models/4052_surfer/build_char_4052_surfer.atlas",
+    "textures": [
+      "models/4052_surfer/build_char_4052_surfer.png"
+    ]
+  },
+  "displayName": "寻澜",
+  "searchText": "寻澜 build_char_4052_surfer models/4052_surfer default interact move relax sit sleep"
+}

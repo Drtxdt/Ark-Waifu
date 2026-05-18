@@ -1,0 +1,37 @@
+{
+  "id": "models-107-liskam-build-char-107-liskam",
+  "name": "雷蛇",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/107_liskam/build_char_107_liskam.skel",
+    "atlas": "/Ark-Models/models/107_liskam/build_char_107_liskam.atlas",
+    "textures": [
+      "/Ark-Models/models/107_liskam/build_char_107_liskam.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/107_liskam",
+  "sourceFiles": {
+    "skeleton": "models/107_liskam/build_char_107_liskam.skel",
+    "atlas": "models/107_liskam/build_char_107_liskam.atlas",
+    "textures": [
+      "models/107_liskam/build_char_107_liskam.png"
+    ]
+  },
+  "displayName": "雷蛇",
+  "searchText": "雷蛇 build_char_107_liskam models/107_liskam default interact move relax sit sleep"
+}

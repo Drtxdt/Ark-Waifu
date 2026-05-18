@@ -1,0 +1,38 @@
+{
+  "id": "models-383-snsant-witch-2-build-char-383-snsant-witch-2",
+  "name": "雪雉",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/383_snsant_witch%232/build_char_383_snsant_witch%232.skel",
+    "atlas": "/Ark-Models/models/383_snsant_witch%232/build_char_383_snsant_witch%232.atlas",
+    "textures": [
+      "/Ark-Models/models/383_snsant_witch%232/build_char_383_snsant_witch%232.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/383_snsant_witch#2",
+  "sourceFiles": {
+    "skeleton": "models/383_snsant_witch#2/build_char_383_snsant_witch#2.skel",
+    "atlas": "models/383_snsant_witch#2/build_char_383_snsant_witch#2.atlas",
+    "textures": [
+      "models/383_snsant_witch#2/build_char_383_snsant_witch#2.png"
+    ]
+  },
+  "displayName": "雪雉",
+  "searchText": "雪雉 build_char_383_snsant_witch#2 models/383_snsant_witch#2 default interact move relax sit sleep special"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-4083-chimes-build-char-4083-chimes",
+  "name": "铎铃",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4083_chimes/build_char_4083_chimes.skel",
+    "atlas": "/Ark-Models/models/4083_chimes/build_char_4083_chimes.atlas",
+    "textures": [
+      "/Ark-Models/models/4083_chimes/build_char_4083_chimes.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4083_chimes",
+  "sourceFiles": {
+    "skeleton": "models/4083_chimes/build_char_4083_chimes.skel",
+    "atlas": "models/4083_chimes/build_char_4083_chimes.atlas",
+    "textures": [
+      "models/4083_chimes/build_char_4083_chimes.png"
+    ]
+  },
+  "displayName": "铎铃",
+  "searchText": "铎铃 build_char_4083_chimes models/4083_chimes default interact move relax sit sleep"
+}

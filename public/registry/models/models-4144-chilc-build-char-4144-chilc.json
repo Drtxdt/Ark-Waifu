@@ -1,0 +1,37 @@
+{
+  "id": "models-4144-chilc-build-char-4144-chilc",
+  "name": "齐尔查克",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4144_chilc/build_char_4144_chilc.skel",
+    "atlas": "/Ark-Models/models/4144_chilc/build_char_4144_chilc.atlas",
+    "textures": [
+      "/Ark-Models/models/4144_chilc/build_char_4144_chilc.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4144_chilc",
+  "sourceFiles": {
+    "skeleton": "models/4144_chilc/build_char_4144_chilc.skel",
+    "atlas": "models/4144_chilc/build_char_4144_chilc.atlas",
+    "textures": [
+      "models/4144_chilc/build_char_4144_chilc.png"
+    ]
+  },
+  "displayName": "齐尔查克",
+  "searchText": "齐尔查克 build_char_4144_chilc models/4144_chilc default interact move relax sit sleep"
+}

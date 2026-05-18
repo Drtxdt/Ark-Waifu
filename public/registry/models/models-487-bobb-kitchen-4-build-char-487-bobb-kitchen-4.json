@@ -1,0 +1,38 @@
+{
+  "id": "models-487-bobb-kitchen-4-build-char-487-bobb-kitchen-4",
+  "name": "波卜",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/487_bobb_kitchen%234/build_char_487_bobb_kitchen%234.skel",
+    "atlas": "/Ark-Models/models/487_bobb_kitchen%234/build_char_487_bobb_kitchen%234.atlas",
+    "textures": [
+      "/Ark-Models/models/487_bobb_kitchen%234/build_char_487_bobb_kitchen%234.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/487_bobb_kitchen#4",
+  "sourceFiles": {
+    "skeleton": "models/487_bobb_kitchen#4/build_char_487_bobb_kitchen#4.skel",
+    "atlas": "models/487_bobb_kitchen#4/build_char_487_bobb_kitchen#4.atlas",
+    "textures": [
+      "models/487_bobb_kitchen#4/build_char_487_bobb_kitchen#4.png"
+    ]
+  },
+  "displayName": "波卜",
+  "searchText": "波卜 build_char_487_bobb_kitchen#4 models/487_bobb_kitchen#4 default interact move relax sit sleep special"
+}

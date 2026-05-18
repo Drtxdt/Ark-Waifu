@@ -1,0 +1,37 @@
+{
+  "id": "models-2027-wang-build-char-2027-wang",
+  "name": "望",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/2027_wang/build_char_2027_wang.skel",
+    "atlas": "/Ark-Models/models/2027_wang/build_char_2027_wang.atlas",
+    "textures": [
+      "/Ark-Models/models/2027_wang/build_char_2027_wang.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/2027_wang",
+  "sourceFiles": {
+    "skeleton": "models/2027_wang/build_char_2027_wang.skel",
+    "atlas": "models/2027_wang/build_char_2027_wang.atlas",
+    "textures": [
+      "models/2027_wang/build_char_2027_wang.png"
+    ]
+  },
+  "displayName": "望",
+  "searchText": "望 build_char_2027_wang models/2027_wang default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-479-sleach-build-char-479-sleach",
+  "name": "琴柳",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/479_sleach/build_char_479_sleach.skel",
+    "atlas": "/Ark-Models/models/479_sleach/build_char_479_sleach.atlas",
+    "textures": [
+      "/Ark-Models/models/479_sleach/build_char_479_sleach.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/479_sleach",
+  "sourceFiles": {
+    "skeleton": "models/479_sleach/build_char_479_sleach.skel",
+    "atlas": "models/479_sleach/build_char_479_sleach.atlas",
+    "textures": [
+      "models/479_sleach/build_char_479_sleach.png"
+    ]
+  },
+  "displayName": "琴柳",
+  "searchText": "琴柳 build_char_479_sleach models/479_sleach default interact move relax sit sleep"
+}

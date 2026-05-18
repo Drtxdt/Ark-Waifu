@@ -1,0 +1,37 @@
+{
+  "id": "models-258-podego-build-char-258-podego",
+  "name": "波登可",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/258_podego/build_char_258_podego.skel",
+    "atlas": "/Ark-Models/models/258_podego/build_char_258_podego.atlas",
+    "textures": [
+      "/Ark-Models/models/258_podego/build_char_258_podego.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/258_podego",
+  "sourceFiles": {
+    "skeleton": "models/258_podego/build_char_258_podego.skel",
+    "atlas": "models/258_podego/build_char_258_podego.atlas",
+    "textures": [
+      "models/258_podego/build_char_258_podego.png"
+    ]
+  },
+  "displayName": "波登可",
+  "searchText": "波登可 build_char_258_podego models/258_podego default interact move relax sit sleep"
+}

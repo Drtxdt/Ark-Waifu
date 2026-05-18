@@ -1,0 +1,37 @@
+{
+  "id": "models-347-jaksel-build-char-347-jaksel",
+  "name": "杰克",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/347_jaksel/build_char_347_jaksel.skel",
+    "atlas": "/Ark-Models/models/347_jaksel/build_char_347_jaksel.atlas",
+    "textures": [
+      "/Ark-Models/models/347_jaksel/build_char_347_jaksel.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/347_jaksel",
+  "sourceFiles": {
+    "skeleton": "models/347_jaksel/build_char_347_jaksel.skel",
+    "atlas": "models/347_jaksel/build_char_347_jaksel.atlas",
+    "textures": [
+      "models/347_jaksel/build_char_347_jaksel.png"
+    ]
+  },
+  "displayName": "杰克",
+  "searchText": "杰克 build_char_347_jaksel models/347_jaksel default interact move relax sit sleep"
+}

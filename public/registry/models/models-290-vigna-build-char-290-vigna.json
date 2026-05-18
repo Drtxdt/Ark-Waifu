@@ -1,0 +1,37 @@
+{
+  "id": "models-290-vigna-build-char-290-vigna",
+  "name": "红豆",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/290_vigna/build_char_290_vigna.skel",
+    "atlas": "/Ark-Models/models/290_vigna/build_char_290_vigna.atlas",
+    "textures": [
+      "/Ark-Models/models/290_vigna/build_char_290_vigna.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/290_vigna",
+  "sourceFiles": {
+    "skeleton": "models/290_vigna/build_char_290_vigna.skel",
+    "atlas": "models/290_vigna/build_char_290_vigna.atlas",
+    "textures": [
+      "models/290_vigna/build_char_290_vigna.png"
+    ]
+  },
+  "displayName": "红豆",
+  "searchText": "红豆 build_char_290_vigna models/290_vigna default interact move relax sit sleep"
+}

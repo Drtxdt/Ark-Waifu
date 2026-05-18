@@ -1,0 +1,38 @@
+{
+  "id": "models-1037-amiya3-sale-13-build-char-1037-amiya3-sale-13",
+  "name": "阿米娅",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1037_amiya3_sale%2313/build_char_1037_amiya3_sale%2313.skel",
+    "atlas": "/Ark-Models/models/1037_amiya3_sale%2313/build_char_1037_amiya3_sale%2313.atlas",
+    "textures": [
+      "/Ark-Models/models/1037_amiya3_sale%2313/build_char_1037_amiya3_sale%2313.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1037_amiya3_sale#13",
+  "sourceFiles": {
+    "skeleton": "models/1037_amiya3_sale#13/build_char_1037_amiya3_sale#13.skel",
+    "atlas": "models/1037_amiya3_sale#13/build_char_1037_amiya3_sale#13.atlas",
+    "textures": [
+      "models/1037_amiya3_sale#13/build_char_1037_amiya3_sale#13.png"
+    ]
+  },
+  "displayName": "阿米娅",
+  "searchText": "阿米娅 build_char_1037_amiya3_sale#13 models/1037_amiya3_sale#13 default interact move relax sit sleep special"
+}

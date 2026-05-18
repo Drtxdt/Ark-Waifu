@@ -1,0 +1,38 @@
+{
+  "id": "models-154-morgan-epoque-47-build-char-154-morgan-epoque-47",
+  "name": "摩根",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/154_morgan_epoque%2347/build_char_154_morgan_epoque%2347.skel",
+    "atlas": "/Ark-Models/models/154_morgan_epoque%2347/build_char_154_morgan_epoque%2347.atlas",
+    "textures": [
+      "/Ark-Models/models/154_morgan_epoque%2347/build_char_154_morgan_epoque%2347.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/154_morgan_epoque#47",
+  "sourceFiles": {
+    "skeleton": "models/154_morgan_epoque#47/build_char_154_morgan_epoque#47.skel",
+    "atlas": "models/154_morgan_epoque#47/build_char_154_morgan_epoque#47.atlas",
+    "textures": [
+      "models/154_morgan_epoque#47/build_char_154_morgan_epoque#47.png"
+    ]
+  },
+  "displayName": "摩根",
+  "searchText": "摩根 build_char_154_morgan_epoque#47 models/154_morgan_epoque#47 default interact move relax sit sleep special"
+}

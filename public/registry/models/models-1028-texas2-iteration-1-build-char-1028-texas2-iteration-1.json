@@ -1,0 +1,38 @@
+{
+  "id": "models-1028-texas2-iteration-1-build-char-1028-texas2-iteration-1",
+  "name": "缄默德克萨斯",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1028_texas2_iteration%231/build_char_1028_texas2_iteration%231.skel",
+    "atlas": "/Ark-Models/models/1028_texas2_iteration%231/build_char_1028_texas2_iteration%231.atlas",
+    "textures": [
+      "/Ark-Models/models/1028_texas2_iteration%231/build_char_1028_texas2_iteration%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1028_texas2_iteration#1",
+  "sourceFiles": {
+    "skeleton": "models/1028_texas2_iteration#1/build_char_1028_texas2_iteration#1.skel",
+    "atlas": "models/1028_texas2_iteration#1/build_char_1028_texas2_iteration#1.atlas",
+    "textures": [
+      "models/1028_texas2_iteration#1/build_char_1028_texas2_iteration#1.png"
+    ]
+  },
+  "displayName": "缄默德克萨斯",
+  "searchText": "缄默德克萨斯 build_char_1028_texas2_iteration#1 models/1028_texas2_iteration#1 default interact move relax sit sleep special"
+}

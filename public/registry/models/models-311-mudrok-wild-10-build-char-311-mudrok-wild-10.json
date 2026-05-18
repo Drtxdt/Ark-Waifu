@@ -1,0 +1,38 @@
+{
+  "id": "models-311-mudrok-wild-10-build-char-311-mudrok-wild-10",
+  "name": "泥岩",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/311_mudrok_wild%2310/build_char_311_mudrok_wild%2310.skel",
+    "atlas": "/Ark-Models/models/311_mudrok_wild%2310/build_char_311_mudrok_wild%2310.atlas",
+    "textures": [
+      "/Ark-Models/models/311_mudrok_wild%2310/build_char_311_mudrok_wild%2310.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/311_mudrok_wild#10",
+  "sourceFiles": {
+    "skeleton": "models/311_mudrok_wild#10/build_char_311_mudrok_wild#10.skel",
+    "atlas": "models/311_mudrok_wild#10/build_char_311_mudrok_wild#10.atlas",
+    "textures": [
+      "models/311_mudrok_wild#10/build_char_311_mudrok_wild#10.png"
+    ]
+  },
+  "displayName": "泥岩",
+  "searchText": "泥岩 build_char_311_mudrok_wild#10 models/311_mudrok_wild#10 default interact move relax sit sleep special"
+}

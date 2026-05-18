@@ -1,0 +1,37 @@
+{
+  "id": "models-4039-horn-build-char-4039-horn",
+  "name": "号角",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4039_horn/build_char_4039_horn.skel",
+    "atlas": "/Ark-Models/models/4039_horn/build_char_4039_horn.atlas",
+    "textures": [
+      "/Ark-Models/models/4039_horn/build_char_4039_horn.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4039_horn",
+  "sourceFiles": {
+    "skeleton": "models/4039_horn/build_char_4039_horn.skel",
+    "atlas": "models/4039_horn/build_char_4039_horn.atlas",
+    "textures": [
+      "models/4039_horn/build_char_4039_horn.png"
+    ]
+  },
+  "displayName": "号角",
+  "searchText": "号角 build_char_4039_horn models/4039_horn default interact move relax sit sleep"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "models-4136-phonor-boc-9-build-char-4136-phonor-boc-9",
+  "name": "PhonoR-0",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4136_phonor_boc%239/build_char_4136_phonor_boc%239.skel",
+    "atlas": "/Ark-Models/models/4136_phonor_boc%239/build_char_4136_phonor_boc%239.atlas",
+    "textures": [
+      "/Ark-Models/models/4136_phonor_boc%239/build_char_4136_phonor_boc%239.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4136_phonor_boc#9",
+  "sourceFiles": {
+    "skeleton": "models/4136_phonor_boc#9/build_char_4136_phonor_boc#9.skel",
+    "atlas": "models/4136_phonor_boc#9/build_char_4136_phonor_boc#9.atlas",
+    "textures": [
+      "models/4136_phonor_boc#9/build_char_4136_phonor_boc#9.png"
+    ]
+  },
+  "displayName": "PhonoR-0",
+  "searchText": "phonor-0 build_char_4136_phonor_boc#9 models/4136_phonor_boc#9 default interact move relax special"
+}

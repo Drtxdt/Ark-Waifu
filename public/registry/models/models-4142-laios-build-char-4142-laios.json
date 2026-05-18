@@ -1,0 +1,37 @@
+{
+  "id": "models-4142-laios-build-char-4142-laios",
+  "name": "莱欧斯",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4142_laios/build_char_4142_laios.skel",
+    "atlas": "/Ark-Models/models/4142_laios/build_char_4142_laios.atlas",
+    "textures": [
+      "/Ark-Models/models/4142_laios/build_char_4142_laios.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4142_laios",
+  "sourceFiles": {
+    "skeleton": "models/4142_laios/build_char_4142_laios.skel",
+    "atlas": "models/4142_laios/build_char_4142_laios.atlas",
+    "textures": [
+      "models/4142_laios/build_char_4142_laios.png"
+    ]
+  },
+  "displayName": "莱欧斯",
+  "searchText": "莱欧斯 build_char_4142_laios models/4142_laios default interact move relax sit sleep"
+}

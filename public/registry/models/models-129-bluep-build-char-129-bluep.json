@@ -1,0 +1,37 @@
+{
+  "id": "models-129-bluep-build-char-129-bluep",
+  "name": "蓝毒",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/129_bluep/build_char_129_bluep.skel",
+    "atlas": "/Ark-Models/models/129_bluep/build_char_129_bluep.atlas",
+    "textures": [
+      "/Ark-Models/models/129_bluep/build_char_129_bluep.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/129_bluep",
+  "sourceFiles": {
+    "skeleton": "models/129_bluep/build_char_129_bluep.skel",
+    "atlas": "models/129_bluep/build_char_129_bluep.atlas",
+    "textures": [
+      "models/129_bluep/build_char_129_bluep.png"
+    ]
+  },
+  "displayName": "蓝毒",
+  "searchText": "蓝毒 build_char_129_bluep models/129_bluep default interact move relax sit sleep"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-4063-quartz-epoque-39-build-char-4063-quartz-epoque-39",
+  "name": "石英",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4063_quartz_epoque%2339/build_char_4063_quartz_epoque%2339.skel",
+    "atlas": "/Ark-Models/models/4063_quartz_epoque%2339/build_char_4063_quartz_epoque%2339.atlas",
+    "textures": [
+      "/Ark-Models/models/4063_quartz_epoque%2339/build_char_4063_quartz_epoque%2339.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4063_quartz_epoque#39",
+  "sourceFiles": {
+    "skeleton": "models/4063_quartz_epoque#39/build_char_4063_quartz_epoque#39.skel",
+    "atlas": "models/4063_quartz_epoque#39/build_char_4063_quartz_epoque#39.atlas",
+    "textures": [
+      "models/4063_quartz_epoque#39/build_char_4063_quartz_epoque#39.png"
+    ]
+  },
+  "displayName": "石英",
+  "searchText": "石英 build_char_4063_quartz_epoque#39 models/4063_quartz_epoque#39 default interact move relax sit sleep special"
+}

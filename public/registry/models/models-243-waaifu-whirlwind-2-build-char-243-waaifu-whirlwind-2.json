@@ -1,0 +1,37 @@
+{
+  "id": "models-243-waaifu-whirlwind-2-build-char-243-waaifu-whirlwind-2",
+  "name": "槐琥",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/243_waaifu_whirlwind%232/build_char_243_waaifu_whirlwind%232.skel",
+    "atlas": "/Ark-Models/models/243_waaifu_whirlwind%232/build_char_243_waaifu_whirlwind%232.atlas",
+    "textures": [
+      "/Ark-Models/models/243_waaifu_whirlwind%232/build_char_243_waaifu_whirlwind%232.png"
+    ]
+  },
+  "actions": {
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/243_waaifu_whirlwind#2",
+  "sourceFiles": {
+    "skeleton": "models/243_waaifu_whirlwind#2/build_char_243_waaifu_whirlwind#2.skel",
+    "atlas": "models/243_waaifu_whirlwind#2/build_char_243_waaifu_whirlwind#2.atlas",
+    "textures": [
+      "models/243_waaifu_whirlwind#2/build_char_243_waaifu_whirlwind#2.png"
+    ]
+  },
+  "displayName": "槐琥",
+  "searchText": "槐琥 build_char_243_waaifu_whirlwind#2 models/243_waaifu_whirlwind#2 interact move relax sit sleep special"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-4131-odda-whirlwind-8-build-char-4131-odda-whirlwind-8",
+  "name": "奥达",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4131_odda_whirlwind%238/build_char_4131_odda_whirlwind%238.skel",
+    "atlas": "/Ark-Models/models/4131_odda_whirlwind%238/build_char_4131_odda_whirlwind%238.atlas",
+    "textures": [
+      "/Ark-Models/models/4131_odda_whirlwind%238/build_char_4131_odda_whirlwind%238.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4131_odda_whirlwind#8",
+  "sourceFiles": {
+    "skeleton": "models/4131_odda_whirlwind#8/build_char_4131_odda_whirlwind#8.skel",
+    "atlas": "models/4131_odda_whirlwind#8/build_char_4131_odda_whirlwind#8.atlas",
+    "textures": [
+      "models/4131_odda_whirlwind#8/build_char_4131_odda_whirlwind#8.png"
+    ]
+  },
+  "displayName": "奥达",
+  "searchText": "奥达 build_char_4131_odda_whirlwind#8 models/4131_odda_whirlwind#8 default interact move relax sit sleep special"
+}

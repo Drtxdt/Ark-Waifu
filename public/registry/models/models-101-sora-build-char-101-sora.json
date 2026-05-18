@@ -1,0 +1,37 @@
+{
+  "id": "models-101-sora-build-char-101-sora",
+  "name": "空",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/101_sora/build_char_101_sora.skel",
+    "atlas": "/Ark-Models/models/101_sora/build_char_101_sora.atlas",
+    "textures": [
+      "/Ark-Models/models/101_sora/build_char_101_sora.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/101_sora",
+  "sourceFiles": {
+    "skeleton": "models/101_sora/build_char_101_sora.skel",
+    "atlas": "models/101_sora/build_char_101_sora.atlas",
+    "textures": [
+      "models/101_sora/build_char_101_sora.png"
+    ]
+  },
+  "displayName": "空",
+  "searchText": "空 build_char_101_sora models/101_sora default interact move relax sit sleep"
+}

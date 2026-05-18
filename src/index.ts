@@ -18,6 +18,8 @@ export type {
   ModelManifest,
   ModelPosition,
   ModelRegistry,
+  ModelRegistryIndex,
+  ModelRegistryIndexEntry,
   ModelType,
   MountedArkWaifu,
   MountArkWaifuOptions,

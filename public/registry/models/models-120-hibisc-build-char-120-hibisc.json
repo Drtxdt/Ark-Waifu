@@ -1,0 +1,37 @@
+{
+  "id": "models-120-hibisc-build-char-120-hibisc",
+  "name": "芙蓉",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/120_hibisc/build_char_120_hibisc.skel",
+    "atlas": "/Ark-Models/models/120_hibisc/build_char_120_hibisc.atlas",
+    "textures": [
+      "/Ark-Models/models/120_hibisc/build_char_120_hibisc.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/120_hibisc",
+  "sourceFiles": {
+    "skeleton": "models/120_hibisc/build_char_120_hibisc.skel",
+    "atlas": "models/120_hibisc/build_char_120_hibisc.atlas",
+    "textures": [
+      "models/120_hibisc/build_char_120_hibisc.png"
+    ]
+  },
+  "displayName": "芙蓉",
+  "searchText": "芙蓉 build_char_120_hibisc models/120_hibisc default interact move relax sit sleep"
+}

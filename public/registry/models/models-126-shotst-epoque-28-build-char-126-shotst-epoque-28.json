@@ -1,0 +1,38 @@
+{
+  "id": "models-126-shotst-epoque-28-build-char-126-shotst-epoque-28",
+  "name": "流星",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/126_shotst_epoque%2328/build_char_126_shotst_epoque%2328.skel",
+    "atlas": "/Ark-Models/models/126_shotst_epoque%2328/build_char_126_shotst_epoque%2328.atlas",
+    "textures": [
+      "/Ark-Models/models/126_shotst_epoque%2328/build_char_126_shotst_epoque%2328.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/126_shotst_epoque#28",
+  "sourceFiles": {
+    "skeleton": "models/126_shotst_epoque#28/build_char_126_shotst_epoque#28.skel",
+    "atlas": "models/126_shotst_epoque#28/build_char_126_shotst_epoque#28.atlas",
+    "textures": [
+      "models/126_shotst_epoque#28/build_char_126_shotst_epoque#28.png"
+    ]
+  },
+  "displayName": "流星",
+  "searchText": "流星 build_char_126_shotst_epoque#28 models/126_shotst_epoque#28 default interact move relax sit sleep special"
+}

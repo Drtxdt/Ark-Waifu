@@ -1,0 +1,38 @@
+{
+  "id": "models-1021-kroos2-game-3-build-char-1021-kroos2-game-3",
+  "name": "寒芒克洛丝",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1021_kroos2_game%233/build_char_1021_kroos2_game%233.skel",
+    "atlas": "/Ark-Models/models/1021_kroos2_game%233/build_char_1021_kroos2_game%233.atlas",
+    "textures": [
+      "/Ark-Models/models/1021_kroos2_game%233/build_char_1021_kroos2_game%233.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1021_kroos2_game#3",
+  "sourceFiles": {
+    "skeleton": "models/1021_kroos2_game#3/build_char_1021_kroos2_game#3.skel",
+    "atlas": "models/1021_kroos2_game#3/build_char_1021_kroos2_game#3.atlas",
+    "textures": [
+      "models/1021_kroos2_game#3/build_char_1021_kroos2_game#3.png"
+    ]
+  },
+  "displayName": "寒芒克洛丝",
+  "searchText": "寒芒克洛丝 build_char_1021_kroos2_game#3 models/1021_kroos2_game#3 default interact move relax sit sleep special"
+}

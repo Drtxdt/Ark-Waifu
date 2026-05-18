@@ -1,0 +1,37 @@
+{
+  "id": "models-289-gyuki-build-char-289-gyuki",
+  "name": "缠丸",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/289_gyuki/build_char_289_gyuki.skel",
+    "atlas": "/Ark-Models/models/289_gyuki/build_char_289_gyuki.atlas",
+    "textures": [
+      "/Ark-Models/models/289_gyuki/build_char_289_gyuki.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/289_gyuki",
+  "sourceFiles": {
+    "skeleton": "models/289_gyuki/build_char_289_gyuki.skel",
+    "atlas": "models/289_gyuki/build_char_289_gyuki.atlas",
+    "textures": [
+      "models/289_gyuki/build_char_289_gyuki.png"
+    ]
+  },
+  "displayName": "缠丸",
+  "searchText": "缠丸 build_char_289_gyuki models/289_gyuki default interact move relax sit sleep"
+}

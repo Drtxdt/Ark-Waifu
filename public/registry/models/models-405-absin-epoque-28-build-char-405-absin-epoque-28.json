@@ -1,0 +1,38 @@
+{
+  "id": "models-405-absin-epoque-28-build-char-405-absin-epoque-28",
+  "name": "苦艾",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/405_absin_epoque%2328/build_char_405_absin_epoque%2328.skel",
+    "atlas": "/Ark-Models/models/405_absin_epoque%2328/build_char_405_absin_epoque%2328.atlas",
+    "textures": [
+      "/Ark-Models/models/405_absin_epoque%2328/build_char_405_absin_epoque%2328.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/405_absin_epoque#28",
+  "sourceFiles": {
+    "skeleton": "models/405_absin_epoque#28/build_char_405_absin_epoque#28.skel",
+    "atlas": "models/405_absin_epoque#28/build_char_405_absin_epoque#28.atlas",
+    "textures": [
+      "models/405_absin_epoque#28/build_char_405_absin_epoque#28.png"
+    ]
+  },
+  "displayName": "苦艾",
+  "searchText": "苦艾 build_char_405_absin_epoque#28 models/405_absin_epoque#28 default interact move relax sit sleep special"
+}

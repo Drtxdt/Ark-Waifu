@@ -1,0 +1,37 @@
+{
+  "id": "models-212-ansel-build-char-212-ansel",
+  "name": "安赛尔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/212_ansel/build_char_212_ansel.skel",
+    "atlas": "/Ark-Models/models/212_ansel/build_char_212_ansel.atlas",
+    "textures": [
+      "/Ark-Models/models/212_ansel/build_char_212_ansel.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/212_ansel",
+  "sourceFiles": {
+    "skeleton": "models/212_ansel/build_char_212_ansel.skel",
+    "atlas": "models/212_ansel/build_char_212_ansel.atlas",
+    "textures": [
+      "models/212_ansel/build_char_212_ansel.png"
+    ]
+  },
+  "displayName": "安赛尔",
+  "searchText": "安赛尔 build_char_212_ansel models/212_ansel default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-367-swllow-build-char-367-swllow",
+  "name": "灰喉",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/367_swllow/build_char_367_swllow.skel",
+    "atlas": "/Ark-Models/models/367_swllow/build_char_367_swllow.atlas",
+    "textures": [
+      "/Ark-Models/models/367_swllow/build_char_367_swllow.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/367_swllow",
+  "sourceFiles": {
+    "skeleton": "models/367_swllow/build_char_367_swllow.skel",
+    "atlas": "models/367_swllow/build_char_367_swllow.atlas",
+    "textures": [
+      "models/367_swllow/build_char_367_swllow.png"
+    ]
+  },
+  "displayName": "灰喉",
+  "searchText": "灰喉 build_char_367_swllow models/367_swllow default interact move relax sit sleep"
+}

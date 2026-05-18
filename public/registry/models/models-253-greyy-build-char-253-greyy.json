@@ -1,0 +1,37 @@
+{
+  "id": "models-253-greyy-build-char-253-greyy",
+  "name": "格雷伊",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/253_greyy/build_char_253_greyy.skel",
+    "atlas": "/Ark-Models/models/253_greyy/build_char_253_greyy.atlas",
+    "textures": [
+      "/Ark-Models/models/253_greyy/build_char_253_greyy.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/253_greyy",
+  "sourceFiles": {
+    "skeleton": "models/253_greyy/build_char_253_greyy.skel",
+    "atlas": "models/253_greyy/build_char_253_greyy.atlas",
+    "textures": [
+      "models/253_greyy/build_char_253_greyy.png"
+    ]
+  },
+  "displayName": "格雷伊",
+  "searchText": "格雷伊 build_char_253_greyy models/253_greyy default interact move relax sit sleep"
+}

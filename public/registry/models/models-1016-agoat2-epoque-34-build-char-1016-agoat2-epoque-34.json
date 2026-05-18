@@ -1,0 +1,38 @@
+{
+  "id": "models-1016-agoat2-epoque-34-build-char-1016-agoat2-epoque-34",
+  "name": "纯烬艾雅法拉",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1016_agoat2_epoque%2334/build_char_1016_agoat2_epoque%2334.skel",
+    "atlas": "/Ark-Models/models/1016_agoat2_epoque%2334/build_char_1016_agoat2_epoque%2334.atlas",
+    "textures": [
+      "/Ark-Models/models/1016_agoat2_epoque%2334/build_char_1016_agoat2_epoque%2334.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1016_agoat2_epoque#34",
+  "sourceFiles": {
+    "skeleton": "models/1016_agoat2_epoque#34/build_char_1016_agoat2_epoque#34.skel",
+    "atlas": "models/1016_agoat2_epoque#34/build_char_1016_agoat2_epoque#34.atlas",
+    "textures": [
+      "models/1016_agoat2_epoque#34/build_char_1016_agoat2_epoque#34.png"
+    ]
+  },
+  "displayName": "纯烬艾雅法拉",
+  "searchText": "纯烬艾雅法拉 build_char_1016_agoat2_epoque#34 models/1016_agoat2_epoque#34 default interact move relax sit sleep special"
+}

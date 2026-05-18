@@ -1,0 +1,37 @@
+{
+  "id": "models-343-tknogi-build-char-343-tknogi",
+  "name": "月禾",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/343_tknogi/build_char_343_tknogi.skel",
+    "atlas": "/Ark-Models/models/343_tknogi/build_char_343_tknogi.atlas",
+    "textures": [
+      "/Ark-Models/models/343_tknogi/build_char_343_tknogi.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/343_tknogi",
+  "sourceFiles": {
+    "skeleton": "models/343_tknogi/build_char_343_tknogi.skel",
+    "atlas": "models/343_tknogi/build_char_343_tknogi.atlas",
+    "textures": [
+      "models/343_tknogi/build_char_343_tknogi.png"
+    ]
+  },
+  "displayName": "月禾",
+  "searchText": "月禾 build_char_343_tknogi models/343_tknogi default interact move relax sit sleep"
+}

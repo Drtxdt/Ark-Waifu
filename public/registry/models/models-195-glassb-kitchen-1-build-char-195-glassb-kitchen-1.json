@@ -1,0 +1,38 @@
+{
+  "id": "models-195-glassb-kitchen-1-build-char-195-glassb-kitchen-1",
+  "name": "真理",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/195_glassb_kitchen%231/build_char_195_glassb_kitchen%231.skel",
+    "atlas": "/Ark-Models/models/195_glassb_kitchen%231/build_char_195_glassb_kitchen%231.atlas",
+    "textures": [
+      "/Ark-Models/models/195_glassb_kitchen%231/build_char_195_glassb_kitchen%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/195_glassb_kitchen#1",
+  "sourceFiles": {
+    "skeleton": "models/195_glassb_kitchen#1/build_char_195_glassb_kitchen#1.skel",
+    "atlas": "models/195_glassb_kitchen#1/build_char_195_glassb_kitchen#1.atlas",
+    "textures": [
+      "models/195_glassb_kitchen#1/build_char_195_glassb_kitchen#1.png"
+    ]
+  },
+  "displayName": "真理",
+  "searchText": "真理 build_char_195_glassb_kitchen#1 models/195_glassb_kitchen#1 default interact move relax sit sleep special"
+}

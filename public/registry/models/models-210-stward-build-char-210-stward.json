@@ -1,0 +1,37 @@
+{
+  "id": "models-210-stward-build-char-210-stward",
+  "name": "史都华德",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/210_stward/build_char_210_stward.skel",
+    "atlas": "/Ark-Models/models/210_stward/build_char_210_stward.atlas",
+    "textures": [
+      "/Ark-Models/models/210_stward/build_char_210_stward.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/210_stward",
+  "sourceFiles": {
+    "skeleton": "models/210_stward/build_char_210_stward.skel",
+    "atlas": "models/210_stward/build_char_210_stward.atlas",
+    "textures": [
+      "models/210_stward/build_char_210_stward.png"
+    ]
+  },
+  "displayName": "史都华德",
+  "searchText": "史都华德 build_char_210_stward models/210_stward default interact move relax sit sleep"
+}

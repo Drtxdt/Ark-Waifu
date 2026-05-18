@@ -1,0 +1,37 @@
+{
+  "id": "models-4194-rmixer-build-char-4194-rmixer",
+  "name": "信仰搅拌机",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4194_rmixer/build_char_4194_rmixer.skel",
+    "atlas": "/Ark-Models/models/4194_rmixer/build_char_4194_rmixer.atlas",
+    "textures": [
+      "/Ark-Models/models/4194_rmixer/build_char_4194_rmixer.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4194_rmixer",
+  "sourceFiles": {
+    "skeleton": "models/4194_rmixer/build_char_4194_rmixer.skel",
+    "atlas": "models/4194_rmixer/build_char_4194_rmixer.atlas",
+    "textures": [
+      "models/4194_rmixer/build_char_4194_rmixer.png"
+    ]
+  },
+  "displayName": "信仰搅拌机",
+  "searchText": "信仰搅拌机 build_char_4194_rmixer models/4194_rmixer default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-242-otter-build-char-242-otter",
+  "name": "梅尔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/242_otter/build_char_242_otter.skel",
+    "atlas": "/Ark-Models/models/242_otter/build_char_242_otter.atlas",
+    "textures": [
+      "/Ark-Models/models/242_otter/build_char_242_otter.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/242_otter",
+  "sourceFiles": {
+    "skeleton": "models/242_otter/build_char_242_otter.skel",
+    "atlas": "models/242_otter/build_char_242_otter.atlas",
+    "textures": [
+      "models/242_otter/build_char_242_otter.png"
+    ]
+  },
+  "displayName": "梅尔",
+  "searchText": "梅尔 build_char_242_otter models/242_otter default interact move relax sit sleep"
+}

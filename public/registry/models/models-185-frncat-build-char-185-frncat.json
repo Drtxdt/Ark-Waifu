@@ -1,0 +1,37 @@
+{
+  "id": "models-185-frncat-build-char-185-frncat",
+  "name": "慕斯",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/185_frncat/build_char_185_frncat.skel",
+    "atlas": "/Ark-Models/models/185_frncat/build_char_185_frncat.atlas",
+    "textures": [
+      "/Ark-Models/models/185_frncat/build_char_185_frncat.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/185_frncat",
+  "sourceFiles": {
+    "skeleton": "models/185_frncat/build_char_185_frncat.skel",
+    "atlas": "models/185_frncat/build_char_185_frncat.atlas",
+    "textures": [
+      "models/185_frncat/build_char_185_frncat.png"
+    ]
+  },
+  "displayName": "慕斯",
+  "searchText": "慕斯 build_char_185_frncat models/185_frncat default interact move relax sit sleep"
+}

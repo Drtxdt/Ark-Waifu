@@ -1,0 +1,37 @@
+{
+  "id": "models-362-saga-build-char-362-saga",
+  "name": "嵯峨",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/362_saga/build_char_362_saga.skel",
+    "atlas": "/Ark-Models/models/362_saga/build_char_362_saga.atlas",
+    "textures": [
+      "/Ark-Models/models/362_saga/build_char_362_saga.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/362_saga",
+  "sourceFiles": {
+    "skeleton": "models/362_saga/build_char_362_saga.skel",
+    "atlas": "models/362_saga/build_char_362_saga.atlas",
+    "textures": [
+      "models/362_saga/build_char_362_saga.png"
+    ]
+  },
+  "displayName": "嵯峨",
+  "searchText": "嵯峨 build_char_362_saga models/362_saga default interact move relax sit sleep"
+}

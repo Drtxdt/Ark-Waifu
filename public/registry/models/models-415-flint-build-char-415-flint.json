@@ -1,0 +1,37 @@
+{
+  "id": "models-415-flint-build-char-415-flint",
+  "name": "燧石",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/415_flint/build_char_415_flint.skel",
+    "atlas": "/Ark-Models/models/415_flint/build_char_415_flint.atlas",
+    "textures": [
+      "/Ark-Models/models/415_flint/build_char_415_flint.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/415_flint",
+  "sourceFiles": {
+    "skeleton": "models/415_flint/build_char_415_flint.skel",
+    "atlas": "models/415_flint/build_char_415_flint.atlas",
+    "textures": [
+      "models/415_flint/build_char_415_flint.png"
+    ]
+  },
+  "displayName": "燧石",
+  "searchText": "燧石 build_char_415_flint models/415_flint default interact move relax sit sleep"
+}

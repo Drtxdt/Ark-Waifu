@@ -1,0 +1,37 @@
+{
+  "id": "models-1026-gvial2-char-1026-gvial2",
+  "name": "百炼嘉维尔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1026_gvial2/char_1026_gvial2.skel",
+    "atlas": "/Ark-Models/models/1026_gvial2/char_1026_gvial2.atlas",
+    "textures": [
+      "/Ark-Models/models/1026_gvial2/char_1026_gvial2.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1026_gvial2",
+  "sourceFiles": {
+    "skeleton": "models/1026_gvial2/char_1026_gvial2.skel",
+    "atlas": "models/1026_gvial2/char_1026_gvial2.atlas",
+    "textures": [
+      "models/1026_gvial2/char_1026_gvial2.png"
+    ]
+  },
+  "displayName": "百炼嘉维尔",
+  "searchText": "百炼嘉维尔 char_1026_gvial2 models/1026_gvial2 default interact move relax sit sleep"
+}

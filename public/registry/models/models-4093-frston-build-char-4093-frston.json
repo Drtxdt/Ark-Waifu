@@ -1,0 +1,35 @@
+{
+  "id": "models-4093-frston-build-char-4093-frston",
+  "name": "Friston-3",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4093_frston/build_char_4093_frston.skel",
+    "atlas": "/Ark-Models/models/4093_frston/build_char_4093_frston.atlas",
+    "textures": [
+      "/Ark-Models/models/4093_frston/build_char_4093_frston.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4093_frston",
+  "sourceFiles": {
+    "skeleton": "models/4093_frston/build_char_4093_frston.skel",
+    "atlas": "models/4093_frston/build_char_4093_frston.atlas",
+    "textures": [
+      "models/4093_frston/build_char_4093_frston.png"
+    ]
+  },
+  "displayName": "Friston-3",
+  "searchText": "friston-3 build_char_4093_frston models/4093_frston default interact move relax"
+}

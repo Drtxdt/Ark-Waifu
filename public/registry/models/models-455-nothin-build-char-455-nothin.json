@@ -1,0 +1,37 @@
+{
+  "id": "models-455-nothin-build-char-455-nothin",
+  "name": "乌有",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/455_nothin/build_char_455_nothin.skel",
+    "atlas": "/Ark-Models/models/455_nothin/build_char_455_nothin.atlas",
+    "textures": [
+      "/Ark-Models/models/455_nothin/build_char_455_nothin.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/455_nothin",
+  "sourceFiles": {
+    "skeleton": "models/455_nothin/build_char_455_nothin.skel",
+    "atlas": "models/455_nothin/build_char_455_nothin.atlas",
+    "textures": [
+      "models/455_nothin/build_char_455_nothin.png"
+    ]
+  },
+  "displayName": "乌有",
+  "searchText": "乌有 build_char_455_nothin models/455_nothin default interact move relax sit sleep"
+}

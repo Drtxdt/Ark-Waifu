@@ -1,0 +1,38 @@
+{
+  "id": "models-2026-yu-nian-12-build-char-2026-yu-nian-12",
+  "name": "余",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/2026_yu_nian%2312/build_char_2026_yu_nian%2312.skel",
+    "atlas": "/Ark-Models/models/2026_yu_nian%2312/build_char_2026_yu_nian%2312.atlas",
+    "textures": [
+      "/Ark-Models/models/2026_yu_nian%2312/build_char_2026_yu_nian%2312.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/2026_yu_nian#12",
+  "sourceFiles": {
+    "skeleton": "models/2026_yu_nian#12/build_char_2026_yu_nian#12.skel",
+    "atlas": "models/2026_yu_nian#12/build_char_2026_yu_nian#12.atlas",
+    "textures": [
+      "models/2026_yu_nian#12/build_char_2026_yu_nian#12.png"
+    ]
+  },
+  "displayName": "余",
+  "searchText": "余 build_char_2026_yu_nian#12 models/2026_yu_nian#12 default interact move relax sit sleep special"
+}

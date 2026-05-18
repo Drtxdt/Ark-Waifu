@@ -1,0 +1,37 @@
+{
+  "id": "models-179-cgbird-build-char-179-cgbird",
+  "name": "夜莺",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/179_cgbird/build_char_179_cgbird.skel",
+    "atlas": "/Ark-Models/models/179_cgbird/build_char_179_cgbird.atlas",
+    "textures": [
+      "/Ark-Models/models/179_cgbird/build_char_179_cgbird.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/179_cgbird",
+  "sourceFiles": {
+    "skeleton": "models/179_cgbird/build_char_179_cgbird.skel",
+    "atlas": "models/179_cgbird/build_char_179_cgbird.atlas",
+    "textures": [
+      "models/179_cgbird/build_char_179_cgbird.png"
+    ]
+  },
+  "displayName": "夜莺",
+  "searchText": "夜莺 build_char_179_cgbird models/179_cgbird default interact move relax sit sleep"
+}

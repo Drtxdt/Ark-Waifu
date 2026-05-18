@@ -1,0 +1,37 @@
+{
+  "id": "models-171-bldsk-build-char-171-bldsk",
+  "name": "华法琳",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/171_bldsk/build_char_171_bldsk.skel",
+    "atlas": "/Ark-Models/models/171_bldsk/build_char_171_bldsk.atlas",
+    "textures": [
+      "/Ark-Models/models/171_bldsk/build_char_171_bldsk.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/171_bldsk",
+  "sourceFiles": {
+    "skeleton": "models/171_bldsk/build_char_171_bldsk.skel",
+    "atlas": "models/171_bldsk/build_char_171_bldsk.atlas",
+    "textures": [
+      "models/171_bldsk/build_char_171_bldsk.png"
+    ]
+  },
+  "displayName": "华法琳",
+  "searchText": "华法琳 build_char_171_bldsk models/171_bldsk default interact move relax sit sleep"
+}

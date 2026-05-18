@@ -1,0 +1,37 @@
+{
+  "id": "models-1035-wisdel-build-char-1035-wisdel",
+  "name": "维什戴尔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1035_wisdel/build_char_1035_wisdel.skel",
+    "atlas": "/Ark-Models/models/1035_wisdel/build_char_1035_wisdel.atlas",
+    "textures": [
+      "/Ark-Models/models/1035_wisdel/build_char_1035_wisdel.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1035_wisdel",
+  "sourceFiles": {
+    "skeleton": "models/1035_wisdel/build_char_1035_wisdel.skel",
+    "atlas": "models/1035_wisdel/build_char_1035_wisdel.atlas",
+    "textures": [
+      "models/1035_wisdel/build_char_1035_wisdel.png"
+    ]
+  },
+  "displayName": "维什戴尔",
+  "searchText": "维什戴尔 build_char_1035_wisdel models/1035_wisdel default interact move relax sit sleep"
+}

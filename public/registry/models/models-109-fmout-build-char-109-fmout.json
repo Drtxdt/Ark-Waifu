@@ -1,0 +1,37 @@
+{
+  "id": "models-109-fmout-build-char-109-fmout",
+  "name": "远山",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/109_fmout/build_char_109_fmout.skel",
+    "atlas": "/Ark-Models/models/109_fmout/build_char_109_fmout.atlas",
+    "textures": [
+      "/Ark-Models/models/109_fmout/build_char_109_fmout.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/109_fmout",
+  "sourceFiles": {
+    "skeleton": "models/109_fmout/build_char_109_fmout.skel",
+    "atlas": "models/109_fmout/build_char_109_fmout.atlas",
+    "textures": [
+      "models/109_fmout/build_char_109_fmout.png"
+    ]
+  },
+  "displayName": "远山",
+  "searchText": "远山 build_char_109_fmout models/109_fmout default interact move relax sit sleep"
+}

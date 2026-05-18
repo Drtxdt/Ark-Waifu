@@ -1,0 +1,37 @@
+{
+  "id": "models-157-dagda-build-char-157-dagda",
+  "name": "达格达",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/157_dagda/build_char_157_dagda.skel",
+    "atlas": "/Ark-Models/models/157_dagda/build_char_157_dagda.atlas",
+    "textures": [
+      "/Ark-Models/models/157_dagda/build_char_157_dagda.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/157_dagda",
+  "sourceFiles": {
+    "skeleton": "models/157_dagda/build_char_157_dagda.skel",
+    "atlas": "models/157_dagda/build_char_157_dagda.atlas",
+    "textures": [
+      "models/157_dagda/build_char_157_dagda.png"
+    ]
+  },
+  "displayName": "达格达",
+  "searchText": "达格达 build_char_157_dagda models/157_dagda default interact move relax sit sleep"
+}

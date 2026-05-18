@@ -1,0 +1,37 @@
+{
+  "id": "models-422-aurora-build-char-422-aurora",
+  "name": "极光",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/422_aurora/build_char_422_aurora.skel",
+    "atlas": "/Ark-Models/models/422_aurora/build_char_422_aurora.atlas",
+    "textures": [
+      "/Ark-Models/models/422_aurora/build_char_422_aurora.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/422_aurora",
+  "sourceFiles": {
+    "skeleton": "models/422_aurora/build_char_422_aurora.skel",
+    "atlas": "models/422_aurora/build_char_422_aurora.atlas",
+    "textures": [
+      "models/422_aurora/build_char_422_aurora.png"
+    ]
+  },
+  "displayName": "极光",
+  "searchText": "极光 build_char_422_aurora models/422_aurora default interact move relax sit sleep"
+}

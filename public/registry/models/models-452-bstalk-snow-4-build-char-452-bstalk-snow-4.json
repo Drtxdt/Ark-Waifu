@@ -1,0 +1,38 @@
+{
+  "id": "models-452-bstalk-snow-4-build-char-452-bstalk-snow-4",
+  "name": "豆苗",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/452_bstalk_snow%234/build_char_452_bstalk_snow%234.skel",
+    "atlas": "/Ark-Models/models/452_bstalk_snow%234/build_char_452_bstalk_snow%234.atlas",
+    "textures": [
+      "/Ark-Models/models/452_bstalk_snow%234/build_char_452_bstalk_snow%234.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/452_bstalk_snow#4",
+  "sourceFiles": {
+    "skeleton": "models/452_bstalk_snow#4/build_char_452_bstalk_snow#4.skel",
+    "atlas": "models/452_bstalk_snow#4/build_char_452_bstalk_snow#4.atlas",
+    "textures": [
+      "models/452_bstalk_snow#4/build_char_452_bstalk_snow#4.png"
+    ]
+  },
+  "displayName": "豆苗",
+  "searchText": "豆苗 build_char_452_bstalk_snow#4 models/452_bstalk_snow#4 default interact move relax sit sleep special"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-325-bison-build-char-325-bison",
+  "name": "拜松",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/325_bison/build_char_325_bison.skel",
+    "atlas": "/Ark-Models/models/325_bison/build_char_325_bison.atlas",
+    "textures": [
+      "/Ark-Models/models/325_bison/build_char_325_bison.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/325_bison",
+  "sourceFiles": {
+    "skeleton": "models/325_bison/build_char_325_bison.skel",
+    "atlas": "models/325_bison/build_char_325_bison.atlas",
+    "textures": [
+      "models/325_bison/build_char_325_bison.png"
+    ]
+  },
+  "displayName": "拜松",
+  "searchText": "拜松 build_char_325_bison models/325_bison default interact move relax sit sleep"
+}

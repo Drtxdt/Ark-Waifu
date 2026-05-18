@@ -1,0 +1,35 @@
+{
+  "id": "models-286-cast3-build-char-286-cast3",
+  "name": "Castle-3",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/286_cast3/build_char_286_cast3.skel",
+    "atlas": "/Ark-Models/models/286_cast3/build_char_286_cast3.atlas",
+    "textures": [
+      "/Ark-Models/models/286_cast3/build_char_286_cast3.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/286_cast3",
+  "sourceFiles": {
+    "skeleton": "models/286_cast3/build_char_286_cast3.skel",
+    "atlas": "models/286_cast3/build_char_286_cast3.atlas",
+    "textures": [
+      "models/286_cast3/build_char_286_cast3.png"
+    ]
+  },
+  "displayName": "Castle-3",
+  "searchText": "castle-3 build_char_286_cast3 models/286_cast3 default interact move relax"
+}

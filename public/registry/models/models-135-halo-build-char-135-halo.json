@@ -1,0 +1,37 @@
+{
+  "id": "models-135-halo-build-char-135-halo",
+  "name": "星源",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/135_halo/build_char_135_halo.skel",
+    "atlas": "/Ark-Models/models/135_halo/build_char_135_halo.atlas",
+    "textures": [
+      "/Ark-Models/models/135_halo/build_char_135_halo.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/135_halo",
+  "sourceFiles": {
+    "skeleton": "models/135_halo/build_char_135_halo.skel",
+    "atlas": "models/135_halo/build_char_135_halo.atlas",
+    "textures": [
+      "models/135_halo/build_char_135_halo.png"
+    ]
+  },
+  "displayName": "星源",
+  "searchText": "星源 build_char_135_halo models/135_halo default interact move relax sit sleep"
+}

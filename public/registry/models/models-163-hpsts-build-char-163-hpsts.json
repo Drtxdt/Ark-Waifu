@@ -1,0 +1,37 @@
+{
+  "id": "models-163-hpsts-build-char-163-hpsts",
+  "name": "火神",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/163_hpsts/build_char_163_hpsts.skel",
+    "atlas": "/Ark-Models/models/163_hpsts/build_char_163_hpsts.atlas",
+    "textures": [
+      "/Ark-Models/models/163_hpsts/build_char_163_hpsts.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/163_hpsts",
+  "sourceFiles": {
+    "skeleton": "models/163_hpsts/build_char_163_hpsts.skel",
+    "atlas": "models/163_hpsts/build_char_163_hpsts.atlas",
+    "textures": [
+      "models/163_hpsts/build_char_163_hpsts.png"
+    ]
+  },
+  "displayName": "火神",
+  "searchText": "火神 build_char_163_hpsts models/163_hpsts default interact move relax sit sleep"
+}

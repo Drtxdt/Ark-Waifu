@@ -1,0 +1,38 @@
+{
+  "id": "models-497-ctable-epoque-44-build-char-497-ctable-epoque-44",
+  "name": "晓歌",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/497_ctable_epoque%2344/build_char_497_ctable_epoque%2344.skel",
+    "atlas": "/Ark-Models/models/497_ctable_epoque%2344/build_char_497_ctable_epoque%2344.atlas",
+    "textures": [
+      "/Ark-Models/models/497_ctable_epoque%2344/build_char_497_ctable_epoque%2344.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/497_ctable_epoque#44",
+  "sourceFiles": {
+    "skeleton": "models/497_ctable_epoque#44/build_char_497_ctable_epoque#44.skel",
+    "atlas": "models/497_ctable_epoque#44/build_char_497_ctable_epoque#44.atlas",
+    "textures": [
+      "models/497_ctable_epoque#44/build_char_497_ctable_epoque#44.png"
+    ]
+  },
+  "displayName": "晓歌",
+  "searchText": "晓歌 build_char_497_ctable_epoque#44 models/497_ctable_epoque#44 default interact move relax sit sleep special"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-261-sddrag-build-char-261-sddrag",
+  "name": "苇草",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/261_sddrag/build_char_261_sddrag.skel",
+    "atlas": "/Ark-Models/models/261_sddrag/build_char_261_sddrag.atlas",
+    "textures": [
+      "/Ark-Models/models/261_sddrag/build_char_261_sddrag.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/261_sddrag",
+  "sourceFiles": {
+    "skeleton": "models/261_sddrag/build_char_261_sddrag.skel",
+    "atlas": "models/261_sddrag/build_char_261_sddrag.atlas",
+    "textures": [
+      "models/261_sddrag/build_char_261_sddrag.png"
+    ]
+  },
+  "displayName": "苇草",
+  "searchText": "苇草 build_char_261_sddrag models/261_sddrag default interact move relax sit sleep"
+}

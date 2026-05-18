@@ -1,0 +1,37 @@
+{
+  "id": "models-4023-rfalcn-build-char-4023-rfalcn",
+  "name": "红隼",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4023_rfalcn/build_char_4023_rfalcn.skel",
+    "atlas": "/Ark-Models/models/4023_rfalcn/build_char_4023_rfalcn.atlas",
+    "textures": [
+      "/Ark-Models/models/4023_rfalcn/build_char_4023_rfalcn.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4023_rfalcn",
+  "sourceFiles": {
+    "skeleton": "models/4023_rfalcn/build_char_4023_rfalcn.skel",
+    "atlas": "models/4023_rfalcn/build_char_4023_rfalcn.atlas",
+    "textures": [
+      "models/4023_rfalcn/build_char_4023_rfalcn.png"
+    ]
+  },
+  "displayName": "红隼",
+  "searchText": "红隼 build_char_4023_rfalcn models/4023_rfalcn default interact move relax sit sleep"
+}

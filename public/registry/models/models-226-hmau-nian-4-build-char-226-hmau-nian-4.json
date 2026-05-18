@@ -1,0 +1,38 @@
+{
+  "id": "models-226-hmau-nian-4-build-char-226-hmau-nian-4",
+  "name": "吽",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/226_hmau_nian%234/build_char_226_hmau_nian%234.skel",
+    "atlas": "/Ark-Models/models/226_hmau_nian%234/build_char_226_hmau_nian%234.atlas",
+    "textures": [
+      "/Ark-Models/models/226_hmau_nian%234/build_char_226_hmau_nian%234.png"
+    ]
+  },
+  "actions": {
+    "defaulet": "Defaulet",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/226_hmau_nian#4",
+  "sourceFiles": {
+    "skeleton": "models/226_hmau_nian#4/build_char_226_hmau_nian#4.skel",
+    "atlas": "models/226_hmau_nian#4/build_char_226_hmau_nian#4.atlas",
+    "textures": [
+      "models/226_hmau_nian#4/build_char_226_hmau_nian#4.png"
+    ]
+  },
+  "displayName": "吽",
+  "searchText": "吽 build_char_226_hmau_nian#4 models/226_hmau_nian#4 defaulet interact move relax sit sleep special"
+}

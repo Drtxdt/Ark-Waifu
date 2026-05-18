@@ -1,0 +1,37 @@
+{
+  "id": "models-484-robrta-build-char-484-robrta",
+  "name": "罗比菈塔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/484_robrta/build_char_484_robrta.skel",
+    "atlas": "/Ark-Models/models/484_robrta/build_char_484_robrta.atlas",
+    "textures": [
+      "/Ark-Models/models/484_robrta/build_char_484_robrta.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/484_robrta",
+  "sourceFiles": {
+    "skeleton": "models/484_robrta/build_char_484_robrta.skel",
+    "atlas": "models/484_robrta/build_char_484_robrta.atlas",
+    "textures": [
+      "models/484_robrta/build_char_484_robrta.png"
+    ]
+  },
+  "displayName": "罗比菈塔",
+  "searchText": "罗比菈塔 build_char_484_robrta models/484_robrta default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-127-estell-build-char-127-estell",
+  "name": "艾丝黛尔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/127_estell/build_char_127_estell.skel",
+    "atlas": "/Ark-Models/models/127_estell/build_char_127_estell.atlas",
+    "textures": [
+      "/Ark-Models/models/127_estell/build_char_127_estell.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/127_estell",
+  "sourceFiles": {
+    "skeleton": "models/127_estell/build_char_127_estell.skel",
+    "atlas": "models/127_estell/build_char_127_estell.atlas",
+    "textures": [
+      "models/127_estell/build_char_127_estell.png"
+    ]
+  },
+  "displayName": "艾丝黛尔",
+  "searchText": "艾丝黛尔 build_char_127_estell models/127_estell default interact move relax sit sleep"
+}

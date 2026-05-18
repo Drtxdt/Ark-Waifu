@@ -1,0 +1,37 @@
+{
+  "id": "models-248-mgllan-build-char-248-mgllan",
+  "name": "麦哲伦",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/248_mgllan/build_char_248_mgllan.skel",
+    "atlas": "/Ark-Models/models/248_mgllan/build_char_248_mgllan.atlas",
+    "textures": [
+      "/Ark-Models/models/248_mgllan/build_char_248_mgllan.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/248_mgllan",
+  "sourceFiles": {
+    "skeleton": "models/248_mgllan/build_char_248_mgllan.skel",
+    "atlas": "models/248_mgllan/build_char_248_mgllan.atlas",
+    "textures": [
+      "models/248_mgllan/build_char_248_mgllan.png"
+    ]
+  },
+  "displayName": "麦哲伦",
+  "searchText": "麦哲伦 build_char_248_mgllan models/248_mgllan default interact move relax sit sleep"
+}

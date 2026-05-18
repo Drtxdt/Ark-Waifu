@@ -1,0 +1,37 @@
+{
+  "id": "models-405-absin-build-char-405-absin",
+  "name": "苦艾",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/405_absin/build_char_405_absin.skel",
+    "atlas": "/Ark-Models/models/405_absin/build_char_405_absin.atlas",
+    "textures": [
+      "/Ark-Models/models/405_absin/build_char_405_absin.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/405_absin",
+  "sourceFiles": {
+    "skeleton": "models/405_absin/build_char_405_absin.skel",
+    "atlas": "models/405_absin/build_char_405_absin.atlas",
+    "textures": [
+      "models/405_absin/build_char_405_absin.png"
+    ]
+  },
+  "displayName": "苦艾",
+  "searchText": "苦艾 build_char_405_absin models/405_absin default interact move relax sit sleep"
+}

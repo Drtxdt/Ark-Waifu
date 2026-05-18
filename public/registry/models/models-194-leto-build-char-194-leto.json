@@ -1,0 +1,37 @@
+{
+  "id": "models-194-leto-build-char-194-leto",
+  "name": "烈夏",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/194_leto/build_char_194_leto.skel",
+    "atlas": "/Ark-Models/models/194_leto/build_char_194_leto.atlas",
+    "textures": [
+      "/Ark-Models/models/194_leto/build_char_194_leto.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/194_leto",
+  "sourceFiles": {
+    "skeleton": "models/194_leto/build_char_194_leto.skel",
+    "atlas": "models/194_leto/build_char_194_leto.atlas",
+    "textures": [
+      "models/194_leto/build_char_194_leto.png"
+    ]
+  },
+  "displayName": "烈夏",
+  "searchText": "烈夏 build_char_194_leto models/194_leto default interact move relax sit sleep"
+}

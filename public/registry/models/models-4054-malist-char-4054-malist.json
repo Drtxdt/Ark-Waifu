@@ -1,0 +1,37 @@
+{
+  "id": "models-4054-malist-char-4054-malist",
+  "name": "至简",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4054_malist/char_4054_malist.skel",
+    "atlas": "/Ark-Models/models/4054_malist/char_4054_malist.atlas",
+    "textures": [
+      "/Ark-Models/models/4054_malist/char_4054_malist.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4054_malist",
+  "sourceFiles": {
+    "skeleton": "models/4054_malist/char_4054_malist.skel",
+    "atlas": "models/4054_malist/char_4054_malist.atlas",
+    "textures": [
+      "models/4054_malist/char_4054_malist.png"
+    ]
+  },
+  "displayName": "至简",
+  "searchText": "至简 char_4054_malist models/4054_malist default interact move relax sit sleep"
+}

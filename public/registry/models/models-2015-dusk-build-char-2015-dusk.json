@@ -1,0 +1,37 @@
+{
+  "id": "models-2015-dusk-build-char-2015-dusk",
+  "name": "夕",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/2015_dusk/build_char_2015_dusk.skel",
+    "atlas": "/Ark-Models/models/2015_dusk/build_char_2015_dusk.atlas",
+    "textures": [
+      "/Ark-Models/models/2015_dusk/build_char_2015_dusk.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/2015_dusk",
+  "sourceFiles": {
+    "skeleton": "models/2015_dusk/build_char_2015_dusk.skel",
+    "atlas": "models/2015_dusk/build_char_2015_dusk.atlas",
+    "textures": [
+      "models/2015_dusk/build_char_2015_dusk.png"
+    ]
+  },
+  "displayName": "夕",
+  "searchText": "夕 build_char_2015_dusk models/2015_dusk default interact move relax sit sleep"
+}

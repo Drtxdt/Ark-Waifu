@@ -1,0 +1,37 @@
+{
+  "id": "models-4117-ray-build-char-4117-ray",
+  "name": "莱伊",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4117_ray/build_char_4117_ray.skel",
+    "atlas": "/Ark-Models/models/4117_ray/build_char_4117_ray.atlas",
+    "textures": [
+      "/Ark-Models/models/4117_ray/build_char_4117_ray.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4117_ray",
+  "sourceFiles": {
+    "skeleton": "models/4117_ray/build_char_4117_ray.skel",
+    "atlas": "models/4117_ray/build_char_4117_ray.atlas",
+    "textures": [
+      "models/4117_ray/build_char_4117_ray.png"
+    ]
+  },
+  "displayName": "莱伊",
+  "searchText": "莱伊 build_char_4117_ray models/4117_ray default interact move relax sit sleep"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-129-bluep-marthe-3-build-char-129-bluep-marthe-3",
+  "name": "蓝毒",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/129_bluep_marthe%233/build_char_129_bluep_marthe%233.skel",
+    "atlas": "/Ark-Models/models/129_bluep_marthe%233/build_char_129_bluep_marthe%233.atlas",
+    "textures": [
+      "/Ark-Models/models/129_bluep_marthe%233/build_char_129_bluep_marthe%233.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/129_bluep_marthe#3",
+  "sourceFiles": {
+    "skeleton": "models/129_bluep_marthe#3/build_char_129_bluep_marthe#3.skel",
+    "atlas": "models/129_bluep_marthe#3/build_char_129_bluep_marthe#3.atlas",
+    "textures": [
+      "models/129_bluep_marthe#3/build_char_129_bluep_marthe#3.png"
+    ]
+  },
+  "displayName": "蓝毒",
+  "searchText": "蓝毒 build_char_129_bluep_marthe#3 models/129_bluep_marthe#3 default interact move relax sit sleep special"
+}

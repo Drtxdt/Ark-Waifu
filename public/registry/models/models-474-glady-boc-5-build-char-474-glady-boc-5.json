@@ -1,0 +1,38 @@
+{
+  "id": "models-474-glady-boc-5-build-char-474-glady-boc-5",
+  "name": "歌蕾蒂娅",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/474_glady_boc%235/build_char_474_glady_boc%235.skel",
+    "atlas": "/Ark-Models/models/474_glady_boc%235/build_char_474_glady_boc%235.atlas",
+    "textures": [
+      "/Ark-Models/models/474_glady_boc%235/build_char_474_glady_boc%235.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/474_glady_boc#5",
+  "sourceFiles": {
+    "skeleton": "models/474_glady_boc#5/build_char_474_glady_boc#5.skel",
+    "atlas": "models/474_glady_boc#5/build_char_474_glady_boc#5.atlas",
+    "textures": [
+      "models/474_glady_boc#5/build_char_474_glady_boc#5.png"
+    ]
+  },
+  "displayName": "歌蕾蒂娅",
+  "searchText": "歌蕾蒂娅 build_char_474_glady_boc#5 models/474_glady_boc#5 default interact move relax sit sleep special"
+}

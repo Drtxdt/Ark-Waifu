@@ -1,0 +1,37 @@
+{
+  "id": "models-2025-shu-build-char-2025-shu",
+  "name": "黍",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/2025_shu/build_char_2025_shu.skel",
+    "atlas": "/Ark-Models/models/2025_shu/build_char_2025_shu.atlas",
+    "textures": [
+      "/Ark-Models/models/2025_shu/build_char_2025_shu.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/2025_shu",
+  "sourceFiles": {
+    "skeleton": "models/2025_shu/build_char_2025_shu.skel",
+    "atlas": "models/2025_shu/build_char_2025_shu.atlas",
+    "textures": [
+      "models/2025_shu/build_char_2025_shu.png"
+    ]
+  },
+  "displayName": "黍",
+  "searchText": "黍 build_char_2025_shu models/2025_shu default interact move relax sit sleep"
+}

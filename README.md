@@ -73,7 +73,7 @@ mounted.ready.catch((error) => {
 ```html
 <script
     src="https://cdn.jsdelivr.net/npm/ark-waifu@0.1.8/dist/ark-waifu.loader.js"
-    data-registry="/registry/operators.json"
+    data-registry-base="/registry/"
     data-model="models-4134-cetsyr-epoque-50-build-char-4134-cetsyr-epoque-50"
     data-cdn="osyb"
   ></script>
@@ -85,6 +85,9 @@ mounted.ready.catch((error) => {
 
 - data-auto: 是否自动挂载，默认 true；传 false 可关闭自动挂载
 - data-manifest: manifest 地址
+- data-registry-base: split registry 根地址，推荐生产使用
+- data-registry: 旧版完整 registry 地址，兼容用，不推荐首屏使用
+- data-model-manifest-url: 单个模型 manifest 地址
 - data-width: 挂件宽度（数字）
 - data-height: 挂件高度（数字）
 - data-z-index: 层级（数字）
@@ -240,7 +243,7 @@ pnpm preview
 ```html
 <script
   src="http://127.0.0.1:4173/ark-waifu.loader.js"
-  data-registry="http://127.0.0.1:4173/registry/operators.json"
+  data-registry-base="http://127.0.0.1:4173/registry/"
   data-model="models-4134-cetsyr-epoque-50-build-char-4134-cetsyr-epoque-50"
   data-cdn="osyb"
   data-default-action="auto"
@@ -254,13 +257,14 @@ pnpm preview
 npm pack --dry-run
 ```
 
-确认 tarball 里包含 `dist/ark-waifu.loader.js`、`dist/ark-waifu.iife.js` 和 `dist/registry/operators.json` 后再发布。
+确认 tarball 里包含 `dist/ark-waifu.loader.js`、`dist/ark-waifu.iife.js`、`dist/registry/index.json` 和 `dist/registry/default-model.json` 后再发布。`dist/registry/operators.json` 和 `dist/models` 会在构建末尾被裁剪，不应进入 npm 包。
 
 ## Compatibility Notes
 
 - 当前定位 MVP，仅支持 type: ark-spine
 - 暂不支持 Live2D
 - 依赖 PixiJS 6 + @pixi-spine/all-3.8 3.x
+- Ark-Models 扫描默认只包含 `models/` 下的干员/皮肤模型，不再包含 `models_enemies/`
 - 动画名由模型决定，manifest 映射不存在时会告警而非崩溃
 - CSS 盒子坐下检测只扫描显式配置的 selector，不会自动识别整页布局
 - 坐下姿态会重新计算模型 transform，但个别资源的动画边界如果本身不完整，仍可能需要单独调整 manifest scale/position

@@ -1,0 +1,37 @@
+{
+  "id": "models-1023-ghost2-build-char-1023-ghost2",
+  "name": "归溟幽灵鲨",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1023_ghost2/build_char_1023_ghost2.skel",
+    "atlas": "/Ark-Models/models/1023_ghost2/build_char_1023_ghost2.atlas",
+    "textures": [
+      "/Ark-Models/models/1023_ghost2/build_char_1023_ghost2.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1023_ghost2",
+  "sourceFiles": {
+    "skeleton": "models/1023_ghost2/build_char_1023_ghost2.skel",
+    "atlas": "models/1023_ghost2/build_char_1023_ghost2.atlas",
+    "textures": [
+      "models/1023_ghost2/build_char_1023_ghost2.png"
+    ]
+  },
+  "displayName": "归溟幽灵鲨",
+  "searchText": "归溟幽灵鲨 build_char_1023_ghost2 models/1023_ghost2 default interact move relax sit sleep"
+}

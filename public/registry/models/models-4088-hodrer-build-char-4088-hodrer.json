@@ -1,0 +1,37 @@
+{
+  "id": "models-4088-hodrer-build-char-4088-hodrer",
+  "name": "赫德雷",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4088_hodrer/build_char_4088_hodrer.skel",
+    "atlas": "/Ark-Models/models/4088_hodrer/build_char_4088_hodrer.atlas",
+    "textures": [
+      "/Ark-Models/models/4088_hodrer/build_char_4088_hodrer.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4088_hodrer",
+  "sourceFiles": {
+    "skeleton": "models/4088_hodrer/build_char_4088_hodrer.skel",
+    "atlas": "models/4088_hodrer/build_char_4088_hodrer.atlas",
+    "textures": [
+      "models/4088_hodrer/build_char_4088_hodrer.png"
+    ]
+  },
+  "displayName": "赫德雷",
+  "searchText": "赫德雷 build_char_4088_hodrer models/4088_hodrer default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-155-tiger-build-char-155-tiger",
+  "name": "因陀罗",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/155_tiger/build_char_155_tiger.skel",
+    "atlas": "/Ark-Models/models/155_tiger/build_char_155_tiger.atlas",
+    "textures": [
+      "/Ark-Models/models/155_tiger/build_char_155_tiger.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/155_tiger",
+  "sourceFiles": {
+    "skeleton": "models/155_tiger/build_char_155_tiger.skel",
+    "atlas": "models/155_tiger/build_char_155_tiger.atlas",
+    "textures": [
+      "models/155_tiger/build_char_155_tiger.png"
+    ]
+  },
+  "displayName": "因陀罗",
+  "searchText": "因陀罗 build_char_155_tiger models/155_tiger default interact move relax sit sleep"
+}

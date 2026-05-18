@@ -1,0 +1,37 @@
+{
+  "id": "models-501-durin-build-char-501-durin",
+  "name": "杜林",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/501_durin/build_char_501_durin.skel",
+    "atlas": "/Ark-Models/models/501_durin/build_char_501_durin.atlas",
+    "textures": [
+      "/Ark-Models/models/501_durin/build_char_501_durin.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/501_durin",
+  "sourceFiles": {
+    "skeleton": "models/501_durin/build_char_501_durin.skel",
+    "atlas": "models/501_durin/build_char_501_durin.atlas",
+    "textures": [
+      "models/501_durin/build_char_501_durin.png"
+    ]
+  },
+  "displayName": "杜林",
+  "searchText": "杜林 build_char_501_durin models/501_durin default interact move relax sit sleep"
+}

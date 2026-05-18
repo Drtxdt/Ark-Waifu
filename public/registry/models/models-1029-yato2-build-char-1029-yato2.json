@@ -1,0 +1,37 @@
+{
+  "id": "models-1029-yato2-build-char-1029-yato2",
+  "name": "麒麟R夜刀",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1029_yato2/build_char_1029_yato2.skel",
+    "atlas": "/Ark-Models/models/1029_yato2/build_char_1029_yato2.atlas",
+    "textures": [
+      "/Ark-Models/models/1029_yato2/build_char_1029_yato2.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1029_yato2",
+  "sourceFiles": {
+    "skeleton": "models/1029_yato2/build_char_1029_yato2.skel",
+    "atlas": "models/1029_yato2/build_char_1029_yato2.atlas",
+    "textures": [
+      "models/1029_yato2/build_char_1029_yato2.png"
+    ]
+  },
+  "displayName": "麒麟R夜刀",
+  "searchText": "麒麟r夜刀 build_char_1029_yato2 models/1029_yato2 default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-4171-wulfen-build-char-4171-wulfen",
+  "name": "钼铅",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4171_wulfen/build_char_4171_wulfen.skel",
+    "atlas": "/Ark-Models/models/4171_wulfen/build_char_4171_wulfen.atlas",
+    "textures": [
+      "/Ark-Models/models/4171_wulfen/build_char_4171_wulfen.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4171_wulfen",
+  "sourceFiles": {
+    "skeleton": "models/4171_wulfen/build_char_4171_wulfen.skel",
+    "atlas": "models/4171_wulfen/build_char_4171_wulfen.atlas",
+    "textures": [
+      "models/4171_wulfen/build_char_4171_wulfen.png"
+    ]
+  },
+  "displayName": "钼铅",
+  "searchText": "钼铅 build_char_4171_wulfen models/4171_wulfen default interact move relax sit sleep"
+}

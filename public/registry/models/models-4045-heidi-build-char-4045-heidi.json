@@ -1,0 +1,37 @@
+{
+  "id": "models-4045-heidi-build-char-4045-heidi",
+  "name": "海蒂",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4045_heidi/build_char_4045_heidi.skel",
+    "atlas": "/Ark-Models/models/4045_heidi/build_char_4045_heidi.atlas",
+    "textures": [
+      "/Ark-Models/models/4045_heidi/build_char_4045_heidi.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4045_heidi",
+  "sourceFiles": {
+    "skeleton": "models/4045_heidi/build_char_4045_heidi.skel",
+    "atlas": "models/4045_heidi/build_char_4045_heidi.atlas",
+    "textures": [
+      "models/4045_heidi/build_char_4045_heidi.png"
+    ]
+  },
+  "displayName": "海蒂",
+  "searchText": "海蒂 build_char_4045_heidi models/4045_heidi default interact move relax sit sleep"
+}

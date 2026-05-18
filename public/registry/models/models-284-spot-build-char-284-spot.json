@@ -1,0 +1,37 @@
+{
+  "id": "models-284-spot-build-char-284-spot",
+  "name": "斑点",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/284_spot/build_char_284_spot.skel",
+    "atlas": "/Ark-Models/models/284_spot/build_char_284_spot.atlas",
+    "textures": [
+      "/Ark-Models/models/284_spot/build_char_284_spot.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/284_spot",
+  "sourceFiles": {
+    "skeleton": "models/284_spot/build_char_284_spot.skel",
+    "atlas": "models/284_spot/build_char_284_spot.atlas",
+    "textures": [
+      "models/284_spot/build_char_284_spot.png"
+    ]
+  },
+  "displayName": "斑点",
+  "searchText": "斑点 build_char_284_spot models/284_spot default interact move relax sit sleep"
+}

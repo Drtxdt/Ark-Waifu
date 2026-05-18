@@ -1,0 +1,38 @@
+{
+  "id": "models-4107-vrdant-unveiling-3-build-char-4107-vrdant-unveiling-3",
+  "name": "维荻",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4107_vrdant_unveiling%233/build_char_4107_vrdant_unveiling%233.skel",
+    "atlas": "/Ark-Models/models/4107_vrdant_unveiling%233/build_char_4107_vrdant_unveiling%233.atlas",
+    "textures": [
+      "/Ark-Models/models/4107_vrdant_unveiling%233/build_char_4107_vrdant_unveiling%233.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4107_vrdant_unveiling#3",
+  "sourceFiles": {
+    "skeleton": "models/4107_vrdant_unveiling#3/build_char_4107_vrdant_unveiling#3.skel",
+    "atlas": "models/4107_vrdant_unveiling#3/build_char_4107_vrdant_unveiling#3.atlas",
+    "textures": [
+      "models/4107_vrdant_unveiling#3/build_char_4107_vrdant_unveiling#3.png"
+    ]
+  },
+  "displayName": "维荻",
+  "searchText": "维荻 build_char_4107_vrdant_unveiling#3 models/4107_vrdant_unveiling#3 default interact move relax sit sleep special"
+}

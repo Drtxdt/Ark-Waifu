@@ -1,0 +1,37 @@
+{
+  "id": "models-218-cuttle-build-char-218-cuttle",
+  "name": "安哲拉",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/218_cuttle/build_char_218_cuttle.skel",
+    "atlas": "/Ark-Models/models/218_cuttle/build_char_218_cuttle.atlas",
+    "textures": [
+      "/Ark-Models/models/218_cuttle/build_char_218_cuttle.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/218_cuttle",
+  "sourceFiles": {
+    "skeleton": "models/218_cuttle/build_char_218_cuttle.skel",
+    "atlas": "models/218_cuttle/build_char_218_cuttle.atlas",
+    "textures": [
+      "models/218_cuttle/build_char_218_cuttle.png"
+    ]
+  },
+  "displayName": "安哲拉",
+  "searchText": "安哲拉 build_char_218_cuttle models/218_cuttle default interact move relax sit sleep"
+}

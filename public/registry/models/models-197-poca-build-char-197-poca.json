@@ -1,0 +1,37 @@
+{
+  "id": "models-197-poca-build-char-197-poca",
+  "name": "早露",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/197_poca/build_char_197_poca.skel",
+    "atlas": "/Ark-Models/models/197_poca/build_char_197_poca.atlas",
+    "textures": [
+      "/Ark-Models/models/197_poca/build_char_197_poca.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/197_poca",
+  "sourceFiles": {
+    "skeleton": "models/197_poca/build_char_197_poca.skel",
+    "atlas": "models/197_poca/build_char_197_poca.atlas",
+    "textures": [
+      "models/197_poca/build_char_197_poca.png"
+    ]
+  },
+  "displayName": "早露",
+  "searchText": "早露 build_char_197_poca models/197_poca default interact move relax sit sleep"
+}

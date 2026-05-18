@@ -1,0 +1,38 @@
+{
+  "id": "models-2024-chyue-nian-10-build-char-2024-chyue-nian-10",
+  "name": "重岳",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/2024_chyue_nian%2310/build_char_2024_chyue_nian%2310.skel",
+    "atlas": "/Ark-Models/models/2024_chyue_nian%2310/build_char_2024_chyue_nian%2310.atlas",
+    "textures": [
+      "/Ark-Models/models/2024_chyue_nian%2310/build_char_2024_chyue_nian%2310.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/2024_chyue_nian#10",
+  "sourceFiles": {
+    "skeleton": "models/2024_chyue_nian#10/build_char_2024_chyue_nian#10.skel",
+    "atlas": "models/2024_chyue_nian#10/build_char_2024_chyue_nian#10.atlas",
+    "textures": [
+      "models/2024_chyue_nian#10/build_char_2024_chyue_nian#10.png"
+    ]
+  },
+  "displayName": "重岳",
+  "searchText": "重岳 build_char_2024_chyue_nian#10 models/2024_chyue_nian#10 default interact move relax sit sleep special"
+}

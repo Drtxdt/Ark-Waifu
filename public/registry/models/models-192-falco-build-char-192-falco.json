@@ -1,0 +1,37 @@
+{
+  "id": "models-192-falco-build-char-192-falco",
+  "name": "翎羽",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/192_falco/build_char_192_falco.skel",
+    "atlas": "/Ark-Models/models/192_falco/build_char_192_falco.atlas",
+    "textures": [
+      "/Ark-Models/models/192_falco/build_char_192_falco.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/192_falco",
+  "sourceFiles": {
+    "skeleton": "models/192_falco/build_char_192_falco.skel",
+    "atlas": "models/192_falco/build_char_192_falco.atlas",
+    "textures": [
+      "models/192_falco/build_char_192_falco.png"
+    ]
+  },
+  "displayName": "翎羽",
+  "searchText": "翎羽 build_char_192_falco models/192_falco default interact move relax sit sleep"
+}

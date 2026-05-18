@@ -1,0 +1,38 @@
+{
+  "id": "models-4138-narant-breaker-1-build-char-4138-narant-breaker-1",
+  "name": "娜仁图亚",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4138_narant_breaker%231/build_char_4138_narant_breaker%231.skel",
+    "atlas": "/Ark-Models/models/4138_narant_breaker%231/build_char_4138_narant_breaker%231.atlas",
+    "textures": [
+      "/Ark-Models/models/4138_narant_breaker%231/build_char_4138_narant_breaker%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4138_narant_breaker#1",
+  "sourceFiles": {
+    "skeleton": "models/4138_narant_breaker#1/build_char_4138_narant_breaker#1.skel",
+    "atlas": "models/4138_narant_breaker#1/build_char_4138_narant_breaker#1.atlas",
+    "textures": [
+      "models/4138_narant_breaker#1/build_char_4138_narant_breaker#1.png"
+    ]
+  },
+  "displayName": "娜仁图亚",
+  "searchText": "娜仁图亚 build_char_4138_narant_breaker#1 models/4138_narant_breaker#1 default interact move relax sit sleep special"
+}

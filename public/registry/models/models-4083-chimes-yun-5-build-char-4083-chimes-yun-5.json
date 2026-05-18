@@ -1,0 +1,39 @@
+{
+  "id": "models-4083-chimes-yun-5-build-char-4083-chimes-yun-5",
+  "name": "铎铃",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4083_chimes_yun%235/build_char_4083_chimes_yun%235.skel",
+    "atlas": "/Ark-Models/models/4083_chimes_yun%235/build_char_4083_chimes_yun%235.atlas",
+    "textures": [
+      "/Ark-Models/models/4083_chimes_yun%235/build_char_4083_chimes_yun%235.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "move2": "Move2",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4083_chimes_yun#5",
+  "sourceFiles": {
+    "skeleton": "models/4083_chimes_yun#5/build_char_4083_chimes_yun#5.skel",
+    "atlas": "models/4083_chimes_yun#5/build_char_4083_chimes_yun#5.atlas",
+    "textures": [
+      "models/4083_chimes_yun#5/build_char_4083_chimes_yun#5.png"
+    ]
+  },
+  "displayName": "铎铃",
+  "searchText": "铎铃 build_char_4083_chimes_yun#5 models/4083_chimes_yun#5 default interact move move2 relax sit sleep special"
+}

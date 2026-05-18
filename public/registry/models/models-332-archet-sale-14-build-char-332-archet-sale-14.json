@@ -1,0 +1,38 @@
+{
+  "id": "models-332-archet-sale-14-build-char-332-archet-sale-14",
+  "name": "空弦",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/332_archet_sale%2314/build_char_332_archet_sale%2314.skel",
+    "atlas": "/Ark-Models/models/332_archet_sale%2314/build_char_332_archet_sale%2314.atlas",
+    "textures": [
+      "/Ark-Models/models/332_archet_sale%2314/build_char_332_archet_sale%2314.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/332_archet_sale#14",
+  "sourceFiles": {
+    "skeleton": "models/332_archet_sale#14/build_char_332_archet_sale#14.skel",
+    "atlas": "models/332_archet_sale#14/build_char_332_archet_sale#14.atlas",
+    "textures": [
+      "models/332_archet_sale#14/build_char_332_archet_sale#14.png"
+    ]
+  },
+  "displayName": "空弦",
+  "searchText": "空弦 build_char_332_archet_sale#14 models/332_archet_sale#14 default interact move relax sit sleep special"
+}

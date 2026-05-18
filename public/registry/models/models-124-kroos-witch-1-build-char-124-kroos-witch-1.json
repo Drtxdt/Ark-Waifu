@@ -1,0 +1,38 @@
+{
+  "id": "models-124-kroos-witch-1-build-char-124-kroos-witch-1",
+  "name": "克洛丝",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/124_kroos_witch%231/build_char_124_kroos_witch%231.skel",
+    "atlas": "/Ark-Models/models/124_kroos_witch%231/build_char_124_kroos_witch%231.atlas",
+    "textures": [
+      "/Ark-Models/models/124_kroos_witch%231/build_char_124_kroos_witch%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/124_kroos_witch#1",
+  "sourceFiles": {
+    "skeleton": "models/124_kroos_witch#1/build_char_124_kroos_witch#1.skel",
+    "atlas": "models/124_kroos_witch#1/build_char_124_kroos_witch#1.atlas",
+    "textures": [
+      "models/124_kroos_witch#1/build_char_124_kroos_witch#1.png"
+    ]
+  },
+  "displayName": "克洛丝",
+  "searchText": "克洛丝 build_char_124_kroos_witch#1 models/124_kroos_witch#1 default interact move relax sit sleep special"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-328-cammou-build-char-328-cammou",
+  "name": "卡达",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/328_cammou/build_char_328_cammou.skel",
+    "atlas": "/Ark-Models/models/328_cammou/build_char_328_cammou.atlas",
+    "textures": [
+      "/Ark-Models/models/328_cammou/build_char_328_cammou.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/328_cammou",
+  "sourceFiles": {
+    "skeleton": "models/328_cammou/build_char_328_cammou.skel",
+    "atlas": "models/328_cammou/build_char_328_cammou.atlas",
+    "textures": [
+      "models/328_cammou/build_char_328_cammou.png"
+    ]
+  },
+  "displayName": "卡达",
+  "searchText": "卡达 build_char_328_cammou models/328_cammou default interact move relax sit sleep"
+}

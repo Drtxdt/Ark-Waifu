@@ -1,0 +1,38 @@
+{
+  "id": "models-337-utage-epoque-15-build-char-337-utage-epoque-15",
+  "name": "宴",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/337_utage_epoque%2315/build_char_337_utage_epoque%2315.skel",
+    "atlas": "/Ark-Models/models/337_utage_epoque%2315/build_char_337_utage_epoque%2315.atlas",
+    "textures": [
+      "/Ark-Models/models/337_utage_epoque%2315/build_char_337_utage_epoque%2315.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/337_utage_epoque#15",
+  "sourceFiles": {
+    "skeleton": "models/337_utage_epoque#15/build_char_337_utage_epoque#15.skel",
+    "atlas": "models/337_utage_epoque#15/build_char_337_utage_epoque#15.atlas",
+    "textures": [
+      "models/337_utage_epoque#15/build_char_337_utage_epoque#15.png"
+    ]
+  },
+  "displayName": "宴",
+  "searchText": "宴 build_char_337_utage_epoque#15 models/337_utage_epoque#15 default interact move relax sit sleep special"
+}

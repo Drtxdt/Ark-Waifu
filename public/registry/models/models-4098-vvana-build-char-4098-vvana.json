@@ -1,0 +1,37 @@
+{
+  "id": "models-4098-vvana-build-char-4098-vvana",
+  "name": "薇薇安娜",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4098_vvana/build_char_4098_vvana.skel",
+    "atlas": "/Ark-Models/models/4098_vvana/build_char_4098_vvana.atlas",
+    "textures": [
+      "/Ark-Models/models/4098_vvana/build_char_4098_vvana.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4098_vvana",
+  "sourceFiles": {
+    "skeleton": "models/4098_vvana/build_char_4098_vvana.skel",
+    "atlas": "models/4098_vvana/build_char_4098_vvana.atlas",
+    "textures": [
+      "models/4098_vvana/build_char_4098_vvana.png"
+    ]
+  },
+  "displayName": "薇薇安娜",
+  "searchText": "薇薇安娜 build_char_4098_vvana models/4098_vvana default interact move relax sit sleep"
+}

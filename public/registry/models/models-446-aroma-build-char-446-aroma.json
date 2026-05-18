@@ -1,0 +1,37 @@
+{
+  "id": "models-446-aroma-build-char-446-aroma",
+  "name": "阿罗玛",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/446_aroma/build_char_446_aroma.skel",
+    "atlas": "/Ark-Models/models/446_aroma/build_char_446_aroma.atlas",
+    "textures": [
+      "/Ark-Models/models/446_aroma/build_char_446_aroma.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/446_aroma",
+  "sourceFiles": {
+    "skeleton": "models/446_aroma/build_char_446_aroma.skel",
+    "atlas": "models/446_aroma/build_char_446_aroma.atlas",
+    "textures": [
+      "models/446_aroma/build_char_446_aroma.png"
+    ]
+  },
+  "displayName": "阿罗玛",
+  "searchText": "阿罗玛 build_char_446_aroma models/446_aroma default interact move relax sit sleep"
+}

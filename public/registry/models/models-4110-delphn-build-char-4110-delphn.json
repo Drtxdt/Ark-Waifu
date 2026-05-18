@@ -1,0 +1,37 @@
+{
+  "id": "models-4110-delphn-build-char-4110-delphn",
+  "name": "戴菲恩",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4110_delphn/build_char_4110_delphn.skel",
+    "atlas": "/Ark-Models/models/4110_delphn/build_char_4110_delphn.atlas",
+    "textures": [
+      "/Ark-Models/models/4110_delphn/build_char_4110_delphn.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4110_delphn",
+  "sourceFiles": {
+    "skeleton": "models/4110_delphn/build_char_4110_delphn.skel",
+    "atlas": "models/4110_delphn/build_char_4110_delphn.atlas",
+    "textures": [
+      "models/4110_delphn/build_char_4110_delphn.png"
+    ]
+  },
+  "displayName": "戴菲恩",
+  "searchText": "戴菲恩 build_char_4110_delphn models/4110_delphn default interact move relax sit sleep"
+}

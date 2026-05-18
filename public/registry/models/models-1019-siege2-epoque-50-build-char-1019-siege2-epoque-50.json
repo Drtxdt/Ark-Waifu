@@ -1,0 +1,38 @@
+{
+  "id": "models-1019-siege2-epoque-50-build-char-1019-siege2-epoque-50",
+  "name": "维娜·维多利亚",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1019_siege2_epoque%2350/build_char_1019_siege2_epoque%2350.skel",
+    "atlas": "/Ark-Models/models/1019_siege2_epoque%2350/build_char_1019_siege2_epoque%2350.atlas",
+    "textures": [
+      "/Ark-Models/models/1019_siege2_epoque%2350/build_char_1019_siege2_epoque%2350.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1019_siege2_epoque#50",
+  "sourceFiles": {
+    "skeleton": "models/1019_siege2_epoque#50/build_char_1019_siege2_epoque#50.skel",
+    "atlas": "models/1019_siege2_epoque#50/build_char_1019_siege2_epoque#50.atlas",
+    "textures": [
+      "models/1019_siege2_epoque#50/build_char_1019_siege2_epoque#50.png"
+    ]
+  },
+  "displayName": "维娜·维多利亚",
+  "searchText": "维娜·维多利亚 build_char_1019_siege2_epoque#50 models/1019_siege2_epoque#50 default interact move relax sit sleep special"
+}

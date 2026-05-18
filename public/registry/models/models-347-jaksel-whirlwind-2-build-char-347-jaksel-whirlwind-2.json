@@ -1,0 +1,38 @@
+{
+  "id": "models-347-jaksel-whirlwind-2-build-char-347-jaksel-whirlwind-2",
+  "name": "杰克",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/347_jaksel_whirlwind%232/build_char_347_jaksel_whirlwind%232.skel",
+    "atlas": "/Ark-Models/models/347_jaksel_whirlwind%232/build_char_347_jaksel_whirlwind%232.atlas",
+    "textures": [
+      "/Ark-Models/models/347_jaksel_whirlwind%232/build_char_347_jaksel_whirlwind%232.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/347_jaksel_whirlwind#2",
+  "sourceFiles": {
+    "skeleton": "models/347_jaksel_whirlwind#2/build_char_347_jaksel_whirlwind#2.skel",
+    "atlas": "models/347_jaksel_whirlwind#2/build_char_347_jaksel_whirlwind#2.atlas",
+    "textures": [
+      "models/347_jaksel_whirlwind#2/build_char_347_jaksel_whirlwind#2.png"
+    ]
+  },
+  "displayName": "杰克",
+  "searchText": "杰克 build_char_347_jaksel_whirlwind#2 models/347_jaksel_whirlwind#2 default interact move relax sit sleep special"
+}

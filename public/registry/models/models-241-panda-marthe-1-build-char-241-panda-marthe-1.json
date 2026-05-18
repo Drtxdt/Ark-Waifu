@@ -1,0 +1,38 @@
+{
+  "id": "models-241-panda-marthe-1-build-char-241-panda-marthe-1",
+  "name": "食铁兽",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/241_panda_marthe%231/build_char_241_panda_marthe%231.skel",
+    "atlas": "/Ark-Models/models/241_panda_marthe%231/build_char_241_panda_marthe%231.atlas",
+    "textures": [
+      "/Ark-Models/models/241_panda_marthe%231/build_char_241_panda_marthe%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/241_panda_marthe#1",
+  "sourceFiles": {
+    "skeleton": "models/241_panda_marthe#1/build_char_241_panda_marthe#1.skel",
+    "atlas": "models/241_panda_marthe#1/build_char_241_panda_marthe#1.atlas",
+    "textures": [
+      "models/241_panda_marthe#1/build_char_241_panda_marthe#1.png"
+    ]
+  },
+  "displayName": "食铁兽",
+  "searchText": "食铁兽 build_char_241_panda_marthe#1 models/241_panda_marthe#1 default interact move relax sit sleep special"
+}

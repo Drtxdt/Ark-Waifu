@@ -1,0 +1,37 @@
+{
+  "id": "models-010-chen-build-char-010-chen",
+  "name": "陈",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/010_chen/build_char_010_chen.skel",
+    "atlas": "/Ark-Models/models/010_chen/build_char_010_chen.atlas",
+    "textures": [
+      "/Ark-Models/models/010_chen/build_char_010_chen.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/010_chen",
+  "sourceFiles": {
+    "skeleton": "models/010_chen/build_char_010_chen.skel",
+    "atlas": "models/010_chen/build_char_010_chen.atlas",
+    "textures": [
+      "models/010_chen/build_char_010_chen.png"
+    ]
+  },
+  "displayName": "陈",
+  "searchText": "陈 build_char_010_chen models/010_chen default interact move relax sit sleep"
+}

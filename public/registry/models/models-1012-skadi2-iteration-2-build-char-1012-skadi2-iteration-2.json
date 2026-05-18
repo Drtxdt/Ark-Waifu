@@ -1,0 +1,38 @@
+{
+  "id": "models-1012-skadi2-iteration-2-build-char-1012-skadi2-iteration-2",
+  "name": "浊心斯卡蒂",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1012_skadi2_iteration%232/build_char_1012_skadi2_iteration%232.skel",
+    "atlas": "/Ark-Models/models/1012_skadi2_iteration%232/build_char_1012_skadi2_iteration%232.atlas",
+    "textures": [
+      "/Ark-Models/models/1012_skadi2_iteration%232/build_char_1012_skadi2_iteration%232.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1012_skadi2_iteration#2",
+  "sourceFiles": {
+    "skeleton": "models/1012_skadi2_iteration#2/build_char_1012_skadi2_iteration#2.skel",
+    "atlas": "models/1012_skadi2_iteration#2/build_char_1012_skadi2_iteration#2.atlas",
+    "textures": [
+      "models/1012_skadi2_iteration#2/build_char_1012_skadi2_iteration#2.png"
+    ]
+  },
+  "displayName": "浊心斯卡蒂",
+  "searchText": "浊心斯卡蒂 build_char_1012_skadi2_iteration#2 models/1012_skadi2_iteration#2 default interact move relax sit sleep special"
+}

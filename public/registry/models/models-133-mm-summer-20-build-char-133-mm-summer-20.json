@@ -1,0 +1,38 @@
+{
+  "id": "models-133-mm-summer-20-build-char-133-mm-summer-20",
+  "name": "梅",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/133_mm_summer%2320/build_char_133_mm_summer%2320.skel",
+    "atlas": "/Ark-Models/models/133_mm_summer%2320/build_char_133_mm_summer%2320.atlas",
+    "textures": [
+      "/Ark-Models/models/133_mm_summer%2320/build_char_133_mm_summer%2320.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/133_mm_summer#20",
+  "sourceFiles": {
+    "skeleton": "models/133_mm_summer#20/build_char_133_mm_summer#20.skel",
+    "atlas": "models/133_mm_summer#20/build_char_133_mm_summer#20.atlas",
+    "textures": [
+      "models/133_mm_summer#20/build_char_133_mm_summer#20.png"
+    ]
+  },
+  "displayName": "梅",
+  "searchText": "梅 build_char_133_mm_summer#20 models/133_mm_summer#20 default interact move relax sit sleep special"
+}

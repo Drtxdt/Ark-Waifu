@@ -1,0 +1,37 @@
+{
+  "id": "models-214-kafka-build-char-214-kafka",
+  "name": "卡夫卡",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/214_kafka/build_char_214_kafka.skel",
+    "atlas": "/Ark-Models/models/214_kafka/build_char_214_kafka.atlas",
+    "textures": [
+      "/Ark-Models/models/214_kafka/build_char_214_kafka.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/214_kafka",
+  "sourceFiles": {
+    "skeleton": "models/214_kafka/build_char_214_kafka.skel",
+    "atlas": "models/214_kafka/build_char_214_kafka.atlas",
+    "textures": [
+      "models/214_kafka/build_char_214_kafka.png"
+    ]
+  },
+  "displayName": "卡夫卡",
+  "searchText": "卡夫卡 build_char_214_kafka models/214_kafka default interact move relax sit sleep"
+}

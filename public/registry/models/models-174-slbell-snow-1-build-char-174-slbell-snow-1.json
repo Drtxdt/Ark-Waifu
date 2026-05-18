@@ -1,0 +1,37 @@
+{
+  "id": "models-174-slbell-snow-1-build-char-174-slbell-snow-1",
+  "name": "初雪",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/174_slbell_snow%231/build_char_174_slbell_snow%231.skel",
+    "atlas": "/Ark-Models/models/174_slbell_snow%231/build_char_174_slbell_snow%231.atlas",
+    "textures": [
+      "/Ark-Models/models/174_slbell_snow%231/build_char_174_slbell_snow%231.png"
+    ]
+  },
+  "actions": {
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/174_slbell_snow#1",
+  "sourceFiles": {
+    "skeleton": "models/174_slbell_snow#1/build_char_174_slbell_snow#1.skel",
+    "atlas": "models/174_slbell_snow#1/build_char_174_slbell_snow#1.atlas",
+    "textures": [
+      "models/174_slbell_snow#1/build_char_174_slbell_snow#1.png"
+    ]
+  },
+  "displayName": "初雪",
+  "searchText": "初雪 build_char_174_slbell_snow#1 models/174_slbell_snow#1 interact move relax sit sleep special"
+}

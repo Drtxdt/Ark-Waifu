@@ -1,0 +1,38 @@
+{
+  "id": "models-225-haak-nian-4-build-char-225-haak-nian-4",
+  "name": "阿",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/225_haak_nian%234/build_char_225_haak_nian%234.skel",
+    "atlas": "/Ark-Models/models/225_haak_nian%234/build_char_225_haak_nian%234.atlas",
+    "textures": [
+      "/Ark-Models/models/225_haak_nian%234/build_char_225_haak_nian%234.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/225_haak_nian#4",
+  "sourceFiles": {
+    "skeleton": "models/225_haak_nian#4/build_char_225_haak_nian#4.skel",
+    "atlas": "models/225_haak_nian#4/build_char_225_haak_nian#4.atlas",
+    "textures": [
+      "models/225_haak_nian#4/build_char_225_haak_nian#4.png"
+    ]
+  },
+  "displayName": "阿",
+  "searchText": "阿 build_char_225_haak_nian#4 models/225_haak_nian#4 default interact move relax sit sleep special"
+}

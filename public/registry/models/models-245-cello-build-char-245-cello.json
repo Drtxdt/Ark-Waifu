@@ -1,0 +1,37 @@
+{
+  "id": "models-245-cello-build-char-245-cello",
+  "name": "塑心",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/245_cello/build_char_245_cello.skel",
+    "atlas": "/Ark-Models/models/245_cello/build_char_245_cello.atlas",
+    "textures": [
+      "/Ark-Models/models/245_cello/build_char_245_cello.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/245_cello",
+  "sourceFiles": {
+    "skeleton": "models/245_cello/build_char_245_cello.skel",
+    "atlas": "models/245_cello/build_char_245_cello.atlas",
+    "textures": [
+      "models/245_cello/build_char_245_cello.png"
+    ]
+  },
+  "displayName": "塑心",
+  "searchText": "塑心 build_char_245_cello models/245_cello default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-4016-kazema-build-char-4016-kazema",
+  "name": "风丸",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4016_kazema/build_char_4016_kazema.skel",
+    "atlas": "/Ark-Models/models/4016_kazema/build_char_4016_kazema.atlas",
+    "textures": [
+      "/Ark-Models/models/4016_kazema/build_char_4016_kazema.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4016_kazema",
+  "sourceFiles": {
+    "skeleton": "models/4016_kazema/build_char_4016_kazema.skel",
+    "atlas": "models/4016_kazema/build_char_4016_kazema.atlas",
+    "textures": [
+      "models/4016_kazema/build_char_4016_kazema.png"
+    ]
+  },
+  "displayName": "风丸",
+  "searchText": "风丸 build_char_4016_kazema models/4016_kazema default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-271-spikes-build-char-271-spikes",
+  "name": "芳汀",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/271_spikes/build_char_271_spikes.skel",
+    "atlas": "/Ark-Models/models/271_spikes/build_char_271_spikes.atlas",
+    "textures": [
+      "/Ark-Models/models/271_spikes/build_char_271_spikes.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/271_spikes",
+  "sourceFiles": {
+    "skeleton": "models/271_spikes/build_char_271_spikes.skel",
+    "atlas": "models/271_spikes/build_char_271_spikes.atlas",
+    "textures": [
+      "models/271_spikes/build_char_271_spikes.png"
+    ]
+  },
+  "displayName": "芳汀",
+  "searchText": "芳汀 build_char_271_spikes models/271_spikes default interact move relax sit sleep"
+}

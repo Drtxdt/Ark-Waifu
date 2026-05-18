@@ -1,0 +1,37 @@
+{
+  "id": "models-4031-liesel-build-char-4031-liesel",
+  "name": "复奏",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4031_liesel/build_char_4031_liesel.skel",
+    "atlas": "/Ark-Models/models/4031_liesel/build_char_4031_liesel.atlas",
+    "textures": [
+      "/Ark-Models/models/4031_liesel/build_char_4031_liesel.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4031_liesel",
+  "sourceFiles": {
+    "skeleton": "models/4031_liesel/build_char_4031_liesel.skel",
+    "atlas": "models/4031_liesel/build_char_4031_liesel.atlas",
+    "textures": [
+      "models/4031_liesel/build_char_4031_liesel.png"
+    ]
+  },
+  "displayName": "复奏",
+  "searchText": "复奏 build_char_4031_liesel models/4031_liesel default interact move relax sit sleep"
+}

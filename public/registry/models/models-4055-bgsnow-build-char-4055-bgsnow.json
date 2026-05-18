@@ -1,0 +1,37 @@
+{
+  "id": "models-4055-bgsnow-build-char-4055-bgsnow",
+  "name": "鸿雪",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4055_bgsnow/build_char_4055_bgsnow.skel",
+    "atlas": "/Ark-Models/models/4055_bgsnow/build_char_4055_bgsnow.atlas",
+    "textures": [
+      "/Ark-Models/models/4055_bgsnow/build_char_4055_bgsnow.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4055_bgsnow",
+  "sourceFiles": {
+    "skeleton": "models/4055_bgsnow/build_char_4055_bgsnow.skel",
+    "atlas": "models/4055_bgsnow/build_char_4055_bgsnow.atlas",
+    "textures": [
+      "models/4055_bgsnow/build_char_4055_bgsnow.png"
+    ]
+  },
+  "displayName": "鸿雪",
+  "searchText": "鸿雪 build_char_4055_bgsnow models/4055_bgsnow default interact move relax sit sleep"
+}

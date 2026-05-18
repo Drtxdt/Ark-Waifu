@@ -1,0 +1,38 @@
+{
+  "id": "models-431-ashlok-epoque-28-build-char-431-ashlok-epoque-28",
+  "name": "灰毫",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/431_ashlok_epoque%2328/build_char_431_ashlok_epoque%2328.skel",
+    "atlas": "/Ark-Models/models/431_ashlok_epoque%2328/build_char_431_ashlok_epoque%2328.atlas",
+    "textures": [
+      "/Ark-Models/models/431_ashlok_epoque%2328/build_char_431_ashlok_epoque%2328.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/431_ashlok_epoque#28",
+  "sourceFiles": {
+    "skeleton": "models/431_ashlok_epoque#28/build_char_431_ashlok_epoque#28.skel",
+    "atlas": "models/431_ashlok_epoque#28/build_char_431_ashlok_epoque#28.atlas",
+    "textures": [
+      "models/431_ashlok_epoque#28/build_char_431_ashlok_epoque#28.png"
+    ]
+  },
+  "displayName": "灰毫",
+  "searchText": "灰毫 build_char_431_ashlok_epoque#28 models/431_ashlok_epoque#28 default interact move relax sit sleep special"
+}

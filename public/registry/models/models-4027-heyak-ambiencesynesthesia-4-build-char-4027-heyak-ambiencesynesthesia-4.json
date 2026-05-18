@@ -1,0 +1,38 @@
+{
+  "id": "models-4027-heyak-ambiencesynesthesia-4-build-char-4027-heyak-ambiencesynesthesia-4",
+  "name": "霍尔海雅",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4027_heyak_ambiencesynesthesia%234/build_char_4027_heyak_ambienceSynesthesia%234.skel",
+    "atlas": "/Ark-Models/models/4027_heyak_ambiencesynesthesia%234/build_char_4027_heyak_ambienceSynesthesia%234.atlas",
+    "textures": [
+      "/Ark-Models/models/4027_heyak_ambiencesynesthesia%234/build_char_4027_heyak_ambienceSynesthesia%234.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4027_heyak_ambiencesynesthesia#4",
+  "sourceFiles": {
+    "skeleton": "models/4027_heyak_ambiencesynesthesia#4/build_char_4027_heyak_ambienceSynesthesia#4.skel",
+    "atlas": "models/4027_heyak_ambiencesynesthesia#4/build_char_4027_heyak_ambienceSynesthesia#4.atlas",
+    "textures": [
+      "models/4027_heyak_ambiencesynesthesia#4/build_char_4027_heyak_ambienceSynesthesia#4.png"
+    ]
+  },
+  "displayName": "霍尔海雅",
+  "searchText": "霍尔海雅 build_char_4027_heyak_ambiencesynesthesia#4 models/4027_heyak_ambiencesynesthesia#4 default interact move relax sit sleep special"
+}

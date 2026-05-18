@@ -1,0 +1,38 @@
+{
+  "id": "models-4048-doroth-witch-4-build-char-4048-doroth-witch-4",
+  "name": "多萝西",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4048_doroth_witch%234/build_char_4048_doroth_witch%234.skel",
+    "atlas": "/Ark-Models/models/4048_doroth_witch%234/build_char_4048_doroth_witch%234.atlas",
+    "textures": [
+      "/Ark-Models/models/4048_doroth_witch%234/build_char_4048_doroth_witch%234.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4048_doroth_witch#4",
+  "sourceFiles": {
+    "skeleton": "models/4048_doroth_witch#4/build_char_4048_doroth_witch#4.skel",
+    "atlas": "models/4048_doroth_witch#4/build_char_4048_doroth_witch#4.atlas",
+    "textures": [
+      "models/4048_doroth_witch#4/build_char_4048_doroth_witch#4.png"
+    ]
+  },
+  "displayName": "多萝西",
+  "searchText": "多萝西 build_char_4048_doroth_witch#4 models/4048_doroth_witch#4 default interact move relax sit sleep special"
+}

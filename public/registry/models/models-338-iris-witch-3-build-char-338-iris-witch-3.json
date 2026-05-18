@@ -1,0 +1,38 @@
+{
+  "id": "models-338-iris-witch-3-build-char-338-iris-witch-3",
+  "name": "爱丽丝",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/338_iris_witch%233/build_char_338_iris_witch%233.skel",
+    "atlas": "/Ark-Models/models/338_iris_witch%233/build_char_338_iris_witch%233.atlas",
+    "textures": [
+      "/Ark-Models/models/338_iris_witch%233/build_char_338_iris_witch%233.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/338_iris_witch#3",
+  "sourceFiles": {
+    "skeleton": "models/338_iris_witch#3/build_char_338_iris_witch#3.skel",
+    "atlas": "models/338_iris_witch#3/build_char_338_iris_witch#3.atlas",
+    "textures": [
+      "models/338_iris_witch#3/build_char_338_iris_witch#3.png"
+    ]
+  },
+  "displayName": "爱丽丝",
+  "searchText": "爱丽丝 build_char_338_iris_witch#3 models/338_iris_witch#3 default interact move relax sit sleep special"
+}

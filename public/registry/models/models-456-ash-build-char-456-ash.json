@@ -1,0 +1,37 @@
+{
+  "id": "models-456-ash-build-char-456-ash",
+  "name": "灰烬",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/456_ash/build_char_456_ash.skel",
+    "atlas": "/Ark-Models/models/456_ash/build_char_456_ash.atlas",
+    "textures": [
+      "/Ark-Models/models/456_ash/build_char_456_ash.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/456_ash",
+  "sourceFiles": {
+    "skeleton": "models/456_ash/build_char_456_ash.skel",
+    "atlas": "models/456_ash/build_char_456_ash.atlas",
+    "textures": [
+      "models/456_ash/build_char_456_ash.png"
+    ]
+  },
+  "displayName": "灰烬",
+  "searchText": "灰烬 build_char_456_ash models/456_ash default interact move relax sit sleep"
+}

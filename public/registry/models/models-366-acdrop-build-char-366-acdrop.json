@@ -1,0 +1,37 @@
+{
+  "id": "models-366-acdrop-build-char-366-acdrop",
+  "name": "酸糖",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/366_acdrop/build_char_366_acdrop.skel",
+    "atlas": "/Ark-Models/models/366_acdrop/build_char_366_acdrop.atlas",
+    "textures": [
+      "/Ark-Models/models/366_acdrop/build_char_366_acdrop.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/366_acdrop",
+  "sourceFiles": {
+    "skeleton": "models/366_acdrop/build_char_366_acdrop.skel",
+    "atlas": "models/366_acdrop/build_char_366_acdrop.atlas",
+    "textures": [
+      "models/366_acdrop/build_char_366_acdrop.png"
+    ]
+  },
+  "displayName": "酸糖",
+  "searchText": "酸糖 build_char_366_acdrop models/366_acdrop default interact move relax sit sleep"
+}

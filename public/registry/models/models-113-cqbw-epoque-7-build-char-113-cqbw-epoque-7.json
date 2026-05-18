@@ -1,0 +1,38 @@
+{
+  "id": "models-113-cqbw-epoque-7-build-char-113-cqbw-epoque-7",
+  "name": "W",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/113_cqbw_epoque%237/build_char_113_cqbw_epoque%237.skel",
+    "atlas": "/Ark-Models/models/113_cqbw_epoque%237/build_char_113_cqbw_epoque%237.atlas",
+    "textures": [
+      "/Ark-Models/models/113_cqbw_epoque%237/build_char_113_cqbw_epoque%237.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/113_cqbw_epoque#7",
+  "sourceFiles": {
+    "skeleton": "models/113_cqbw_epoque#7/build_char_113_cqbw_epoque#7.skel",
+    "atlas": "models/113_cqbw_epoque#7/build_char_113_cqbw_epoque#7.atlas",
+    "textures": [
+      "models/113_cqbw_epoque#7/build_char_113_cqbw_epoque#7.png"
+    ]
+  },
+  "displayName": "W",
+  "searchText": "w build_char_113_cqbw_epoque#7 models/113_cqbw_epoque#7 default interact move relax sit sleep special"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-456-ash-rainbow6-1-build-char-456-ash-rainbow6-1",
+  "name": "灰烬",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/456_ash_rainbow6%231/build_char_456_ash_rainbow6%231.skel",
+    "atlas": "/Ark-Models/models/456_ash_rainbow6%231/build_char_456_ash_rainbow6%231.atlas",
+    "textures": [
+      "/Ark-Models/models/456_ash_rainbow6%231/build_char_456_ash_rainbow6%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/456_ash_rainbow6#1",
+  "sourceFiles": {
+    "skeleton": "models/456_ash_rainbow6#1/build_char_456_ash_rainbow6#1.skel",
+    "atlas": "models/456_ash_rainbow6#1/build_char_456_ash_rainbow6#1.atlas",
+    "textures": [
+      "models/456_ash_rainbow6#1/build_char_456_ash_rainbow6#1.png"
+    ]
+  },
+  "displayName": "灰烬",
+  "searchText": "灰烬 build_char_456_ash_rainbow6#1 models/456_ash_rainbow6#1 default interact move relax sit sleep special"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-1050-chen3-build-char-1050-chen3",
+  "name": "赤刃明霄陈",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1050_chen3/build_char_1050_chen3.skel",
+    "atlas": "/Ark-Models/models/1050_chen3/build_char_1050_chen3.atlas",
+    "textures": [
+      "/Ark-Models/models/1050_chen3/build_char_1050_chen3.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1050_chen3",
+  "sourceFiles": {
+    "skeleton": "models/1050_chen3/build_char_1050_chen3.skel",
+    "atlas": "models/1050_chen3/build_char_1050_chen3.atlas",
+    "textures": [
+      "models/1050_chen3/build_char_1050_chen3.png"
+    ]
+  },
+  "displayName": "赤刃明霄陈",
+  "searchText": "赤刃明霄陈 build_char_1050_chen3 models/1050_chen3 default interact move relax sit sleep"
+}

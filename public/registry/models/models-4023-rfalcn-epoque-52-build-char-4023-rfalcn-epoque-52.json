@@ -1,0 +1,38 @@
+{
+  "id": "models-4023-rfalcn-epoque-52-build-char-4023-rfalcn-epoque-52",
+  "name": "红隼",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4023_rfalcn_epoque%2352/build_char_4023_rfalcn_epoque%2352.skel",
+    "atlas": "/Ark-Models/models/4023_rfalcn_epoque%2352/build_char_4023_rfalcn_epoque%2352.atlas",
+    "textures": [
+      "/Ark-Models/models/4023_rfalcn_epoque%2352/build_char_4023_rfalcn_epoque%2352.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4023_rfalcn_epoque#52",
+  "sourceFiles": {
+    "skeleton": "models/4023_rfalcn_epoque#52/build_char_4023_rfalcn_epoque#52.skel",
+    "atlas": "models/4023_rfalcn_epoque#52/build_char_4023_rfalcn_epoque#52.atlas",
+    "textures": [
+      "models/4023_rfalcn_epoque#52/build_char_4023_rfalcn_epoque#52.png"
+    ]
+  },
+  "displayName": "红隼",
+  "searchText": "红隼 build_char_4023_rfalcn_epoque#52 models/4023_rfalcn_epoque#52 default interact move relax sit sleep special"
+}

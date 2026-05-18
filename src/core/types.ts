@@ -43,6 +43,26 @@ export type ModelRegistry = {
   operators: ScannedModelManifest[];
 };
 
+export type ModelRegistryIndexEntry = {
+  id: string;
+  name: string;
+  type: ModelType;
+  version: string;
+  category?: string;
+  relativeDir: string;
+  displayName?: string;
+  searchText?: string;
+  manifest: string;
+};
+
+export type ModelRegistryIndex = {
+  version: 1;
+  generatedAt: string;
+  baseUrl: string;
+  defaultModelId?: string;
+  models: ModelRegistryIndexEntry[];
+};
+
 export type AssetCdnSource = {
   id: string;
   label: string;

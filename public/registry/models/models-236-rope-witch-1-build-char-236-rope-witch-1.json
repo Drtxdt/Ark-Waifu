@@ -1,0 +1,38 @@
+{
+  "id": "models-236-rope-witch-1-build-char-236-rope-witch-1",
+  "name": "暗索",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/236_rope_witch%231/build_char_236_rope_witch%231.skel",
+    "atlas": "/Ark-Models/models/236_rope_witch%231/build_char_236_rope_witch%231.atlas",
+    "textures": [
+      "/Ark-Models/models/236_rope_witch%231/build_char_236_rope_witch%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/236_rope_witch#1",
+  "sourceFiles": {
+    "skeleton": "models/236_rope_witch#1/build_char_236_rope_witch#1.skel",
+    "atlas": "models/236_rope_witch#1/build_char_236_rope_witch#1.atlas",
+    "textures": [
+      "models/236_rope_witch#1/build_char_236_rope_witch#1.png"
+    ]
+  },
+  "displayName": "暗索",
+  "searchText": "暗索 build_char_236_rope_witch#1 models/236_rope_witch#1 default interact move relax sit sleep special"
+}

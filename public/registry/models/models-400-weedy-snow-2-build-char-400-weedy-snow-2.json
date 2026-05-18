@@ -1,0 +1,38 @@
+{
+  "id": "models-400-weedy-snow-2-build-char-400-weedy-snow-2",
+  "name": "温蒂",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/400_weedy_snow%232/build_char_400_weedy_snow%232.skel",
+    "atlas": "/Ark-Models/models/400_weedy_snow%232/build_char_400_weedy_snow%232.atlas",
+    "textures": [
+      "/Ark-Models/models/400_weedy_snow%232/build_char_400_weedy_snow%232.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/400_weedy_snow#2",
+  "sourceFiles": {
+    "skeleton": "models/400_weedy_snow#2/build_char_400_weedy_snow#2.skel",
+    "atlas": "models/400_weedy_snow#2/build_char_400_weedy_snow#2.atlas",
+    "textures": [
+      "models/400_weedy_snow#2/build_char_400_weedy_snow#2.png"
+    ]
+  },
+  "displayName": "温蒂",
+  "searchText": "温蒂 build_char_400_weedy_snow#2 models/400_weedy_snow#2 default interact move relax sit sleep special"
+}

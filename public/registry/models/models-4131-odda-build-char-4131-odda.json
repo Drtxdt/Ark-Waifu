@@ -1,0 +1,37 @@
+{
+  "id": "models-4131-odda-build-char-4131-odda",
+  "name": "奥达",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4131_odda/build_char_4131_odda.skel",
+    "atlas": "/Ark-Models/models/4131_odda/build_char_4131_odda.atlas",
+    "textures": [
+      "/Ark-Models/models/4131_odda/build_char_4131_odda.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4131_odda",
+  "sourceFiles": {
+    "skeleton": "models/4131_odda/build_char_4131_odda.skel",
+    "atlas": "models/4131_odda/build_char_4131_odda.atlas",
+    "textures": [
+      "models/4131_odda/build_char_4131_odda.png"
+    ]
+  },
+  "displayName": "奥达",
+  "searchText": "奥达 build_char_4131_odda models/4131_odda default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-219-meteo-build-char-219-meteo",
+  "name": "陨星",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/219_meteo/build_char_219_meteo.skel",
+    "atlas": "/Ark-Models/models/219_meteo/build_char_219_meteo.atlas",
+    "textures": [
+      "/Ark-Models/models/219_meteo/build_char_219_meteo.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/219_meteo",
+  "sourceFiles": {
+    "skeleton": "models/219_meteo/build_char_219_meteo.skel",
+    "atlas": "models/219_meteo/build_char_219_meteo.atlas",
+    "textures": [
+      "models/219_meteo/build_char_219_meteo.png"
+    ]
+  },
+  "displayName": "陨星",
+  "searchText": "陨星 build_char_219_meteo models/219_meteo default interact move relax sit sleep"
+}

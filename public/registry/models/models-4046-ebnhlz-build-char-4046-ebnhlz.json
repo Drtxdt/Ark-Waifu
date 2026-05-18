@@ -1,0 +1,37 @@
+{
+  "id": "models-4046-ebnhlz-build-char-4046-ebnhlz",
+  "name": "黑键",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4046_ebnhlz/build_char_4046_ebnhlz.skel",
+    "atlas": "/Ark-Models/models/4046_ebnhlz/build_char_4046_ebnhlz.atlas",
+    "textures": [
+      "/Ark-Models/models/4046_ebnhlz/build_char_4046_ebnhlz.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4046_ebnhlz",
+  "sourceFiles": {
+    "skeleton": "models/4046_ebnhlz/build_char_4046_ebnhlz.skel",
+    "atlas": "models/4046_ebnhlz/build_char_4046_ebnhlz.atlas",
+    "textures": [
+      "models/4046_ebnhlz/build_char_4046_ebnhlz.png"
+    ]
+  },
+  "displayName": "黑键",
+  "searchText": "黑键 build_char_4046_ebnhlz models/4046_ebnhlz default interact move relax sit sleep"
+}

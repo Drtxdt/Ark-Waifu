@@ -1,0 +1,38 @@
+{
+  "id": "models-254-vodfox-yun-8-build-char-254-vodfox-yun-8",
+  "name": "巫恋",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/254_vodfox_yun%238/build_char_254_vodfox_yun%238.skel",
+    "atlas": "/Ark-Models/models/254_vodfox_yun%238/build_char_254_vodfox_yun%238.atlas",
+    "textures": [
+      "/Ark-Models/models/254_vodfox_yun%238/build_char_254_vodfox_yun%238.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/254_vodfox_yun#8",
+  "sourceFiles": {
+    "skeleton": "models/254_vodfox_yun#8/build_char_254_vodfox_yun#8.skel",
+    "atlas": "models/254_vodfox_yun#8/build_char_254_vodfox_yun#8.atlas",
+    "textures": [
+      "models/254_vodfox_yun#8/build_char_254_vodfox_yun#8.png"
+    ]
+  },
+  "displayName": "巫恋",
+  "searchText": "巫恋 build_char_254_vodfox_yun#8 models/254_vodfox_yun#8 default interact move relax sit sleep special"
+}

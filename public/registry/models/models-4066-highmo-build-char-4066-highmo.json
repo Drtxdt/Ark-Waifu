@@ -1,0 +1,37 @@
+{
+  "id": "models-4066-highmo-build-char-4066-highmo",
+  "name": "海沫",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4066_highmo/build_char_4066_highmo.skel",
+    "atlas": "/Ark-Models/models/4066_highmo/build_char_4066_highmo.atlas",
+    "textures": [
+      "/Ark-Models/models/4066_highmo/build_char_4066_highmo.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4066_highmo",
+  "sourceFiles": {
+    "skeleton": "models/4066_highmo/build_char_4066_highmo.skel",
+    "atlas": "models/4066_highmo/build_char_4066_highmo.atlas",
+    "textures": [
+      "models/4066_highmo/build_char_4066_highmo.png"
+    ]
+  },
+  "displayName": "海沫",
+  "searchText": "海沫 build_char_4066_highmo models/4066_highmo default interact move relax sit sleep"
+}

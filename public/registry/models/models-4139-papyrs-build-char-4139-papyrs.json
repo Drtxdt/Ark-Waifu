@@ -1,0 +1,37 @@
+{
+  "id": "models-4139-papyrs-build-char-4139-papyrs",
+  "name": "莎草",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4139_papyrs/build_char_4139_papyrs.skel",
+    "atlas": "/Ark-Models/models/4139_papyrs/build_char_4139_papyrs.atlas",
+    "textures": [
+      "/Ark-Models/models/4139_papyrs/build_char_4139_papyrs.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4139_papyrs",
+  "sourceFiles": {
+    "skeleton": "models/4139_papyrs/build_char_4139_papyrs.skel",
+    "atlas": "models/4139_papyrs/build_char_4139_papyrs.atlas",
+    "textures": [
+      "models/4139_papyrs/build_char_4139_papyrs.png"
+    ]
+  },
+  "displayName": "莎草",
+  "searchText": "莎草 build_char_4139_papyrs models/4139_papyrs default interact move relax sit sleep"
+}

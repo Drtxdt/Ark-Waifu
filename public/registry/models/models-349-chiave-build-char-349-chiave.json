@@ -1,0 +1,37 @@
+{
+  "id": "models-349-chiave-build-char-349-chiave",
+  "name": "贾维",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/349_chiave/build_char_349_chiave.skel",
+    "atlas": "/Ark-Models/models/349_chiave/build_char_349_chiave.atlas",
+    "textures": [
+      "/Ark-Models/models/349_chiave/build_char_349_chiave.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/349_chiave",
+  "sourceFiles": {
+    "skeleton": "models/349_chiave/build_char_349_chiave.skel",
+    "atlas": "models/349_chiave/build_char_349_chiave.atlas",
+    "textures": [
+      "models/349_chiave/build_char_349_chiave.png"
+    ]
+  },
+  "displayName": "贾维",
+  "searchText": "贾维 build_char_349_chiave models/349_chiave default interact move relax sit sleep"
+}

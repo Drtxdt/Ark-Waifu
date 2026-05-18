@@ -1,0 +1,37 @@
+{
+  "id": "models-4116-blkkgt-build-char-4116-blkkgt",
+  "name": "锏",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4116_blkkgt/build_char_4116_blkkgt.skel",
+    "atlas": "/Ark-Models/models/4116_blkkgt/build_char_4116_blkkgt.atlas",
+    "textures": [
+      "/Ark-Models/models/4116_blkkgt/build_char_4116_blkkgt.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4116_blkkgt",
+  "sourceFiles": {
+    "skeleton": "models/4116_blkkgt/build_char_4116_blkkgt.skel",
+    "atlas": "models/4116_blkkgt/build_char_4116_blkkgt.atlas",
+    "textures": [
+      "models/4116_blkkgt/build_char_4116_blkkgt.png"
+    ]
+  },
+  "displayName": "锏",
+  "searchText": "锏 build_char_4116_blkkgt models/4116_blkkgt default interact move relax sit sleep"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-2013-cerber-whirlwind-2-build-char-2013-cerber-whirlwind-2",
+  "name": "刻俄柏",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/2013_cerber_whirlwind%232/build_char_2013_cerber_whirlwind%232.skel",
+    "atlas": "/Ark-Models/models/2013_cerber_whirlwind%232/build_char_2013_cerber_whirlwind%232.atlas",
+    "textures": [
+      "/Ark-Models/models/2013_cerber_whirlwind%232/build_char_2013_cerber_whirlwind%232.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/2013_cerber_whirlwind#2",
+  "sourceFiles": {
+    "skeleton": "models/2013_cerber_whirlwind#2/build_char_2013_cerber_whirlwind#2.skel",
+    "atlas": "models/2013_cerber_whirlwind#2/build_char_2013_cerber_whirlwind#2.atlas",
+    "textures": [
+      "models/2013_cerber_whirlwind#2/build_char_2013_cerber_whirlwind#2.png"
+    ]
+  },
+  "displayName": "刻俄柏",
+  "searchText": "刻俄柏 build_char_2013_cerber_whirlwind#2 models/2013_cerber_whirlwind#2 default interact move relax sit sleep special"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-430-fartth-build-char-430-fartth",
+  "name": "远牙",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/430_fartth/build_char_430_fartth.skel",
+    "atlas": "/Ark-Models/models/430_fartth/build_char_430_fartth.atlas",
+    "textures": [
+      "/Ark-Models/models/430_fartth/build_char_430_fartth.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/430_fartth",
+  "sourceFiles": {
+    "skeleton": "models/430_fartth/build_char_430_fartth.skel",
+    "atlas": "models/430_fartth/build_char_430_fartth.atlas",
+    "textures": [
+      "models/430_fartth/build_char_430_fartth.png"
+    ]
+  },
+  "displayName": "远牙",
+  "searchText": "远牙 build_char_430_fartth models/430_fartth default interact move relax sit sleep"
+}

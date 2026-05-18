@@ -1,0 +1,37 @@
+{
+  "id": "models-333-sidero-build-char-333-sidero",
+  "name": "铸铁",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/333_sidero/build_char_333_sidero.skel",
+    "atlas": "/Ark-Models/models/333_sidero/build_char_333_sidero.atlas",
+    "textures": [
+      "/Ark-Models/models/333_sidero/build_char_333_sidero.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/333_sidero",
+  "sourceFiles": {
+    "skeleton": "models/333_sidero/build_char_333_sidero.skel",
+    "atlas": "models/333_sidero/build_char_333_sidero.atlas",
+    "textures": [
+      "models/333_sidero/build_char_333_sidero.png"
+    ]
+  },
+  "displayName": "铸铁",
+  "searchText": "铸铁 build_char_333_sidero models/333_sidero default interact move relax sit sleep"
+}

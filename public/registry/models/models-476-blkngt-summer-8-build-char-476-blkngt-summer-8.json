@@ -1,0 +1,38 @@
+{
+  "id": "models-476-blkngt-summer-8-build-char-476-blkngt-summer-8",
+  "name": "夜半",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/476_blkngt_summer%238/build_char_476_blkngt_summer%238.skel",
+    "atlas": "/Ark-Models/models/476_blkngt_summer%238/build_char_476_blkngt_summer%238.atlas",
+    "textures": [
+      "/Ark-Models/models/476_blkngt_summer%238/build_char_476_blkngt_summer%238.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/476_blkngt_summer#8",
+  "sourceFiles": {
+    "skeleton": "models/476_blkngt_summer#8/build_char_476_blkngt_summer#8.skel",
+    "atlas": "models/476_blkngt_summer#8/build_char_476_blkngt_summer#8.atlas",
+    "textures": [
+      "models/476_blkngt_summer#8/build_char_476_blkngt_summer#8.png"
+    ]
+  },
+  "displayName": "夜半",
+  "searchText": "夜半 build_char_476_blkngt_summer#8 models/476_blkngt_summer#8 default interact move relax sit sleep special"
+}

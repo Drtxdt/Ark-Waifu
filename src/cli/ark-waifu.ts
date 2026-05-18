@@ -44,12 +44,35 @@ type ModelRegistry = {
   operators: ScannedModelManifest[];
 };
 
+type ModelRegistryIndexEntry = {
+  id: string;
+  name: string;
+  type: "ark-spine";
+  version: string;
+  category?: string;
+  relativeDir: string;
+  displayName?: string;
+  searchText?: string;
+  manifest: string;
+};
+
+type ModelRegistryIndex = {
+  version: 1;
+  generatedAt: string;
+  baseUrl: string;
+  defaultModelId?: string;
+  models: ModelRegistryIndexEntry[];
+};
+
 type ScanOptions = {
   root: string;
   out: string;
   baseUrl: string;
   publicOut?: string;
   publicCopy: boolean;
+  splitRegistry: boolean;
+  splitOut?: string;
+  defaultModelId?: string;
 };
 
 type AssetGroup = {
@@ -81,7 +104,7 @@ const ACTION_ALIASES: Record<string, string> = {
   Special: "special"
 };
 
-const MODEL_ROOTS = ["models", "models_enemies"];
+const MODEL_ROOTS = ["models"];
 
 async function main(): Promise<void> {
   const options = parseArgs(process.argv.slice(2));
@@ -91,6 +114,18 @@ async function main(): Promise<void> {
 
   if (options.publicCopy && options.publicOut) {
     await writeJson(options.publicOut, registry);
+  }
+
+  if (options.splitRegistry) {
+    await writeSplitRegistry(options.splitOut ?? path.dirname(options.out), registry, options.defaultModelId);
+
+    if (options.publicCopy && options.publicOut) {
+      await writeSplitRegistry(
+        options.splitOut ? path.join("public", options.splitOut) : path.dirname(options.publicOut),
+        registry,
+        options.defaultModelId
+      );
+    }
   }
 
   const warningCount = registry.operators.reduce(
@@ -105,6 +140,43 @@ async function main(): Promise<void> {
 
   if (options.publicCopy && options.publicOut) {
     console.log(`[ark-waifu] wrote ${path.resolve(options.publicOut)}`);
+  }
+}
+
+async function writeSplitRegistry(
+  outputDir: string,
+  registry: ModelRegistry,
+  defaultModelId: string | undefined
+): Promise<void> {
+  const modelsDir = path.join(outputDir, "models");
+  const defaultModel =
+    registry.operators.find((operator) => operator.id === defaultModelId) ?? registry.operators[0];
+  const index: ModelRegistryIndex = {
+    version: 1,
+    generatedAt: registry.generatedAt,
+    baseUrl: registry.baseUrl,
+    defaultModelId: defaultModel?.id,
+    models: registry.operators.map((operator) => ({
+      id: operator.id,
+      name: operator.name,
+      type: operator.type,
+      version: operator.version,
+      category: operator.category,
+      relativeDir: operator.relativeDir,
+      displayName: operator.displayName,
+      searchText: operator.searchText,
+      manifest: `models/${operator.id}.json`
+    }))
+  };
+
+  await writeJson(path.join(outputDir, "index.json"), index);
+
+  for (const operator of registry.operators) {
+    await writeJson(path.join(modelsDir, `${operator.id}.json`), operator);
+  }
+
+  if (defaultModel) {
+    await writeJson(path.join(outputDir, "default-model.json"), defaultModel);
   }
 }
 
@@ -594,6 +666,9 @@ function parseArgs(args: string[]): ScanOptions {
   let baseUrl: string | undefined;
   let publicOut: string | undefined;
   let publicCopy = true;
+  let splitRegistry = false;
+  let splitOut: string | undefined;
+  let defaultModelId: string | undefined;
 
   for (let index = 2; index < args.length; index += 1) {
     const arg = args[index];
@@ -609,6 +684,14 @@ function parseArgs(args: string[]): ScanOptions {
       index += 1;
     } else if (arg === "--no-public-copy") {
       publicCopy = false;
+    } else if (arg === "--split-registry") {
+      splitRegistry = true;
+    } else if (arg === "--split-out") {
+      splitOut = readOptionValue(args, index, "--split-out");
+      index += 1;
+    } else if (arg === "--default-model") {
+      defaultModelId = readOptionValue(args, index, "--default-model");
+      index += 1;
     } else if (arg === "--help" || arg === "-h") {
       throw new Error(usage());
     } else {
@@ -630,7 +713,10 @@ function parseArgs(args: string[]): ScanOptions {
     out,
     baseUrl: derivedBaseUrl,
     publicOut,
-    publicCopy
+    publicCopy,
+    splitRegistry,
+    splitOut,
+    defaultModelId
   };
 }
 
@@ -647,10 +733,13 @@ function readOptionValue(args: string[], index: number, option: string): string 
 function usage(): string {
   return [
     "Usage:",
-    "  ark-waifu scan <Ark-Models-dir> --out <registry.json> [--base-url <url>]",
+    "  ark-waifu scan <Ark-Models-dir> --out <registry.json> [--base-url <url>] [--split-registry]",
+    "",
+    "Notes:",
+    "  The scanner only includes Ark-Models/models and intentionally skips models_enemies.",
     "",
     "Example:",
-    "  pnpm ark-waifu scan ./Ark-Models --out registry/operators.json --base-url /Ark-Models"
+    "  pnpm ark-waifu scan ./Ark-Models --out registry/operators.json --base-url /Ark-Models --split-registry"
   ].join("\n");
 }
 

@@ -1,0 +1,37 @@
+{
+  "id": "models-106-franka-build-char-106-franka",
+  "name": "芙兰卡",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/106_franka/build_char_106_franka.skel",
+    "atlas": "/Ark-Models/models/106_franka/build_char_106_franka.atlas",
+    "textures": [
+      "/Ark-Models/models/106_franka/build_char_106_franka.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/106_franka",
+  "sourceFiles": {
+    "skeleton": "models/106_franka/build_char_106_franka.skel",
+    "atlas": "models/106_franka/build_char_106_franka.atlas",
+    "textures": [
+      "models/106_franka/build_char_106_franka.png"
+    ]
+  },
+  "displayName": "芙兰卡",
+  "searchText": "芙兰卡 build_char_106_franka models/106_franka default interact move relax sit sleep"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-250-phatom-ghost-1-build-char-250-phatom-ghost-1",
+  "name": "傀影",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/250_phatom_ghost%231/build_char_250_phatom_ghost%231.skel",
+    "atlas": "/Ark-Models/models/250_phatom_ghost%231/build_char_250_phatom_ghost%231.atlas",
+    "textures": [
+      "/Ark-Models/models/250_phatom_ghost%231/build_char_250_phatom_ghost%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/250_phatom_ghost#1",
+  "sourceFiles": {
+    "skeleton": "models/250_phatom_ghost#1/build_char_250_phatom_ghost#1.skel",
+    "atlas": "models/250_phatom_ghost#1/build_char_250_phatom_ghost#1.atlas",
+    "textures": [
+      "models/250_phatom_ghost#1/build_char_250_phatom_ghost#1.png"
+    ]
+  },
+  "displayName": "傀影",
+  "searchText": "傀影 build_char_250_phatom_ghost#1 models/250_phatom_ghost#1 default interact move relax sit sleep special"
+}

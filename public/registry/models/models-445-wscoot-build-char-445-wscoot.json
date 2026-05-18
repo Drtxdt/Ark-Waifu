@@ -1,0 +1,37 @@
+{
+  "id": "models-445-wscoot-build-char-445-wscoot",
+  "name": "骋风",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/445_wscoot/build_char_445_wscoot.skel",
+    "atlas": "/Ark-Models/models/445_wscoot/build_char_445_wscoot.atlas",
+    "textures": [
+      "/Ark-Models/models/445_wscoot/build_char_445_wscoot.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/445_wscoot",
+  "sourceFiles": {
+    "skeleton": "models/445_wscoot/build_char_445_wscoot.skel",
+    "atlas": "models/445_wscoot/build_char_445_wscoot.atlas",
+    "textures": [
+      "models/445_wscoot/build_char_445_wscoot.png"
+    ]
+  },
+  "displayName": "骋风",
+  "searchText": "骋风 build_char_445_wscoot models/445_wscoot default interact move relax sit sleep"
+}

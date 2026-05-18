@@ -1,0 +1,37 @@
+{
+  "id": "models-140-whitew-build-char-140-whitew",
+  "name": "拉普兰德",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/140_whitew/build_char_140_whitew.skel",
+    "atlas": "/Ark-Models/models/140_whitew/build_char_140_whitew.atlas",
+    "textures": [
+      "/Ark-Models/models/140_whitew/build_char_140_whitew.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/140_whitew",
+  "sourceFiles": {
+    "skeleton": "models/140_whitew/build_char_140_whitew.skel",
+    "atlas": "models/140_whitew/build_char_140_whitew.atlas",
+    "textures": [
+      "models/140_whitew/build_char_140_whitew.png"
+    ]
+  },
+  "displayName": "拉普兰德",
+  "searchText": "拉普兰德 build_char_140_whitew models/140_whitew default interact move relax sit sleep"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-181-flower-epoque-9-build-char-181-flower-epoque-9",
+  "name": "调香师",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/181_flower_epoque%239/build_char_181_flower_epoque%239.skel",
+    "atlas": "/Ark-Models/models/181_flower_epoque%239/build_char_181_flower_epoque%239.atlas",
+    "textures": [
+      "/Ark-Models/models/181_flower_epoque%239/build_char_181_flower_epoque%239.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/181_flower_epoque#9",
+  "sourceFiles": {
+    "skeleton": "models/181_flower_epoque#9/build_char_181_flower_epoque#9.skel",
+    "atlas": "models/181_flower_epoque#9/build_char_181_flower_epoque#9.atlas",
+    "textures": [
+      "models/181_flower_epoque#9/build_char_181_flower_epoque#9.png"
+    ]
+  },
+  "displayName": "调香师",
+  "searchText": "调香师 build_char_181_flower_epoque#9 models/181_flower_epoque#9 default interact move relax sit sleep special"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-4195-radian-build-char-4195-radian",
+  "name": "电弧",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4195_radian/build_char_4195_radian.skel",
+    "atlas": "/Ark-Models/models/4195_radian/build_char_4195_radian.atlas",
+    "textures": [
+      "/Ark-Models/models/4195_radian/build_char_4195_radian.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4195_radian",
+  "sourceFiles": {
+    "skeleton": "models/4195_radian/build_char_4195_radian.skel",
+    "atlas": "models/4195_radian/build_char_4195_radian.atlas",
+    "textures": [
+      "models/4195_radian/build_char_4195_radian.png"
+    ]
+  },
+  "displayName": "电弧",
+  "searchText": "电弧 build_char_4195_radian models/4195_radian default interact move relax sit sleep"
+}

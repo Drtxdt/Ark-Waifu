@@ -1,0 +1,37 @@
+{
+  "id": "models-4214-cairn-build-char-4214-cairn",
+  "name": "响石",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4214_cairn/build_char_4214_cairn.skel",
+    "atlas": "/Ark-Models/models/4214_cairn/build_char_4214_cairn.atlas",
+    "textures": [
+      "/Ark-Models/models/4214_cairn/build_char_4214_cairn.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4214_cairn",
+  "sourceFiles": {
+    "skeleton": "models/4214_cairn/build_char_4214_cairn.skel",
+    "atlas": "models/4214_cairn/build_char_4214_cairn.atlas",
+    "textures": [
+      "models/4214_cairn/build_char_4214_cairn.png"
+    ]
+  },
+  "displayName": "响石",
+  "searchText": "响石 build_char_4214_cairn models/4214_cairn default interact move relax sit sleep"
+}

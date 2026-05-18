@@ -1,0 +1,38 @@
+{
+  "id": "models-158-milu-wild-2-build-char-158-milu-wild-2",
+  "name": "守林人",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/158_milu_wild%232/build_char_158_milu_wild%232.skel",
+    "atlas": "/Ark-Models/models/158_milu_wild%232/build_char_158_milu_wild%232.atlas",
+    "textures": [
+      "/Ark-Models/models/158_milu_wild%232/build_char_158_milu_wild%232.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/158_milu_wild#2",
+  "sourceFiles": {
+    "skeleton": "models/158_milu_wild#2/build_char_158_milu_wild#2.skel",
+    "atlas": "models/158_milu_wild#2/build_char_158_milu_wild#2.atlas",
+    "textures": [
+      "models/158_milu_wild#2/build_char_158_milu_wild#2.png"
+    ]
+  },
+  "displayName": "守林人",
+  "searchText": "守林人 build_char_158_milu_wild#2 models/158_milu_wild#2 default interact move relax sit sleep special"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-236-rope-build-char-236-rope",
+  "name": "暗索",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/236_rope/build_char_236_rope.skel",
+    "atlas": "/Ark-Models/models/236_rope/build_char_236_rope.atlas",
+    "textures": [
+      "/Ark-Models/models/236_rope/build_char_236_rope.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/236_rope",
+  "sourceFiles": {
+    "skeleton": "models/236_rope/build_char_236_rope.skel",
+    "atlas": "models/236_rope/build_char_236_rope.atlas",
+    "textures": [
+      "models/236_rope/build_char_236_rope.png"
+    ]
+  },
+  "displayName": "暗索",
+  "searchText": "暗索 build_char_236_rope models/236_rope default interact move relax sit sleep"
+}

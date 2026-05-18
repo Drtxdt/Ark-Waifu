@@ -1,0 +1,37 @@
+{
+  "id": "models-275-breeze-build-char-275-breeze",
+  "name": "微风",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/275_breeze/build_char_275_breeze.skel",
+    "atlas": "/Ark-Models/models/275_breeze/build_char_275_breeze.atlas",
+    "textures": [
+      "/Ark-Models/models/275_breeze/build_char_275_breeze.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/275_breeze",
+  "sourceFiles": {
+    "skeleton": "models/275_breeze/build_char_275_breeze.skel",
+    "atlas": "models/275_breeze/build_char_275_breeze.atlas",
+    "textures": [
+      "models/275_breeze/build_char_275_breeze.png"
+    ]
+  },
+  "displayName": "微风",
+  "searchText": "微风 build_char_275_breeze models/275_breeze default interact move relax sit sleep"
+}

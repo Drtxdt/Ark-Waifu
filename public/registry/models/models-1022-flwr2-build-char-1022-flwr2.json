@@ -1,0 +1,37 @@
+{
+  "id": "models-1022-flwr2-build-char-1022-flwr2",
+  "name": "撷英调香师",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1022_flwr2/build_char_1022_flwr2.skel",
+    "atlas": "/Ark-Models/models/1022_flwr2/build_char_1022_flwr2.atlas",
+    "textures": [
+      "/Ark-Models/models/1022_flwr2/build_char_1022_flwr2.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1022_flwr2",
+  "sourceFiles": {
+    "skeleton": "models/1022_flwr2/build_char_1022_flwr2.skel",
+    "atlas": "models/1022_flwr2/build_char_1022_flwr2.atlas",
+    "textures": [
+      "models/1022_flwr2/build_char_1022_flwr2.png"
+    ]
+  },
+  "displayName": "撷英调香师",
+  "searchText": "撷英调香师 build_char_1022_flwr2 models/1022_flwr2 default interact move relax sit sleep"
+}

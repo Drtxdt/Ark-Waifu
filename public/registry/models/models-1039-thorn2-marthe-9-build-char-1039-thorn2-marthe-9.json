@@ -1,0 +1,38 @@
+{
+  "id": "models-1039-thorn2-marthe-9-build-char-1039-thorn2-marthe-9",
+  "name": "引星棘刺",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1039_thorn2_marthe%239/build_char_1039_thorn2_marthe%239.skel",
+    "atlas": "/Ark-Models/models/1039_thorn2_marthe%239/build_char_1039_thorn2_marthe%239.atlas",
+    "textures": [
+      "/Ark-Models/models/1039_thorn2_marthe%239/build_char_1039_thorn2_marthe%239.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1039_thorn2_marthe#9",
+  "sourceFiles": {
+    "skeleton": "models/1039_thorn2_marthe#9/build_char_1039_thorn2_marthe#9.skel",
+    "atlas": "models/1039_thorn2_marthe#9/build_char_1039_thorn2_marthe#9.atlas",
+    "textures": [
+      "models/1039_thorn2_marthe#9/build_char_1039_thorn2_marthe#9.png"
+    ]
+  },
+  "displayName": "引星棘刺",
+  "searchText": "引星棘刺 build_char_1039_thorn2_marthe#9 models/1039_thorn2_marthe#9 default interact move relax sit sleep special"
+}

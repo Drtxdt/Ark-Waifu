@@ -1,0 +1,38 @@
+{
+  "id": "models-499-kaitou-epoque-37-build-char-499-kaitou-epoque-37",
+  "name": "折光",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/499_kaitou_epoque%2337/build_char_499_kaitou_epoque%2337.skel",
+    "atlas": "/Ark-Models/models/499_kaitou_epoque%2337/build_char_499_kaitou_epoque%2337.atlas",
+    "textures": [
+      "/Ark-Models/models/499_kaitou_epoque%2337/build_char_499_kaitou_epoque%2337.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/499_kaitou_epoque#37",
+  "sourceFiles": {
+    "skeleton": "models/499_kaitou_epoque#37/build_char_499_kaitou_epoque#37.skel",
+    "atlas": "models/499_kaitou_epoque#37/build_char_499_kaitou_epoque#37.atlas",
+    "textures": [
+      "models/499_kaitou_epoque#37/build_char_499_kaitou_epoque#37.png"
+    ]
+  },
+  "displayName": "折光",
+  "searchText": "折光 build_char_499_kaitou_epoque#37 models/499_kaitou_epoque#37 default interact move relax sit sleep special"
+}

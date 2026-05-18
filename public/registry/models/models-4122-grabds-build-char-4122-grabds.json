@@ -1,0 +1,37 @@
+{
+  "id": "models-4122-grabds-build-char-4122-grabds",
+  "name": "小满",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4122_grabds/build_char_4122_grabds.skel",
+    "atlas": "/Ark-Models/models/4122_grabds/build_char_4122_grabds.atlas",
+    "textures": [
+      "/Ark-Models/models/4122_grabds/build_char_4122_grabds.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4122_grabds",
+  "sourceFiles": {
+    "skeleton": "models/4122_grabds/build_char_4122_grabds.skel",
+    "atlas": "models/4122_grabds/build_char_4122_grabds.atlas",
+    "textures": [
+      "models/4122_grabds/build_char_4122_grabds.png"
+    ]
+  },
+  "displayName": "小满",
+  "searchText": "小满 build_char_4122_grabds models/4122_grabds default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-150-snakek-build-char-150-snakek",
+  "name": "蛇屠箱",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/150_snakek/build_char_150_snakek.skel",
+    "atlas": "/Ark-Models/models/150_snakek/build_char_150_snakek.atlas",
+    "textures": [
+      "/Ark-Models/models/150_snakek/build_char_150_snakek.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/150_snakek",
+  "sourceFiles": {
+    "skeleton": "models/150_snakek/build_char_150_snakek.skel",
+    "atlas": "models/150_snakek/build_char_150_snakek.atlas",
+    "textures": [
+      "models/150_snakek/build_char_150_snakek.png"
+    ]
+  },
+  "displayName": "蛇屠箱",
+  "searchText": "蛇屠箱 build_char_150_snakek models/150_snakek default interact move relax sit sleep"
+}

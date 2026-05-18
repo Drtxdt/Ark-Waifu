@@ -1,0 +1,37 @@
+{
+  "id": "models-4091-ulika-build-char-4091-ulika",
+  "name": "U-Official",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4091_ulika/build_char_4091_ulika.skel",
+    "atlas": "/Ark-Models/models/4091_ulika/build_char_4091_ulika.atlas",
+    "textures": [
+      "/Ark-Models/models/4091_ulika/build_char_4091_ulika.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4091_ulika",
+  "sourceFiles": {
+    "skeleton": "models/4091_ulika/build_char_4091_ulika.skel",
+    "atlas": "models/4091_ulika/build_char_4091_ulika.atlas",
+    "textures": [
+      "models/4091_ulika/build_char_4091_ulika.png"
+    ]
+  },
+  "displayName": "U-Official",
+  "searchText": "u-official build_char_4091_ulika models/4091_ulika default interact move relax sit sleep"
+}

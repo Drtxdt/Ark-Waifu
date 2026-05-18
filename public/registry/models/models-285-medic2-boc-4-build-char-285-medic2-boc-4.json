@@ -1,0 +1,36 @@
+{
+  "id": "models-285-medic2-boc-4-build-char-285-medic2-boc-4",
+  "name": "Lancet-2",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/285_medic2_boc%234/build_char_285_medic2_boc%234.skel",
+    "atlas": "/Ark-Models/models/285_medic2_boc%234/build_char_285_medic2_boc%234.atlas",
+    "textures": [
+      "/Ark-Models/models/285_medic2_boc%234/build_char_285_medic2_boc%234.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/285_medic2_boc#4",
+  "sourceFiles": {
+    "skeleton": "models/285_medic2_boc#4/build_char_285_medic2_boc#4.skel",
+    "atlas": "models/285_medic2_boc#4/build_char_285_medic2_boc#4.atlas",
+    "textures": [
+      "models/285_medic2_boc#4/build_char_285_medic2_boc#4.png"
+    ]
+  },
+  "displayName": "Lancet-2",
+  "searchText": "lancet-2 build_char_285_medic2_boc#4 models/285_medic2_boc#4 default interact move relax special"
+}

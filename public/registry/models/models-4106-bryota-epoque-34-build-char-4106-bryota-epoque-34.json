@@ -1,0 +1,38 @@
+{
+  "id": "models-4106-bryota-epoque-34-build-char-4106-bryota-epoque-34",
+  "name": "苍苔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4106_bryota_epoque%2334/build_char_4106_bryota_epoque%2334.skel",
+    "atlas": "/Ark-Models/models/4106_bryota_epoque%2334/build_char_4106_bryota_epoque%2334.atlas",
+    "textures": [
+      "/Ark-Models/models/4106_bryota_epoque%2334/build_char_4106_bryota_epoque%2334.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4106_bryota_epoque#34",
+  "sourceFiles": {
+    "skeleton": "models/4106_bryota_epoque#34/build_char_4106_bryota_epoque#34.skel",
+    "atlas": "models/4106_bryota_epoque#34/build_char_4106_bryota_epoque#34.atlas",
+    "textures": [
+      "models/4106_bryota_epoque#34/build_char_4106_bryota_epoque#34.png"
+    ]
+  },
+  "displayName": "苍苔",
+  "searchText": "苍苔 build_char_4106_bryota_epoque#34 models/4106_bryota_epoque#34 default interact move relax sit sleep special"
+}

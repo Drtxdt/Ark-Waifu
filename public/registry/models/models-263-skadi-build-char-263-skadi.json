@@ -1,0 +1,37 @@
+{
+  "id": "models-263-skadi-build-char-263-skadi",
+  "name": "斯卡蒂",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/263_skadi/build_char_263_skadi.skel",
+    "atlas": "/Ark-Models/models/263_skadi/build_char_263_skadi.atlas",
+    "textures": [
+      "/Ark-Models/models/263_skadi/build_char_263_skadi.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/263_skadi",
+  "sourceFiles": {
+    "skeleton": "models/263_skadi/build_char_263_skadi.skel",
+    "atlas": "models/263_skadi/build_char_263_skadi.atlas",
+    "textures": [
+      "models/263_skadi/build_char_263_skadi.png"
+    ]
+  },
+  "displayName": "斯卡蒂",
+  "searchText": "斯卡蒂 build_char_263_skadi models/263_skadi default interact move relax sit sleep"
+}

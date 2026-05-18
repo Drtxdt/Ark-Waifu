@@ -1,0 +1,37 @@
+{
+  "id": "models-2012-typhon-build-char-2012-typhon",
+  "name": "提丰",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/2012_typhon/build_char_2012_typhon.skel",
+    "atlas": "/Ark-Models/models/2012_typhon/build_char_2012_typhon.atlas",
+    "textures": [
+      "/Ark-Models/models/2012_typhon/build_char_2012_typhon.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/2012_typhon",
+  "sourceFiles": {
+    "skeleton": "models/2012_typhon/build_char_2012_typhon.skel",
+    "atlas": "models/2012_typhon/build_char_2012_typhon.atlas",
+    "textures": [
+      "models/2012_typhon/build_char_2012_typhon.png"
+    ]
+  },
+  "displayName": "提丰",
+  "searchText": "提丰 build_char_2012_typhon models/2012_typhon default interact move relax sit sleep"
+}

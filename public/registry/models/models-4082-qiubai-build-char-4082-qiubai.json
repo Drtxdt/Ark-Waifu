@@ -1,0 +1,37 @@
+{
+  "id": "models-4082-qiubai-build-char-4082-qiubai",
+  "name": "仇白",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4082_qiubai/build_char_4082_qiubai.skel",
+    "atlas": "/Ark-Models/models/4082_qiubai/build_char_4082_qiubai.atlas",
+    "textures": [
+      "/Ark-Models/models/4082_qiubai/build_char_4082_qiubai.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4082_qiubai",
+  "sourceFiles": {
+    "skeleton": "models/4082_qiubai/build_char_4082_qiubai.skel",
+    "atlas": "models/4082_qiubai/build_char_4082_qiubai.atlas",
+    "textures": [
+      "models/4082_qiubai/build_char_4082_qiubai.png"
+    ]
+  },
+  "displayName": "仇白",
+  "searchText": "仇白 build_char_4082_qiubai models/4082_qiubai default interact move relax sit sleep"
+}

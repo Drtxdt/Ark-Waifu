@@ -1,0 +1,37 @@
+{
+  "id": "models-4124-iana-build-char-4124-iana",
+  "name": "双月",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4124_iana/build_char_4124_iana.skel",
+    "atlas": "/Ark-Models/models/4124_iana/build_char_4124_iana.atlas",
+    "textures": [
+      "/Ark-Models/models/4124_iana/build_char_4124_iana.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4124_iana",
+  "sourceFiles": {
+    "skeleton": "models/4124_iana/build_char_4124_iana.skel",
+    "atlas": "models/4124_iana/build_char_4124_iana.atlas",
+    "textures": [
+      "models/4124_iana/build_char_4124_iana.png"
+    ]
+  },
+  "displayName": "双月",
+  "searchText": "双月 build_char_4124_iana models/4124_iana default interact move relax sit sleep"
+}

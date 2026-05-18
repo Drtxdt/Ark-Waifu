@@ -1,0 +1,37 @@
+{
+  "id": "models-340-shwaz-build-char-340-shwaz",
+  "name": "黑",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/340_shwaz/build_char_340_shwaz.skel",
+    "atlas": "/Ark-Models/models/340_shwaz/build_char_340_shwaz.atlas",
+    "textures": [
+      "/Ark-Models/models/340_shwaz/build_char_340_shwaz.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/340_shwaz",
+  "sourceFiles": {
+    "skeleton": "models/340_shwaz/build_char_340_shwaz.skel",
+    "atlas": "models/340_shwaz/build_char_340_shwaz.atlas",
+    "textures": [
+      "models/340_shwaz/build_char_340_shwaz.png"
+    ]
+  },
+  "displayName": "黑",
+  "searchText": "黑 build_char_340_shwaz models/340_shwaz default interact move relax sit sleep"
+}

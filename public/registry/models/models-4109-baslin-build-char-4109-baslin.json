@@ -1,0 +1,37 @@
+{
+  "id": "models-4109-baslin-build-char-4109-baslin",
+  "name": "深律",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4109_baslin/build_char_4109_baslin.skel",
+    "atlas": "/Ark-Models/models/4109_baslin/build_char_4109_baslin.atlas",
+    "textures": [
+      "/Ark-Models/models/4109_baslin/build_char_4109_baslin.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4109_baslin",
+  "sourceFiles": {
+    "skeleton": "models/4109_baslin/build_char_4109_baslin.skel",
+    "atlas": "models/4109_baslin/build_char_4109_baslin.atlas",
+    "textures": [
+      "models/4109_baslin/build_char_4109_baslin.png"
+    ]
+  },
+  "displayName": "深律",
+  "searchText": "深律 build_char_4109_baslin models/4109_baslin default interact move relax sit sleep"
+}

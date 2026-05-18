@@ -1,0 +1,37 @@
+{
+  "id": "models-4199-makiri-build-char-4199-makiri",
+  "name": "松桐",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4199_makiri/build_char_4199_makiri.skel",
+    "atlas": "/Ark-Models/models/4199_makiri/build_char_4199_makiri.atlas",
+    "textures": [
+      "/Ark-Models/models/4199_makiri/build_char_4199_makiri.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4199_makiri",
+  "sourceFiles": {
+    "skeleton": "models/4199_makiri/build_char_4199_makiri.skel",
+    "atlas": "models/4199_makiri/build_char_4199_makiri.atlas",
+    "textures": [
+      "models/4199_makiri/build_char_4199_makiri.png"
+    ]
+  },
+  "displayName": "松桐",
+  "searchText": "松桐 build_char_4199_makiri models/4199_makiri default interact move relax sit sleep"
+}

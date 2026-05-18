@@ -1,0 +1,37 @@
+{
+  "id": "models-204-platnm-build-char-204-platnm",
+  "name": "白金",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/204_platnm/build_char_204_platnm.skel",
+    "atlas": "/Ark-Models/models/204_platnm/build_char_204_platnm.atlas",
+    "textures": [
+      "/Ark-Models/models/204_platnm/build_char_204_platnm.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/204_platnm",
+  "sourceFiles": {
+    "skeleton": "models/204_platnm/build_char_204_platnm.skel",
+    "atlas": "models/204_platnm/build_char_204_platnm.atlas",
+    "textures": [
+      "models/204_platnm/build_char_204_platnm.png"
+    ]
+  },
+  "displayName": "白金",
+  "searchText": "白金 build_char_204_platnm models/204_platnm default interact move relax sit sleep"
+}

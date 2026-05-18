@@ -1,0 +1,36 @@
+{
+  "id": "models-421-crow-build-char-421-crow",
+  "name": "羽毛笔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/421_crow/build_char_421_crow.skel",
+    "atlas": "/Ark-Models/models/421_crow/build_char_421_crow.atlas",
+    "textures": [
+      "/Ark-Models/models/421_crow/build_char_421_crow.png"
+    ]
+  },
+  "actions": {
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/421_crow",
+  "sourceFiles": {
+    "skeleton": "models/421_crow/build_char_421_crow.skel",
+    "atlas": "models/421_crow/build_char_421_crow.atlas",
+    "textures": [
+      "models/421_crow/build_char_421_crow.png"
+    ]
+  },
+  "displayName": "羽毛笔",
+  "searchText": "羽毛笔 build_char_421_crow models/421_crow interact move relax sit sleep"
+}

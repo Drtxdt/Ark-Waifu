@@ -1,0 +1,37 @@
+{
+  "id": "models-4207-branch-build-char-4207-branch",
+  "name": "折桠",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4207_branch/build_char_4207_branch.skel",
+    "atlas": "/Ark-Models/models/4207_branch/build_char_4207_branch.atlas",
+    "textures": [
+      "/Ark-Models/models/4207_branch/build_char_4207_branch.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4207_branch",
+  "sourceFiles": {
+    "skeleton": "models/4207_branch/build_char_4207_branch.skel",
+    "atlas": "models/4207_branch/build_char_4207_branch.atlas",
+    "textures": [
+      "models/4207_branch/build_char_4207_branch.png"
+    ]
+  },
+  "displayName": "折桠",
+  "searchText": "折桠 build_char_4207_branch models/4207_branch default interact move relax sit sleep"
+}

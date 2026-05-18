@@ -1,0 +1,37 @@
+{
+  "id": "models-003-kalts-build-char-003-kalts",
+  "name": "凯尔希",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/003_kalts/build_char_003_kalts.skel",
+    "atlas": "/Ark-Models/models/003_kalts/build_char_003_kalts.atlas",
+    "textures": [
+      "/Ark-Models/models/003_kalts/build_char_003_kalts.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/003_kalts",
+  "sourceFiles": {
+    "skeleton": "models/003_kalts/build_char_003_kalts.skel",
+    "atlas": "models/003_kalts/build_char_003_kalts.atlas",
+    "textures": [
+      "models/003_kalts/build_char_003_kalts.png"
+    ]
+  },
+  "displayName": "凯尔希",
+  "searchText": "凯尔希 build_char_003_kalts models/003_kalts default interact move relax sit sleep"
+}

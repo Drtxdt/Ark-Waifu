@@ -1,0 +1,38 @@
+{
+  "id": "models-400-weedy-sightseer-1-build-char-400-weedy-sightseer-1",
+  "name": "温蒂",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/400_weedy_sightseer%231/build_char_400_weedy_sightseer%231.skel",
+    "atlas": "/Ark-Models/models/400_weedy_sightseer%231/build_char_400_weedy_sightseer%231.atlas",
+    "textures": [
+      "/Ark-Models/models/400_weedy_sightseer%231/build_char_400_weedy_sightseer%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/400_weedy_sightseer#1",
+  "sourceFiles": {
+    "skeleton": "models/400_weedy_sightseer#1/build_char_400_weedy_sightseer#1.skel",
+    "atlas": "models/400_weedy_sightseer#1/build_char_400_weedy_sightseer#1.atlas",
+    "textures": [
+      "models/400_weedy_sightseer#1/build_char_400_weedy_sightseer#1.png"
+    ]
+  },
+  "displayName": "温蒂",
+  "searchText": "温蒂 build_char_400_weedy_sightseer#1 models/400_weedy_sightseer#1 default interact move relax sit sleep special"
+}

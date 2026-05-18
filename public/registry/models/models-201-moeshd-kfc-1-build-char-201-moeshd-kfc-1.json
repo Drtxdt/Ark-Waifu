@@ -1,0 +1,38 @@
+{
+  "id": "models-201-moeshd-kfc-1-build-char-201-moeshd-kfc-1",
+  "name": "可颂",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/201_moeshd_kfc%231/build_char_201_moeshd_kfc%231.skel",
+    "atlas": "/Ark-Models/models/201_moeshd_kfc%231/build_char_201_moeshd_kfc%231.atlas",
+    "textures": [
+      "/Ark-Models/models/201_moeshd_kfc%231/build_char_201_moeshd_kfc%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/201_moeshd_kfc#1",
+  "sourceFiles": {
+    "skeleton": "models/201_moeshd_kfc#1/build_char_201_moeshd_kfc#1.skel",
+    "atlas": "models/201_moeshd_kfc#1/build_char_201_moeshd_kfc#1.atlas",
+    "textures": [
+      "models/201_moeshd_kfc#1/build_char_201_moeshd_kfc#1.png"
+    ]
+  },
+  "displayName": "可颂",
+  "searchText": "可颂 build_char_201_moeshd_kfc#1 models/201_moeshd_kfc#1 default interact move relax sit sleep special"
+}

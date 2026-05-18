@@ -1,0 +1,37 @@
+{
+  "id": "models-4114-harold-build-char-4114-harold",
+  "name": "哈洛德",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4114_harold/build_char_4114_harold.skel",
+    "atlas": "/Ark-Models/models/4114_harold/build_char_4114_harold.atlas",
+    "textures": [
+      "/Ark-Models/models/4114_harold/build_char_4114_harold.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4114_harold",
+  "sourceFiles": {
+    "skeleton": "models/4114_harold/build_char_4114_harold.skel",
+    "atlas": "models/4114_harold/build_char_4114_harold.atlas",
+    "textures": [
+      "models/4114_harold/build_char_4114_harold.png"
+    ]
+  },
+  "displayName": "哈洛德",
+  "searchText": "哈洛德 build_char_4114_harold models/4114_harold default interact move relax sit sleep"
+}

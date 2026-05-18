@@ -1,0 +1,37 @@
+{
+  "id": "models-173-slchan-build-char-173-slchan",
+  "name": "崖心",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/173_slchan/build_char_173_slchan.skel",
+    "atlas": "/Ark-Models/models/173_slchan/build_char_173_slchan.atlas",
+    "textures": [
+      "/Ark-Models/models/173_slchan/build_char_173_slchan.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/173_slchan",
+  "sourceFiles": {
+    "skeleton": "models/173_slchan/build_char_173_slchan.skel",
+    "atlas": "models/173_slchan/build_char_173_slchan.atlas",
+    "textures": [
+      "models/173_slchan/build_char_173_slchan.png"
+    ]
+  },
+  "displayName": "崖心",
+  "searchText": "崖心 build_char_173_slchan models/173_slchan default interact move relax sit sleep"
+}

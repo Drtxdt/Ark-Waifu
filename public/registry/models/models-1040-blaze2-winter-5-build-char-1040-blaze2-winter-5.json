@@ -1,0 +1,38 @@
+{
+  "id": "models-1040-blaze2-winter-5-build-char-1040-blaze2-winter-5",
+  "name": "烛煌",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1040_blaze2_winter%235/build_char_1040_blaze2_winter%235.skel",
+    "atlas": "/Ark-Models/models/1040_blaze2_winter%235/build_char_1040_blaze2_winter%235.atlas",
+    "textures": [
+      "/Ark-Models/models/1040_blaze2_winter%235/build_char_1040_blaze2_winter%235.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1040_blaze2_winter#5",
+  "sourceFiles": {
+    "skeleton": "models/1040_blaze2_winter#5/build_char_1040_blaze2_winter#5.skel",
+    "atlas": "models/1040_blaze2_winter#5/build_char_1040_blaze2_winter#5.atlas",
+    "textures": [
+      "models/1040_blaze2_winter#5/build_char_1040_blaze2_winter#5.png"
+    ]
+  },
+  "displayName": "烛煌",
+  "searchText": "烛煌 build_char_1040_blaze2_winter#5 models/1040_blaze2_winter#5 default interact move relax sit sleep special"
+}

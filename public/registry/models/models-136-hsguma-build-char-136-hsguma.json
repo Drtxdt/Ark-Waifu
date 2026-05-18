@@ -1,0 +1,37 @@
+{
+  "id": "models-136-hsguma-build-char-136-hsguma",
+  "name": "星熊",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/136_hsguma/build_char_136_hsguma.skel",
+    "atlas": "/Ark-Models/models/136_hsguma/build_char_136_hsguma.atlas",
+    "textures": [
+      "/Ark-Models/models/136_hsguma/build_char_136_hsguma.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/136_hsguma",
+  "sourceFiles": {
+    "skeleton": "models/136_hsguma/build_char_136_hsguma.skel",
+    "atlas": "models/136_hsguma/build_char_136_hsguma.atlas",
+    "textures": [
+      "models/136_hsguma/build_char_136_hsguma.png"
+    ]
+  },
+  "displayName": "星熊",
+  "searchText": "星熊 build_char_136_hsguma models/136_hsguma default interact move relax sit sleep"
+}

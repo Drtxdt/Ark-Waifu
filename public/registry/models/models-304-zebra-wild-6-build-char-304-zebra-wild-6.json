@@ -1,0 +1,38 @@
+{
+  "id": "models-304-zebra-wild-6-build-char-304-zebra-wild-6",
+  "name": "暴雨",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/304_zebra_wild%236/build_char_304_zebra_wild%236.skel",
+    "atlas": "/Ark-Models/models/304_zebra_wild%236/build_char_304_zebra_wild%236.atlas",
+    "textures": [
+      "/Ark-Models/models/304_zebra_wild%236/build_char_304_zebra_wild%236.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/304_zebra_wild#6",
+  "sourceFiles": {
+    "skeleton": "models/304_zebra_wild#6/build_char_304_zebra_wild#6.skel",
+    "atlas": "models/304_zebra_wild#6/build_char_304_zebra_wild#6.atlas",
+    "textures": [
+      "models/304_zebra_wild#6/build_char_304_zebra_wild#6.png"
+    ]
+  },
+  "displayName": "暴雨",
+  "searchText": "暴雨 build_char_304_zebra_wild#6 models/304_zebra_wild#6 default interact move relax sit sleep special"
+}

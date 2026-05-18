@@ -1,0 +1,37 @@
+{
+  "id": "models-1013-chen2-build-char-1013-chen2",
+  "name": "假日威龙陈",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1013_chen2/build_char_1013_chen2.skel",
+    "atlas": "/Ark-Models/models/1013_chen2/build_char_1013_chen2.atlas",
+    "textures": [
+      "/Ark-Models/models/1013_chen2/build_char_1013_chen2.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1013_chen2",
+  "sourceFiles": {
+    "skeleton": "models/1013_chen2/build_char_1013_chen2.skel",
+    "atlas": "models/1013_chen2/build_char_1013_chen2.atlas",
+    "textures": [
+      "models/1013_chen2/build_char_1013_chen2.png"
+    ]
+  },
+  "displayName": "假日威龙陈",
+  "searchText": "假日威龙陈 build_char_1013_chen2 models/1013_chen2 default interact move relax sit sleep"
+}

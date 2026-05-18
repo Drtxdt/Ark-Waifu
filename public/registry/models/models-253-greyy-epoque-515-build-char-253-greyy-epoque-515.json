@@ -1,0 +1,38 @@
+{
+  "id": "models-253-greyy-epoque-515-build-char-253-greyy-epoque-515",
+  "name": "格雷伊",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/253_greyy_epoque%23515/build_char_253_greyy_epoque%23515.skel",
+    "atlas": "/Ark-Models/models/253_greyy_epoque%23515/build_char_253_greyy_epoque%23515.atlas",
+    "textures": [
+      "/Ark-Models/models/253_greyy_epoque%23515/build_char_253_greyy_epoque%23515.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/253_greyy_epoque#515",
+  "sourceFiles": {
+    "skeleton": "models/253_greyy_epoque#515/build_char_253_greyy_epoque#515.skel",
+    "atlas": "models/253_greyy_epoque#515/build_char_253_greyy_epoque#515.atlas",
+    "textures": [
+      "models/253_greyy_epoque#515/build_char_253_greyy_epoque#515.png"
+    ]
+  },
+  "displayName": "格雷伊",
+  "searchText": "格雷伊 build_char_253_greyy_epoque#515 models/253_greyy_epoque#515 default interact move relax sit sleep special"
+}

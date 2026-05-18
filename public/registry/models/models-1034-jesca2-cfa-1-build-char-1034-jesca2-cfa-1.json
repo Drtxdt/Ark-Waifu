@@ -1,0 +1,38 @@
+{
+  "id": "models-1034-jesca2-cfa-1-build-char-1034-jesca2-cfa-1",
+  "name": "涤火杰西卡",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1034_jesca2_cfa%231/build_char_1034_jesca2_cfa%231.skel",
+    "atlas": "/Ark-Models/models/1034_jesca2_cfa%231/build_char_1034_jesca2_cfa%231.atlas",
+    "textures": [
+      "/Ark-Models/models/1034_jesca2_cfa%231/build_char_1034_jesca2_cfa%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1034_jesca2_cfa#1",
+  "sourceFiles": {
+    "skeleton": "models/1034_jesca2_cfa#1/build_char_1034_jesca2_cfa#1.skel",
+    "atlas": "models/1034_jesca2_cfa#1/build_char_1034_jesca2_cfa#1.atlas",
+    "textures": [
+      "models/1034_jesca2_cfa#1/build_char_1034_jesca2_cfa#1.png"
+    ]
+  },
+  "displayName": "涤火杰西卡",
+  "searchText": "涤火杰西卡 build_char_1034_jesca2_cfa#1 models/1034_jesca2_cfa#1 default interact move relax sit sleep special"
+}

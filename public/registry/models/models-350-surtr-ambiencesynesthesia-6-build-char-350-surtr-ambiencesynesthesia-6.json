@@ -1,0 +1,38 @@
+{
+  "id": "models-350-surtr-ambiencesynesthesia-6-build-char-350-surtr-ambiencesynesthesia-6",
+  "name": "史尔特尔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/350_surtr_ambiencesynesthesia%236/build_char_350_surtr_ambienceSynesthesia%236.skel",
+    "atlas": "/Ark-Models/models/350_surtr_ambiencesynesthesia%236/build_char_350_surtr_ambienceSynesthesia%236.atlas",
+    "textures": [
+      "/Ark-Models/models/350_surtr_ambiencesynesthesia%236/build_char_350_surtr_ambienceSynesthesia%236.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/350_surtr_ambiencesynesthesia#6",
+  "sourceFiles": {
+    "skeleton": "models/350_surtr_ambiencesynesthesia#6/build_char_350_surtr_ambienceSynesthesia#6.skel",
+    "atlas": "models/350_surtr_ambiencesynesthesia#6/build_char_350_surtr_ambienceSynesthesia#6.atlas",
+    "textures": [
+      "models/350_surtr_ambiencesynesthesia#6/build_char_350_surtr_ambienceSynesthesia#6.png"
+    ]
+  },
+  "displayName": "史尔特尔",
+  "searchText": "史尔特尔 build_char_350_surtr_ambiencesynesthesia#6 models/350_surtr_ambiencesynesthesia#6 default interact move relax sit sleep special"
+}

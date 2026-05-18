@@ -1,0 +1,38 @@
+{
+  "id": "models-215-mantic-epoque-19-build-char-215-mantic-epoque-19",
+  "name": "狮蝎",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/215_mantic_epoque%2319/build_char_215_mantic_epoque%2319.skel",
+    "atlas": "/Ark-Models/models/215_mantic_epoque%2319/build_char_215_mantic_epoque%2319.atlas",
+    "textures": [
+      "/Ark-Models/models/215_mantic_epoque%2319/build_char_215_mantic_epoque%2319.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/215_mantic_epoque#19",
+  "sourceFiles": {
+    "skeleton": "models/215_mantic_epoque#19/build_char_215_mantic_epoque#19.skel",
+    "atlas": "models/215_mantic_epoque#19/build_char_215_mantic_epoque#19.atlas",
+    "textures": [
+      "models/215_mantic_epoque#19/build_char_215_mantic_epoque#19.png"
+    ]
+  },
+  "displayName": "狮蝎",
+  "searchText": "狮蝎 build_char_215_mantic_epoque#19 models/215_mantic_epoque#19 default interact move relax sit sleep special"
+}

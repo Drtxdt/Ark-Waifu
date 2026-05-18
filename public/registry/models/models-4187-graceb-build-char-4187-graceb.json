@@ -1,0 +1,37 @@
+{
+  "id": "models-4187-graceb-build-char-4187-graceb",
+  "name": "聆音",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4187_graceb/build_char_4187_graceb.skel",
+    "atlas": "/Ark-Models/models/4187_graceb/build_char_4187_graceb.atlas",
+    "textures": [
+      "/Ark-Models/models/4187_graceb/build_char_4187_graceb.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4187_graceb",
+  "sourceFiles": {
+    "skeleton": "models/4187_graceb/build_char_4187_graceb.skel",
+    "atlas": "models/4187_graceb/build_char_4187_graceb.atlas",
+    "textures": [
+      "models/4187_graceb/build_char_4187_graceb.png"
+    ]
+  },
+  "displayName": "聆音",
+  "searchText": "聆音 build_char_4187_graceb models/4187_graceb default interact move relax sit sleep"
+}

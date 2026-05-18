@@ -1,0 +1,37 @@
+{
+  "id": "models-1020-reed2-build-char-1020-reed2",
+  "name": "焰影苇草",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1020_reed2/build_char_1020_reed2.skel",
+    "atlas": "/Ark-Models/models/1020_reed2/build_char_1020_reed2.atlas",
+    "textures": [
+      "/Ark-Models/models/1020_reed2/build_char_1020_reed2.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1020_reed2",
+  "sourceFiles": {
+    "skeleton": "models/1020_reed2/build_char_1020_reed2.skel",
+    "atlas": "models/1020_reed2/build_char_1020_reed2.atlas",
+    "textures": [
+      "models/1020_reed2/build_char_1020_reed2.png"
+    ]
+  },
+  "displayName": "焰影苇草",
+  "searchText": "焰影苇草 build_char_1020_reed2 models/1020_reed2 default interact move relax sit sleep"
+}

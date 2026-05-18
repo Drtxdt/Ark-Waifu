@@ -1,0 +1,37 @@
+{
+  "id": "models-459-tachak-build-char-459-tachak",
+  "name": "战车",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/459_tachak/build_char_459_tachak.skel",
+    "atlas": "/Ark-Models/models/459_tachak/build_char_459_tachak.atlas",
+    "textures": [
+      "/Ark-Models/models/459_tachak/build_char_459_tachak.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/459_tachak",
+  "sourceFiles": {
+    "skeleton": "models/459_tachak/build_char_459_tachak.skel",
+    "atlas": "models/459_tachak/build_char_459_tachak.atlas",
+    "textures": [
+      "models/459_tachak/build_char_459_tachak.png"
+    ]
+  },
+  "displayName": "战车",
+  "searchText": "战车 build_char_459_tachak models/459_tachak default interact move relax sit sleep"
+}

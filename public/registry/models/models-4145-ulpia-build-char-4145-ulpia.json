@@ -1,0 +1,37 @@
+{
+  "id": "models-4145-ulpia-build-char-4145-ulpia",
+  "name": "乌尔比安",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4145_ulpia/build_char_4145_ulpia.skel",
+    "atlas": "/Ark-Models/models/4145_ulpia/build_char_4145_ulpia.atlas",
+    "textures": [
+      "/Ark-Models/models/4145_ulpia/build_char_4145_ulpia.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4145_ulpia",
+  "sourceFiles": {
+    "skeleton": "models/4145_ulpia/build_char_4145_ulpia.skel",
+    "atlas": "models/4145_ulpia/build_char_4145_ulpia.atlas",
+    "textures": [
+      "models/4145_ulpia/build_char_4145_ulpia.png"
+    ]
+  },
+  "displayName": "乌尔比安",
+  "searchText": "乌尔比安 build_char_4145_ulpia models/4145_ulpia default interact move relax sit sleep"
+}

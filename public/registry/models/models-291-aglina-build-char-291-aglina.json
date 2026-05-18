@@ -1,0 +1,37 @@
+{
+  "id": "models-291-aglina-build-char-291-aglina",
+  "name": "安洁莉娜",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/291_aglina/build_char_291_aglina.skel",
+    "atlas": "/Ark-Models/models/291_aglina/build_char_291_aglina.atlas",
+    "textures": [
+      "/Ark-Models/models/291_aglina/build_char_291_aglina.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/291_aglina",
+  "sourceFiles": {
+    "skeleton": "models/291_aglina/build_char_291_aglina.skel",
+    "atlas": "models/291_aglina/build_char_291_aglina.atlas",
+    "textures": [
+      "models/291_aglina/build_char_291_aglina.png"
+    ]
+  },
+  "displayName": "安洁莉娜",
+  "searchText": "安洁莉娜 build_char_291_aglina models/291_aglina default interact move relax sit sleep"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-423-blemsh-witch-2-build-char-423-blemsh-witch-2",
+  "name": "瑕光",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/423_blemsh_witch%232/build_char_423_blemsh_witch%232.skel",
+    "atlas": "/Ark-Models/models/423_blemsh_witch%232/build_char_423_blemsh_witch%232.atlas",
+    "textures": [
+      "/Ark-Models/models/423_blemsh_witch%232/build_char_423_blemsh_witch%232.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/423_blemsh_witch#2",
+  "sourceFiles": {
+    "skeleton": "models/423_blemsh_witch#2/build_char_423_blemsh_witch#2.skel",
+    "atlas": "models/423_blemsh_witch#2/build_char_423_blemsh_witch#2.atlas",
+    "textures": [
+      "models/423_blemsh_witch#2/build_char_423_blemsh_witch#2.png"
+    ]
+  },
+  "displayName": "瑕光",
+  "searchText": "瑕光 build_char_423_blemsh_witch#2 models/423_blemsh_witch#2 default interact move relax sit sleep special"
+}

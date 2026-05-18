@@ -1,0 +1,38 @@
+{
+  "id": "models-103-angel-sale-8-build-char-103-angel-sale-8",
+  "name": "能天使",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/103_angel_sale%238/build_char_103_angel_sale%238.skel",
+    "atlas": "/Ark-Models/models/103_angel_sale%238/build_char_103_angel_sale%238.atlas",
+    "textures": [
+      "/Ark-Models/models/103_angel_sale%238/build_char_103_angel_sale%238.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/103_angel_sale#8",
+  "sourceFiles": {
+    "skeleton": "models/103_angel_sale#8/build_char_103_angel_sale#8.skel",
+    "atlas": "models/103_angel_sale#8/build_char_103_angel_sale#8.atlas",
+    "textures": [
+      "models/103_angel_sale#8/build_char_103_angel_sale#8.png"
+    ]
+  },
+  "displayName": "能天使",
+  "searchText": "能天使 build_char_103_angel_sale#8 models/103_angel_sale#8 default interact move relax sit sleep special"
+}

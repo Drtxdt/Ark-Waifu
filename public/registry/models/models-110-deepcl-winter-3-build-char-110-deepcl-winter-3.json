@@ -1,0 +1,38 @@
+{
+  "id": "models-110-deepcl-winter-3-build-char-110-deepcl-winter-3",
+  "name": "深海色",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/110_deepcl_winter%233/build_char_110_deepcl_winter%233.skel",
+    "atlas": "/Ark-Models/models/110_deepcl_winter%233/build_char_110_deepcl_winter%233.atlas",
+    "textures": [
+      "/Ark-Models/models/110_deepcl_winter%233/build_char_110_deepcl_winter%233.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/110_deepcl_winter#3",
+  "sourceFiles": {
+    "skeleton": "models/110_deepcl_winter#3/build_char_110_deepcl_winter#3.skel",
+    "atlas": "models/110_deepcl_winter#3/build_char_110_deepcl_winter#3.atlas",
+    "textures": [
+      "models/110_deepcl_winter#3/build_char_110_deepcl_winter#3.png"
+    ]
+  },
+  "displayName": "深海色",
+  "searchText": "深海色 build_char_110_deepcl_winter#3 models/110_deepcl_winter#3 default interact move relax sit sleep special"
+}

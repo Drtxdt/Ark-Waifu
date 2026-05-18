@@ -1,0 +1,37 @@
+{
+  "id": "models-440-pinecn-build-char-440-pinecn",
+  "name": "松果",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/440_pinecn/build_char_440_pinecn.skel",
+    "atlas": "/Ark-Models/models/440_pinecn/build_char_440_pinecn.atlas",
+    "textures": [
+      "/Ark-Models/models/440_pinecn/build_char_440_pinecn.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/440_pinecn",
+  "sourceFiles": {
+    "skeleton": "models/440_pinecn/build_char_440_pinecn.skel",
+    "atlas": "models/440_pinecn/build_char_440_pinecn.atlas",
+    "textures": [
+      "models/440_pinecn/build_char_440_pinecn.png"
+    ]
+  },
+  "displayName": "松果",
+  "searchText": "松果 build_char_440_pinecn models/440_pinecn default interact move relax sit sleep"
+}

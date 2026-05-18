@@ -1,0 +1,37 @@
+{
+  "id": "models-336-folivo-build-char-336-folivo",
+  "name": "稀音",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/336_folivo/build_char_336_folivo.skel",
+    "atlas": "/Ark-Models/models/336_folivo/build_char_336_folivo.atlas",
+    "textures": [
+      "/Ark-Models/models/336_folivo/build_char_336_folivo.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/336_folivo",
+  "sourceFiles": {
+    "skeleton": "models/336_folivo/build_char_336_folivo.skel",
+    "atlas": "models/336_folivo/build_char_336_folivo.atlas",
+    "textures": [
+      "models/336_folivo/build_char_336_folivo.png"
+    ]
+  },
+  "displayName": "稀音",
+  "searchText": "稀音 build_char_336_folivo models/336_folivo default interact move relax sit sleep"
+}

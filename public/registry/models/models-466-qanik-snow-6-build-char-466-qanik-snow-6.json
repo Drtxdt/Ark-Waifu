@@ -1,0 +1,38 @@
+{
+  "id": "models-466-qanik-snow-6-build-char-466-qanik-snow-6",
+  "name": "雪绒",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/466_qanik_snow%236/build_char_466_qanik_snow%236.skel",
+    "atlas": "/Ark-Models/models/466_qanik_snow%236/build_char_466_qanik_snow%236.atlas",
+    "textures": [
+      "/Ark-Models/models/466_qanik_snow%236/build_char_466_qanik_snow%236.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/466_qanik_snow#6",
+  "sourceFiles": {
+    "skeleton": "models/466_qanik_snow#6/build_char_466_qanik_snow#6.skel",
+    "atlas": "models/466_qanik_snow#6/build_char_466_qanik_snow#6.atlas",
+    "textures": [
+      "models/466_qanik_snow#6/build_char_466_qanik_snow#6.png"
+    ]
+  },
+  "displayName": "雪绒",
+  "searchText": "雪绒 build_char_466_qanik_snow#6 models/466_qanik_snow#6 default interact move relax sit sleep special"
+}

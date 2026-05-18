@@ -1,0 +1,38 @@
+{
+  "id": "models-333-sidero-summer-6-build-char-333-sidero-summer-6",
+  "name": "铸铁",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/333_sidero_summer%236/build_char_333_sidero_summer%236.skel",
+    "atlas": "/Ark-Models/models/333_sidero_summer%236/build_char_333_sidero_summer%236.atlas",
+    "textures": [
+      "/Ark-Models/models/333_sidero_summer%236/build_char_333_sidero_summer%236.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/333_sidero_summer#6",
+  "sourceFiles": {
+    "skeleton": "models/333_sidero_summer#6/build_char_333_sidero_summer#6.skel",
+    "atlas": "models/333_sidero_summer#6/build_char_333_sidero_summer#6.atlas",
+    "textures": [
+      "models/333_sidero_summer#6/build_char_333_sidero_summer#6.png"
+    ]
+  },
+  "displayName": "铸铁",
+  "searchText": "铸铁 build_char_333_sidero_summer#6 models/333_sidero_summer#6 default interact move relax sit sleep special"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-358-lisa-wild-3-build-char-358-lisa-wild-3",
+  "name": "铃兰",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/358_lisa_wild%233/build_char_358_lisa_wild%233.skel",
+    "atlas": "/Ark-Models/models/358_lisa_wild%233/build_char_358_lisa_wild%233.atlas",
+    "textures": [
+      "/Ark-Models/models/358_lisa_wild%233/build_char_358_lisa_wild%233.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/358_lisa_wild#3",
+  "sourceFiles": {
+    "skeleton": "models/358_lisa_wild#3/build_char_358_lisa_wild#3.skel",
+    "atlas": "models/358_lisa_wild#3/build_char_358_lisa_wild#3.atlas",
+    "textures": [
+      "models/358_lisa_wild#3/build_char_358_lisa_wild#3.png"
+    ]
+  },
+  "displayName": "铃兰",
+  "searchText": "铃兰 build_char_358_lisa_wild#3 models/358_lisa_wild#3 default interact move relax sit sleep special"
+}

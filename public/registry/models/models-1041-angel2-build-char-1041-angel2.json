@@ -1,0 +1,37 @@
+{
+  "id": "models-1041-angel2-build-char-1041-angel2",
+  "name": "新约能天使",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1041_angel2/build_char_1041_angel2.skel",
+    "atlas": "/Ark-Models/models/1041_angel2/build_char_1041_angel2.atlas",
+    "textures": [
+      "/Ark-Models/models/1041_angel2/build_char_1041_angel2.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1041_angel2",
+  "sourceFiles": {
+    "skeleton": "models/1041_angel2/build_char_1041_angel2.skel",
+    "atlas": "models/1041_angel2/build_char_1041_angel2.atlas",
+    "textures": [
+      "models/1041_angel2/build_char_1041_angel2.png"
+    ]
+  },
+  "displayName": "新约能天使",
+  "searchText": "新约能天使 build_char_1041_angel2 models/1041_angel2 default interact move relax sit sleep"
+}

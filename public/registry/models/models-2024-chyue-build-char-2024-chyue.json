@@ -1,0 +1,37 @@
+{
+  "id": "models-2024-chyue-build-char-2024-chyue",
+  "name": "重岳",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/2024_chyue/build_char_2024_chyue.skel",
+    "atlas": "/Ark-Models/models/2024_chyue/build_char_2024_chyue.atlas",
+    "textures": [
+      "/Ark-Models/models/2024_chyue/build_char_2024_chyue.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/2024_chyue",
+  "sourceFiles": {
+    "skeleton": "models/2024_chyue/build_char_2024_chyue.skel",
+    "atlas": "models/2024_chyue/build_char_2024_chyue.atlas",
+    "textures": [
+      "models/2024_chyue/build_char_2024_chyue.png"
+    ]
+  },
+  "displayName": "重岳",
+  "searchText": "重岳 build_char_2024_chyue models/2024_chyue default interact move relax sit sleep"
+}

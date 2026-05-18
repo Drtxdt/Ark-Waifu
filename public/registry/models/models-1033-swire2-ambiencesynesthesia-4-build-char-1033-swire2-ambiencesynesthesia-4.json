@@ -1,0 +1,38 @@
+{
+  "id": "models-1033-swire2-ambiencesynesthesia-4-build-char-1033-swire2-ambiencesynesthesia-4",
+  "name": "琳琅诗怀雅",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1033_swire2_ambiencesynesthesia%234/build_char_1033_swire2_ambienceSynesthesia%234.skel",
+    "atlas": "/Ark-Models/models/1033_swire2_ambiencesynesthesia%234/build_char_1033_swire2_ambienceSynesthesia%234.atlas",
+    "textures": [
+      "/Ark-Models/models/1033_swire2_ambiencesynesthesia%234/build_char_1033_swire2_ambienceSynesthesia%234.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1033_swire2_ambiencesynesthesia#4",
+  "sourceFiles": {
+    "skeleton": "models/1033_swire2_ambiencesynesthesia#4/build_char_1033_swire2_ambienceSynesthesia#4.skel",
+    "atlas": "models/1033_swire2_ambiencesynesthesia#4/build_char_1033_swire2_ambienceSynesthesia#4.atlas",
+    "textures": [
+      "models/1033_swire2_ambiencesynesthesia#4/build_char_1033_swire2_ambienceSynesthesia#4.png"
+    ]
+  },
+  "displayName": "琳琅诗怀雅",
+  "searchText": "琳琅诗怀雅 build_char_1033_swire2_ambiencesynesthesia#4 models/1033_swire2_ambiencesynesthesia#4 default interact move relax sit sleep special"
+}

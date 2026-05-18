@@ -1,0 +1,38 @@
+{
+  "id": "models-272-strong-summer-6-build-char-272-strong-summer-6",
+  "name": "孑",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/272_strong_summer%236/build_char_272_strong_summer%236.skel",
+    "atlas": "/Ark-Models/models/272_strong_summer%236/build_char_272_strong_summer%236.atlas",
+    "textures": [
+      "/Ark-Models/models/272_strong_summer%236/build_char_272_strong_summer%236.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/272_strong_summer#6",
+  "sourceFiles": {
+    "skeleton": "models/272_strong_summer#6/build_char_272_strong_summer#6.skel",
+    "atlas": "models/272_strong_summer#6/build_char_272_strong_summer#6.atlas",
+    "textures": [
+      "models/272_strong_summer#6/build_char_272_strong_summer#6.png"
+    ]
+  },
+  "displayName": "孑",
+  "searchText": "孑 build_char_272_strong_summer#6 models/272_strong_summer#6 default interact move relax sit sleep special"
+}

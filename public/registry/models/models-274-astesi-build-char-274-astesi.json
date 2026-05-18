@@ -1,0 +1,37 @@
+{
+  "id": "models-274-astesi-build-char-274-astesi",
+  "name": "星极",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/274_astesi/build_char_274_astesi.skel",
+    "atlas": "/Ark-Models/models/274_astesi/build_char_274_astesi.atlas",
+    "textures": [
+      "/Ark-Models/models/274_astesi/build_char_274_astesi.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/274_astesi",
+  "sourceFiles": {
+    "skeleton": "models/274_astesi/build_char_274_astesi.skel",
+    "atlas": "models/274_astesi/build_char_274_astesi.atlas",
+    "textures": [
+      "models/274_astesi/build_char_274_astesi.png"
+    ]
+  },
+  "displayName": "星极",
+  "searchText": "星极 build_char_274_astesi models/274_astesi default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-199-yak-build-char-199-yak",
+  "name": "角峰",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/199_yak/build_char_199_yak.skel",
+    "atlas": "/Ark-Models/models/199_yak/build_char_199_yak.atlas",
+    "textures": [
+      "/Ark-Models/models/199_yak/build_char_199_yak.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/199_yak",
+  "sourceFiles": {
+    "skeleton": "models/199_yak/build_char_199_yak.skel",
+    "atlas": "models/199_yak/build_char_199_yak.atlas",
+    "textures": [
+      "models/199_yak/build_char_199_yak.png"
+    ]
+  },
+  "displayName": "角峰",
+  "searchText": "角峰 build_char_199_yak models/199_yak default interact move relax sit sleep"
+}

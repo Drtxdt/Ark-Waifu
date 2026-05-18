@@ -1,0 +1,37 @@
+{
+  "id": "models-473-mberry-build-char-473-mberry",
+  "name": "桑葚",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/473_mberry/build_char_473_mberry.skel",
+    "atlas": "/Ark-Models/models/473_mberry/build_char_473_mberry.atlas",
+    "textures": [
+      "/Ark-Models/models/473_mberry/build_char_473_mberry.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/473_mberry",
+  "sourceFiles": {
+    "skeleton": "models/473_mberry/build_char_473_mberry.skel",
+    "atlas": "models/473_mberry/build_char_473_mberry.atlas",
+    "textures": [
+      "models/473_mberry/build_char_473_mberry.png"
+    ]
+  },
+  "displayName": "桑葚",
+  "searchText": "桑葚 build_char_473_mberry models/473_mberry default interact move relax sit sleep"
+}

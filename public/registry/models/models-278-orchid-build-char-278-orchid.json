@@ -1,0 +1,37 @@
+{
+  "id": "models-278-orchid-build-char-278-orchid",
+  "name": "梓兰",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/278_orchid/build_char_278_orchid.skel",
+    "atlas": "/Ark-Models/models/278_orchid/build_char_278_orchid.atlas",
+    "textures": [
+      "/Ark-Models/models/278_orchid/build_char_278_orchid.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/278_orchid",
+  "sourceFiles": {
+    "skeleton": "models/278_orchid/build_char_278_orchid.skel",
+    "atlas": "models/278_orchid/build_char_278_orchid.atlas",
+    "textures": [
+      "models/278_orchid/build_char_278_orchid.png"
+    ]
+  },
+  "displayName": "梓兰",
+  "searchText": "梓兰 build_char_278_orchid models/278_orchid default interact move relax sit sleep"
+}

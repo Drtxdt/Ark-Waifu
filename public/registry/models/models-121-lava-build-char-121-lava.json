@@ -1,0 +1,37 @@
+{
+  "id": "models-121-lava-build-char-121-lava",
+  "name": "炎熔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/121_lava/build_char_121_lava.skel",
+    "atlas": "/Ark-Models/models/121_lava/build_char_121_lava.atlas",
+    "textures": [
+      "/Ark-Models/models/121_lava/build_char_121_lava.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/121_lava",
+  "sourceFiles": {
+    "skeleton": "models/121_lava/build_char_121_lava.skel",
+    "atlas": "models/121_lava/build_char_121_lava.atlas",
+    "textures": [
+      "models/121_lava/build_char_121_lava.png"
+    ]
+  },
+  "displayName": "炎熔",
+  "searchText": "炎熔 build_char_121_lava models/121_lava default interact move relax sit sleep"
+}

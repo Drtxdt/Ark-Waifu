@@ -1,0 +1,37 @@
+{
+  "id": "models-2013-cerber-build-char-2013-cerber",
+  "name": "刻俄柏",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/2013_cerber/build_char_2013_cerber.skel",
+    "atlas": "/Ark-Models/models/2013_cerber/build_char_2013_cerber.atlas",
+    "textures": [
+      "/Ark-Models/models/2013_cerber/build_char_2013_cerber.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/2013_cerber",
+  "sourceFiles": {
+    "skeleton": "models/2013_cerber/build_char_2013_cerber.skel",
+    "atlas": "models/2013_cerber/build_char_2013_cerber.atlas",
+    "textures": [
+      "models/2013_cerber/build_char_2013_cerber.png"
+    ]
+  },
+  "displayName": "刻俄柏",
+  "searchText": "刻俄柏 build_char_2013_cerber models/2013_cerber default interact move relax sit sleep"
+}

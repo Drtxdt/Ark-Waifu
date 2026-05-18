@@ -1,0 +1,38 @@
+{
+  "id": "models-385-finlpp-nian-11-build-char-385-finlpp-nian-11",
+  "name": "清流",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/385_finlpp_nian%2311/build_char_385_finlpp_nian%2311.skel",
+    "atlas": "/Ark-Models/models/385_finlpp_nian%2311/build_char_385_finlpp_nian%2311.atlas",
+    "textures": [
+      "/Ark-Models/models/385_finlpp_nian%2311/build_char_385_finlpp_nian%2311.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/385_finlpp_nian#11",
+  "sourceFiles": {
+    "skeleton": "models/385_finlpp_nian#11/build_char_385_finlpp_nian#11.skel",
+    "atlas": "models/385_finlpp_nian#11/build_char_385_finlpp_nian#11.atlas",
+    "textures": [
+      "models/385_finlpp_nian#11/build_char_385_finlpp_nian#11.png"
+    ]
+  },
+  "displayName": "清流",
+  "searchText": "清流 build_char_385_finlpp_nian#11 models/385_finlpp_nian#11 default interact move relax sit sleep special"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-4087-ines-build-char-4087-ines",
+  "name": "伊内丝",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4087_ines/build_char_4087_ines.skel",
+    "atlas": "/Ark-Models/models/4087_ines/build_char_4087_ines.atlas",
+    "textures": [
+      "/Ark-Models/models/4087_ines/build_char_4087_ines.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4087_ines",
+  "sourceFiles": {
+    "skeleton": "models/4087_ines/build_char_4087_ines.skel",
+    "atlas": "models/4087_ines/build_char_4087_ines.atlas",
+    "textures": [
+      "models/4087_ines/build_char_4087_ines.png"
+    ]
+  },
+  "displayName": "伊内丝",
+  "searchText": "伊内丝 build_char_4087_ines models/4087_ines default interact move relax sit sleep"
+}

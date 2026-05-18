@@ -1,0 +1,37 @@
+{
+  "id": "models-433-windft-build-char-433-windft",
+  "name": "掠风",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/433_windft/build_char_433_windft.skel",
+    "atlas": "/Ark-Models/models/433_windft/build_char_433_windft.atlas",
+    "textures": [
+      "/Ark-Models/models/433_windft/build_char_433_windft.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/433_windft",
+  "sourceFiles": {
+    "skeleton": "models/433_windft/build_char_433_windft.skel",
+    "atlas": "models/433_windft/build_char_433_windft.atlas",
+    "textures": [
+      "models/433_windft/build_char_433_windft.png"
+    ]
+  },
+  "displayName": "掠风",
+  "searchText": "掠风 build_char_433_windft models/433_windft default interact move relax sit sleep"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-4025-aprot2-whirlwind-5-build-char-4025-aprot2-whirlwind-5",
+  "name": "暮落",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4025_aprot2_whirlwind%235/build_char_4025_aprot2_whirlwind%235.skel",
+    "atlas": "/Ark-Models/models/4025_aprot2_whirlwind%235/build_char_4025_aprot2_whirlwind%235.atlas",
+    "textures": [
+      "/Ark-Models/models/4025_aprot2_whirlwind%235/build_char_4025_aprot2_whirlwind%235.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4025_aprot2_whirlwind#5",
+  "sourceFiles": {
+    "skeleton": "models/4025_aprot2_whirlwind#5/build_char_4025_aprot2_whirlwind#5.skel",
+    "atlas": "models/4025_aprot2_whirlwind#5/build_char_4025_aprot2_whirlwind#5.atlas",
+    "textures": [
+      "models/4025_aprot2_whirlwind#5/build_char_4025_aprot2_whirlwind#5.png"
+    ]
+  },
+  "displayName": "暮落",
+  "searchText": "暮落 build_char_4025_aprot2_whirlwind#5 models/4025_aprot2_whirlwind#5 default interact move relax sit sleep special"
+}

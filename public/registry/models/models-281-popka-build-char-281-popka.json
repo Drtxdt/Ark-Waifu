@@ -1,0 +1,37 @@
+{
+  "id": "models-281-popka-build-char-281-popka",
+  "name": "泡普卡",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/281_popka/build_char_281_popka.skel",
+    "atlas": "/Ark-Models/models/281_popka/build_char_281_popka.atlas",
+    "textures": [
+      "/Ark-Models/models/281_popka/build_char_281_popka.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/281_popka",
+  "sourceFiles": {
+    "skeleton": "models/281_popka/build_char_281_popka.skel",
+    "atlas": "models/281_popka/build_char_281_popka.atlas",
+    "textures": [
+      "models/281_popka/build_char_281_popka.png"
+    ]
+  },
+  "displayName": "泡普卡",
+  "searchText": "泡普卡 build_char_281_popka models/281_popka default interact move relax sit sleep"
+}

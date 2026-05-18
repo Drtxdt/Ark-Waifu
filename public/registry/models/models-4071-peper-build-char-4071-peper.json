@@ -1,0 +1,37 @@
+{
+  "id": "models-4071-peper-build-char-4071-peper",
+  "name": "明椒",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4071_peper/build_char_4071_peper.skel",
+    "atlas": "/Ark-Models/models/4071_peper/build_char_4071_peper.atlas",
+    "textures": [
+      "/Ark-Models/models/4071_peper/build_char_4071_peper.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4071_peper",
+  "sourceFiles": {
+    "skeleton": "models/4071_peper/build_char_4071_peper.skel",
+    "atlas": "models/4071_peper/build_char_4071_peper.atlas",
+    "textures": [
+      "models/4071_peper/build_char_4071_peper.png"
+    ]
+  },
+  "displayName": "明椒",
+  "searchText": "明椒 build_char_4071_peper models/4071_peper default interact move relax sit sleep"
+}

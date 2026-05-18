@@ -1,0 +1,38 @@
+{
+  "id": "models-202-demkni-boc-1-build-char-202-demkni-boc-1",
+  "name": "塞雷娅",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/202_demkni_boc%231/build_char_202_demkni_boc%231.skel",
+    "atlas": "/Ark-Models/models/202_demkni_boc%231/build_char_202_demkni_boc%231.atlas",
+    "textures": [
+      "/Ark-Models/models/202_demkni_boc%231/build_char_202_demkni_boc%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/202_demkni_boc#1",
+  "sourceFiles": {
+    "skeleton": "models/202_demkni_boc#1/build_char_202_demkni_boc#1.skel",
+    "atlas": "models/202_demkni_boc#1/build_char_202_demkni_boc#1.atlas",
+    "textures": [
+      "models/202_demkni_boc#1/build_char_202_demkni_boc#1.png"
+    ]
+  },
+  "displayName": "塞雷娅",
+  "searchText": "塞雷娅 build_char_202_demkni_boc#1 models/202_demkni_boc#1 default interact move relax sit sleep special"
+}

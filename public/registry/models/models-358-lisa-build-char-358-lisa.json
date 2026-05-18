@@ -1,0 +1,37 @@
+{
+  "id": "models-358-lisa-build-char-358-lisa",
+  "name": "铃兰",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/358_lisa/build_char_358_lisa.skel",
+    "atlas": "/Ark-Models/models/358_lisa/build_char_358_lisa.atlas",
+    "textures": [
+      "/Ark-Models/models/358_lisa/build_char_358_lisa.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/358_lisa",
+  "sourceFiles": {
+    "skeleton": "models/358_lisa/build_char_358_lisa.skel",
+    "atlas": "models/358_lisa/build_char_358_lisa.atlas",
+    "textures": [
+      "models/358_lisa/build_char_358_lisa.png"
+    ]
+  },
+  "displayName": "铃兰",
+  "searchText": "铃兰 build_char_358_lisa models/358_lisa default interact move relax sit sleep"
+}

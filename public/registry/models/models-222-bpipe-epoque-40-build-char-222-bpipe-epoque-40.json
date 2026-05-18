@@ -1,0 +1,38 @@
+{
+  "id": "models-222-bpipe-epoque-40-build-char-222-bpipe-epoque-40",
+  "name": "风笛",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/222_bpipe_epoque%2340/build_char_222_bpipe_epoque%2340.skel",
+    "atlas": "/Ark-Models/models/222_bpipe_epoque%2340/build_char_222_bpipe_epoque%2340.atlas",
+    "textures": [
+      "/Ark-Models/models/222_bpipe_epoque%2340/build_char_222_bpipe_epoque%2340.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/222_bpipe_epoque#40",
+  "sourceFiles": {
+    "skeleton": "models/222_bpipe_epoque#40/build_char_222_bpipe_epoque#40.skel",
+    "atlas": "models/222_bpipe_epoque#40/build_char_222_bpipe_epoque#40.atlas",
+    "textures": [
+      "models/222_bpipe_epoque#40/build_char_222_bpipe_epoque#40.png"
+    ]
+  },
+  "displayName": "风笛",
+  "searchText": "风笛 build_char_222_bpipe_epoque#40 models/222_bpipe_epoque#40 default interact move relax sit sleep special"
+}

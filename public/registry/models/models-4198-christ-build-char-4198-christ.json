@@ -1,0 +1,37 @@
+{
+  "id": "models-4198-christ-build-char-4198-christ",
+  "name": "Miss.Christine",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4198_christ/build_char_4198_christ.skel",
+    "atlas": "/Ark-Models/models/4198_christ/build_char_4198_christ.atlas",
+    "textures": [
+      "/Ark-Models/models/4198_christ/build_char_4198_christ.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4198_christ",
+  "sourceFiles": {
+    "skeleton": "models/4198_christ/build_char_4198_christ.skel",
+    "atlas": "models/4198_christ/build_char_4198_christ.atlas",
+    "textures": [
+      "models/4198_christ/build_char_4198_christ.png"
+    ]
+  },
+  "displayName": "Miss.Christine",
+  "searchText": "miss.christine build_char_4198_christ models/4198_christ default interact move relax sit sleep"
+}

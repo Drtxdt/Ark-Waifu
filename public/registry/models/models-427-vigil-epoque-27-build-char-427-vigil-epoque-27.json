@@ -1,0 +1,38 @@
+{
+  "id": "models-427-vigil-epoque-27-build-char-427-vigil-epoque-27",
+  "name": "伺夜",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/427_vigil_epoque%2327/build_char_427_vigil_epoque%2327.skel",
+    "atlas": "/Ark-Models/models/427_vigil_epoque%2327/build_char_427_vigil_epoque%2327.atlas",
+    "textures": [
+      "/Ark-Models/models/427_vigil_epoque%2327/build_char_427_vigil_epoque%2327.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/427_vigil_epoque#27",
+  "sourceFiles": {
+    "skeleton": "models/427_vigil_epoque#27/build_char_427_vigil_epoque#27.skel",
+    "atlas": "models/427_vigil_epoque#27/build_char_427_vigil_epoque#27.atlas",
+    "textures": [
+      "models/427_vigil_epoque#27/build_char_427_vigil_epoque#27.png"
+    ]
+  },
+  "displayName": "伺夜",
+  "searchText": "伺夜 build_char_427_vigil_epoque#27 models/427_vigil_epoque#27 default interact move relax sit sleep special"
+}

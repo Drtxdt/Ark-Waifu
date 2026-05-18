@@ -25,7 +25,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "pnpm typecheck && pnpm build:demo && pnpm build:lib && pnpm build:cli && pnpm build:types",
+    "build": "pnpm typecheck && pnpm build:demo && pnpm build:lib && pnpm build:cli && pnpm build:types && node scripts/trim-dist.mjs",
     "build:demo": "vite build",
     "build:lib": "vite build --config vite.lib.config.ts && vite build --config vite.iife.config.ts && vite build --config vite.loader.config.ts",
     "build:cli": "tsc -p tsconfig.cli.json",

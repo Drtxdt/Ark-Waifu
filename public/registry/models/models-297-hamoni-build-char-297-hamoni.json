@@ -1,0 +1,37 @@
+{
+  "id": "models-297-hamoni-build-char-297-hamoni",
+  "name": "和弦",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/297_hamoni/build_char_297_hamoni.skel",
+    "atlas": "/Ark-Models/models/297_hamoni/build_char_297_hamoni.atlas",
+    "textures": [
+      "/Ark-Models/models/297_hamoni/build_char_297_hamoni.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/297_hamoni",
+  "sourceFiles": {
+    "skeleton": "models/297_hamoni/build_char_297_hamoni.skel",
+    "atlas": "models/297_hamoni/build_char_297_hamoni.atlas",
+    "textures": [
+      "models/297_hamoni/build_char_297_hamoni.png"
+    ]
+  },
+  "displayName": "和弦",
+  "searchText": "和弦 build_char_297_hamoni models/297_hamoni default interact move relax sit sleep"
+}

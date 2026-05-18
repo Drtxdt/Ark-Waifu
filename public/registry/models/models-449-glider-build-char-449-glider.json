@@ -1,0 +1,37 @@
+{
+  "id": "models-449-glider-build-char-449-glider",
+  "name": "蜜莓",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/449_glider/build_char_449_glider.skel",
+    "atlas": "/Ark-Models/models/449_glider/build_char_449_glider.atlas",
+    "textures": [
+      "/Ark-Models/models/449_glider/build_char_449_glider.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/449_glider",
+  "sourceFiles": {
+    "skeleton": "models/449_glider/build_char_449_glider.skel",
+    "atlas": "models/449_glider/build_char_449_glider.atlas",
+    "textures": [
+      "models/449_glider/build_char_449_glider.png"
+    ]
+  },
+  "displayName": "蜜莓",
+  "searchText": "蜜莓 build_char_449_glider models/449_glider default interact move relax sit sleep"
+}

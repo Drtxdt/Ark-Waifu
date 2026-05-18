@@ -1,0 +1,37 @@
+{
+  "id": "models-209-ardign-build-char-209-ardign",
+  "name": "卡缇",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/209_ardign/build_char_209_ardign.skel",
+    "atlas": "/Ark-Models/models/209_ardign/build_char_209_ardign.atlas",
+    "textures": [
+      "/Ark-Models/models/209_ardign/build_char_209_ardign.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/209_ardign",
+  "sourceFiles": {
+    "skeleton": "models/209_ardign/build_char_209_ardign.skel",
+    "atlas": "models/209_ardign/build_char_209_ardign.atlas",
+    "textures": [
+      "models/209_ardign/build_char_209_ardign.png"
+    ]
+  },
+  "displayName": "卡缇",
+  "searchText": "卡缇 build_char_209_ardign models/209_ardign default interact move relax sit sleep"
+}

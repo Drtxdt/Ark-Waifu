@@ -1,0 +1,37 @@
+{
+  "id": "models-1040-blaze2-build-char-1040-blaze2",
+  "name": "烛煌",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1040_blaze2/build_char_1040_blaze2.skel",
+    "atlas": "/Ark-Models/models/1040_blaze2/build_char_1040_blaze2.atlas",
+    "textures": [
+      "/Ark-Models/models/1040_blaze2/build_char_1040_blaze2.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1040_blaze2",
+  "sourceFiles": {
+    "skeleton": "models/1040_blaze2/build_char_1040_blaze2.skel",
+    "atlas": "models/1040_blaze2/build_char_1040_blaze2.atlas",
+    "textures": [
+      "models/1040_blaze2/build_char_1040_blaze2.png"
+    ]
+  },
+  "displayName": "烛煌",
+  "searchText": "烛煌 build_char_1040_blaze2 models/1040_blaze2 default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-4212-nasti-build-char-4212-nasti",
+  "name": "娜斯提",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4212_nasti/build_char_4212_nasti.skel",
+    "atlas": "/Ark-Models/models/4212_nasti/build_char_4212_nasti.atlas",
+    "textures": [
+      "/Ark-Models/models/4212_nasti/build_char_4212_nasti.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4212_nasti",
+  "sourceFiles": {
+    "skeleton": "models/4212_nasti/build_char_4212_nasti.skel",
+    "atlas": "models/4212_nasti/build_char_4212_nasti.atlas",
+    "textures": [
+      "models/4212_nasti/build_char_4212_nasti.png"
+    ]
+  },
+  "displayName": "娜斯提",
+  "searchText": "娜斯提 build_char_4212_nasti models/4212_nasti default interact move relax sit sleep"
+}

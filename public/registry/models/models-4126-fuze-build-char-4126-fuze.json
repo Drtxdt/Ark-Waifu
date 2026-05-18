@@ -1,0 +1,37 @@
+{
+  "id": "models-4126-fuze-build-char-4126-fuze",
+  "name": "导火索",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4126_fuze/build_char_4126_fuze.skel",
+    "atlas": "/Ark-Models/models/4126_fuze/build_char_4126_fuze.atlas",
+    "textures": [
+      "/Ark-Models/models/4126_fuze/build_char_4126_fuze.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4126_fuze",
+  "sourceFiles": {
+    "skeleton": "models/4126_fuze/build_char_4126_fuze.skel",
+    "atlas": "models/4126_fuze/build_char_4126_fuze.atlas",
+    "textures": [
+      "models/4126_fuze/build_char_4126_fuze.png"
+    ]
+  },
+  "displayName": "导火索",
+  "searchText": "导火索 build_char_4126_fuze models/4126_fuze default interact move relax sit sleep"
+}

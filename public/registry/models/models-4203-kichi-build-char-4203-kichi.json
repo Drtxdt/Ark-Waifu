@@ -1,0 +1,37 @@
+{
+  "id": "models-4203-kichi-build-char-4203-kichi",
+  "name": "吉星",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4203_kichi/build_char_4203_kichi.skel",
+    "atlas": "/Ark-Models/models/4203_kichi/build_char_4203_kichi.atlas",
+    "textures": [
+      "/Ark-Models/models/4203_kichi/build_char_4203_kichi.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4203_kichi",
+  "sourceFiles": {
+    "skeleton": "models/4203_kichi/build_char_4203_kichi.skel",
+    "atlas": "models/4203_kichi/build_char_4203_kichi.atlas",
+    "textures": [
+      "models/4203_kichi/build_char_4203_kichi.png"
+    ]
+  },
+  "displayName": "吉星",
+  "searchText": "吉星 build_char_4203_kichi models/4203_kichi default interact move relax sit sleep"
+}

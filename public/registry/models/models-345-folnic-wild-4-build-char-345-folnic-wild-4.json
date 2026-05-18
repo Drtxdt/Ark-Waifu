@@ -1,0 +1,38 @@
+{
+  "id": "models-345-folnic-wild-4-build-char-345-folnic-wild-4",
+  "name": "亚叶",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/345_folnic_wild%234/build_char_345_folnic_wild%234.skel",
+    "atlas": "/Ark-Models/models/345_folnic_wild%234/build_char_345_folnic_wild%234.atlas",
+    "textures": [
+      "/Ark-Models/models/345_folnic_wild%234/build_char_345_folnic_wild%234.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/345_folnic_wild#4",
+  "sourceFiles": {
+    "skeleton": "models/345_folnic_wild#4/build_char_345_folnic_wild#4.skel",
+    "atlas": "models/345_folnic_wild#4/build_char_345_folnic_wild#4.atlas",
+    "textures": [
+      "models/345_folnic_wild#4/build_char_345_folnic_wild#4.png"
+    ]
+  },
+  "displayName": "亚叶",
+  "searchText": "亚叶 build_char_345_folnic_wild#4 models/345_folnic_wild#4 default interact move relax sit sleep special"
+}

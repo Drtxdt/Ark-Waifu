@@ -1,0 +1,37 @@
+{
+  "id": "models-4162-cathy-build-char-4162-cathy",
+  "name": "凯瑟琳",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4162_cathy/build_char_4162_cathy.skel",
+    "atlas": "/Ark-Models/models/4162_cathy/build_char_4162_cathy.atlas",
+    "textures": [
+      "/Ark-Models/models/4162_cathy/build_char_4162_cathy.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4162_cathy",
+  "sourceFiles": {
+    "skeleton": "models/4162_cathy/build_char_4162_cathy.skel",
+    "atlas": "models/4162_cathy/build_char_4162_cathy.atlas",
+    "textures": [
+      "models/4162_cathy/build_char_4162_cathy.png"
+    ]
+  },
+  "displayName": "凯瑟琳",
+  "searchText": "凯瑟琳 build_char_4162_cathy models/4162_cathy default interact move relax sit sleep"
+}

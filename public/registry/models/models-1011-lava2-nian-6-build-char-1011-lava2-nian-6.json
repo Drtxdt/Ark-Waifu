@@ -1,0 +1,38 @@
+{
+  "id": "models-1011-lava2-nian-6-build-char-1011-lava2-nian-6",
+  "name": "炎狱炎熔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1011_lava2_nian%236/build_char_1011_lava2_nian%236.skel",
+    "atlas": "/Ark-Models/models/1011_lava2_nian%236/build_char_1011_lava2_nian%236.atlas",
+    "textures": [
+      "/Ark-Models/models/1011_lava2_nian%236/build_char_1011_lava2_nian%236.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1011_lava2_nian#6",
+  "sourceFiles": {
+    "skeleton": "models/1011_lava2_nian#6/build_char_1011_lava2_nian#6.skel",
+    "atlas": "models/1011_lava2_nian#6/build_char_1011_lava2_nian#6.atlas",
+    "textures": [
+      "models/1011_lava2_nian#6/build_char_1011_lava2_nian#6.png"
+    ]
+  },
+  "displayName": "炎狱炎熔",
+  "searchText": "炎狱炎熔 build_char_1011_lava2_nian#6 models/1011_lava2_nian#6 default interact move relax sit sleep special"
+}

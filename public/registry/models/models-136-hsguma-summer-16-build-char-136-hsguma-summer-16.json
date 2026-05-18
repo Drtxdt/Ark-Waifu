@@ -1,0 +1,38 @@
+{
+  "id": "models-136-hsguma-summer-16-build-char-136-hsguma-summer-16",
+  "name": "星熊",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/136_hsguma_summer%2316/build_char_136_hsguma_summer%2316.skel",
+    "atlas": "/Ark-Models/models/136_hsguma_summer%2316/build_char_136_hsguma_summer%2316.atlas",
+    "textures": [
+      "/Ark-Models/models/136_hsguma_summer%2316/build_char_136_hsguma_summer%2316.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/136_hsguma_summer#16",
+  "sourceFiles": {
+    "skeleton": "models/136_hsguma_summer#16/build_char_136_hsguma_summer#16.skel",
+    "atlas": "models/136_hsguma_summer#16/build_char_136_hsguma_summer#16.atlas",
+    "textures": [
+      "models/136_hsguma_summer#16/build_char_136_hsguma_summer#16.png"
+    ]
+  },
+  "displayName": "星熊",
+  "searchText": "星熊 build_char_136_hsguma_summer#16 models/136_hsguma_summer#16 default interact move relax sit sleep special"
+}

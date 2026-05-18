@@ -1,0 +1,38 @@
+{
+  "id": "models-4141-marcil-dungeon-1-build-char-4141-marcil-dungeon-1",
+  "name": "玛露西尔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4141_marcil_dungeon%231/build_char_4141_marcil_dungeon%231.skel",
+    "atlas": "/Ark-Models/models/4141_marcil_dungeon%231/build_char_4141_marcil_dungeon%231.atlas",
+    "textures": [
+      "/Ark-Models/models/4141_marcil_dungeon%231/build_char_4141_marcil_dungeon%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4141_marcil_dungeon#1",
+  "sourceFiles": {
+    "skeleton": "models/4141_marcil_dungeon#1/build_char_4141_marcil_dungeon#1.skel",
+    "atlas": "models/4141_marcil_dungeon#1/build_char_4141_marcil_dungeon#1.atlas",
+    "textures": [
+      "models/4141_marcil_dungeon#1/build_char_4141_marcil_dungeon#1.png"
+    ]
+  },
+  "displayName": "玛露西尔",
+  "searchText": "玛露西尔 build_char_4141_marcil_dungeon#1 models/4141_marcil_dungeon#1 default interact move relax sit sleep special"
+}

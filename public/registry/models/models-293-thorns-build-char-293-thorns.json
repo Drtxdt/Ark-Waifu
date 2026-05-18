@@ -1,0 +1,37 @@
+{
+  "id": "models-293-thorns-build-char-293-thorns",
+  "name": "棘刺",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/293_thorns/build_char_293_thorns.skel",
+    "atlas": "/Ark-Models/models/293_thorns/build_char_293_thorns.atlas",
+    "textures": [
+      "/Ark-Models/models/293_thorns/build_char_293_thorns.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/293_thorns",
+  "sourceFiles": {
+    "skeleton": "models/293_thorns/build_char_293_thorns.skel",
+    "atlas": "models/293_thorns/build_char_293_thorns.atlas",
+    "textures": [
+      "models/293_thorns/build_char_293_thorns.png"
+    ]
+  },
+  "displayName": "棘刺",
+  "searchText": "棘刺 build_char_293_thorns models/293_thorns default interact move relax sit sleep"
+}

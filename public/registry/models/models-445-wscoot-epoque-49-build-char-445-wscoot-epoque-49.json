@@ -1,0 +1,38 @@
+{
+  "id": "models-445-wscoot-epoque-49-build-char-445-wscoot-epoque-49",
+  "name": "骋风",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/445_wscoot_epoque%2349/build_char_445_wscoot_epoque%2349.skel",
+    "atlas": "/Ark-Models/models/445_wscoot_epoque%2349/build_char_445_wscoot_epoque%2349.atlas",
+    "textures": [
+      "/Ark-Models/models/445_wscoot_epoque%2349/build_char_445_wscoot_epoque%2349.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/445_wscoot_epoque#49",
+  "sourceFiles": {
+    "skeleton": "models/445_wscoot_epoque#49/build_char_445_wscoot_epoque#49.skel",
+    "atlas": "models/445_wscoot_epoque#49/build_char_445_wscoot_epoque#49.atlas",
+    "textures": [
+      "models/445_wscoot_epoque#49/build_char_445_wscoot_epoque#49.png"
+    ]
+  },
+  "displayName": "骋风",
+  "searchText": "骋风 build_char_445_wscoot_epoque#49 models/445_wscoot_epoque#49 default interact move relax sit sleep special"
+}

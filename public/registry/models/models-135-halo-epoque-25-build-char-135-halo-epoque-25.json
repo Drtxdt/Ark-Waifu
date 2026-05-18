@@ -1,0 +1,38 @@
+{
+  "id": "models-135-halo-epoque-25-build-char-135-halo-epoque-25",
+  "name": "星源",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/135_halo_epoque%2325/build_char_135_halo_epoque%2325.skel",
+    "atlas": "/Ark-Models/models/135_halo_epoque%2325/build_char_135_halo_epoque%2325.atlas",
+    "textures": [
+      "/Ark-Models/models/135_halo_epoque%2325/build_char_135_halo_epoque%2325.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/135_halo_epoque#25",
+  "sourceFiles": {
+    "skeleton": "models/135_halo_epoque#25/build_char_135_halo_epoque#25.skel",
+    "atlas": "models/135_halo_epoque#25/build_char_135_halo_epoque#25.atlas",
+    "textures": [
+      "models/135_halo_epoque#25/build_char_135_halo_epoque#25.png"
+    ]
+  },
+  "displayName": "星源",
+  "searchText": "星源 build_char_135_halo_epoque#25 models/135_halo_epoque#25 default interact move relax sit sleep special"
+}

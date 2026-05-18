@@ -1,0 +1,38 @@
+{
+  "id": "models-1043-leizi2-game-8-build-char-1043-leizi2-game-8",
+  "name": "司霆惊蛰",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1043_leizi2_game%238/build_char_1043_leizi2_game%238.skel",
+    "atlas": "/Ark-Models/models/1043_leizi2_game%238/build_char_1043_leizi2_game%238.atlas",
+    "textures": [
+      "/Ark-Models/models/1043_leizi2_game%238/build_char_1043_leizi2_game%238.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1043_leizi2_game#8",
+  "sourceFiles": {
+    "skeleton": "models/1043_leizi2_game#8/build_char_1043_leizi2_game#8.skel",
+    "atlas": "models/1043_leizi2_game#8/build_char_1043_leizi2_game#8.atlas",
+    "textures": [
+      "models/1043_leizi2_game#8/build_char_1043_leizi2_game#8.png"
+    ]
+  },
+  "displayName": "司霆惊蛰",
+  "searchText": "司霆惊蛰 build_char_1043_leizi2_game#8 models/1043_leizi2_game#8 default interact move relax sit sleep special"
+}

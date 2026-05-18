@@ -1,0 +1,37 @@
+{
+  "id": "models-002-amiya-build-char-002-amiya",
+  "name": "阿米娅",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/002_amiya/build_char_002_amiya.skel",
+    "atlas": "/Ark-Models/models/002_amiya/build_char_002_amiya.atlas",
+    "textures": [
+      "/Ark-Models/models/002_amiya/build_char_002_amiya.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/002_amiya",
+  "sourceFiles": {
+    "skeleton": "models/002_amiya/build_char_002_amiya.skel",
+    "atlas": "models/002_amiya/build_char_002_amiya.atlas",
+    "textures": [
+      "models/002_amiya/build_char_002_amiya.png"
+    ]
+  },
+  "displayName": "阿米娅",
+  "searchText": "阿米娅 build_char_002_amiya models/002_amiya default interact move relax sit sleep"
+}

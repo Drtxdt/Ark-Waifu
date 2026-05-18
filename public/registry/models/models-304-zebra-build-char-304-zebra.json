@@ -1,0 +1,37 @@
+{
+  "id": "models-304-zebra-build-char-304-zebra",
+  "name": "暴雨",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/304_zebra/build_char_304_zebra.skel",
+    "atlas": "/Ark-Models/models/304_zebra/build_char_304_zebra.atlas",
+    "textures": [
+      "/Ark-Models/models/304_zebra/build_char_304_zebra.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/304_zebra",
+  "sourceFiles": {
+    "skeleton": "models/304_zebra/build_char_304_zebra.skel",
+    "atlas": "models/304_zebra/build_char_304_zebra.atlas",
+    "textures": [
+      "models/304_zebra/build_char_304_zebra.png"
+    ]
+  },
+  "displayName": "暴雨",
+  "searchText": "暴雨 build_char_304_zebra models/304_zebra default interact move relax sit sleep"
+}

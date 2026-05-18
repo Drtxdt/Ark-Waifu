@@ -1,0 +1,37 @@
+{
+  "id": "models-102-texas-winter-1-build-char-102-texas-winter-1",
+  "name": "德克萨斯",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/102_texas_winter%231/build_char_102_texas_winter%231.skel",
+    "atlas": "/Ark-Models/models/102_texas_winter%231/build_char_102_texas_winter%231.atlas",
+    "textures": [
+      "/Ark-Models/models/102_texas_winter%231/build_char_102_texas_winter%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/102_texas_winter#1",
+  "sourceFiles": {
+    "skeleton": "models/102_texas_winter#1/build_char_102_texas_winter#1.skel",
+    "atlas": "models/102_texas_winter#1/build_char_102_texas_winter#1.atlas",
+    "textures": [
+      "models/102_texas_winter#1/build_char_102_texas_winter#1.png"
+    ]
+  },
+  "displayName": "德克萨斯",
+  "searchText": "德克萨斯 build_char_102_texas_winter#1 models/102_texas_winter#1 default interact move relax sit sleep"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-211-adnach-sale-5-build-char-211-adnach-sale-5",
+  "name": "安德切尔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/211_adnach_sale%235/build_char_211_adnach_sale%235.skel",
+    "atlas": "/Ark-Models/models/211_adnach_sale%235/build_char_211_adnach_sale%235.atlas",
+    "textures": [
+      "/Ark-Models/models/211_adnach_sale%235/build_char_211_adnach_sale%235.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/211_adnach_sale#5",
+  "sourceFiles": {
+    "skeleton": "models/211_adnach_sale#5/build_char_211_adnach_sale#5.skel",
+    "atlas": "models/211_adnach_sale#5/build_char_211_adnach_sale#5.atlas",
+    "textures": [
+      "models/211_adnach_sale#5/build_char_211_adnach_sale#5.png"
+    ]
+  },
+  "displayName": "安德切尔",
+  "searchText": "安德切尔 build_char_211_adnach_sale#5 models/211_adnach_sale#5 default interact move relax sit sleep special"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-102-texas-build-char-102-texas",
+  "name": "德克萨斯",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/102_texas/build_char_102_texas.skel",
+    "atlas": "/Ark-Models/models/102_texas/build_char_102_texas.atlas",
+    "textures": [
+      "/Ark-Models/models/102_texas/build_char_102_texas.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "relax-idle": "Relax_Idle",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/102_texas",
+  "sourceFiles": {
+    "skeleton": "models/102_texas/build_char_102_texas.skel",
+    "atlas": "models/102_texas/build_char_102_texas.atlas",
+    "textures": [
+      "models/102_texas/build_char_102_texas.png"
+    ]
+  },
+  "displayName": "德克萨斯",
+  "searchText": "德克萨斯 build_char_102_texas models/102_texas default interact move relax relax_idle sit sleep"
+}

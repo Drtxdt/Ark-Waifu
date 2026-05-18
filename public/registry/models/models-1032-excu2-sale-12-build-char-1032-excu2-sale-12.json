@@ -1,0 +1,38 @@
+{
+  "id": "models-1032-excu2-sale-12-build-char-1032-excu2-sale-12",
+  "name": "圣约送葬人",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1032_excu2_sale%2312/build_char_1032_excu2_sale%2312.skel",
+    "atlas": "/Ark-Models/models/1032_excu2_sale%2312/build_char_1032_excu2_sale%2312.atlas",
+    "textures": [
+      "/Ark-Models/models/1032_excu2_sale%2312/build_char_1032_excu2_sale%2312.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1032_excu2_sale#12",
+  "sourceFiles": {
+    "skeleton": "models/1032_excu2_sale#12/build_char_1032_excu2_sale#12.skel",
+    "atlas": "models/1032_excu2_sale#12/build_char_1032_excu2_sale#12.atlas",
+    "textures": [
+      "models/1032_excu2_sale#12/build_char_1032_excu2_sale#12.png"
+    ]
+  },
+  "displayName": "圣约送葬人",
+  "searchText": "圣约送葬人 build_char_1032_excu2_sale#12 models/1032_excu2_sale#12 default interact move relax sit sleep special"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-164-nightm-build-char-164-nightm",
+  "name": "夜魔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/164_nightm/build_char_164_nightm.skel",
+    "atlas": "/Ark-Models/models/164_nightm/build_char_164_nightm.atlas",
+    "textures": [
+      "/Ark-Models/models/164_nightm/build_char_164_nightm.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/164_nightm",
+  "sourceFiles": {
+    "skeleton": "models/164_nightm/build_char_164_nightm.skel",
+    "atlas": "models/164_nightm/build_char_164_nightm.atlas",
+    "textures": [
+      "models/164_nightm/build_char_164_nightm.png"
+    ]
+  },
+  "displayName": "夜魔",
+  "searchText": "夜魔 build_char_164_nightm models/164_nightm default interact move relax sit sleep"
+}

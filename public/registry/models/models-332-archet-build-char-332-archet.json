@@ -1,0 +1,37 @@
+{
+  "id": "models-332-archet-build-char-332-archet",
+  "name": "空弦",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/332_archet/build_char_332_archet.skel",
+    "atlas": "/Ark-Models/models/332_archet/build_char_332_archet.atlas",
+    "textures": [
+      "/Ark-Models/models/332_archet/build_char_332_archet.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/332_archet",
+  "sourceFiles": {
+    "skeleton": "models/332_archet/build_char_332_archet.skel",
+    "atlas": "models/332_archet/build_char_332_archet.atlas",
+    "textures": [
+      "models/332_archet/build_char_332_archet.png"
+    ]
+  },
+  "displayName": "空弦",
+  "searchText": "空弦 build_char_332_archet models/332_archet default interact move relax sit sleep"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-180-amgoat-summer-5-build-char-180-amgoat-summer-5",
+  "name": "艾雅法拉",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/180_amgoat_summer%235/build_char_180_amgoat_summer%235.skel",
+    "atlas": "/Ark-Models/models/180_amgoat_summer%235/build_char_180_amgoat_summer%235.atlas",
+    "textures": [
+      "/Ark-Models/models/180_amgoat_summer%235/build_char_180_amgoat_summer%235.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/180_amgoat_summer#5",
+  "sourceFiles": {
+    "skeleton": "models/180_amgoat_summer#5/build_char_180_amgoat_summer#5.skel",
+    "atlas": "models/180_amgoat_summer#5/build_char_180_amgoat_summer#5.atlas",
+    "textures": [
+      "models/180_amgoat_summer#5/build_char_180_amgoat_summer#5.png"
+    ]
+  },
+  "displayName": "艾雅法拉",
+  "searchText": "艾雅法拉 build_char_180_amgoat_summer#5 models/180_amgoat_summer#5 default interact move relax sit sleep special"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-183-skgoat-epoque-30-build-char-183-skgoat-epoque-30",
+  "name": "地灵",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/183_skgoat_epoque%2330/build_char_183_skgoat_epoque%2330.skel",
+    "atlas": "/Ark-Models/models/183_skgoat_epoque%2330/build_char_183_skgoat_epoque%2330.atlas",
+    "textures": [
+      "/Ark-Models/models/183_skgoat_epoque%2330/build_char_183_skgoat_epoque%2330.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/183_skgoat_epoque#30",
+  "sourceFiles": {
+    "skeleton": "models/183_skgoat_epoque#30/build_char_183_skgoat_epoque#30.skel",
+    "atlas": "models/183_skgoat_epoque#30/build_char_183_skgoat_epoque#30.atlas",
+    "textures": [
+      "models/183_skgoat_epoque#30/build_char_183_skgoat_epoque#30.png"
+    ]
+  },
+  "displayName": "地灵",
+  "searchText": "地灵 build_char_183_skgoat_epoque#30 models/183_skgoat_epoque#30 default interact move relax sit sleep special"
+}

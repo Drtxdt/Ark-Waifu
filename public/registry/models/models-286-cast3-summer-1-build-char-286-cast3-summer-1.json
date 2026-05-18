@@ -1,0 +1,36 @@
+{
+  "id": "models-286-cast3-summer-1-build-char-286-cast3-summer-1",
+  "name": "Castle-3",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/286_cast3_summer%231/build_char_286_cast3_summer%231.skel",
+    "atlas": "/Ark-Models/models/286_cast3_summer%231/build_char_286_cast3_summer%231.atlas",
+    "textures": [
+      "/Ark-Models/models/286_cast3_summer%231/build_char_286_cast3_summer%231.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/286_cast3_summer#1",
+  "sourceFiles": {
+    "skeleton": "models/286_cast3_summer#1/build_char_286_cast3_summer#1.skel",
+    "atlas": "models/286_cast3_summer#1/build_char_286_cast3_summer#1.atlas",
+    "textures": [
+      "models/286_cast3_summer#1/build_char_286_cast3_summer#1.png"
+    ]
+  },
+  "displayName": "Castle-3",
+  "searchText": "castle-3 build_char_286_cast3_summer#1 models/286_cast3_summer#1 default interact move relax special"
+}

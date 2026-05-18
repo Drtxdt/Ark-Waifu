@@ -1,0 +1,38 @@
+{
+  "id": "models-4104-coldst-striker-3-build-char-4104-coldst-striker-3",
+  "name": "冰酿",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4104_coldst_striker%233/build_char_4104_coldst_striker%233.skel",
+    "atlas": "/Ark-Models/models/4104_coldst_striker%233/build_char_4104_coldst_striker%233.atlas",
+    "textures": [
+      "/Ark-Models/models/4104_coldst_striker%233/build_char_4104_coldst_striker%233.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4104_coldst_striker#3",
+  "sourceFiles": {
+    "skeleton": "models/4104_coldst_striker#3/build_char_4104_coldst_striker#3.skel",
+    "atlas": "models/4104_coldst_striker#3/build_char_4104_coldst_striker#3.atlas",
+    "textures": [
+      "models/4104_coldst_striker#3/build_char_4104_coldst_striker#3.png"
+    ]
+  },
+  "displayName": "冰酿",
+  "searchText": "冰酿 build_char_4104_coldst_striker#3 models/4104_coldst_striker#3 default interact move relax sit sleep special"
+}

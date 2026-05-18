@@ -1,0 +1,37 @@
+{
+  "id": "models-1030-noirc2-build-char-1030-noirc2",
+  "name": "火龙S黑角",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1030_noirc2/build_char_1030_noirc2.skel",
+    "atlas": "/Ark-Models/models/1030_noirc2/build_char_1030_noirc2.atlas",
+    "textures": [
+      "/Ark-Models/models/1030_noirc2/build_char_1030_noirc2.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1030_noirc2",
+  "sourceFiles": {
+    "skeleton": "models/1030_noirc2/build_char_1030_noirc2.skel",
+    "atlas": "models/1030_noirc2/build_char_1030_noirc2.atlas",
+    "textures": [
+      "models/1030_noirc2/build_char_1030_noirc2.png"
+    ]
+  },
+  "displayName": "火龙S黑角",
+  "searchText": "火龙s黑角 build_char_1030_noirc2 models/1030_noirc2 default interact move relax sit sleep"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-1043-leizi2-build-char-1043-leizi2",
+  "name": "司霆惊蛰",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/1043_leizi2/build_char_1043_leizi2.skel",
+    "atlas": "/Ark-Models/models/1043_leizi2/build_char_1043_leizi2.atlas",
+    "textures": [
+      "/Ark-Models/models/1043_leizi2/build_char_1043_leizi2.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/1043_leizi2",
+  "sourceFiles": {
+    "skeleton": "models/1043_leizi2/build_char_1043_leizi2.skel",
+    "atlas": "models/1043_leizi2/build_char_1043_leizi2.atlas",
+    "textures": [
+      "models/1043_leizi2/build_char_1043_leizi2.png"
+    ]
+  },
+  "displayName": "司霆惊蛰",
+  "searchText": "司霆惊蛰 build_char_1043_leizi2 models/1043_leizi2 default interact move relax sit sleep"
+}

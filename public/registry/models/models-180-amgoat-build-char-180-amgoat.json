@@ -1,0 +1,37 @@
+{
+  "id": "models-180-amgoat-build-char-180-amgoat",
+  "name": "艾雅法拉",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/180_amgoat/build_char_180_amgoat.skel",
+    "atlas": "/Ark-Models/models/180_amgoat/build_char_180_amgoat.atlas",
+    "textures": [
+      "/Ark-Models/models/180_amgoat/build_char_180_amgoat.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/180_amgoat",
+  "sourceFiles": {
+    "skeleton": "models/180_amgoat/build_char_180_amgoat.skel",
+    "atlas": "models/180_amgoat/build_char_180_amgoat.atlas",
+    "textures": [
+      "models/180_amgoat/build_char_180_amgoat.png"
+    ]
+  },
+  "displayName": "艾雅法拉",
+  "searchText": "艾雅法拉 build_char_180_amgoat models/180_amgoat default interact move relax sit sleep"
+}

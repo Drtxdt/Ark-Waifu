@@ -1,0 +1,38 @@
+{
+  "id": "models-488-buildr-epoque-34-build-char-488-buildr-epoque-34",
+  "name": "青枳",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/488_buildr_epoque%2334/build_char_488_buildr_epoque%2334.skel",
+    "atlas": "/Ark-Models/models/488_buildr_epoque%2334/build_char_488_buildr_epoque%2334.atlas",
+    "textures": [
+      "/Ark-Models/models/488_buildr_epoque%2334/build_char_488_buildr_epoque%2334.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/488_buildr_epoque#34",
+  "sourceFiles": {
+    "skeleton": "models/488_buildr_epoque#34/build_char_488_buildr_epoque#34.skel",
+    "atlas": "models/488_buildr_epoque#34/build_char_488_buildr_epoque#34.atlas",
+    "textures": [
+      "models/488_buildr_epoque#34/build_char_488_buildr_epoque#34.png"
+    ]
+  },
+  "displayName": "青枳",
+  "searchText": "青枳 build_char_488_buildr_epoque#34 models/488_buildr_epoque#34 default interact move relax sit sleep special"
+}

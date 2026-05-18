@@ -1,0 +1,37 @@
+{
+  "id": "models-302-glaze-build-char-302-glaze",
+  "name": "安比尔",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/302_glaze/build_char_302_glaze.skel",
+    "atlas": "/Ark-Models/models/302_glaze/build_char_302_glaze.atlas",
+    "textures": [
+      "/Ark-Models/models/302_glaze/build_char_302_glaze.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/302_glaze",
+  "sourceFiles": {
+    "skeleton": "models/302_glaze/build_char_302_glaze.skel",
+    "atlas": "models/302_glaze/build_char_302_glaze.atlas",
+    "textures": [
+      "models/302_glaze/build_char_302_glaze.png"
+    ]
+  },
+  "displayName": "安比尔",
+  "searchText": "安比尔 build_char_302_glaze models/302_glaze default interact move relax sit sleep"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "models-136-hsguma-nian-3-build-char-136-hsguma-nian-3",
+  "name": "星熊",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/136_hsguma_nian%233/build_char_136_hsguma_nian%233.skel",
+    "atlas": "/Ark-Models/models/136_hsguma_nian%233/build_char_136_hsguma_nian%233.atlas",
+    "textures": [
+      "/Ark-Models/models/136_hsguma_nian%233/build_char_136_hsguma_nian%233.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/136_hsguma_nian#3",
+  "sourceFiles": {
+    "skeleton": "models/136_hsguma_nian#3/build_char_136_hsguma_nian#3.skel",
+    "atlas": "models/136_hsguma_nian#3/build_char_136_hsguma_nian#3.atlas",
+    "textures": [
+      "models/136_hsguma_nian#3/build_char_136_hsguma_nian#3.png"
+    ]
+  },
+  "displayName": "星熊",
+  "searchText": "星熊 build_char_136_hsguma_nian#3 models/136_hsguma_nian#3 default interact move relax sit sleep special"
+}

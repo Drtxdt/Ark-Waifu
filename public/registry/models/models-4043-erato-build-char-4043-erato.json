@@ -1,0 +1,37 @@
+{
+  "id": "models-4043-erato-build-char-4043-erato",
+  "name": "埃拉托",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4043_erato/build_char_4043_erato.skel",
+    "atlas": "/Ark-Models/models/4043_erato/build_char_4043_erato.atlas",
+    "textures": [
+      "/Ark-Models/models/4043_erato/build_char_4043_erato.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4043_erato",
+  "sourceFiles": {
+    "skeleton": "models/4043_erato/build_char_4043_erato.skel",
+    "atlas": "models/4043_erato/build_char_4043_erato.atlas",
+    "textures": [
+      "models/4043_erato/build_char_4043_erato.png"
+    ]
+  },
+  "displayName": "埃拉托",
+  "searchText": "埃拉托 build_char_4043_erato models/4043_erato default interact move relax sit sleep"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "models-4000-jnight-build-char-4000-jnight",
+  "name": "正义骑士号",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4000_jnight/build_char_4000_jnight.skel",
+    "atlas": "/Ark-Models/models/4000_jnight/build_char_4000_jnight.atlas",
+    "textures": [
+      "/Ark-Models/models/4000_jnight/build_char_4000_jnight.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4000_jnight",
+  "sourceFiles": {
+    "skeleton": "models/4000_jnight/build_char_4000_jnight.skel",
+    "atlas": "models/4000_jnight/build_char_4000_jnight.atlas",
+    "textures": [
+      "models/4000_jnight/build_char_4000_jnight.png"
+    ]
+  },
+  "displayName": "正义骑士号",
+  "searchText": "正义骑士号 build_char_4000_jnight models/4000_jnight default interact move relax"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "models-4013-kjera-build-char-4013-kjera",
+  "name": "耶拉",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4013_kjera/build_char_4013_kjera.skel",
+    "atlas": "/Ark-Models/models/4013_kjera/build_char_4013_kjera.atlas",
+    "textures": [
+      "/Ark-Models/models/4013_kjera/build_char_4013_kjera.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4013_kjera",
+  "sourceFiles": {
+    "skeleton": "models/4013_kjera/build_char_4013_kjera.skel",
+    "atlas": "models/4013_kjera/build_char_4013_kjera.atlas",
+    "textures": [
+      "models/4013_kjera/build_char_4013_kjera.png"
+    ]
+  },
+  "displayName": "耶拉",
+  "searchText": "耶拉 build_char_4013_kjera models/4013_kjera default interact move relax sit sleep"
+}

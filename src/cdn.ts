@@ -13,17 +13,23 @@ import {
 import type {
   ModelManifest,
   ModelRegistry,
+  ModelRegistryIndex,
+  ModelRegistryIndexEntry,
   MountArkWaifuOptions,
   ScannedModelManifest
 } from "./core/types";
 
+type RegistryModelEntry = ScannedModelManifest | ModelRegistryIndexEntry;
+
 type RegistryControllerState = {
   widget: ArkWaifuWidget;
   registry?: ModelRegistry;
+  registryIndex?: ModelRegistryIndex;
   registryUrl: string;
+  registryBaseUrl: string;
   assetBaseUrl?: string;
-  selected: ScannedModelManifest;
-  matches: ScannedModelManifest[];
+  selected: RegistryModelEntry;
+  matches: RegistryModelEntry[];
   panel?: HTMLElement;
   toggle: HTMLElement;
   searchInput?: HTMLInputElement;
@@ -70,9 +76,10 @@ const currentScript = document.currentScript as HTMLScriptElement | null;
 if (currentScript?.dataset.auto !== "false") {
   const autoMount = (): void => {
     const registryUrl = resolveRegistryUrl(currentScript);
+    const registryBaseUrl = resolveRegistryBaseUrl(currentScript);
 
-    if (registryUrl) {
-      autoMountRegistryModel(currentScript, registryUrl).catch((error: unknown) => {
+    if (shouldUseRegistryMount(currentScript, registryUrl)) {
+      autoMountRegistryModel(currentScript, registryUrl ?? getDefaultRegistryUrl(currentScript), registryBaseUrl).catch((error: unknown) => {
         console.error("[Ark-waifu] Auto mount failed", error);
       });
       return;
@@ -130,14 +137,25 @@ if (currentScript?.dataset.auto !== "false") {
   }
 }
 
+function shouldUseRegistryMount(
+  script: HTMLScriptElement | null,
+  registryUrl: string | undefined
+): boolean {
+  return Boolean(
+    registryUrl ??
+      script?.dataset.registryBase ??
+      script?.dataset.model
+  );
+}
+
 async function autoMountRegistryModel(
   script: HTMLScriptElement | null,
-  registryUrl: string
+  registryUrl: string,
+  registryBaseUrl: string
 ): Promise<void> {
-  const registry = await loadRegistry(registryUrl);
   const assetBaseUrl = readAssetBaseUrl(script);
-  const initialModel =
-    findModel(registry, script?.dataset.model ?? DEFAULT_MODEL_ID) ?? registry.operators[0];
+  const modelId = script?.dataset.model ?? DEFAULT_MODEL_ID;
+  const initialModel = await loadInitialRegistryModel(script, registryUrl, registryBaseUrl, modelId);
 
   if (!initialModel) {
     throw new Error(`Registry "${registryUrl}" does not contain any model.`);
@@ -169,11 +187,13 @@ async function autoMountRegistryModel(
   const toggle = createRegistryToggle();
   const state: RegistryControllerState = {
     widget,
-    registry: readBooleanDataset(script, "modelSelectorOpen", false) ? registry : undefined,
+    registry: undefined,
+    registryIndex: undefined,
     registryUrl,
+    registryBaseUrl,
     assetBaseUrl,
     selected: initialModel,
-    matches: registry.operators,
+    matches: [initialModel],
     toggle,
     panelLoaded: false
   };
@@ -191,7 +211,7 @@ async function autoMountRegistryModel(
 
 async function loadControllerModel(
   state: RegistryControllerState,
-  model: ScannedModelManifest
+  model: RegistryModelEntry
 ): Promise<void> {
   state.selected = model;
   if (state.searchInput) {
@@ -205,7 +225,7 @@ async function loadControllerModel(
   }
 
   try {
-    const manifest = resolveControllerManifest(model, state.assetBaseUrl);
+    const manifest = await resolveControllerManifest(model, state.assetBaseUrl, state.registryBaseUrl);
     await state.widget.load(manifest);
     if (state.actions) {
       renderActionButtons(state, manifest);
@@ -224,16 +244,16 @@ async function loadControllerModel(
 
 function renderModelSuggestions(state: RegistryControllerState, term: string): void {
   const query = term.trim().toLowerCase();
-  const registry = state.registry;
-  if (!registry || !state.datalist || !state.status) {
+  const models = getRegistryEntries(state);
+  if (!state.datalist || !state.status) {
     return;
   }
 
   state.matches = query
-    ? registry.operators.filter((model) =>
+    ? models.filter((model) =>
         (model.searchText ?? createSearchText(model)).includes(query)
       )
-    : registry.operators;
+    : models;
 
   state.datalist.innerHTML = "";
 
@@ -273,8 +293,7 @@ function renderActionButtons(state: RegistryControllerState, manifest: ModelMani
 async function openRegistryPanel(state: RegistryControllerState): Promise<void> {
   if (!state.registry) {
     state.toggle.textContent = "Loading...";
-    state.registry = await loadRegistry(state.registryUrl);
-    state.matches = state.registry.operators;
+    await loadPanelRegistry(state);
   }
 
   if (!state.panelLoaded) {
@@ -421,11 +440,17 @@ function actionButtonStyle(): Partial<CSSStyleDeclaration> {
   };
 }
 
-function resolveControllerManifest(
-  model: ScannedModelManifest,
-  assetBaseUrl: string | undefined
-): ModelManifest {
-  return assetBaseUrl ? rewriteScannedManifestAssetBase(model, assetBaseUrl) : model;
+async function resolveControllerManifest(
+  model: RegistryModelEntry,
+  assetBaseUrl: string | undefined,
+  registryBaseUrl: string
+): Promise<ModelManifest> {
+  if (isScannedModelManifest(model)) {
+    return assetBaseUrl ? rewriteScannedManifestAssetBase(model, assetBaseUrl) : model;
+  }
+
+  const manifest = await loadRegistryModelManifest(registryBaseUrl, model.id);
+  return assetBaseUrl ? rewriteScannedManifestAssetBase(manifest, assetBaseUrl) : manifest;
 }
 
 async function loadRegistry(registryUrl: string): Promise<ModelRegistry> {
@@ -438,6 +463,77 @@ async function loadRegistry(registryUrl: string): Promise<ModelRegistry> {
   return (await response.json()) as ModelRegistry;
 }
 
+async function loadRegistryIndex(indexUrl: string): Promise<ModelRegistryIndex> {
+  const response = await fetch(indexUrl);
+
+  if (!response.ok) {
+    throw new Error(`Failed to load registry index "${indexUrl}": ${response.status} ${response.statusText}`);
+  }
+
+  return (await response.json()) as ModelRegistryIndex;
+}
+
+async function loadInitialRegistryModel(
+  script: HTMLScriptElement | null,
+  registryUrl: string,
+  registryBaseUrl: string,
+  modelId: string
+): Promise<ScannedModelManifest> {
+  if (script?.dataset.modelManifestUrl) {
+    return loadManifest(
+      resolveDatasetUrl(script.dataset.modelManifestUrl, script.dataset.modelManifestUrl, script)
+    ) as Promise<ScannedModelManifest>;
+  }
+
+  try {
+    return await loadRegistryModelManifest(registryBaseUrl, modelId);
+  } catch (modelError) {
+    if (modelId === DEFAULT_MODEL_ID) {
+      try {
+        return (await loadManifest(resolveAgainstRegistryBase(registryBaseUrl, "default-model.json"))) as ScannedModelManifest;
+      } catch {
+        // Fall through to full registry fallback below.
+      }
+    }
+
+    try {
+      const registry = await loadRegistry(registryUrl);
+      const model = findModel(registry, modelId) ?? registry.operators[0];
+      if (model) {
+        return model;
+      }
+    } catch {
+      // Preserve the split-registry error for clearer root cause.
+    }
+
+    throw modelError;
+  }
+}
+
+async function loadPanelRegistry(state: RegistryControllerState): Promise<void> {
+  try {
+    state.registryIndex = await loadRegistryIndex(resolveAgainstRegistryBase(state.registryBaseUrl, "index.json"));
+    state.matches = state.registryIndex.models;
+    return;
+  } catch (error) {
+    console.warn("[Ark-waifu] Failed to load split registry index; falling back to full registry.", error);
+  }
+
+  state.registry = await loadRegistry(state.registryUrl);
+  state.matches = state.registry.operators;
+}
+
+async function loadRegistryModelManifest(
+  registryBaseUrl: string,
+  modelId: string
+): Promise<ScannedModelManifest> {
+  return (await loadManifest(resolveAgainstRegistryBase(registryBaseUrl, `models/${modelId}.json`))) as ScannedModelManifest;
+}
+
+function isScannedModelManifest(model: RegistryModelEntry): model is ScannedModelManifest {
+  return "sourceFiles" in model;
+}
+
 function findModel(
   registry: ModelRegistry,
   modelId: string | undefined
@@ -448,7 +544,7 @@ function findModel(
 function findSearchModel(
   state: RegistryControllerState,
   value: string
-): ScannedModelManifest | undefined {
+): RegistryModelEntry | undefined {
   const query = value.trim().toLowerCase();
 
   if (!query) {
@@ -456,7 +552,7 @@ function findSearchModel(
   }
 
   return (
-    state.registry?.operators.find(
+    getRegistryEntries(state).find(
       (model) =>
         model.id.toLowerCase() === query ||
         createModelInputValue(model).toLowerCase() === query
@@ -469,33 +565,41 @@ function findSearchModel(
 function findUniqueNameMatch(
   state: RegistryControllerState,
   query: string
-): ScannedModelManifest | undefined {
-  const matches = state.registry?.operators.filter((model) => model.name.toLowerCase() === query) ?? [];
+): RegistryModelEntry | undefined {
+  const matches = getRegistryEntries(state).filter((model) => model.name.toLowerCase() === query);
   return matches.length === 1 ? matches[0] : undefined;
 }
 
-function createModelInputValue(model: ScannedModelManifest): string {
+function createModelInputValue(model: RegistryModelEntry): string {
   return `${model.name} | ${model.relativeDir} | ${model.id}`;
 }
 
-function createSearchText(model: ScannedModelManifest): string {
+function createSearchText(model: RegistryModelEntry): string {
   return [
     model.name,
     model.id,
     model.relativeDir,
     model.category,
-    Object.keys(model.actions).join(" "),
-    Object.values(model.actions).join(" ")
+    "actions" in model ? Object.keys(model.actions).join(" ") : undefined,
+    "actions" in model ? Object.values(model.actions).join(" ") : undefined
   ]
     .filter(Boolean)
     .join(" ")
     .toLowerCase();
 }
 
+function getRegistryEntries(state: RegistryControllerState): RegistryModelEntry[] {
+  return state.registryIndex?.models ?? state.registry?.operators ?? state.matches;
+}
+
 function resolveRegistryUrl(script: HTMLScriptElement | null): string | undefined {
   return script?.dataset.registry
     ? resolveDatasetUrl(script.dataset.registry, getDefaultRegistryUrl(script), script)
     : undefined;
+}
+
+function resolveRegistryBaseUrl(script: HTMLScriptElement | null): string {
+  return resolveDatasetUrl(script?.dataset.registryBase, getDefaultRegistryBaseUrl(script), script);
 }
 
 function readAssetBaseUrl(script: HTMLScriptElement | null): string | undefined {
@@ -530,6 +634,15 @@ function getDefaultManifestUrl(script: HTMLScriptElement | null): string {
 
 function getDefaultRegistryUrl(script: HTMLScriptElement | null): string {
   return new URL("./registry/operators.json", getScriptDirectoryUrl(script)).href;
+}
+
+function getDefaultRegistryBaseUrl(script: HTMLScriptElement | null): string {
+  return new URL("./registry/", getScriptDirectoryUrl(script)).href;
+}
+
+function resolveAgainstRegistryBase(registryBaseUrl: string, relativePath: string): string {
+  const baseUrl = registryBaseUrl.endsWith("/") ? registryBaseUrl : `${registryBaseUrl}/`;
+  return new URL(relativePath, baseUrl).href;
 }
 
 function getScriptDirectoryUrl(script: HTMLScriptElement | null): string {

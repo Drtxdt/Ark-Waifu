@@ -1,0 +1,38 @@
+{
+  "id": "models-206-gnosis-boc-4-build-char-206-gnosis-boc-4",
+  "name": "灵知",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/206_gnosis_boc%234/build_char_206_gnosis_boc%234.skel",
+    "atlas": "/Ark-Models/models/206_gnosis_boc%234/build_char_206_gnosis_boc%234.atlas",
+    "textures": [
+      "/Ark-Models/models/206_gnosis_boc%234/build_char_206_gnosis_boc%234.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/206_gnosis_boc#4",
+  "sourceFiles": {
+    "skeleton": "models/206_gnosis_boc#4/build_char_206_gnosis_boc#4.skel",
+    "atlas": "models/206_gnosis_boc#4/build_char_206_gnosis_boc#4.atlas",
+    "textures": [
+      "models/206_gnosis_boc#4/build_char_206_gnosis_boc#4.png"
+    ]
+  },
+  "displayName": "灵知",
+  "searchText": "灵知 build_char_206_gnosis_boc#4 models/206_gnosis_boc#4 default interact move relax sit sleep special"
+}

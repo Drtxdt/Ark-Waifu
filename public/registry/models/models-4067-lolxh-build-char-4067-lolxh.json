@@ -1,0 +1,37 @@
+{
+  "id": "models-4067-lolxh-build-char-4067-lolxh",
+  "name": "罗小黑",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/4067_lolxh/build_char_4067_lolxh.skel",
+    "atlas": "/Ark-Models/models/4067_lolxh/build_char_4067_lolxh.atlas",
+    "textures": [
+      "/Ark-Models/models/4067_lolxh/build_char_4067_lolxh.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/4067_lolxh",
+  "sourceFiles": {
+    "skeleton": "models/4067_lolxh/build_char_4067_lolxh.skel",
+    "atlas": "models/4067_lolxh/build_char_4067_lolxh.atlas",
+    "textures": [
+      "models/4067_lolxh/build_char_4067_lolxh.png"
+    ]
+  },
+  "displayName": "罗小黑",
+  "searchText": "罗小黑 build_char_4067_lolxh models/4067_lolxh default interact move relax sit sleep"
+}

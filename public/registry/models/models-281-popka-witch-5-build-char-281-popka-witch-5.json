@@ -1,0 +1,38 @@
+{
+  "id": "models-281-popka-witch-5-build-char-281-popka-witch-5",
+  "name": "泡普卡",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/281_popka_witch%235/build_char_281_popka_witch%235.skel",
+    "atlas": "/Ark-Models/models/281_popka_witch%235/build_char_281_popka_witch%235.atlas",
+    "textures": [
+      "/Ark-Models/models/281_popka_witch%235/build_char_281_popka_witch%235.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/281_popka_witch#5",
+  "sourceFiles": {
+    "skeleton": "models/281_popka_witch#5/build_char_281_popka_witch#5.skel",
+    "atlas": "models/281_popka_witch#5/build_char_281_popka_witch#5.atlas",
+    "textures": [
+      "models/281_popka_witch#5/build_char_281_popka_witch#5.png"
+    ]
+  },
+  "displayName": "泡普卡",
+  "searchText": "泡普卡 build_char_281_popka_witch#5 models/281_popka_witch#5 default interact move relax sit sleep special"
+}

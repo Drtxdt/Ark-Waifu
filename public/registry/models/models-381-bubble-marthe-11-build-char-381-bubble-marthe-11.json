@@ -1,0 +1,38 @@
+{
+  "id": "models-381-bubble-marthe-11-build-char-381-bubble-marthe-11",
+  "name": "泡泡",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/381_bubble_marthe%2311/build_char_381_bubble_marthe%2311.skel",
+    "atlas": "/Ark-Models/models/381_bubble_marthe%2311/build_char_381_bubble_marthe%2311.atlas",
+    "textures": [
+      "/Ark-Models/models/381_bubble_marthe%2311/build_char_381_bubble_marthe%2311.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep",
+    "special": "Special"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/381_bubble_marthe#11",
+  "sourceFiles": {
+    "skeleton": "models/381_bubble_marthe#11/build_char_381_bubble_marthe#11.skel",
+    "atlas": "models/381_bubble_marthe#11/build_char_381_bubble_marthe#11.atlas",
+    "textures": [
+      "models/381_bubble_marthe#11/build_char_381_bubble_marthe#11.png"
+    ]
+  },
+  "displayName": "泡泡",
+  "searchText": "泡泡 build_char_381_bubble_marthe#11 models/381_bubble_marthe#11 default interact move relax sit sleep special"
+}

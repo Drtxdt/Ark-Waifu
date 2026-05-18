@@ -1,0 +1,37 @@
+{
+  "id": "models-128-plosis-build-char-128-plosis",
+  "name": "白面鸮",
+  "type": "ark-spine",
+  "version": "spine-3.8",
+  "files": {
+    "skel": "/Ark-Models/models/128_plosis/build_char_128_plosis.skel",
+    "atlas": "/Ark-Models/models/128_plosis/build_char_128_plosis.atlas",
+    "textures": [
+      "/Ark-Models/models/128_plosis/build_char_128_plosis.png"
+    ]
+  },
+  "actions": {
+    "idle": "Default",
+    "touch": "Interact",
+    "walk": "Move",
+    "relax": "Relax",
+    "sit": "Sit",
+    "sleep": "Sleep"
+  },
+  "scale": 0.5,
+  "position": {
+    "x": 0.5,
+    "y": 1
+  },
+  "category": "models",
+  "relativeDir": "models/128_plosis",
+  "sourceFiles": {
+    "skeleton": "models/128_plosis/build_char_128_plosis.skel",
+    "atlas": "models/128_plosis/build_char_128_plosis.atlas",
+    "textures": [
+      "models/128_plosis/build_char_128_plosis.png"
+    ]
+  },
+  "displayName": "白面鸮",
+  "searchText": "白面鸮 build_char_128_plosis models/128_plosis default interact move relax sit sleep"
+}
